@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<madoc:MadocLibrary xmlns:madoc="http://www.lexml.gov.br/madoc/2.0" xmlns:xi="http://www.lexml.gov.br/schema/xloom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <madoc:Metadata id="question-library">
+        <madoc:Entry key="Titulo">Banco de dados de questões mais comuns
+		</madoc:Entry>
+        <madoc:Entry key="Indexacao">
+            <madoc:List>
+                <madoc:Entry>modelo</madoc:Entry>
+                <madoc:Entry>madoc</madoc:Entry>
+                <madoc:Entry>banco de dados de questões</madoc:Entry>
+            </madoc:List>
+        </madoc:Entry>
+        <madoc:Entry key="PublicoAlvo">Equipe de desenvolvimento de modelos
+		</madoc:Entry>
+    </madoc:Metadata>
+
+
+    <madoc:Wizard display="Banco de dados de questões mais comuns">
+
+        <madoc:Page id="q-lib-legis-metadata-page">
+
+            <!-- Questão oculta para registro do tipo de conteúdo informacional -->
+            <madoc:Question id="q-tipo-conteudo-informacional" defaultValue="" visible="false" xsi:type="madoc:InputTextQuestionType" />
+
+        </madoc:Page>
+
+        <madoc:Page id="q-lib-oficios-page">
+            <madoc:Question display="Identificação do Ofício" id="q-lib-identificacao-oficio" hint="Informe número, ano e complemento (ex: 12/2019 - GABABC)" required="true" xsi:type="madoc:InputTextQuestionType" />
+        </madoc:Page>
+
+        <madoc:Page id="q-lib-epigrafe-page">
+
+            <madoc:Section display="Destino" id="q-lib-epigrafe-section">
+                <madoc:Question display="Órgão" id="q-lib-destino" required="true" xsi:type="madoc:RadioBoxGroupQuestionType">
+                    <madoc:OnChange>
+                        <madoc:Action xsi:type="madoc:SwitchType">
+                            <madoc:Case questionValue="Plenário">
+                                <madoc:Action xsi:type="madoc:SelectOptionActionType" id="actionA" optionId="q-lib-autoria-signatario-senador" />
+                            </madoc:Case>
+                            <madoc:Case questionValue="Plenário via Comissão">
+                                <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-comissao-nome" value="{q-lib-destino-comissao-comissao}" />
+                                <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-autoria-signatario-senador" />
+                            </madoc:Case>
+                        </madoc:Action>
+                    </madoc:OnChange>
+                    <madoc:Options>
+                        <madoc:Option id="q-lib-destino-plenario" selected="true" value="Plenário" enabled="false" />
+                        <madoc:Option id="q-lib-destino-plenario-via-comissao" value="Plenário via Comissão" enabled="false" />
+                        <madoc:Option id="q-lib-destino-mesa" display="Mesa Diretora" value="Mesa" enabled="false" />
+                        <madoc:Option id="q-lib-destino-comissao" value="Comissão" enabled="false" />
+                        <madoc:Option id="q-lib-destino-cpi" value="CPI" enabled="false" visible="false" />
+                        <madoc:Option id="q-lib-destino-subcomissao" value="Subcomissão" enabled="false" />
+                    </madoc:Options>
+                </madoc:Question>
+
+                <madoc:Question display="Comissão" id="q-lib-destino-comissao-comissao" required="true" enabled="true" visible="{q-lib-destino == 'Comissão' || q-lib-destino == 'Plenário via Comissão'}" xsi:type="madoc:ComboQuestionType">
+                    <madoc:OnChange>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-comissao-nome" value="{q-lib-destino-comissao-comissao}" />
+                    </madoc:OnChange>
+                    <madoc:OnLoad>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-destino-comissao-comissao" value="@@nomeComissao@@" />
+                    </madoc:OnLoad>
+                    <madoc:Options dataSetBind="(/comissoes|/comissoesInquerito|/comissoesTemporarias|/comissoesMistas|/comissoesMistasInquerito|/comissoesMistasEspeciais|/comissoesMedidasProvisorias)/*" sorted="true">
+                        <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="q-lib-destino-comissao-comissao-opt-" value="{./Nome}" />
+                    </madoc:Options>
+                </madoc:Question>
+
+                <madoc:Question display="CPI" id="q-lib-destino-comissao-cpi" required="true" visible="{q-lib-destino == 'CPI'}" xsi:type="madoc:ComboQuestionType">
+                    <madoc:OnChange>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-comissao-nome" value="{q-lib-destino-comissao-cpi}" />
+                    </madoc:OnChange>
+                    <madoc:Options dataSetBind="(/comissoesInquerito|/comissoesMistasInquerito)/*" sorted="true">
+                        <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="q-lib-destino-comissao-cpi-opt-" value="{./Nome}" />
+                    </madoc:Options>
+                </madoc:Question>
+
+                <madoc:Question display="Subcomissão" id="q-lib-destino-subcomissao-subcomissao" required="true" visible="{q-lib-destino == 'Subcomissão'}" xsi:type="madoc:ComboQuestionType">
+                    <madoc:Options dataSetBind="(/subcomissoes|/subcomissoesMistas)/*" sorted="true">
+                        <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="q-lib-destino-subcomissao-subcomissao-opt-" value="{./Nome}" />
+                    </madoc:Options>
+                </madoc:Question>
+
+                <madoc:Question defaultValue="@@vocativo@@" display="Vocativo" hint="Informe o vocativo sem pontuação final. Ex: Senhor Presidente" id="q-lib-destino-vocativo" visible="true" required="false" xsi:type="madoc:InputTextQuestionType" />
+            </madoc:Section>
+        </madoc:Page>
+
+        <madoc:Page id="q-lib-destalhes-proposicoes-page">
+
+            <madoc:Section id="q-lib-obtem-materia-e-ementa-section" display="Identificação da Matéria" visible="true">
+
+                <madoc:Question display="Matéria" id="q-materia" required="false" xsi:type="madoc:CustomQuestionType" customQuestionType="MateriaQuestion" visible="true" hint="Identifique a matéria no formato tipo número/ano (ex: PL 1/1997)">
+                    <madoc:OnChange>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-materia-ementa" value="" />
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-materia-apensada" value="" />
+                    </madoc:OnChange>
+
+                    <madoc:CustomAttribute name="mregex" value="*" />
+                </madoc:Question>
+
+                <madoc:Command xsi:type="madoc:ButtonType" id="button-obter-ementa-materia" display="Obter ementa">
+                    <madoc:OnClick>
+                        <madoc:Action xsi:type="madoc:ConsumeRestServiceActionType" uri="resources/materia/get?materia={q-materia}">
+                            <madoc:Action xpath="normalize-space(//EmentaMateria/text())" xsi:type="madoc:ConsumeSetQuestionValueActionType" questionId="q-materia-ementa" />
+                        </madoc:Action>
+                    </madoc:OnClick>
+                </madoc:Command>
+
+                <madoc:Question display="Ementa da Proposição" id="q-materia-ementa" xsi:type="madoc:MemoTextQuestionType" enabled="{q-materia.startsWith('SUG')}" />
+
+                <madoc:Question display="Incluir ementa no requerimento" id="q-materia-apresentar-ementa" xsi:type="madoc:CheckBoxQuestionType" selected="true" />
+
+                <madoc:Command xsi:type="madoc:ButtonType" id="button-obter-materias-apensadas" display="Obter matérias que tramitam em conjunto" visible="false">
+                    <madoc:OnClick>
+                        <madoc:Action xsi:type="madoc:ConsumeRestServiceActionType" uri="resources/materia/get?materia={q-materia}">
+
+                            <madoc:Transformation xsi:type="madoc:InlineXSLType">
+                                <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+                                    <xsl:output omit-xml-declaration="yes" method="xml" />
+                                    <xsl:template match="/">
+                                        <apensadas>
+                                            <xsl:for-each select="DetalheMateria/Materia/MateriasAnexadas/child::*[not(DataDesanexacao)]">
+                                                <xsl:sort select="name()" order="descending" />
+                                                <xsl:sort select="IdentificacaoMateria/SiglaSubtipoMateria" />
+                                                <xsl:sort select="IdentificacaoMateria/AnoMateria" />
+                                                <xsl:sort select="IdentificacaoMateria/NumeroMateria" />
+                                                <xsl:if test="position()=1">
+                                                    <xsl:text>(que tramita com </xsl:text>
+                                                </xsl:if>
+                                                <xsl:if test="position() &gt; 1">
+                                                    <xsl:if test="position() = last()">
+                                                        <xsl:text> e </xsl:text>
+                                                    </xsl:if>
+                                                    <xsl:if test="position() &lt; last()">
+                                                        <xsl:text>, </xsl:text>
+                                                    </xsl:if>
+                                                </xsl:if>
+                                                <xsl:value-of select="concat(IdentificacaoMateria/SiglaSubtipoMateria, ' ', IdentificacaoMateria/NumeroMateria, '/', IdentificacaoMateria/AnoMateria)" />
+                                                <xsl:if test="position() = last()">
+                                                    <xsl:text>)</xsl:text>
+                                                </xsl:if>
+                                            </xsl:for-each>
+                                        </apensadas>
+                                    </xsl:template>
+                                </xsl:stylesheet>
+                            </madoc:Transformation>
+
+                            <madoc:Action xpath="/apensadas/text()" xsi:type="madoc:ConsumeSetQuestionValueActionType" questionId="q-materia-apensada" />
+
+                        </madoc:Action>
+                    </madoc:OnClick>
+                </madoc:Command>
+
+                <madoc:Question display="Lista de matérias que tramitam em conjunto" id="q-materia-apensada" xsi:type="madoc:MemoTextQuestionType" enabled="false" visible="false" />
+
+            </madoc:Section>
+            <madoc:Section id="q-lib-obtem-materias-section" display="Identificação da Matéria" visible="true">
+
+                <madoc:Question display="Matéria" id="q-materias" required="false" xsi:type="madoc:CustomQuestionType" customQuestionType="MultiMateriaQuestion" visible="true" hint="Identifique a matéria no formato tipo número/ano (ex: PL 1/1997)">
+                    <madoc:CustomAttribute name="maxEntries" value="0" />
+                    <madoc:CustomAttribute name="mregex" value="*" />
+                </madoc:Question>
+
+                <madoc:Question display="Incluir ementa no requerimento" id="q-materias-apresentar-ementa" xsi:type="madoc:CheckBoxQuestionType" selected="true" />
+
+            </madoc:Section>
+        </madoc:Page>
+
+
+        <madoc:Page id="q-lib-detalhes-page">
+
+            <madoc:Question display="Justificação" hint="Texto iniciado com letra maiúscula. Pode ser composto por múltiplos parágrafos. " id="q-lib-justificativa" lines="20" xsi:type="madoc:RichTextQuestionType" visible="true" />
+
+        </madoc:Page>
+
+        <madoc:Page id="q-lib-comissoes-page">
+
+            <madoc:Question display="Comissões" id="q-lib-comissoes-combo" required="true" xsi:type="madoc:ComboQuestionType" visible="true" hint="">
+                <madoc:Options dataSetBind="/comissoes/*" sorted="true">
+                    <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="library-comissoes-opt" value="{./Nome}" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="Comissão de Inquérito" id="q-lib-comissoes-inquerito-combo" required="true" xsi:type="madoc:ComboQuestionType">
+                <madoc:Options dataSetBind="/comissoesInquerito/*" sorted="true">
+                    <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="library-comissoes-inq-opt" value="{./Nome}" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="Comissão Temporária" id="q-lib-comissoes-temporaria-combo" required="true" xsi:type="madoc:ComboQuestionType">
+                <madoc:Options dataSetBind="/comissoesTemporarias/*" sorted="true">
+                    <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="library-comissoes-temp-opt" value="{./Nome}" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="Comissões Mistas" id="q-lib-comissoes-mistas-combo" required="true" xsi:type="madoc:ComboQuestionType" visible="true" hint="">
+                <madoc:Options dataSetBind="/comissoesMistas/*" sorted="true">
+                    <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="library-comissoes-mistas-opt" value="{./Nome}" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="Comissão Mistas de Inquérito" id="q-lib-comissoes-mistas-inquerito-combo" required="true" xsi:type="madoc:ComboQuestionType">
+                <madoc:Options dataSetBind="/comissoesMistasInquerito/*" sorted="true">
+                    <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="library-comissoes-mistas-inq-opt" value="{./Nome}" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="Comissões Mistas Especiais" id="q-lib-comissoes-mistas-esp-combo" required="true" xsi:type="madoc:ComboQuestionType" visible="true" hint="">
+                <madoc:Options dataSetBind="/comissoesMistasEspeciais/*" sorted="true">
+                    <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="library-comissoes-mistas-esp-opt" value="{./Nome}" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="Comissões de Medida Provisória" id="q-lib-comissoes-mistas-mpv-combo" required="true" xsi:type="madoc:ComboQuestionType" visible="true" hint="">
+                <madoc:Options dataSetBind="/comissoesMedidasProvisorias/*" sorted="true">
+                    <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="library-comissoes-mistas-mpv-opt" value="{./Nome}" />
+                </madoc:Options>
+            </madoc:Question>
+
+        </madoc:Page>
+
+        <madoc:Page display="Autoria" id="q-lib-fecho-page">
+
+            <madoc:Question display="Data" id="q-lib-fecho-data" xsi:type="madoc:RadioBoxGroupQuestionType">
+                <madoc:Options>
+                    <madoc:Option id="q-lib-fecho-data-naoinformado" value="" display="Não informar" />
+                    <madoc:Option id="q-lib-fecho-data-data" value="data" selected="true" display="Data" input="true" inputType="date" inputDefaultValue="@@currentDate@@" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Section display="Autoria" id="q-lib-autoria-section">
+
+                <madoc:Question display="Tipo de autoria" id="q-lib-autoria-tipo" required="true" xsi:type="madoc:RadioBoxGroupQuestionType" hint="">
+
+                    <madoc:OnLoad>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-tipo" value="@@tipoAutoria@@" />
+                    </madoc:OnLoad>
+
+                    <madoc:Options>
+                        <!-- Manter o atributo "enabled" para processamento do xslt pelo include
+							xloom -->
+                        <madoc:Option id="q-lib-autoria-signatario-senador" enabled="true" selected="true" value="Parlamentar" />
+                        <madoc:Option id="q-lib-autoria-signatario-comissao" enabled="true" value="Comissão" />
+                        <madoc:Option id="q-lib-autoria-signatario-mesa" display="Mesa Diretora" enabled="true" value="Mesa" />
+                        <madoc:Option id="q-lib-autoria-signatario-sem-ident" enabled="true" value="Não identificado" />
+                    </madoc:Options>
+                </madoc:Question>
+
+                <madoc:Question display="Comissão signatária" id="q-lib-autoria-signatario-comissao-nome" required="true" visible="{q-lib-autoria-tipo == 'Comissão'}" enabled="{q-lib-destino != 'Plenário via Comissão'}" xsi:type="madoc:ComboQuestionType">
+                    <madoc:OnLoad>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-comissao-nome" value="@@nomeComissao@@" />
+                    </madoc:OnLoad>
+                    <madoc:Options dataSetBind="(/comissoes|/comissoesInquerito|/comissoesTemporarias|/comissoesMistas|/comissoesMistasInquerito|/comissoesMistasEspeciais|/comissoesMedidasProvisorias)/*" sorted="true">
+                        <madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="q-lib-autoria-signatario-comissao-nome-opt" value="{./Nome}" />
+                    </madoc:Options>
+                </madoc:Question>
+
+                <!-- desativado para documentos futuros mas mantido no xsd por causa do legado -->
+                <!--
+				<madoc:Question display="Autoria" id="q-lib-autoria-signatario-senador-nome" required="true" visible="{q-lib-autoria-tipo == 'Parlamentar'}" xsi:type="madoc:AutoriaQuestionType" hint="ex: Presidente da Comissão ..., Líder do ...">
+					<madoc:OnLoad>
+						<madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-senador-nome" value="@@codigoParlamentar@@" />
+					</madoc:OnLoad>
+					<madoc:Options dataSetBind="/senadores/* | /deputados/*" sorted="true">
+						<madoc:Option id="q-lib-autoria-signatario-senador-nome-opt" display="{./NomeParlamentar}" value="{./Codigo}" />
+					</madoc:Options>
+				</madoc:Question>
+				-->
+                <madoc:Question display="Signatario" id="q-lib-autoria-signatario-senador-nome" required="true" xsi:type="madoc:CustomQuestionType" customQuestionType="SignatarioQuestion" visible="{q-lib-autoria-tipo == 'Parlamentar'}" hint="ex: Presidente da Comissão ..., Líder do ...">
+                    <madoc:OnLoad>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-senador-nome" value="@@codigoParlamentar@@" />
+                    </madoc:OnLoad>
+                    <madoc:CustomAttribute name="maxEntries" value="0" />
+                    <madoc:Options dataSetBind="/senadores/* | /deputados/*" sorted="true">
+                        <madoc:Option id="q-lib-autoria-signatario-senador-nome-opt-2" display="{./NomeParlamentar}" value="{./Codigo}" />
+                    </madoc:Options>
+                </madoc:Question>
+
+                <!--
+				<madoc:Question display="Autoria" id="q-lib-autoria-signatario-senador-nome" required="true" xsi:type="madoc:CustomQuestionType" customQuestionType="SignatariosQuestion" visible="{q-lib-autoria-tipo == 'Parlamentar'}" hint="ex: Presidente da Comissão ..., Líder do ...">
+					<madoc:OnLoad>
+						<madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-senador-nome" value="@@codigoParlamentar@@" />
+					</madoc:OnLoad>
+					<madoc:CustomAttribute name="attr1" value="valor1"/>
+					<madoc:CustomAttribute name="attr2" value="valor2"/>
+					<madoc:Options dataSetBind="/senadores/* | /deputados/*" sorted="true">
+						<madoc:Option id="q-lib-autoria-signatario-senador-nome-opt-2" display="{./NomeParlamentar}" value="{./Codigo}" />
+					</madoc:Options>
+				</madoc:Question>
+				 -->
+
+                <madoc:Question defaultValue="0" display="Quantidade de assinaturas adicionais de Senadores" id="q-lib-autoria-demaissignatarios-quant-assinaturas" visible="{q-lib-autoria-tipo == 'Parlamentar' || q-lib-autoria-tipo == 'Não identificado'}" maxValue="81" minValue="0" required="false" xsi:type="madoc:IntegerQuestionType" />
+
+                <madoc:Question display="Quantidade de assinaturas adicionais de Deputados Federais" id="q-lib-autoria-demaissignatarios-quant-assinaturas-deputados" defaultValue="0" xsi:type="madoc:IntegerQuestionType" minValue="0" maxValue="513" visible="false" />
+
+                <madoc:Question selected="true" display="Imprimir partido e UF para os signatários" id="q-lib-autoria-imprimir-partido-uf" visible="{q-lib-autoria-tipo == 'Parlamentar'}" xsi:type="madoc:CheckBoxQuestionType" />
+
+            </madoc:Section>
+
+            <madoc:Section display="Opções de Impressão" id="q-lib-opcoes-impressao-section">
+
+                <madoc:Question display="Impressão do cabeçalho" id="q-lib-imprimir-cabecalho" required="true" xsi:type="madoc:RadioBoxGroupQuestionType">
+                    <madoc:Options>
+                        <madoc:Option id="q-lib-imprimir-nao" display="Sem Cabeçalho" value="sem" enabled="true" />
+                        <madoc:Option id="q-lib-imprimir-padrao" display="Cabeçalho Padrão" value="padrao" enabled="true" />
+                        <madoc:Option id="q-lib-imprimir-alternativo" display="Cabeçalho Padrão com Texto Abaixo" value="alternativo" enabled="true" />
+                    </madoc:Options>
+                    <madoc:OnLoad>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-imprimir-cabecalho" value="@@cabecalho@@" />
+                    </madoc:OnLoad>
+                </madoc:Question>
+
+                <madoc:Question display="Texto do cabeçalho" id="q-lib-texto-cabecalho" xsi:type="madoc:InputTextQuestionType" visible="{q-lib-imprimir-cabecalho == 'alternativo'}" required="{q-lib-imprimir-cabecalho == 'alternativo'}" defaultValue="@@textoAdicionalCabecalho@@" hint="ex: Gabinete da Senadora..., Líderança do ..." />
+
+                <madoc:Question selected="false" display="Reduzir espaçamento entre linhas" id="q-lib-impressao-compacta" visible="true" xsi:type="madoc:CheckBoxQuestionType" />
+            </madoc:Section>
+
+        </madoc:Page>
+
+    </madoc:Wizard>
+
+</madoc:MadocLibrary>

@@ -1,0 +1,108 @@
+<!--
+Associa nome na URN com nome por extenso para autoridades e tipos de documento.
+Associa nome do evento na URN com o tipo do texto no processo legislativo.
+ -->
+<vocabulario>
+
+    <autoridades>
+        <autoridade urn="federal" extenso="Federal" genero="M"/>
+        <autoridade urn="senado.federal" extenso="Senado Federal" genero="M"/>
+        <autoridade urn="senado.federal;secretaria.geral.mesa" extenso="Secretaria-Geral da Mesa" genero="F"/>
+        <autoridade urn="congresso.nacional" extenso="Congresso Nacional" genero="M"/>
+    </autoridades>
+    
+    <tiposDocumento>
+        <tipoDocumento  urn="lei" extenso="Lei" genero="F"/>
+        <tipoDocumento  urn="lei.complementar" extenso="Lei Complementar" genero="F"/>
+        <tipoDocumento  urn="lei.delegada" extenso="Lei Delegada" genero="F"/>
+        <tipoDocumento  urn="decreto.legislativo" extenso="Decreto Legislativo" genero="M"/>
+        <tipoDocumento  urn="decreto.lei" extenso="Decreto-Lei" genero="M"/>
+        <tipoDocumento  urn="decreto" extenso="Decreto" genero="M"/>
+        <tipoDocumento  urn="consolidacao.leis.trabalho" extenso="Consolidação das Leis do Trabalho" genero="F"/>
+        <tipoDocumento  urn="resolucao" extenso="Resolução" genero="F"/>
+        <tipoDocumento  urn="regimento.interno" extenso="Regimento Interno" genero="M"/>
+        <tipoDocumento  urn="constituicao" extenso="Constituição" genero="F"/>
+        <tipoDocumento  urn="ato.disposicoes.constitucionais.transitorias"
+            extenso="Ato das Disposições Constitucionais Transitórias" genero="M"/>
+        <tipoDocumento  urn="medida.provisoria" extenso="Medida Provisória" genero="F"/>
+        <tipoDocumento  urn="emenda.constitucional" extenso="Emenda Constitucional" genero="F"/>
+        <tipoDocumento  urn="emenda.constitucional.revisao" extenso="Emenda Constitucional de Revisão" genero="F"/>
+        <tipoDocumento  urn="instrucao.normativa" extenso="Instrução Normativa" genero="F"/>
+
+        <!-- Proposições legislativas -->
+        <tipoDocumento  urn="proposta.emenda.constitucional;pec" extenso="Proposta de Emenda Constitucional" genero="F"/>
+        <tipoDocumento  urn="projeto.lei;pls" extenso="Projeto de Lei do Senado" genero="M"/>
+        <tipoDocumento  urn="projeto.lei.complementar;pls" extenso="Projeto de Lei Complementar do Senado" genero="M"/>
+        <tipoDocumento  urn="projeto.lei;plc" extenso="Projeto de Lei da Câmara" genero="M"/>
+        <tipoDocumento  urn="projeto.lei.complementar;plc" extenso="Projeto de Lei Complementar da Câmara" genero="M"/>
+        <tipoDocumento  urn="projeto.resolucao;prs" extenso="Projeto de Resolução do Senado" genero="M"/>
+        <tipoDocumento  urn="projeto.decreto.legislativo;pds" extenso="Projeto de Decreto Legislativo" genero="M"/>
+    </tiposDocumento>
+    
+    <!-- Siglas para proposições legislativas quando a sigla não aparecer no tipo de documento -->
+    <siglas>
+    	<sigla urnAutoridade="federal" urnTipoDocumento="medida.provisoria" sigla="MPV" />
+    	<!-- 
+		As entradas abaixo são utilizadas temporariamente enquanto ainda se usa formato de URN antiga
+		sem a sigla dos projetos de lei como segundo campo do tipo do documento.
+    	 -->
+    	<sigla urnAutoridade="congresso.nacional" urnTipoDocumento="projeto.lei" sigla="PLN" />
+		<sigla urnAutoridade="senado.federal" urnTipoDocumento="projeto.lei" sigla="PLS" />
+		<sigla urnAutoridade="congresso.nacional" urnTipoDocumento="medida.provisoria" sigla="MPV" />
+		<sigla urnAutoridade="senado.federal" urnTipoDocumento="projeto.lei.senado.federal" sigla="PLS" />
+		<sigla urnAutoridade="senado.federal;secretaria.geral.mesa" urnTipoDocumento="instrucao.normativa" sigla="INM" />
+		<sigla urnAutoridade="camara.deputados" urnTipoDocumento="projeto.lei" sigla="PLC" />
+    </siglas>
+    
+    <!--
+    Informar atributo genero se o gênero não for o mesmo do tipo de documento.
+     -->
+    <atalhosUrn>
+        <atalhoUrn urnTipoDocumento="constituicao"
+            urnAutoridade="federal"
+            urn="urn:lex:br:federal:constituicao:1988-10-05;1988"
+            nome="Constituição Federal"/>
+        <atalhoUrn urnTipoDocumento="ato.disposicoes.constitucionais.transitorias"
+            urnAutoridade="federal"
+            urn="urn:lex:br:federal:ato.disposicoes.constitucionais.transitorias:1988-10-05;1988"
+            nome="Ato das Disposições Constitucionais Transitórias - ADCT"/>
+        <atalhoUrn urnTipoDocumento="consolidacao.leis.trabalho"
+            urnAutoridade="federal"
+            urn="urn:lex:br:federal:decreto.lei:1943-05-01;5452"
+            nome="Consolidação das Leis do Trabalho - CLT, aprovada pelo Decreto-Lei nº 5.452, de 1º de maio de 1943"
+            genero="F"/>
+        <atalhoUrn urnTipoDocumento="regimento.interno"
+            urnAutoridade="senado.federal"
+            urn="urn:lex:br:senado.federal:resolucao:1970-11-27;93"
+            nome="Regimento Interno do Senado Federal"
+            genero="M"/>
+        <atalhoUrn urnTipoDocumento="regimento.interno"
+            urnAutoridade="congresso.nacional"
+            urn="urn:lex:br:congresso.nacional:resolucao:1970-08-11;1"
+            nome="Regimento Comum do Congresso Nacional"
+            genero="M"/>
+    </atalhosUrn>
+    
+    <!--
+    Associação entre o evento contido na versão com o tipo do texto no processo legislativo.
+    O primeiro é utilizado como default.
+     -->
+    <eventos>
+    	<evento urn="leitura" 
+    			tipoTextoProcessoLegislativo="Texto inicial"
+    			genero="M"/>
+    	<evento urn="aprovacao.substitutivo.decisao.terminativa" 
+    			tipoTextoProcessoLegislativo="Redação do vencido em turno suplementar na Comissão"
+    			substitutivo="s"
+    			genero="F"/>
+    	<evento urn="aprovacao.substitutivo" 
+    			tipoTextoProcessoLegislativo="Redação do vencido em turno suplementar no Plenário"
+    			substitutivo="s"
+    			genero="F"/>
+    	<evento urn="apresentacao.substitutivo" 
+    			tipoTextoProcessoLegislativo="Texto do substitutivo"
+    			substitutivo="s"
+    			genero="M"/>
+    </eventos>
+    
+</vocabulario>

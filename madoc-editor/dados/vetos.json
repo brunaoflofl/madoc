@@ -1,0 +1,222 @@
+[
+  {
+    "total": false,
+    "numero": "22",
+    "ano": 2013,
+    "numeroIdentificador": "22.13",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "22.13.001",
+        "texto": "art. 5º-A da Lei nº 11.096, de 13 de janeiro de 2005, com a redação dada pelo art. 4º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "22.13.002",
+        "texto": "art. 20-C da Lei nº 12.513, de 26 de outubro de 2011, com a redação dada pelo art. 5º do projeto",
+        "conteudo": null
+      }
+    ]
+  },
+  {
+    "total": false,
+    "numero": "32",
+    "ano": 2014,
+    "numeroIdentificador": "32.14",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "32.14.001",
+        "texto": "inciso II do \"caput\" do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.002",
+        "texto": "inciso III do \"caput\" do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.003",
+        "texto": "§ 1º do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.004",
+        "texto": "§ 2º do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.005",
+        "texto": "inciso I do § 3º do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.006",
+        "texto": "inciso III do § 3º do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.007",
+        "texto": "inciso IV do § 3º do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.008",
+        "texto": "inciso V do § 3º do art. 14 da Lei Complementar nº 101, de 4 de maio de 2000, com a redação dada pelo art. 1º do projeto",
+        "conteudo": null
+      },
+      {
+        "numeroIdentificador": "32.14.009",
+        "texto": "§ 4º do art. 2º",
+        "conteudo": null
+      }
+    ]
+  },
+  {
+    "total": true,
+    "numero": "29",
+    "ano": 2018,
+    "numeroIdentificador": "29.18",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "29.18.000",
+        "texto": null,
+        "conteudo": null
+      }
+    ]
+  },
+  {
+    "total": false,
+    "numero": "35",
+    "ano": 2018,
+    "numeroIdentificador": "35.18",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "35.18.001",
+        "texto": "inciso III do parágrafo único do art. 8º da Lei nº 9.478, de 6 de agosto de 1997, com a redação dada pelo art. 12 do projeto",
+        "conteudo": "o fornecimento de informações sobre sua política de formação de preços, incluindo seus componentes e respectivos graus de participação, de comercialização às distribuidoras de combustíveis, segmentados por ponto de comercialização, produto e demais condições relevantes."
+      },
+      {
+        "numeroIdentificador": "35.18.002",
+        "texto": "art. 13",
+        "conteudo": null
+      }
+    ]
+  },
+  {
+    "total": false,
+    "numero": "36",
+    "ano": 2018,
+    "numeroIdentificador": "36.18",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "36.18.001",
+        "texto": "inciso I do art. 6º",
+        "conteudo": "parcela da receita de arrecadação das multas de trânsito, na forma estabelecida pelo art. 320 da Lei nº 9.503, de 23 de setembro de 1997 (Código de Trânsito Brasileiro);"
+      },
+      {
+        "numeroIdentificador": "36.18.002",
+        "texto": "\"caput\" do art. 320 da Lei nº 9.503, de 23 de setembro de 1997, com a redação dada pelo art. 7º do projeto",
+        "conteudo": "A receita arrecadada com a cobrança das multas de trânsito será aplicada, exclusivamente, em sinalização, engenharia de tráfego e de campo, policiamento, fiscalização e educação de trânsito."
+      },
+      {
+        "numeroIdentificador": "36.18.003",
+        "texto": "§ 1º do art. 320 da Lei nº 9.503, de 23 de setembro de 1997, com a redação dada pelo art. 7º do projeto",
+        "conteudo": "O percentual de 5% (cinco por cento) do valor das multas de trânsito arrecadadas será depositado, mensalmente, na conta do fundo de âmbito nacional destinado à segurança e educação de trânsito."
+      },
+      {
+        "numeroIdentificador": "36.18.004",
+        "texto": "§ 2º do art. 320 da Lei nº 9.503, de 23 de setembro de 1997, com a redação dada pelo art. 7º do projeto",
+        "conteudo": "O percentual de 15% (quinze por cento) do valor das multas de trânsito arrecadadas será destinado ao financiamento de ações no âmbito do Programa Bicicleta Brasil (PBB)."
+      },
+      {
+        "numeroIdentificador": "36.18.005",
+        "texto": "§ 3º do art. 320 da Lei nº 9.503, de 23 de setembro de 1997, com a redação dada pelo art. 7º do projeto",
+        "conteudo": "Os órgãos responsáveis pela arrecadação das multas de trânsito ficam obrigados a divulgar, mensalmente, pela rede mundial de computadores, o total das receitas auferidas no mês anterior."
+      }
+    ]
+  },
+  {
+    "total": false,
+    "numero": "40",
+    "ano": 2018,
+    "numeroIdentificador": "40.18",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "40.18.011",
+        "texto": "\"caput\" do art. 72 da Lei nº 8.383, de 30 de dezembro de 1991, com a redação dada pelo art. 36 do projeto",
+        "conteudo": "<Clob>"
+      },
+      {
+        "numeroIdentificador": "40.18.012",
+        "texto": "\"caput\" do art. 1º da Lei nº 8.989, de 24 de fevereiro de 1995, com a redação dada pelo art. 37 do projeto",
+        "conteudo": "<Clob>"
+      }
+    ]
+  },
+  {
+    "total": false,
+    "numero": "3",
+    "ano": 2019,
+    "numeroIdentificador": "03.19",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "03.19.002",
+        "texto": "parágrafo único do art. 2º",
+        "conteudo": "<Clob>"
+      }
+    ]
+  },
+  {
+    "total": false,
+    "numero": "8",
+    "ano": 2019,
+    "numeroIdentificador": "08.19",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "08.19.001",
+        "texto": "\"caput\" do parágrafo único do art. 6º",
+        "conteudo": "<Clob>"
+      },
+      {
+        "numeroIdentificador": "08.19.002",
+        "texto": "inciso I do parágrafo único do art. 6º",
+        "conteudo": "<Clob>"
+      },
+      {
+        "numeroIdentificador": "08.19.003",
+        "texto": "inciso II do parágrafo único do art. 6º",
+        "conteudo": "<Clob>"
+      },
+      {
+        "numeroIdentificador": "08.19.004",
+        "texto": "inciso III do parágrafo único do art. 6º",
+        "conteudo": "<Clob>"
+      }
+    ]
+  },
+  {
+    "total": true,
+    "numero": "11",
+    "ano": 2019,
+    "numeroIdentificador": "11.19",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "11.19.000",
+        "texto": null,
+        "conteudo": null
+      }
+    ]
+  },
+  {
+    "total": false,
+    "numero": "14",
+    "ano": 2019,
+    "numeroIdentificador": "14.19",
+    "dispositivos": [
+      {
+        "numeroIdentificador": "14.19.001",
+        "texto": "art. 55-D da Lei nº 9.096, de 19 de setembro de 1995 (Lei dos Partidos Políticos), com a redação dada pelo art. 2º do projeto.",
+        "conteudo": "<Clob>"
+      }
+    ]
+  }
+]

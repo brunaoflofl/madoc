@@ -1,0 +1,30 @@
+
+Wizard (0..1 OnLoad: OnLoadEventType, ...)
+
+QuestionType (0..* OnChange: OnChangeEventType, ...)
+
+Section (..., 0..* Command: BaseCommandType, ...)
+
+------ Hierarquias
+EventType (1..* Action: ActionType)
+	OnLoadEventType
+	OnChangeEventType
+	OnClickEventType
+	
+ActionType
+	SwitchType (1..* Case: SwitchCaseType, 0..1 Otherwise: ActionListType)
+	SetQuestionValueActionType (questionId, value)
+	SelectOptionActionType (optionId)
+	AddQuestionValueActionType (questionId, value)
+	ConsumeRestServiceActionType (0..1 transformations (0..* externalXSL (href), 0..* inlineXSL (any)), actions (1..* action: ConsumeActionType), uri),
+	ConsumeActionType (xpath)
+		ConsumeSetQuestionValueActionType (questionId)
+		ConsumeAddQuestionValueActionType (questionId)
+	
+ActionListType (0..* action: ActionType)
+	SwitchCaseType (questionValue, attributeToTest)	
+	
+BaseWizardRestrictType
+	BaseCommandType (0..1 OnClickRules)
+		ButtonType
+			 	

@@ -1,0 +1,70 @@
+-------------------------------------------
+Sintaxe de regras em atributos Madoc
+-------------------------------------------
+
+Alguns atributos de questões do Madoc podem apresentar valores
+fixos/literais ou calculados a partir de valores de outras questões.
+
+As regras de cálculo devem ser limitadas por {} para diferenciá-las
+dos valores fixos/literais. 
+
+-----
+Atributos booleanos
+
+Atributos: 
+	visible
+	enabled
+	required
+
+Operadores lógicos: 
+	== 		Igualdade
+ 	&&		And lógico
+ 	||		Or lógico
+
+Variáveis:
+	o id das questões pode ser utilizado como variável com o valor
+	da questão em formato string, número ou boolean, de acordo com o tipo da questão
+	
+Literais:
+	Strings literais devem ser limitadas por aspas simples.
+	número, true e false são tratado como literal
+	
+Exemplos:
+
+	visible="{q-fundamentacao == 'Audiência Pública para instruir matéria sob sua apreciação'}"
+
+	visible="{q-fundamentacao == 'Audiência Pública para instruir matéria sob sua apreciação' && q-opcao == 1}"
+	
+	enabled="true"  <--- literal
+	
+-----	
+Atributos string
+
+Atributos: 
+	display
+	hint
+	defaultValue
+
+Operadores lógicos:
+	== 		Igualdade
+ 	&&		And lógico
+ 	||		Or lógico
+
+Operador condicional:
+	?:		se? então: senão
+	
+Literais:
+	Strings literais devem ser limitadas por aspas simples.
+	número, true e false são tratado como literal
+	
+Exemplos:
+
+	display="{q-opcao == 1? 'Nome do Senador': 'Nome do Deputado'}"
+	
+	display="{q-opcao == 1? 'Nome do Senador': q-opcao == 2? 'Nome do Deputado': 'Nome do Vereador'}"
+
+	display="Nome do Senador" <--- literal
+
+	display="Nome do {q-nome}"
+
+	

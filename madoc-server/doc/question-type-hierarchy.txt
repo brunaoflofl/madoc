@@ -1,0 +1,16 @@
+QuestionType (abstract)
+	TextQuestionType (abstract)
+		InputTextQuestionType 
+		MultiLineTextQuestionType (abstract)
+			MemoTextQuestionType
+			RichTextQuestionType
+	IntegerQuestionType
+	DecimalQuestionType
+	DateQuestionType
+	CheckBoxQuestionType
+	SelectQuestionType (abstract)
+		ComboQuestionType
+		CheckBoxGroupQuestionType
+		RadioBoxGroupQuestionType
+	ChoiceListQuestionType
+	TextListQuestionType

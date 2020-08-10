@@ -1,0 +1,136 @@
+<DetalheMateria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://legis.senado.leg.br/dadosabertos/dados/DetalheMateriav5.xsd">
+    <Metadados>
+        <Versao>08/05/2020 08:49:00</Versao>
+        <VersaoServico>5</VersaoServico>
+        <DataVersaoServico>2017-02-01</DataVersaoServico>
+        <DescricaoDataSet>Dados básicos da matéria, incluindo autoria, norma gerada e outras informações. A partir de fevereiro de 2019, os requerimentos de comissões permanentes passam a ser numerados com a mesma sistemática dos requerimentos das comissões temporárias, seguindo, portanto, o padrão: REQ 99/2019 - SIGLA_COMISSÃO. Dessa forma, para se buscar um requerimento de determinada comissão (com ano a partir de 2019), deve-se informar .../materia/sigla/número/ano?comissao=sigla da comissão.</DescricaoDataSet>
+    </Metadados>
+    <Materia>
+        <IdentificacaoMateria>
+            <CodigoMateria>132117</CodigoMateria>
+            <SiglaCasaIdentificacaoMateria>SF</SiglaCasaIdentificacaoMateria>
+            <NomeCasaIdentificacaoMateria>Senado Federal</NomeCasaIdentificacaoMateria>
+            <SiglaSubtipoMateria>PLS</SiglaSubtipoMateria>
+            <DescricaoSubtipoMateria>PROJETO DE LEI DO SENADO</DescricaoSubtipoMateria>
+            <NumeroMateria>00001</NumeroMateria>
+            <AnoMateria>2018</AnoMateria>
+            <DescricaoObjetivoProcesso>Iniciadora</DescricaoObjetivoProcesso>
+            <DescricaoIdentificacaoMateria>PLS 1/2018</DescricaoIdentificacaoMateria>
+            <IndicadorTramitando>Sim</IndicadorTramitando>
+        </IdentificacaoMateria>
+        <DadosBasicosMateria>
+            <EmentaMateria>Altera a Lei no 11.445, de 5 de janeiro de 2007, que estabelece as diretrizes nacionais para o saneamento básico, para dispor sobre o Certificado de Recebíveis de Saneamento (CRS).</EmentaMateria>
+            <ExplicacaoEmentaMateria>Facilita a destinação de poupança para o investimento em saneamento.</ExplicacaoEmentaMateria>
+            <IndicadorComplementar>Não</IndicadorComplementar>
+            <DataApresentacao>2018-02-05</DataApresentacao>
+            <DataLeitura>2018-02-05</DataLeitura>
+            <NaturezaMateria>
+                <CodigoNatureza>11</CodigoNatureza>
+                <NomeNatureza>NORMA_GERAL</NomeNatureza>
+                <DescricaoNatureza>Norma Geral</DescricaoNatureza>
+            </NaturezaMateria>
+        </DadosBasicosMateria>
+        <Autoria>
+            <Autor>
+                <NomeAutor>Roberto Muniz</NomeAutor>
+                <SiglaTipoAutor>SENADOR</SiglaTipoAutor>
+                <DescricaoTipoAutor>Senador</DescricaoTipoAutor>
+                <UfAutor>BA</UfAutor>
+                <NumOrdemAutor>1</NumOrdemAutor>
+                <IndicadorOutrosAutores>Não</IndicadorOutrosAutores>
+                <IdentificacaoParlamentar>
+                    <CodigoParlamentar>5052</CodigoParlamentar>
+                    <CodigoPublicoNaLegAtual>931</CodigoPublicoNaLegAtual>
+                    <NomeParlamentar>Roberto Muniz</NomeParlamentar>
+                    <NomeCompletoParlamentar>Roberto de Oliveira Muniz</NomeCompletoParlamentar>
+                    <SexoParlamentar>Masculino</SexoParlamentar>
+                    <FormaTratamento>Senador</FormaTratamento>
+                    <UrlFotoParlamentar>http://www.senado.leg.br/senadores/img/fotos-oficiais/senador5052.jpg</UrlFotoParlamentar>
+                    <UrlPaginaParlamentar>http://www25.senado.leg.br/web/senadores/senador/-/perfil/5052</UrlPaginaParlamentar>
+                    <EmailParlamentar>roberto.muniz@senador.leg.br</EmailParlamentar>
+                    <SiglaPartidoParlamentar>PP</SiglaPartidoParlamentar>
+                    <UfParlamentar>BA</UfParlamentar>
+                </IdentificacaoParlamentar>
+            </Autor>
+        </Autoria>
+        <Assunto>
+            <AssuntoEspecifico>
+                <Codigo>149</Codigo>
+                <Descricao>Saúde</Descricao>
+            </AssuntoEspecifico>
+            <AssuntoGeral>
+                <Codigo>84</Codigo>
+                <Descricao>Social</Descricao>
+            </AssuntoGeral>
+        </Assunto>
+        <OrigemMateria>
+            <NomePoderOrigem>Legislativo</NomePoderOrigem>
+            <SiglaCasaOrigem>SF</SiglaCasaOrigem>
+            <NomeCasaOrigem>Senado Federal</NomeCasaOrigem>
+        </OrigemMateria>
+        <CasaIniciadoraNoLegislativo>
+            <SiglaCasaIniciadora>SF</SiglaCasaIniciadora>
+            <NomeCasaIniciadora>Senado Federal</NomeCasaIniciadora>
+        </CasaIniciadoraNoLegislativo>
+        <SituacaoAtual>
+            <Autuacoes>
+                <Autuacao>
+                    <NumeroAutuacao>1</NumeroAutuacao>
+                    <Situacao>
+                        <DataSituacao>2019-03-07</DataSituacao>
+                        <CodigoSituacao>91</CodigoSituacao>
+                        <SiglaSituacao>RELATOR</SiglaSituacao>
+                        <DescricaoSituacao>MATÉRIA COM A RELATORIA</DescricaoSituacao>
+                    </Situacao>
+                    <Local>
+                        <DataLocal>2019-03-07</DataLocal>
+                        <CodigoLocal>1306</CodigoLocal>
+                        <TipoLocal>C</TipoLocal>
+                        <SiglaCasaLocal>SF</SiglaCasaLocal>
+                        <NomeCasaLocal>Senado Federal</NomeCasaLocal>
+                        <SiglaLocal>CDR</SiglaLocal>
+                        <NomeLocal>Comissão de Desenvolvimento Regional e Turismo</NomeLocal>
+                    </Local>
+                </Autuacao>
+            </Autuacoes>
+        </SituacaoAtual>
+        <OutrasInformacoes>
+            <Servico>
+                <NomeServico>EmendaMateria</NomeServico>
+                <DescricaoServico>Emendas da matéria</DescricaoServico>
+                <UrlServico>http://legis.senado.leg.br/dadosabertos/materia/emendas/132117?v=6</UrlServico>
+            </Servico>
+            <Servico>
+                <NomeServico>MovimentacaoMateria</NomeServico>
+                <DescricaoServico>Movimentações da matéria, como tramitações, despachos e prazos.
+       Evoluções:
+       14/8/2019
+       - criada nova Tag "DeliberacoesMPV" para as deliberações de MPV;
+       - criada nova Tag "DescricaoItemCalendario" subord</DescricaoServico>
+                <UrlServico>http://legis.senado.leg.br/dadosabertos/materia/movimentacoes/132117?v=6</UrlServico>
+            </Servico>
+            <Servico>
+                <NomeServico>RelatoriaMateria</NomeServico>
+                <DescricaoServico>Relatoria atual e relatorias encerradas (histórico) da matéria</DescricaoServico>
+                <UrlServico>http://legis.senado.leg.br/dadosabertos/materia/relatorias/132117?v=5</UrlServico>
+            </Servico>
+            <Servico>
+                <NomeServico>TextoMateria</NomeServico>
+                <DescricaoServico>Textos da matéria. 
+       Evoluções da versão: 
+       28/8/2019 - incluída a tag "AutoriaTexto", sob a tag "Texto".</DescricaoServico>
+                <UrlServico>http://legis.senado.leg.br/dadosabertos/materia/textos/132117?v=5</UrlServico>
+            </Servico>
+            <Servico>
+                <NomeServico>VotacaoMateria</NomeServico>
+                <DescricaoServico>Votações da matéria</DescricaoServico>
+                <UrlServico>http://legis.senado.leg.br/dadosabertos/materia/votacoes/132117?v=5</UrlServico>
+            </Servico>
+            <Servico>
+                <NomeServico>VotacoesComissao</NomeServico>
+                <UrlServico>http://legis.senado.leg.br/dadosabertos/votacaoComissao/materia/PLS/00001/2018?v=1</UrlServico>
+            </Servico>
+        </OutrasInformacoes>
+        <UrlGlossario>http://legis.senado.leg.br/dadosabertos/glossario/lista</UrlGlossario>
+    </Materia>
+</DetalheMateria>

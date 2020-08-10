@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.gov.lexml.madoc</groupId>
+		<artifactId>madoc-dominio</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<artifactId>madoc-server</artifactId>
+	<packaging>jar</packaging>
+	<name>Montador Automático de Documentos - MADOC</name>
+	<description>Processamento dos XML e PDF do MADOC</description>
+
+	<build>
+		<plugins>
+
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>0.14.0</version>
+				<executions>
+					<execution>
+						<id>jaxb2-schemas</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<extension>true</extension>
+
+					<args>
+						<arg>-Xcopyable</arg>
+						<arg>-Xinheritance</arg>
+						<arg>-Xvisitor</arg>
+						<arg>-Xvisitor-package:br.gov.lexml.madoc.server.schema.entity.visitor</arg>
+					</args>
+
+					<schemaDirectory>src/main/xsd</schemaDirectory>
+					<generatePackage>br.gov.lexml.madoc.server.schema.entity</generatePackage>
+					<generateDirectory>${project.build.directory}/generated-sources/xjc</generateDirectory>
+
+					<plugins>
+						<plugin>
+							<groupId>org.ops4j.xvisitor</groupId>
+							<artifactId>xvisitor-plugin</artifactId>
+							<version>0.1.0</version>
+						</plugin>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-basics</artifactId>
+							<version>0.6.4</version>
+						</plugin>
+					</plugins>
+				</configuration>
+			</plugin>
+
+			<!-- Manifest info -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<index>false</index>
+						<manifestEntries>
+							<Project-version>${project.version}</Project-version>
+						</manifestEntries>
+						<manifestSections>
+							<manifestSection>
+								<name>pdfa-fonts/GenBasB.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+							<manifestSection>
+								<name>pdfa-fonts/GenBasBI.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+							<manifestSection>
+								<name>pdfa-fonts/GenBasI.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+							<manifestSection>
+								<name>pdfa-fonts/GenBasR.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+							<manifestSection>
+								<name>pdfa-fonts/FreeSerif.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+							<manifestSection>
+								<name>pdfa-fonts/FreeSerifBold.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+							<manifestSection>
+								<name>pdfa-fonts/FreeSerifBoldItalic.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+							<manifestSection>
+								<name>pdfa-fonts/FreeSerifItalic.ttf</name>
+								<manifestEntries>
+									<Content-Type>application/x-font</Content-Type>
+								</manifestEntries>
+							</manifestSection>
+						</manifestSections>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<!-- <version>2.3.1</version> -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+		</dependency>
+
+		<!-- FOP -->
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>fop</artifactId>
+			<version>2.2</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>batik-svg-dom</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>batik-bridge</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>batik-awt-util</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>batik-gvt</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>batik-transcoder</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>batik-extension</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>batik-ext</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- XML Graphics -->
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-svg-dom</artifactId>
+			<version>1.9.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-bridge</artifactId>
+			<version>1.9.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-awt-util</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-gvt</artifactId>
+			<version>1.9.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-transcoder</artifactId>
+			<version>1.9.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.xmlgraphics</groupId>
+					<artifactId>fop</artifactId>
+				</exclusion>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-extension</artifactId>
+			<version>1.9.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-ext</artifactId>
+			<version>1.9.1</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>xml-apis</artifactId>
+					<groupId>xml-apis</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>br.gov.lexml</groupId>
+			<artifactId>xloom</artifactId>
+			<version>2.0.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>br.gov.lexml</groupId>
+			<artifactId>pdfa-helper</artifactId>
+			<version>0.10.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-jxpath</groupId>
+			<artifactId>commons-jxpath</artifactId>
+			<version>1.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>1.11.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.1.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>jaxen</groupId>
+			<artifactId>jaxen</artifactId>
+			<!-- 
+			<version>1.2.0</version>
+			 -->
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.htmlcleaner</groupId>
+			<artifactId>htmlcleaner</artifactId>
+			<version>2.24</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<!-- 
+			<version>2.11.0</version>
+			 -->
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<!-- 
+			<version>2.11.0</version>
+			 -->
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<!-- 
+			<version>2.11.0</version>
+			 -->
+		</dependency>
+
+	</dependencies>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.google.zxing</groupId>
+				<artifactId>core</artifactId>
+				<version>2.1</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>

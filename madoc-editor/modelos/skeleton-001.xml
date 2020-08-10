@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<madoc:MadocSkeleton xmlns:madoc="http://www.lexml.gov.br/madoc/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:sf="http://www.senado.gov.br/requerimento/modelo/metadado" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <madoc:Metadata id="skeleton-001">
+        <madoc:Entry key="Titulo">Esqueleto padrão</madoc:Entry>
+        <madoc:Entry key="TipoModelo">Requerimento</madoc:Entry>
+        <madoc:Entry key="Indexacao">
+            <madoc:List>
+                <madoc:Entry>CPI</madoc:Entry>
+                <madoc:Entry>Criação</madoc:Entry>
+            </madoc:List>
+        </madoc:Entry>
+        <madoc:Entry key="PublicoAlvo">Senador</madoc:Entry>
+    </madoc:Metadata>
+
+    <madoc:Skeleton>
+        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="Gentium Basic">
+            ## IMPRESSÃO COMPACTA 
+	
+	#if($madoc.valueOf.q-lib-impressao-compacta #and $madoc.valueOf.q-lib-impressao-compacta == 'true')
+		#set($lineHeight = "120%")
+		
+		#set($spacing1 = "12pt")
+		#set($spacing2 = "18pt")
+		#set($spacing3 = "24pt")
+		#set($spacing4 = "32pt")
+		#set($spacing5 = "36pt")
+		#set($spacing6 = "48pt")
+	#else
+		#set($lineHeight = "160%")	
+		
+		#set($spacing1 = "10pt")
+		#set($spacing2 = "14pt")
+		#set($spacing3 = "21pt")
+		#set($spacing4 = "26pt")
+		#set($spacing5 = "29pt")
+		#set($spacing6 = "40pt")
+	#end
+        
+
+    ## Quebra de linha em Materias
+
+        #macro(idMateria $materia)
+            #set($i = $materia.indexOf(' ('))
+            #if($i == -1)
+                #nowrap($materia)
+            #else
+                #nowrap($materia.substring(0, $i))
+                $materia.substring($i)
+            #end
+        #end
+
+    ## PALAVRAS FEMININAS EM ORDEM ALFABÉTICA
+    ## CASO A FLEXÃO DE GÊNERO MODIFIQUE O INÍCIO DA PALAVRA, A PALAVRA FLEXIONADA TAMBÉM DEVE SER ACRESCENTADA (EX: SEÇÃO, SEÇÕES)
+
+		#macro(ifFeminino $palavra $fem $masc)
+			#set($pfem = ['alínea', 'emenda', 'indicação', 'ins', 'parte', 'pec', 'proposição', 'proposta', 'medida provisória', 'mpv', 'ecd', 'consulta', 'mensagem', 'representação', 'rep', 'seção', 'seções', 'subseção', 'subseções', 'sug'])
+			#set($ret = $masc)
+			#foreach($p in $pfem)
+                #if($palavra.toLowerCase().startsWith($p))
+                    #set($ret = $fem)
+                    #break
+                #end
+			#end
+			$ret
+		#end
+
+        #macro(ifFemininoPlural $palavras $fem $masc)
+			#set($pfem = ['alínea', 'emenda', 'indicação', 'ins', 'parte', 'pec', 'proposição', 'proposta', 'medida provisória', 'mpv', 'ecd', 'consulta', 'mensagem', 'representação', 'rep', 'seção', 'seções', 'subseção', 'subseções', 'sug'])
+            #set($ret = $fem)
+			#foreach($pa in $palavras)
+                #set($atual = $masc)
+                #foreach($p in $pfem)
+                    #if($pa.toLowerCase().startsWith($p))
+                        #set($atual = $fem)
+                        #break
+                    #end
+                #end
+                #if($atual == $masc)
+                    #set($ret = $masc)
+                    #break
+                #end
+            #end
+			$ret
+		#end
+
+    ## SIGLAS FEMININAS DO MATE EM ORDEM ALFABÉTICA
+    ## CASO A FLEXÃO DE GÊNERO MODIFIQUE O INÍCIO DA PALAVRA, A PALAVRA FLEXIONADA TAMBÉM DEVE SER ACRESCENTADA (EX: SEÇÃO, SEÇÕES)
+
+		#macro(ifSiglaMatFeminina $palavra $fem $masc)
+			#set($pfem = ['ecd', 'ecs', 'mcr', 'mpv', 'pec', 'ccc', 'ccn', 'con', 'cop', 'das', 'den', 'ins', 'mcn', 'mos', 'msc', 'msf', 'msg', 'pcf','pcj', 'pdh', 'pet', 'pfs', 'por', 'ptn', 'qcn', 'qed', 'qsf', 'rae', 'rrc', 'sin', 'sug'])
+			#set($ret = $masc)
+			#foreach($p in $pfem)
+			#if($palavra.toLowerCase().startsWith($p))
+				#set($ret = $fem)
+				#break
+			#end
+			#end
+			$ret
+    #end
+
+
+    ## DISPOSITIVOS NO PLURAL
+
+		#macro(ifDispositivosPlural $expressao $plural $singular)
+			#set($ret = $singular) #set($expressao=$expressao.trim())
+			#if($expressao.contains(' e '))
+				#set($ret = $plural)
+			#else
+					## PALAVRAS PLURAL EM ORDEM ALFABÉTICA
+					#set($pplu = ['alíneas', 'artigos', 'arts', 'capítulos', 'incisos', 'itens', 'livros', 'parágrafos', '§§', 'partes', 'seções', 'subseções', 'títulos'])
+					#foreach($p in $pplu)
+					#if($expressao.toLowerCase().startsWith($p))
+						#set($ret = $plural)
+						#break
+					#end
+					#end
+			#end
+			$ret
+		#end
+
+    ## DISPOSITIVOS FEMININO E PLURAL
+
+    #macro(ifDispFemPlural $expr $fs $ms $fp $mp)
+        #set($p = "#ifDispositivosPlural($expr 'p' '')")
+			#set($p = $p.trim())
+			#if($p == 'p')
+					#ifFeminino($expr $fp $mp)
+			#else
+					#ifFeminino($expr $fs $ms)
+			#end
+		#end
+
+		## TRATAMENTO DE EMENTA
+		#macro(trataEmenta $texto)
+			#if($texto #and $texto != '')
+				#set($textoT = $texto.trim())
+
+				## Retira . no final
+				#if($textoT.endsWith('.'))
+					#set($indice = $textoT.length() - 1)
+					#set($textoT = $textoT.substring(0, $indice))
+				#end
+
+				## Primeira letra minúscula
+				#set($primeiraLetra = $textoT.substring(0, 1).toLowerCase())
+				#set($textoT ="$primeiraLetra$textoT.substring(1)")
+
+				## Não altera emenda iniciada em emenda ou substitutivo
+				#if(!($textoT.toLowerCase().startsWith("emenda") #or $textoT.toLowerCase().startsWith("substitutivo")))
+					#set($strVetoParcial = 'veto parcial ')
+					#if($textoT.toLowerCase().startsWith($strVetoParcial))
+						#set($textoT = $textoT.substring($strVetoParcial.length()))
+					#else
+						#set($textoT = $textoT)
+						que 
+					#end
+				#end
+
+				#set($textoT = $textoT.replace('“', '‘').replace('”', '’'))
+            <fo:inline>“$textoT”</fo:inline>
+            #end
+		#end
+        
+        #macro(ementaMateriaOpcional $ementa $apresentarEmenta)
+            #if(not($ementa))
+                #set($ementa = $madoc.valueOf.q-materia-ementa)
+            #end
+            #if(not($apresentarEmenta))
+            	#set($apresentarEmenta = $madoc.valueOf.q-materia-apresentar-ementa)
+            #end
+            #if($apresentarEmenta == 'true' #and $madoc.size($ementa) gt 0)
+                , #trataEmenta($ementa)
+            #end
+        #end
+
+    ## NORMALIZA O CAPS DO TEXTO ENVIADO
+
+		#macro(initCap $texto)
+            #set($initCapExcl = ['a', 'à', 'ao', 'aos', 'as', 'às', 'e', 'o', 'os', 'de', 'da', 'das', 'do', 'dos', 'nº', 'pela', 'por', 'para', 'na', 'em'])
+			#set($initCapExclSiglas = ['cae', 'cas', 'ccj', 'cct', 'cdh', 'cdr', 'ce', 'ci', 'cma', 'cpi', 'cpmi', 'cra', 'cre', 'csf',
+				'ecd','eds','mpv','pdc','pdn','pdr','pds','pec','plc','pln','pls','plv','prn','prs','rai','ras','rce','rcm','rcp','rcs','rct','rdh','rdr','red',
+				'rff','ric','rma','rmc','rqa','rqe','rqf','rqi','rqj','rqm','rqn','rqr','rqs','rra','rre','rsj','scd','sds',
+				'ct', 'risf'])
+			#set($textoLower = $texto.toLowerCase())
+			#set($tokens = $textoLower.split(' '))
+			#foreach($palavra in $textoLower.split(' '))
+				#if($initCapExcl.contains($palavra))
+					$palavra
+				#else
+					#if($initCapExclSiglas.contains($palavra))
+							$palavra.toUpperCase()
+					#else
+							$palavra.substring(0,1).toUpperCase()$palavra.substring(1)
+					#end
+				#end
+			#end
+		#end
+
+
+		## EVITA QUEBRA DE LINHA
+
+		#macro(nowrap $texto)
+            <fo:inline keep-together.within-line="always">$texto</fo:inline>
+            #end
+
+        ## Na materia2
+
+        #macro(idMateria $materia)
+            #set($palavras = $materia.split(' '))
+            #set($materiafinal = $palavras[0])
+            #set($palavrafinal = '')
+            #foreach($palavra in $palavras)
+                #if($palavra != $palavras[0])
+                    #if($palavra.startsWith('('))
+                        #set($palavrafinal = $palavra)
+                    #else
+                        #set($materiafinal = "$materiafinal $palavra")
+                    #end
+                #end
+            #end
+            #nowrap($materiafinal)
+            #if($palavrafinal != '')
+                #nowrap($palavrafinal)
+            #end
+        #end
+
+		## ITALICO NO FORMATO FO
+
+		#macro(italicoFO $texto)
+            <fo:inline font-style="italic">$texto</fo:inline>
+            #end
+
+        ## MONTA IDENTIFICACAO DE MATÉRIA (SIGLA NUMERO/ANO)
+
+		#macro(materia $campoSigla $campoNumero $campoAno)
+            #nowrap("$madoc.valueOf.get($campoSigla).toUpperCase() $madoc.valueOf.get($campoNumero).toUpperCase()/$madoc.valueOf.get($campoAno)")
+        #end
+
+
+		## MONTA IDENTIFICACAO DE MATÉRIA (SIGLA nº NUMERO de ANO)
+
+		#macro(materia2 $campoSigla $campoNumero $campoAno)
+            #nowrap("$madoc.valueOf.get($campoSigla).toUpperCase() nº $madoc.valueOf.get($campoNumero).toUpperCase() de $madoc.valueOf.get($campoAno)")
+    #end
+
+
+
+	##
+    ## Definindo variaveis globais
+    ##
+
+		#set($pMarginBottomDefault = "0.6em")
+
+
+	##
+    ## Definindo a epigrafe do requerimento com base no colegiado
+    ##
+		#if($madoc.valueOf.q-lib-destino == "Mesa")
+            #set($epigrafeColeg = " - Mesa")
+		#elseif($madoc.valueOf.q-lib-destino == "Comissão" #or $madoc.valueOf.q-lib-destino == "Plenário via Comissão")
+            #set($siglaColeg = $ds.queryString("(/comissoes|/comissoesTemporarias|/comissoesInquerito|/comissoesMedidasProvisorias|/comissoesMistas|/comissoesMistasInquerito|/comissoesMistasEspeciais)[@name='$madoc.valueOf.q-lib-destino-comissao-comissao']/Sigla"))
+            #set($epigrafeColeg = " - $siglaColeg"))
+		#elseif($madoc.valueOf.q-lib-destino == "CPI")
+            #set($siglaColeg = $ds.queryString("(/comissoesInquerito|/comissoesMistasInquerito)[@name='$madoc.valueOf.q-lib-destino-comissao-cpi']/Sigla"))
+            #set($epigrafeColeg = " - $siglaColeg"))
+		#elseif($madoc.valueOf.q-lib-destino == "Subcomissão")
+            #if($metadata.queryString("/CasaLegislativa") == 'CN')
+                #set($epigrafeColeg = " - " + $ds.queryString("/subcomissoesMistas[@name='$madoc.valueOf.q-lib-destino-subcomissao-subcomissao']/Sigla")))
+            #else
+                #set($epigrafeColeg = " - " + $ds.queryString("/subcomissoes[@name='$madoc.valueOf.q-lib-destino-subcomissao-subcomissao']/Sigla")))
+            #end
+		#else
+            #set($epigrafeColeg = "")
+		#end
+
+
+    ##
+    ## Definindo o verbo da requisicao com base nos autores do requerimento
+    ##
+
+    #if($madoc.valueOf.q-lib-autoria-tipo == "Comissão" #or $madoc.valueOf.q-lib-autoria-tipo == "Mesa Diretora")
+        #set($qtdAssinaturas = 2)
+    #else
+        #set($qtdAssinaturas = 0)
+    #end
+
+    #if($qtdAssinaturas le 1)
+        #set($vetorSenadores = $madoc.valueListOf.q-lib-autoria-signatario-senador-nome)
+        #if($madoc.size($vetorSenadores) gt 0)
+            #set($qtdAssinaturas = $qtdAssinaturas + $madoc.size($vetorSenadores)/2)
+        #end
+        #if($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas)
+            #set($qtdAssinaturas = $qtdAssinaturas + $madoc.parseInt($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas))
+        #end
+        #if($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas-deputados)
+            #set($qtdAssinaturas = $qtdAssinaturas + $madoc.parseInt($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas-deputados))
+        #end
+    #end
+
+    #if($qtdAssinaturas gt 1)
+        #set($verboRequeiro = "Requeremos")
+    #else
+        #set($verboRequeiro = "Requeiro")
+    #end
+
+
+    ##
+    ## Estabelecendo o tamanho do texto do cabeçalho das assinaturas
+    ##
+
+	#set($objetoDoRequerimento = $madoc.renderedTemplate.objetoDoRequerimento)
+
+    #set($cabecalhoObjRequerimento = $madoc.removeEntities($madoc.normalizeSpaces($objetoDoRequerimento)))
+		#set($numMaxCarac = 420)
+		#if($cabecalhoObjRequerimento.length() gt $numMaxCarac)
+			#set($cabecalhoObjRequerimento = $cabecalhoObjRequerimento.substring(0, $cabecalhoObjRequerimento.substring(0, $numMaxCarac).lastIndexOf(" ")))
+			#set($cabecalhoObjRequerimento = "$cabecalhoObjRequerimento...")
+		#end
+
+    #set($anoEpigrafe = $madoc.queryAnswerMetadata('/AnoEpigrafe'))
+        #if($madoc.size($anoEpigrafe) == 0)
+        #set($anoEpigrafe = "&#160;&#160;&#160;&#160;&#160;&#160;")
+    #end
+            <fo:layout-master-set xmlns:fo="http://www.w3.org/1999/XSL/Format">
+
+                <!-- layout for the first page -->
+                <fo:simple-page-master master-name="firstPage" page-height="29.7cm" page-width="21cm" margin-top="2.5cm" margin-bottom="2cm" margin-left="2.5cm" margin-right="2cm">
+                    <fo:region-body margin-top="4cm" />
+                    <fo:region-before region-name="header-principal" extent="3cm" />
+                </fo:simple-page-master>
+                <fo:simple-page-master master-name="restPage" page-height="29.7cm" page-width="21cm" margin-top="2.5cm" margin-bottom="2cm" margin-left="2.5cm" margin-right="2cm">
+                    <fo:region-body margin-top="2cm" />
+                    <fo:region-before region-name="header-assinaturas" extent="3cm" />
+                </fo:simple-page-master>
+
+                <fo:page-sequence-master master-name="document">
+                    <fo:repeatable-page-master-alternatives>
+                        <fo:conditional-page-master-reference page-position="first" master-reference="firstPage" />
+                        <fo:conditional-page-master-reference page-position="rest" master-reference="restPage" />
+                    </fo:repeatable-page-master-alternatives>
+                </fo:page-sequence-master>
+            </fo:layout-master-set>
+
+            <fo:declarations>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/">
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:pdf="http://ns.adobe.com/pdf/1.3/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:pdfaid="http://www.aiim.org/pdfa/ns/id/" xmlns:pdfaExtension="http://www.aiim.org/pdfa/ns/extension/" xmlns:pdfaSchema="http://www.aiim.org/pdfa/ns/schema#" xmlns:pdfaProperty="http://www.aiim.org/pdfa/ns/property#" xmlns:check="http://lexeditweb/check">
+                            <xmp:CreatorTool>LexEdit</xmp:CreatorTool>
+                            <xmp:ModifyDate>$madoc.currentISO8601DateTime()</xmp:ModifyDate>
+                            <xmp:CreateDate>$madoc.currentISO8601DateTime()</xmp:CreateDate>
+                            <xmp:MetadataDate>$madoc.currentISO8601DateTime()</xmp:MetadataDate>
+                            <pdf:Keywords>$metadata.queryString("/TipoModelo")</pdf:Keywords>
+                            <pdf:Producer>LexEdit</pdf:Producer>
+                            <pdf:PDFVersion>1.7</pdf:PDFVersion>
+                            <dc:format>application/pdf</dc:format>
+                            <dc:title>
+                                <rdf:Alt>
+                                    <rdf:li xml:lang="x-default">$metadata.queryString("/TipoModelo") nº ____ de $anoEpigrafe</rdf:li>
+                                </rdf:Alt>
+                            </dc:title>
+                            <dc:description>
+                                <rdf:Alt>
+                                    <rdf:li xml:lang="x-default">$metadata.queryString("/Titulo")</rdf:li>
+                                </rdf:Alt>
+                                #if($ementaGerada)
+                                <rdf:Alt>
+                                    <rdf:li xml:description="ementaGerada">$ementaGerada</rdf:li>
+                                </rdf:Alt>
+                                #end
+                            </dc:description>
+                            <dc:language>
+                                <rdf:Bag>
+                                    <rdf:li>pt-BR</rdf:li>
+                                </rdf:Bag>
+                            </dc:language>
+                            #if($madoc.valueOf.q-lib-autoria-tipo=="Parlamentar" #or $madoc.valueOf.q-lib-autoria-tipo=="" )
+                                #set($datasetRoot = "/senadores[@name='$madoc.valueOf.q-lib-autoria-signatario-senador-nome']")
+                                #set($dsSenadorNome = $ds.queryString("$datasetRoot/NomeParlamentar"))
+                            <dc:creator>
+                                <rdf:Seq>
+                                    <rdf:li>$dsSenadorNome</rdf:li>
+                                    #set($vetorSenadores = $madoc.valueListOf.q-lib-autoria-demaissignatarios-senadores )
+
+                                #set($vS = [])
+                                #foreach($nomeSenador in $vetorSenadores)
+                                    #if(!$nomeSenador.equals($madoc.valueOf.q-lib-autoria-signatario-senador-nome))
+                                        #if($vS.add($nomeSenador))
+                                        #end
+                                    #end
+                                #end
+                                #set($vetorSenadores = $vS)
+
+                                #set($quantSenadores = $vetorSenadores.size())
+
+                                #if($quantSenadores gt 0)
+                                                #foreach($nomeSenador in $vetorSenadores)
+                                                        #set($datasetRoot = "/senadores[@name='$nomeSenador']")
+                                                        #set($dsSenadorNome = $ds.queryString("$datasetRoot/NomeParlamentar"))
+                                    <rdf:li>$dsSenadorNome</rdf:li>
+                                    #end
+                                #end
+                                </rdf:Seq>
+                            </dc:creator>
+                            #end
+                            <dc:subject>
+                                <rdf:Bag>
+                                    #foreach($dsIndexacao in $metadata.queryStrings("/Indexacao"))
+                                    <rdf:li>$dsIndexacao</rdf:li>
+                                    #end
+                                </rdf:Bag>
+                            </dc:subject>
+                            <check:hash>00000000000000000000000000000000</check:hash>
+                            <pdfaid:part>3</pdfaid:part>
+                            <pdfaid:conformance>B</pdfaid:conformance>
+                            <pdfaExtension:schemas>
+                                <rdf:Bag>
+                                    <rdf:li rdf:parseType="Resource">
+                                        <pdfaSchema:namespaceURI>http://ns.adobe.com/pdf/1.3/</pdfaSchema:namespaceURI>
+                                        <pdfaSchema:prefix>pdf</pdfaSchema:prefix>
+                                        <pdfaSchema:schema>Adobe PDF Schema</pdfaSchema:schema>
+                                        <pdfaSchema:property>
+                                            <rdf:Seq>
+                                                <rdf:li rdf:parseType="Resource">
+                                                    <pdfaProperty:category>internal</pdfaProperty:category>
+                                                    <pdfaProperty:description>A name object indicating whether the document has been modified to include trapping information</pdfaProperty:description>
+                                                    <pdfaProperty:name>Trapped</pdfaProperty:name>
+                                                    <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+                                                </rdf:li>
+                                            </rdf:Seq>
+                                        </pdfaSchema:property>
+                                    </rdf:li>
+                                    <rdf:li rdf:parseType="Resource">
+                                        <pdfaSchema:namespaceURI>http://www.aiim.org/pdfa/ns/id/</pdfaSchema:namespaceURI>
+                                        <pdfaSchema:prefix>pdfaid</pdfaSchema:prefix>
+                                        <pdfaSchema:schema>PDF/A ID Schema</pdfaSchema:schema>
+                                        <pdfaSchema:property>
+                                            <rdf:Seq>
+                                                <rdf:li rdf:parseType="Resource">
+                                                    <pdfaProperty:category>internal</pdfaProperty:category>
+                                                    <pdfaProperty:description>Part of PDF/A standard</pdfaProperty:description>
+                                                    <pdfaProperty:name>part</pdfaProperty:name>
+                                                    <pdfaProperty:valueType>Integer</pdfaProperty:valueType>
+                                                </rdf:li>
+                                                <rdf:li rdf:parseType="Resource">
+                                                    <pdfaProperty:category>internal</pdfaProperty:category>
+                                                    <pdfaProperty:description>Amendment of PDF/A standard</pdfaProperty:description>
+                                                    <pdfaProperty:name>amd</pdfaProperty:name>
+                                                    <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+                                                </rdf:li>
+                                                <rdf:li rdf:parseType="Resource">
+                                                    <pdfaProperty:category>internal</pdfaProperty:category>
+                                                    <pdfaProperty:description>Conformance level of PDF/A standard</pdfaProperty:description>
+                                                    <pdfaProperty:name>conformance</pdfaProperty:name>
+                                                    <pdfaProperty:valueType>Text</pdfaProperty:valueType>
+                                                </rdf:li>
+                                            </rdf:Seq>
+                                        </pdfaSchema:property>
+                                    </rdf:li>
+                                </rdf:Bag>
+                            </pdfaExtension:schemas>
+                        </rdf:Description>
+                    </rdf:RDF>
+                </x:xmpmeta>
+            </fo:declarations>
+
+
+            <fo:page-sequence master-reference="document">
+                #if ($madoc.valueOf.q-lib-imprimir-cabecalho != 'sem')
+                <fo:static-content flow-name="header-principal">
+                    <fo:block text-align="center">
+                        #if($metadata.queryString("/CasaLegislativa") == 'CN')
+                        <fo:external-graphic src="url('data:image/jpeg;base64, @@brasao_cn@@')" />
+                        #else
+                        <fo:external-graphic src="url('data:image/jpeg;base64, @@brasao@@')" />
+                        #end
+                    </fo:block>
+                    #if ($madoc.valueOf.q-lib-imprimir-cabecalho == 'alternativo')
+                    <fo:block text-align="center">
+							$madoc.valueOf.q-lib-texto-cabecalho
+					</fo:block>
+                    #end
+                </fo:static-content>
+                #end
+                <fo:static-content flow-name="header-assinaturas">
+                    <fo:block>
+                        <fo:retrieve-marker retrieve-class-name="marker.texto" retrieve-position="first-including-carryover" retrieve-boundary="page" />
+                    </fo:block>
+                </fo:static-content>
+
+
+                <fo:flow flow-name="xsl-region-body" font-size="14pt">
+
+                    <!-- Conteúdo -->
+                    <fo:block-container>
+                        <fo:marker marker-class-name="marker.texto" />
+                        #if($metadata.queryString("/TipoModelo") == 'Ofício')
+                        <fo:block text-align="left" space-after="$spacing1" white-space-collapse="false">
+							Ofício nº $madoc.valueOf.q-lib-identificacao-oficio
+						</fo:block>
+                        #if($madoc.valueOf.q-lib-fecho-data == "data")
+                        <fo:block text-align="right" space-after="$spacing3" white-space-collapse="false">
+                                Brasília, ${madoc.formatDateFull($madoc.valueListOf.q-lib-fecho-data[1])}
+                            </fo:block>
+                        #end					
+
+					#else
+                        <!-- Epígrafe-->
+                        #set($tipoModeloENumero = "$metadata.queryString('/TipoModelo').toUpperCase() Nº &#160;&#160;&#160;&#160;&#160;&#160;&#160; DE &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;")
+                        <fo:block text-align="center" space-after="$spacing3" white-space-collapse="false">
+                            <fo:block font-size="16pt" font-weight="bold">$tipoModeloENumero$epigrafeColeg
+							</fo:block>
+                            #if($madoc.queryAnswerMetadata('/Valido') == 'false')
+                            <fo:block background-color="yellow" color="red" font-size="12pt" font-weight="bold">Documento não preenchido
+								corretamente</fo:block>
+                            #end
+                        </fo:block>
+                        #if($ementaGerada #and $apresentarEmentaGerada)
+                        <fo:block text-align="justify" space-after="$spacing3" margin-left="8cm">
+								$ementaGerada
+							</fo:block>
+                        #end
+
+					#end
+                        <fo:block text-align="justify" white-space-collapse="false" text-indent="2.5cm" line-height="$lineHeight" space-after="$spacing2">
+								#if($madoc.size($madoc.valueOf.q-lib-destino-vocativo) gt 0)
+										$madoc.removeFinalDot($madoc.html2fo(${madoc.valueOf.q-lib-destino-vocativo})),
+								#elseif($vocativo)
+										$vocativo,
+								#end
+						</fo:block>
+
+                        <!-- this defines a title level 2 -->
+                        <fo:block text-align="justify" white-space-collapse="false" text-indent="2.5cm" line-height="$lineHeight" role="objetoDoRequerimento">
+                            $objetoDoRequerimento
+						</fo:block>
+
+                        <!-- COMPLEMENTO DO OBJETO -->
+                        #set($complementoMadoc = $madoc.valueOf.q-complemento-objeto)
+                        #set($complementoTemplate = $madoc.renderedTemplate.complementoDoObjeto.trim())
+
+						#if(($madoc.size($complementoMadoc) gt 0) || ($madoc.size($complementoTemplate) gt 0))
+                        <fo:block role="complementoDoObjeto">
+                            <!-- A questão q-complemento-objeto como texto livre -->
+                            #if($madoc.size($complementoMadoc) gt 0)
+                            <fo:block text-align="justify" space-before="0.6em" white-space-collapse="false" text-indent="2.5cm" line-height="$lineHeight">
+									$madoc.html2fo($madoc.valueOf.q-complemento-objeto)
+								</fo:block>
+                            #end
+                            <!-- O Complemento do Objeto é montado pelo Template do Modelo (ex: m016.xml)  -->
+                            #if($madoc.size($complementoTemplate) gt 0)
+                            <fo:block text-align="justify" space-before="0.6em" white-space-collapse="false">
+									$complementoTemplate
+								</fo:block>
+                            #end
+                        </fo:block>
+                        #end
+
+						#if($madoc.size($madoc.valueOf.q-lib-justificativa) gt 0)
+                        <fo:block font-size="16pt" space-before="$spacing4" text-align="center" font-weight="bold" keep-with-next="always" white-space-collapse="false" xmlns:fo="http://www.w3.org/1999/XSL/Format">
+								JUSTIFICAÇÃO
+							</fo:block>
+                        <fo:block text-align="justify" space-before="$spacing2" white-space-collapse="false" text-indent="2.5cm" line-height="$lineHeight" keep-with-previous="always" role="justificacao">
+								$madoc.removeTrailingEmptyLinesFromFO($madoc.html2fo($madoc.valueOf.q-lib-justificativa))
+							</fo:block>
+                        #end
+                    </fo:block-container>
+
+                    <!-- Para imprimir o objeto do requerimento no cabeçalho quando quebra a página antes do fecho -->
+                    <fo:block-container>
+                        <fo:marker marker-class-name="marker.texto">
+                            <fo:block font-size="small" color="gray" text-align="justify" border-bottom-style="solid" border-color="gray" border-width="thin" padding-after="6pt">
+                            $cabecalhoObjRequerimento
+							</fo:block>
+                        </fo:marker>
+                        <fo:block></fo:block>
+                    </fo:block-container>
+
+                    <!-- Fecho e Assinaturas -->
+                    <fo:block-container>
+                        <fo:marker marker-class-name="marker.texto">
+                            <fo:block font-size="small" color="gray" text-align="justify" border-bottom-style="solid" border-color="gray" border-width="thin" padding-after="6pt">
+                            $cabecalhoObjRequerimento
+							</fo:block>
+                        </fo:marker>
+                        #if($metadata.queryString("/TipoModelo") == 'Ofício')
+                        <fo:block white-space-collapse="false" text-indent="2.5cm" space-before="$spacing2" space-after="0pt" line-height="$lineHeight">Atenciosamente,</fo:block>
+                        #else
+                        <!-- Fecho -->
+                        <fo:block keep-with-next.within-page="always" text-align="justify" white-space-collapse="false" space-before="$spacing2" space-after="0pt" text-indent="2.5cm" line-height="$lineHeight" role="fecho" keep-with-previous="10"> #if($madoc.valueOf.q-lib-destino=="Plenário")
+                            Sala das Sessões, #elseif($madoc.valueOf.q-lib-destino=="Plenário via Comissão")
+                            Sala das Comissões, #elseif($madoc.valueOf.q-lib-destino=="Comissão" #or $madoc.valueOf.q-lib-destino=="CPI" #or $madoc.valueOf.q-lib-destino=="Subcomissão")
+                            Sala da Comissão, #elseif($madoc.valueOf.q-lib-destino=="Mesa")
+                            Sala das Reuniões,
+                    #end
+
+                    #if($madoc.valueOf.q-lib-fecho-data == "data")
+                        #if($madoc.valueListOf.q-lib-fecho-data.size() gt 1)
+                            ${madoc.formatDateFull($madoc.valueListOf.q-lib-fecho-data[1])}.
+                        #end
+                    #else
+                        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                        de &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                        de &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.
+                    #end
+						</fo:block>
+                        #end
+                        <!-- Assinaturas -->
+                        <fo:block font-weight="bold">
+                            #set($quebraLinhaDeputados = 'auto') #if($madoc.valueOf.q-lib-autoria-tipo=="Comissão")
+							#set($comissaoNome = $madoc.valueOf.q-lib-autoria-signatario-comissao-nome)
+                            <fo:block space-before="$spacing4" role="primeiro-signatario" text-align="center" white-space-collapse="false" keep-with-previous="always">
+
+                                <fo:block font-weight="bold" line-height="$lineHeight">
+                                    #initCap($comissaoNome)
+								</fo:block>
+                            </fo:block>
+                            #elseif($madoc.valueOf.q-lib-autoria-tipo=="Mesa")
+							#set($mesaNome = "Mesa Diretora")
+                            <fo:block space-before="$spacing4" role="primeiro-signatario" text-align="center" white-space-collapse="false" keep-with-previous="always">
+                                <fo:block font-weight="bold" line-height="$lineHeight">
+                                    $mesaNome
+								</fo:block>
+                            </fo:block>
+                            #elseif($madoc.valueOf.q-lib-autoria-tipo=="Parlamentar")
+							#set($vS = $madoc.valueListOf.q-lib-autoria-signatario-senador-nome )
+
+							#set($vetorSenadores = [])
+							#set($vetorCargosSenadores = [])
+							#foreach($temp in $vS)
+								#if($velocityCount % 2 == 1)
+                                    #if($vetorSenadores.add($temp))
+                                    #end
+								#else
+                                    #if($vetorCargosSenadores.add($temp))
+                                    #end
+								#end
+							#end
+
+							#set($quantSenadores = $vetorSenadores.size())
+
+							#if($quantSenadores gt 0)
+								#set($quebraLinhaDeputados = 'always')
+                            <fo:block>
+                                <fo:table width="100%" table-layout="fixed" role="demais-signatarios-senadores">
+                                    <fo:table-column column-width="proportional-column-width(50)" />
+                                    <fo:table-column column-width="proportional-column-width(50)" />
+
+                                    <fo:table-body>
+                                        #foreach($codigoParlamentar in $vetorSenadores)
+											
+												#set($datasetRoot = "(/senadores[@name='$codigoParlamentar']|/deputados[@name='$codigoParlamentar'])")
+
+												#set($dsSenadorNome = $ds.queryString("$datasetRoot/NomeParlamentar"))
+
+												#set($senadorPrefixoAssinatura = $ds.queryString("$datasetRoot/PrefixoAssinatura")) #if($madoc.valueOf.q-lib-autoria-imprimir-partido-uf=="true")
+													#set($senadorPartidoSigla = $ds.queryString("$datasetRoot/PartidoSigla"))
+													#set($senadorUF = $ds.queryString("$datasetRoot/UFSigla"))
+
+													#set($dsSenadorPartidoUF = "($senadorPartidoSigla - $senadorUF)")
+												#else
+													#set($dsSenadorPartidoUF = "")
+												#end
+
+
+												#if($velocityCount % 2 == 1)
+                                        <fo:table-row>
+                                            #end
+
+												#set($indexCargo = $velocityCount - 1)
+												#set($cargo = $vetorCargosSenadores.get($indexCargo))
+
+												#if(($velocityCount % 2 == 1) #and ($velocityCount==$quantSenadores))
+                                            <fo:table-cell text-align="center" number-columns-spanned="2">
+                                                <fo:block margin-top="30pt">$senadorPrefixoAssinatura #initCap($dsSenadorNome)</fo:block>
+                                                <fo:block keep-with-previous="always">$dsSenadorPartidoUF</fo:block>
+                                                #if($cargo != "")
+                                                <fo:block keep-with-previous="always">$cargo</fo:block>
+                                                #end
+                                            </fo:table-cell>
+                                            #else
+                                            <fo:table-cell text-align="center">
+                                                <fo:block margin-top="30pt">$senadorPrefixoAssinatura #initCap($dsSenadorNome)</fo:block>
+                                                <fo:block keep-with-previous="always">$dsSenadorPartidoUF</fo:block>
+                                                #if($cargo != "")
+                                                <fo:block keep-with-previous="always">$cargo</fo:block>
+                                                #end
+                                            </fo:table-cell>
+                                            #end
+
+                                                #if(($velocityCount % 2 == 0) || ($velocityCount==$quantSenadores))
+                                        </fo:table-row>
+                                        #end
+											#end
+                                    </fo:table-body>
+                                </fo:table>
+                            </fo:block>
+                            #end #end #if(($madoc.valueOf.q-lib-autoria-tipo=="Parlamentar") || ($madoc.valueOf.q-lib-autoria-tipo=="Não identificado"))
+
+							##
+							## Imprimindo quantidade de assinaturas adicionais - SENADORES
+							##
+							#if($madoc.parseInt($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas) gt 0)
+								#set($quebraLinhaDeputados = 'always')
+                            <fo:table width="100%" table-layout="fixed">
+                                <fo:table-column column-width="proportional-column-width(60)" />
+                                <fo:table-column column-width="proportional-column-width(40)" />
+
+                                <fo:table-header>
+                                    <fo:table-row>
+                                        <fo:table-cell border-width="0.5pt" number-columns-spanned="2" height="30pt">
+                                            <fo:block />
+                                        </fo:table-cell>
+                                    </fo:table-row>
+                                    <fo:table-row>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black" padding="2pt">
+                                            <fo:block font-weight="bold">Nome do Senador</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black" padding="2pt">
+                                            <fo:block font-weight="bold">Assinatura</fo:block>
+                                        </fo:table-cell>
+                                    </fo:table-row>
+                                </fo:table-header>
+
+                                <fo:table-body>
+                                    #foreach($assinatura in [1..$madoc.parseInt($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas)])
+                                    <fo:table-row line-height="$lineHeight" height="10mm">
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black">
+                                            <fo:block />
+                                        </fo:table-cell>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black">
+                                            <fo:block />
+                                        </fo:table-cell>
+                                    </fo:table-row>
+                                    #end
+                                </fo:table-body>
+
+                            </fo:table>
+                            #end
+
+						#end
+
+						##
+						## Imprimindo quantidade de assinaturas adicionais - DEPUTADOS FEDERAIS
+						##
+						#set($isAssinatDepQuant = $madoc.parseInt($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas-deputados) gt 0)
+
+						#if($isAssinatDepQuant)
+                            <fo:block page-break-before="always" />
+                            <fo:table width="100%" table-layout="fixed">
+                                <fo:table-column column-width="proportional-column-width(15)" />
+                                <fo:table-column column-width="proportional-column-width(60)" />
+                                <fo:table-column column-width="proportional-column-width(40)" />
+
+                                <fo:table-header>
+                                    <fo:table-row>
+                                        <fo:table-cell border-width="0.5pt" number-columns-spanned="2" height="30pt">
+                                            <fo:block />
+                                        </fo:table-cell>
+                                    </fo:table-row>
+                                    <fo:table-row>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black" padding="2pt">
+                                            <fo:block font-weight="bold">Gabinete</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black" padding="2pt">
+                                            <fo:block font-weight="bold">Nome do Deputado</fo:block>
+                                        </fo:table-cell>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black" padding="2pt">
+                                            <fo:block font-weight="bold">Assinatura</fo:block>
+                                        </fo:table-cell>
+                                    </fo:table-row>
+                                </fo:table-header>
+
+                                <fo:table-body>
+                                    #foreach($assinaturaDep in [1..$madoc.parseInt($madoc.valueOf.q-lib-autoria-demaissignatarios-quant-assinaturas-deputados)])
+                                    <fo:table-row line-height="$lineHeight" height="10mm">
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black">
+                                            <fo:block />
+                                        </fo:table-cell>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black">
+                                            <fo:block />
+                                        </fo:table-cell>
+                                        <fo:table-cell border-width="0.5pt" border-style="solid" border-color="black">
+                                            <fo:block />
+                                        </fo:table-cell>
+                                    </fo:table-row>
+                                    #end
+                                </fo:table-body>
+
+                            </fo:table>
+                            #end
+                        </fo:block>
+
+
+                    </fo:block-container>
+
+                    <!-- TEXTO APÓS ASSINATURAS -->
+                    #set($textoAposAssinaturas = $madoc.renderedTemplate.textoAposAssinaturas)
+				#if($textoAposAssinaturas.trim() != '')
+                    <fo:block space-before="$spacing6" text-align="left" white-space-collapse="false" text-indent="2.5cm" line-height="$lineHeight" role="texto-apos-assinaturas">
+                        $textoAposAssinaturas
+					</fo:block>
+                    #end
+                </fo:flow>
+
+            </fo:page-sequence>
+
+        </fo:root>
+    </madoc:Skeleton>
+
+</madoc:MadocSkeleton>

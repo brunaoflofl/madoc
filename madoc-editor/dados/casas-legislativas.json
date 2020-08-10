@@ -1,0 +1,12 @@
+[
+	{
+		"sigla": "SF",
+		"nome": "Senado Federal",
+		"genero": "masculino"
+	},
+	{
+		"sigla": "CN",
+		"nome": "Congresso Nacional",
+		"genero": "masculino"
+	}
+]

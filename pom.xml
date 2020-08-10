@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.3.1.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>br.gov.lexml.madoc</groupId>
+	<artifactId>madoc-dominio</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>madoc</name>
+	<description>POM Principal do domínio Madoc (Montador Automático de Documentos)</description>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/lexedit/madoc.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+
+	<properties>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
+		<maven.site.skip>true</maven.site.skip>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+		<maven.build.timestamp.format>dd/MM/yyyy HH:mm:ss</maven.build.timestamp.format>
+		<buildTimestamp>${maven.build.timestamp}</buildTimestamp>
+
+		<!-- Repositórios de deployment -->
+		<base.site.deployment.url>file://${user.home}/.m2/local-site-deployment</base.site.deployment.url>
+		<!-- <release.deployment.url>????</release.deployment.url> <snapshot.deployment.url>????</snapshot.deployment.url> -->
+
+		<release.plugin.version>2.5.2</release.plugin.version>
+		
+		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
+		
+	</properties>
+
+	<!-- configuracoes usadas para deployment de artefatos -->
+	<!-- <distributionManagement> <repository> <id>mvnrepo</id> <name>sfmvnrepo-releases</name> 
+		<url>${release.deployment.url}</url> </repository> <snapshotRepository> <id>sfmvnrepo</id> 
+		<name>sfmvnrepo-snapshots</name> <url>${snapshot.deployment.url}</url> </snapshotRepository> 
+		<site> <id>maven-site</id> <name>Componentes Java</name> <url>${base.site.deployment.url}</url> 
+		</site> </distributionManagement> -->
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.9.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-text</artifactId>
+			<version>1.8</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${release.plugin.version}</version>
+				<configuration>
+					<allowTimestampedSnapshots>false</allowTimestampedSnapshots>
+					<goals>deploy</goals>
+					<tagNameFormat>@{project.version}</tagNameFormat>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<suppressCommitBeforeBranch>true</suppressCommitBeforeBranch>
+					<remoteTagging>false</remoteTagging>
+					<updateBranchVersions>true</updateBranchVersions>
+					<updateWorkingCopyVersions>true</updateWorkingCopyVersions>
+				</configuration>
+			</plugin>
+			 -->
+
+			<!-- encoding usado nos arquivos de resource -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-resources-plugin</artifactId> 
+				<version>${resources.plugin.version}</version> <configuration> <encoding>UTF-8</encoding> 
+				</configuration> </plugin> -->
+		</plugins>
+	</build>
+
+	<modules>
+		<module>madoc-editor</module>
+		<module>madoc-server</module>
+	</modules>
+
+
+</project>

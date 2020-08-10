@@ -1,0 +1,1742 @@
+{
+  "uuid": "8de2faf2-abc0-40b7-a49a-6edfb13b834e",
+  "properties": {
+    "Modelo": "req-010-sf - Retirada de proposições",
+    "TipoModelo": "Requerimento",
+    "Elaborador": "fragomeni",
+    "Nome": null
+  },
+  "answers": {
+    "q-tipo-conteudo-informacional": ["RETIRADA_MATERIA"],
+    "q-lib-autoria-tipo": ["Parlamentar"],
+    "q-requerimento": [],
+    "q-nome-autoria-requerimento": [],
+    "q-lib-destino-comissao-cpi": [],
+    "q-lib-autoria-signatario-senador-nome": ["s3830", ""],
+    "q-lib-impressao-compacta": ["false"],
+    "q-lib-autoria-demaissignatarios-quant-assinaturas-deputados": ["0"],
+    "q-fundamentacao": ["Requerimento de Retirada de Proposições"],
+    "q-nome-autoria-proposicao": ["Câmara dos Deputados"],
+    "q-lib-autoria-demaissignatarios-quant-assinaturas": ["0"],
+    "q-relator-proposicao": ["Lasier Martins"],
+    "q-materia-ementa": ["Confere ao Município de Almirante Tamandaré do Sul, no Estado do Rio Grande do Sul, o título de Terra do Gaitaço."],
+    "q-lib-autoria-signatario-comissao-nome": ["Comissão de Constituição, Justiça e Cidadania"],
+    "q-lib-destino-comissao-comissao": ["Comissão de Constituição, Justiça e Cidadania"],
+    "q-materia": ["PL 1/2020"],
+    "button-obter-dados": [],
+    "q-lib-destino": ["Plenário"],
+    "q-lib-texto-cabecalho": ["Gabinete do Senador Davi Alcolumbre"],
+    "q-lib-justificativa": [""],
+    "button-obter-ementa": [],
+    "q-lib-autoria-imprimir-partido-uf": ["true"],
+    "q-requerimento-ementa": [],
+    "q-lib-imprimir-cabecalho": ["alternativo"],
+    "q-materia-apresentar-ementa": ["true"],
+    "q-tipo-autoria-requerimento": [],
+    "q-lib-destino-subcomissao-subcomissao": [],
+    "q-lib-fecho-data": ["data", "15/07/2020"],
+    "q-tipo-autoria-proposicao": [""],
+    "q-url-servico-relatoria": ["https://legis.senado.leg.br/dadosabertos/materia/relatorias/140412?v=5"],
+    "q-lib-destino-vocativo": ["Senhor Presidente"]
+  },
+  "wizard": {
+    "type": "Wizard",
+    "display": "Requerimento de Retirada de proposições",
+    "pages": [{
+      "type": "Page",
+      "id": "p-detalhes",
+      "display": "Requerimento de Retirada de proposições",
+      "enabled": "true",
+      "visible": "true",
+      "elements": [{
+        "type": "InputTextQuestion",
+        "id": "q-tipo-conteudo-informacional",
+        "enabled": "true",
+        "visible": "false",
+        "required": "false",
+        "defaultValue": "RETIRADA_MATERIA",
+        "defaultValueSatisfiesRequiredQuestion": true
+      }, {
+        "type": "RadioBoxGroupQuestion",
+        "id": "q-fundamentacao",
+        "display": "Fundamentação",
+        "enabled": "true",
+        "visible": "true",
+        "required": "false",
+        "sorted": false,
+        "options": [{
+          "type": "Option",
+          "id": "retiradaProposicao",
+          "display": "Retirada de Proposição (RISF, art. 256)",
+          "enabled": "true",
+          "visible": "true",
+          "value": "Requerimento de Retirada de Proposições",
+          "selected": true,
+          "input": false,
+          "inputType": "TEXT"
+        }, {
+          "type": "Option",
+          "id": "retiradaProposicaoOrdemDia",
+          "display": "Retirada de Proposição da Ordem do Dia (RISF, art. 235, III, d, 7)",
+          "enabled": "true",
+          "visible": "true",
+          "value": "Requerimento de Retirada de Proposição da Ordem do Dia",
+          "selected": false,
+          "input": false,
+          "inputType": "TEXT"
+        }, {
+          "type": "Option",
+          "id": "retiradaRequerimento",
+          "display": "Retirada de Requerimento de Urgência (RISF, art. 344)",
+          "enabled": "true",
+          "visible": "true",
+          "value": "Requerimento de Retirada de Requerimento de urgência",
+          "selected": false,
+          "input": false,
+          "inputType": "TEXT"
+        }]
+      }, {
+        "type": "Section",
+        "id": "q-lib-epigrafe-section",
+        "display": "Destino",
+        "enabled": "true",
+        "visible": "true",
+        "elements": [{
+          "type": "RadioBoxGroupQuestion",
+          "id": "q-lib-destino",
+          "display": "Órgão",
+          "enabled": "true",
+          "visible": "true",
+          "required": "true",
+          "sorted": false,
+          "onChange": [{
+            "type": "Switch",
+            "cases": [{
+              "type": "Case",
+              "questionValue": "Plenário",
+              "attributeToTest": "value",
+              "actions": [{
+                "type": "SelectOptionAction",
+                "optionId": "q-lib-autoria-signatario-senador"
+              }]
+            }, {
+              "type": "Case",
+              "questionValue": "Plenário via Comissão",
+              "attributeToTest": "value",
+              "actions": [{
+                "type": "SetQuestionValueAction",
+                "questionId": "q-lib-autoria-signatario-comissao-nome",
+                "value": "{q-lib-destino-comissao-comissao}"
+              }, {
+                "type": "SelectOptionAction",
+                "optionId": "q-lib-autoria-signatario-senador"
+              }]
+            }]
+          }],
+          "options": [{
+            "type": "Option",
+            "id": "q-lib-destino-plenario",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Plenário",
+            "selected": true,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-plenario-via-comissao",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Plenário via Comissão",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-mesa",
+            "display": "Mesa Diretora",
+            "enabled": "false",
+            "visible": "true",
+            "value": "Mesa",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao",
+            "enabled": "false",
+            "visible": "true",
+            "value": "Comissão",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-cpi",
+            "enabled": "false",
+            "visible": "false",
+            "value": "CPI",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-subcomissao",
+            "enabled": "false",
+            "visible": "true",
+            "value": "Subcomissão",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }]
+        }, {
+          "type": "ComboQuestion",
+          "id": "q-lib-destino-comissao-comissao",
+          "display": "Comissão",
+          "enabled": "true",
+          "visible": "{q-lib-destino == 'Comissão' || q-lib-destino == 'Plenário via Comissão'}",
+          "required": "true",
+          "sorted": true,
+          "onLoad": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-lib-destino-comissao-comissao",
+            "value": "COMISSÃO DE CONSTITUIÇÃO, JUSTIÇA E CIDADANIA"
+          }],
+          "onChange": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-lib-autoria-signatario-comissao-nome",
+            "value": "{q-lib-destino-comissao-comissao}"
+          }],
+          "options": [{
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_3",
+            "display": "CAE - Comissão de Assuntos Econômicos",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Assuntos Econômicos",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_4",
+            "display": "CAS - Comissão de Assuntos Sociais",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Assuntos Sociais",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_6",
+            "display": "CCJ - Comissão de Constituição, Justiça e Cidadania",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Constituição, Justiça e Cidadania",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_5",
+            "display": "CCT - Comissão de Ciência, Tecnologia, Inovação, Comunicação e Informática",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Ciência, Tecnologia, Inovação, Comunicação e Informática",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_8",
+            "display": "CDH - Comissão de Direitos Humanos e Legislação Participativa",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Direitos Humanos e Legislação Participativa",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_7",
+            "display": "CDR - Comissão de Desenvolvimento Regional e Turismo",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Desenvolvimento Regional e Turismo",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_9",
+            "display": "CE - Comissão de Educação, Cultura e Esporte",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Educação, Cultura e Esporte",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_11",
+            "display": "CI - Comissão de Serviços de Infraestrutura",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Serviços de Infraestrutura",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_10",
+            "display": "CMA - Comissão de Meio Ambiente",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Meio Ambiente",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_2",
+            "display": "CRA - Comissão de Agricultura e Reforma Agrária",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Agricultura e Reforma Agrária",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_1",
+            "display": "CSF - Comissão Senado do Futuro",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão Senado do Futuro",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-destino-comissao-comissao-opt-_12",
+            "display": "CTFC - Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }]
+        }, {
+          "type": "ComboQuestion",
+          "id": "q-lib-destino-comissao-cpi",
+          "display": "CPI",
+          "enabled": "true",
+          "visible": "{q-lib-destino == 'CPI'}",
+          "required": "true",
+          "sorted": true,
+          "onChange": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-lib-autoria-signatario-comissao-nome",
+            "value": "{q-lib-destino-comissao-cpi}"
+          }],
+          "options": []
+        }, {
+          "type": "ComboQuestion",
+          "id": "q-lib-destino-subcomissao-subcomissao",
+          "display": "Subcomissão",
+          "enabled": "true",
+          "visible": "{q-lib-destino == 'Subcomissão'}",
+          "required": "true",
+          "sorted": true,
+          "options": []
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-lib-destino-vocativo",
+          "display": "Vocativo",
+          "hint": "Informe o vocativo sem pontuação final. Ex: Senhor Presidente",
+          "enabled": "true",
+          "visible": "true",
+          "required": "false",
+          "defaultValue": "Senhor Presidente",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }]
+      }, {
+        "type": "Section",
+        "id": "s-obtem-requerimento",
+        "display": "Identificação do Requerimento",
+        "enabled": "true",
+        "visible": "{q-fundamentacao == 'Requerimento de Retirada de Requerimento de urgência'}",
+        "elements": [{
+          "type": "CustomQuestion",
+          "customQuestionType": "MateriaQuestion",
+          "id": "q-requerimento",
+          "display": "Requerimento",
+          "hint": "Digite o Requerimento, no formato tipo número/ano (ex: RQS 1/1997)         ",
+          "enabled": "true",
+          "visible": "true",
+          "required": "{q-fundamentacao == 'Requerimento de Retirada de Requerimento de urgência'}\"",
+          "onChange": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-materia-ementa",
+            "value": ""
+          }, {
+            "type": "SetQuestionValueAction",
+            "questionId": "q-materia-apensada",
+            "value": ""
+          }],
+          "customAttributes": [{
+            "type": "CustomAttribute",
+            "name": "regex",
+            "value": "^(rqs|RQS)\\s[1-9][0-9]*.*"
+          }],
+          "customFields": []
+        }, {
+          "type": "Button",
+          "id": "button-obter-dados",
+          "display": "Obter informações de autoria do requerimento",
+          "enabled": "true",
+          "visible": "true",
+          "onClick": [{
+            "type": "ConsumeRestServiceAction",
+            "uri": "resources/materia/get?materia={q-requerimento}",
+            "transformations": [],
+            "actions": [{
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-tipo-autoria-requerimento",
+              "xpath": "//Autoria[1]/Autor[1]/IdentificacaoParlamentar/FormaTratamento/text()"
+            }, {
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-nome-autoria-requerimento",
+              "xpath": "//Autoria[1]/Autor[1]//NomeAutor/text()"
+            }, {
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-requerimento-ementa",
+              "xpath": "//EmentaMateria/text()"
+            }]
+          }]
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-tipo-autoria-requerimento",
+          "display": "Tipo do Autor",
+          "enabled": "false",
+          "visible": "true",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-nome-autoria-requerimento",
+          "display": "Nome do Autor",
+          "enabled": "false",
+          "visible": "true",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }, {
+          "type": "MemoTextQuestion",
+          "id": "q-requerimento-ementa",
+          "display": "Ementa do Requerimento",
+          "enabled": "false",
+          "visible": "true",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true,
+          "lines": 5
+        }]
+      }, {
+        "type": "Section",
+        "id": "s-obtem-ementa",
+        "display": "Identificação da Proposição",
+        "enabled": "true",
+        "visible": "true",
+        "elements": [{
+          "type": "CustomQuestion",
+          "customQuestionType": "MateriaQuestion",
+          "id": "q-materia",
+          "display": "Matéria",
+          "hint": "Identifique a matéria no formato tipo número/ano (ex: PL 1/1997)",
+          "enabled": "true",
+          "visible": "true",
+          "required": "true",
+          "onChange": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-materia-ementa",
+            "value": ""
+          }, {
+            "type": "SetQuestionValueAction",
+            "questionId": "q-tipo-autoria-proposicao",
+            "value": ""
+          }, {
+            "type": "SetQuestionValueAction",
+            "questionId": "q-nome-autoria-proposicao",
+            "value": ""
+          }, {
+            "type": "SetQuestionValueAction",
+            "questionId": "q-relator-proposicao",
+            "value": ""
+          }],
+          "customAttributes": [{
+            "type": "CustomAttribute",
+            "name": "mregex",
+            "value": "*"
+          }],
+          "customFields": []
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-url-servico-relatoria",
+          "display": "",
+          "enabled": "true",
+          "visible": "false",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }, {
+          "type": "Button",
+          "id": "button-obter-ementa",
+          "display": "Obter ementa e informações complementares",
+          "enabled": "true",
+          "visible": "true",
+          "onClick": [{
+            "type": "ConsumeRestServiceAction",
+            "uri": "resources/materia/get?materia={q-materia}",
+            "transformations": [],
+            "actions": [{
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-materia-ementa",
+              "xpath": "//EmentaMateria/text()"
+            }, {
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-tipo-autoria-proposicao",
+              "xpath": "//Autoria[1]/Autor[1]/IdentificacaoParlamentar/FormaTratamento/text()"
+            }, {
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-nome-autoria-proposicao",
+              "xpath": "//Autoria[1]/Autor[1]//NomeAutor/text()"
+            }, {
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-url-servico-relatoria",
+              "xpath": "//Servico[NomeServico='RelatoriaMateria']/UrlServico/text()"
+            }]
+          }, {
+            "type": "ConsumeRestServiceAction",
+            "uri": "{q-url-servico-relatoria}",
+            "transformations": [],
+            "actions": [{
+              "type": "ConsumeSetQuestionValueAction",
+              "questionId": "q-relator-proposicao",
+              "xpath": "//RelatoriaAtual/Relator[1]/IdentificacaoParlamentar/NomeParlamentar/text()"
+            }]
+          }]
+        }, {
+          "type": "MemoTextQuestion",
+          "id": "q-materia-ementa",
+          "display": "Ementa da Proposição",
+          "enabled": "false",
+          "visible": "true",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true,
+          "lines": 5
+        }, {
+          "type": "CheckBoxQuestion",
+          "id": "q-materia-apresentar-ementa",
+          "display": "Incluir ementa no requerimento",
+          "enabled": "true",
+          "visible": "true",
+          "required": "false",
+          "selected": true,
+          "input": false,
+          "inputType": "TEXT"
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-tipo-autoria-proposicao",
+          "display": "Tipo do Autor",
+          "enabled": "false",
+          "visible": "true",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-nome-autoria-proposicao",
+          "display": "Nome do Autor",
+          "enabled": "false",
+          "visible": "true",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-relator-proposicao",
+          "display": "Relator",
+          "enabled": "false",
+          "visible": "true",
+          "required": "false",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }]
+      }, {
+        "type": "RichTextQuestion",
+        "id": "q-lib-justificativa",
+        "display": "Justificação",
+        "hint": "Texto iniciado com letra maiúscula. Pode ser composto por múltiplos parágrafos. ",
+        "enabled": "true",
+        "visible": "true",
+        "required": "false",
+        "defaultValueSatisfiesRequiredQuestion": true,
+        "lines": 20,
+        "inline": false
+      }, {
+        "type": "RadioBoxGroupQuestion",
+        "id": "q-lib-fecho-data",
+        "display": "Data",
+        "enabled": "true",
+        "visible": "true",
+        "required": "false",
+        "sorted": false,
+        "options": [{
+          "type": "Option",
+          "id": "q-lib-fecho-data-naoinformado",
+          "display": "Não informar",
+          "enabled": "true",
+          "visible": "true",
+          "value": "",
+          "selected": false,
+          "input": false,
+          "inputType": "TEXT"
+        }, {
+          "type": "Option",
+          "id": "q-lib-fecho-data-data",
+          "display": "Data",
+          "enabled": "true",
+          "visible": "true",
+          "value": "data",
+          "selected": true,
+          "input": true,
+          "inputType": "DATE",
+          "inputDefaultValue": "15/07/2020"
+        }]
+      }, {
+        "type": "Section",
+        "id": "q-lib-autoria-section",
+        "display": "Autoria",
+        "enabled": "true",
+        "visible": "true",
+        "elements": [{
+          "type": "RadioBoxGroupQuestion",
+          "id": "q-lib-autoria-tipo",
+          "display": "Tipo de autoria",
+          "hint": "{q-fundamentacao == 'Requerimento de Retirada de Proposições'? '<html>Para esse requerimento, o Senador precisa ser o autor ou o primeiro signatário da proposição. <br>  Caso a proposição seja de autoria de Comissão, o Senador precisa ser seu Presidente ou o Relator da Matéria.</html>': '<html>Para esse requerimento, o Senador precisa ser o primeiro signatário do requerimento de urgência ou,  <br> se for de autoria de Comissão, o Presidente desta. Se o requerimento de urgência tiver sido proposto por líderes, precisará,  <br>para sua retirada, da subscrição das mesmas lideranças.</html>'}",
+          "enabled": "true",
+          "visible": "true",
+          "required": "true",
+          "sorted": false,
+          "onLoad": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-lib-autoria-tipo",
+            "value": "Parlamentar"
+          }],
+          "options": [{
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Parlamentar",
+            "selected": true,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao",
+            "enabled": "{q-lib-destino == 'Plenário via Comissão'}",
+            "visible": "true",
+            "value": "Comissão",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-mesa",
+            "display": "Mesa Diretora",
+            "enabled": "false",
+            "visible": "true",
+            "value": "Mesa",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-sem-ident",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Não identificado",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }]
+        }, {
+          "type": "ComboQuestion",
+          "id": "q-lib-autoria-signatario-comissao-nome",
+          "display": "Comissão signatária",
+          "enabled": "{q-lib-destino != 'Plenário via Comissão'}",
+          "visible": "{q-lib-autoria-tipo == 'Comissão'}",
+          "required": "true",
+          "sorted": true,
+          "onLoad": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-lib-autoria-signatario-comissao-nome",
+            "value": "COMISSÃO DE CONSTITUIÇÃO, JUSTIÇA E CIDADANIA"
+          }],
+          "options": [{
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_3",
+            "display": "CAE - Comissão de Assuntos Econômicos",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Assuntos Econômicos",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_4",
+            "display": "CAS - Comissão de Assuntos Sociais",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Assuntos Sociais",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_6",
+            "display": "CCJ - Comissão de Constituição, Justiça e Cidadania",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Constituição, Justiça e Cidadania",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_5",
+            "display": "CCT - Comissão de Ciência, Tecnologia, Inovação, Comunicação e Informática",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Ciência, Tecnologia, Inovação, Comunicação e Informática",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_8",
+            "display": "CDH - Comissão de Direitos Humanos e Legislação Participativa",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Direitos Humanos e Legislação Participativa",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_7",
+            "display": "CDR - Comissão de Desenvolvimento Regional e Turismo",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Desenvolvimento Regional e Turismo",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_9",
+            "display": "CE - Comissão de Educação, Cultura e Esporte",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Educação, Cultura e Esporte",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_11",
+            "display": "CI - Comissão de Serviços de Infraestrutura",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Serviços de Infraestrutura",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_10",
+            "display": "CMA - Comissão de Meio Ambiente",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Meio Ambiente",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_2",
+            "display": "CRA - Comissão de Agricultura e Reforma Agrária",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Agricultura e Reforma Agrária",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_1",
+            "display": "CSF - Comissão Senado do Futuro",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão Senado do Futuro",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-comissao-nome-opt_12",
+            "display": "CTFC - Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor",
+            "enabled": "true",
+            "visible": "true",
+            "value": "Comissão de Transparência, Governança, Fiscalização e Controle e Defesa do Consumidor",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }]
+        }, {
+          "type": "CustomQuestion",
+          "customQuestionType": "SignatarioQuestion",
+          "id": "q-lib-autoria-signatario-senador-nome",
+          "display": "Signatario",
+          "hint": "ex: Presidente da Comissão ..., Líder do ...",
+          "enabled": "true",
+          "visible": "{q-lib-autoria-tipo == 'Parlamentar'}",
+          "required": "true",
+          "sorted": true,
+          "onLoad": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-lib-autoria-signatario-senador-nome",
+            "value": "s3830"
+          }],
+          "customAttributes": [{
+            "type": "CustomAttribute",
+            "name": "maxEntries",
+            "value": "0"
+          }],
+          "customFields": [],
+          "options": [{
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_23",
+            "display": "Acir Gurgacz",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s4981",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_67",
+            "display": "Alessandro Vieira",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5982",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_81",
+            "display": "Alvaro Dias",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s945",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_63",
+            "display": "Angelo Coronel",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5967",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_39",
+            "display": "Antonio Anastasia",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5529",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_78",
+            "display": "Arolde de Oliveira",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s751",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_73",
+            "display": "Carlos Fávaro",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s6295",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_70",
+            "display": "Carlos Viana",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5990",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_20",
+            "display": "Chico Rodrigues",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s470",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_64",
+            "display": "Cid Gomes",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5973",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_76",
+            "display": "Ciro Nogueira",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s739",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_21",
+            "display": "Confúcio Moura",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s475",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_71",
+            "display": "Daniella Ribeiro",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5998",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_43",
+            "display": "Dário Berger",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5537",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_15",
+            "display": "Davi Alcolumbre",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s3830",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_24",
+            "display": "Eduardo Braga",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s4994",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_65",
+            "display": "Eduardo Girão",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5976",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_13",
+            "display": "Eduardo Gomes",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s3777",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_49",
+            "display": "Eliziane Gama",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5718",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_40",
+            "display": "Elmano Férrer",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5531",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_5",
+            "display": "Esperidião Amin",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s22",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_61",
+            "display": "Fabiano Contarato",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5953",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_44",
+            "display": "Fernando Bezerra Coelho",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5540",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_16",
+            "display": "Fernando Collor",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s4525",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_10",
+            "display": "Flávio Arns",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s345",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_54",
+            "display": "Flávio Bolsonaro",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5894",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_25",
+            "display": "Humberto Costa",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5008",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_32",
+            "display": "Irajá",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5385",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_22",
+            "display": "Izalci Lucas",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s4770",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_11",
+            "display": "Jader Barbalho",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s35",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_53",
+            "display": "Jaques Wagner",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s581",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_18",
+            "display": "Jarbas Vasconcelos",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s4545",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_17",
+            "display": "Jayme Campos",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s4531",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_47",
+            "display": "Jean Paul Prates",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5627",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_55",
+            "display": "Jorge Kajuru",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5895",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_29",
+            "display": "Jorginho Mello",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5350",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_8",
+            "display": "José Maranhão",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s3361",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_80",
+            "display": "José Serra",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s90",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_4",
+            "display": "Kátia Abreu",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s1249",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_41",
+            "display": "Lasier Martins",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5533",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_66",
+            "display": "Leila Barros",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5979",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_59",
+            "display": "Lucas Barreto",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5926",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_3",
+            "display": "Luis Carlos Heinze",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s1186",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_46",
+            "display": "Luiz do Carmo",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5585",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_45",
+            "display": "Mailza Gomes",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5557",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_48",
+            "display": "Major Olimpio",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5666",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_31",
+            "display": "Mara Gabrilli",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5376",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_77",
+            "display": "Marcelo Castro",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s742",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_7",
+            "display": "Marcio Bittar",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s285",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_60",
+            "display": "Marcos do Val",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5942",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_34",
+            "display": "Marcos Rogério",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5422",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_1",
+            "display": "Maria do Carmo Alves",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s1023",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_72",
+            "display": "Mecias de Jesus",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s6027",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_68",
+            "display": "Nelsinho Trad",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5985",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_37",
+            "display": "Omar Aziz",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5525",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_58",
+            "display": "Oriovisto Guimarães",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5924",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_36",
+            "display": "Otto Alencar",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5523",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_79",
+            "display": "Paulo Paim",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s825",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_12",
+            "display": "Paulo Rocha",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s374",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_35",
+            "display": "Plínio Valério",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5502",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_26",
+            "display": "Randolfe Rodrigues",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5012",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_27",
+            "display": "Reguffe",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5236",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_75",
+            "display": "Renan Calheiros",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s70",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_74",
+            "display": "Roberto Rocha",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s677",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_57",
+            "display": "Rodrigo Cunha",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5905",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_50",
+            "display": "Rodrigo Pacheco",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5732",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_30",
+            "display": "Rogério Carvalho",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5352",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_28",
+            "display": "Romário",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5322",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_6",
+            "display": "Rose de Freitas",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s2331",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_19",
+            "display": "Sérgio Petecão",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s4560",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_38",
+            "display": "Simone Tebet",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5527",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_69",
+            "display": "Soraya Thronicke",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5988",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_62",
+            "display": "Styvenson Valentim",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5959",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_9",
+            "display": "Tasso Jereissati",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s3396",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_42",
+            "display": "Telmário Mota",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5535",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_56",
+            "display": "Vanderlan Cardoso",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5899",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_51",
+            "display": "Veneziano Vital do Rêgo",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5748",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_2",
+            "display": "Wellington Fagundes",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s1173",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_33",
+            "display": "Weverton",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5411",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_52",
+            "display": "Zenaide Maia",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s5783",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-autoria-signatario-senador-nome-opt-2_14",
+            "display": "Zequinha Marinho",
+            "enabled": "true",
+            "visible": "true",
+            "value": "s3806",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }]
+        }, {
+          "type": "IntegerQuestion",
+          "id": "q-lib-autoria-demaissignatarios-quant-assinaturas",
+          "display": "Quantidade de assinaturas adicionais de Senadores",
+          "enabled": "true",
+          "visible": "{q-lib-autoria-tipo == 'Parlamentar' || q-lib-autoria-tipo == 'Não identificado'}",
+          "required": "false",
+          "defaultValue": "0",
+          "minValue": 0,
+          "maxValue": 81
+        }, {
+          "type": "IntegerQuestion",
+          "id": "q-lib-autoria-demaissignatarios-quant-assinaturas-deputados",
+          "display": "Quantidade de assinaturas adicionais de Deputados Federais",
+          "enabled": "true",
+          "visible": "false",
+          "required": "false",
+          "defaultValue": "0",
+          "minValue": 0,
+          "maxValue": 513
+        }, {
+          "type": "CheckBoxQuestion",
+          "id": "q-lib-autoria-imprimir-partido-uf",
+          "display": "Imprimir partido e UF para os signatários",
+          "enabled": "true",
+          "visible": "{q-lib-autoria-tipo == 'Parlamentar'}",
+          "required": "false",
+          "selected": true,
+          "input": false,
+          "inputType": "TEXT"
+        }]
+      }, {
+        "type": "Section",
+        "id": "q-lib-opcoes-impressao-section",
+        "display": "Opções de Impressão",
+        "enabled": "true",
+        "visible": "true",
+        "elements": [{
+          "type": "RadioBoxGroupQuestion",
+          "id": "q-lib-imprimir-cabecalho",
+          "display": "Impressão do cabeçalho",
+          "enabled": "true",
+          "visible": "true",
+          "required": "true",
+          "sorted": false,
+          "onLoad": [{
+            "type": "SetQuestionValueAction",
+            "questionId": "q-lib-imprimir-cabecalho",
+            "value": "alternativo"
+          }],
+          "options": [{
+            "type": "Option",
+            "id": "q-lib-imprimir-nao",
+            "display": "Sem Cabeçalho",
+            "enabled": "true",
+            "visible": "true",
+            "value": "sem",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-imprimir-padrao",
+            "display": "Cabeçalho Padrão",
+            "enabled": "true",
+            "visible": "true",
+            "value": "padrao",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }, {
+            "type": "Option",
+            "id": "q-lib-imprimir-alternativo",
+            "display": "Cabeçalho Padrão com Texto Abaixo",
+            "enabled": "true",
+            "visible": "true",
+            "value": "alternativo",
+            "selected": false,
+            "input": false,
+            "inputType": "TEXT"
+          }]
+        }, {
+          "type": "InputTextQuestion",
+          "id": "q-lib-texto-cabecalho",
+          "display": "Texto do cabeçalho",
+          "hint": "ex: Gabinete da Senadora..., Líderança do ...",
+          "enabled": "true",
+          "visible": "{q-lib-imprimir-cabecalho == 'alternativo'}",
+          "required": "{q-lib-imprimir-cabecalho == 'alternativo'}",
+          "defaultValue": "Gabinete do Senador Davi Alcolumbre",
+          "defaultValueSatisfiesRequiredQuestion": true
+        }, {
+          "type": "CheckBoxQuestion",
+          "id": "q-lib-impressao-compacta",
+          "display": "Reduzir espaçamento entre linhas",
+          "enabled": "true",
+          "visible": "true",
+          "required": "false",
+          "selected": false,
+          "input": false,
+          "inputType": "TEXT"
+        }]
+      }]
+    }]
+  }
+}

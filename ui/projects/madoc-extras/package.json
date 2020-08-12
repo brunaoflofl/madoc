@@ -1,0 +1,14 @@
+{
+    "name": "@lexml/madoc-extras",
+    "version": "0.0.1",
+    "publishConfig": {
+        "registry": "https://api.bintray.com/npm/lexml/npm/"
+    },
+    "peerDependencies": {
+        "@angular/common": "^10.0.0",
+        "@angular/core": "^10.0.0"
+    },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

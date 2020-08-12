@@ -1,0 +1,96 @@
+<div>
+    <div>
+        <h3>Selecione o modelo de {{ tipo }}</h3>
+        <div style="margin-bottom: 10px;">
+            <input
+                #modelFilterInput
+                type="text"
+                class="form-control modelFilterInput"
+                id="filter"
+                name="filter"
+                autocomplete="off"
+                [(ngModel)]="filter"
+                (keyup)="onKey($event)"
+                placeholder="Buscar modelo..."
+            />
+            <label *ngFor="let casa of casas; let i = index"
+                >&nbsp;&nbsp;
+                <input
+                    *ngIf="casa"
+                    type="radio"
+                    name="casa"
+                    [checked]="casa == casaSelected"
+                    [value]="casa.sigla"
+                    (change)="onSelectedCasa(casa)"
+                />&nbsp;{{ casa.nome }}
+            </label>
+        </div>
+        <div *ngIf="modelos">
+            <div *ngIf="modelos == null && modelos.length === 0">
+                <p>
+                    Não foram encontrados documentos com os argumentos
+                    informados
+                </p>
+            </div>
+            <div *ngIf="modelos != null && modelos.length > 0">
+                <table
+                    class="table table-striped table-bordered table-hover unselectable"
+                    role="grid"
+                    style="width: 100%;"
+                >
+                    <thead>
+                        <tr role="row">
+                            <th>Categoria</th>
+                            <th>Modelo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr
+                            *ngFor="let m of modelos; let i = index"
+                            class="dms-row"
+                            [ngClass]="{
+                                'table-hover': m['hover'],
+                                info: isActiveRow(m)
+                            }"
+                            (mouseenter)="activateRow(m)"
+                            (click)="selectModel(m)"
+                            (dblclick)="selectModel(m)"
+                        >
+                            <td style="vertical-align: top;">
+                                <span
+                                    [ngClass]="{ hidden: i > 0 && modelos[i].categoria == modelos [i - 1].categoria }"
+                                    [innerHtml]="highlight(m, 'categoria')"
+                                ></span>
+                            </td>
+                            <td>
+                                <div
+                                    style="font-weight: bold;"
+                                    [innerHtml]="highlight(m, 'titulo')"
+                                ></div>
+                                <div
+                                    [innerHtml]="highlight(m, 'indexacao')"
+                                ></div>
+                                <div
+                                    [innerHtml]="highlight(m, 'fundamentacao')"
+                                ></div>
+                                <span
+                                    class="casa"
+                                    [ngClass]="
+                                        'casa-' + m.metadata.CasaLegislativa
+                                    "
+                                    title="{{
+                                        montaTituloCasa(
+                                            m.metadata.CasaLegislativa
+                                        )
+                                    }}"
+                                >
+                                    {{ m.metadata.CasaLegislativa }}
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+ </div>

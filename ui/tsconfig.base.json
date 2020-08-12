@@ -1,0 +1,38 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "module": "commonjs",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "es2019",
+      "dom"
+    ],
+    "paths": {
+      "@lexml/madoc-ui": [
+        "dist/madoc-ui"
+      ],
+      "@lexml/madoc-ui/*": [
+        "dist/madoc-ui/*"
+      ],
+      "@lexml/madoc-extras": [
+        "dist/madoc-extras",
+      ],
+      "@lexml/madoc-extras/*": [
+        "dist/madoc-extras/*",
+      ]
+    }
+  }
+}

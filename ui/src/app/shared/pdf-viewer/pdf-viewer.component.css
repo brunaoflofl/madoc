@@ -1,0 +1,8 @@
+
+#pdf {
+  position: fixed;
+  left: 5px;
+  top: 5px;
+  width: calc(100vw - 25px);
+  z-index: 1010;
+}

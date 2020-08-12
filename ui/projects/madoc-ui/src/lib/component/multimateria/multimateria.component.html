@@ -1,0 +1,61 @@
+<div class="component form-group" [ngClass]="{'hidden': !item.visible}" style="padding:12px;"
+    [style.border]="isOk() ? 'none' : '1px solid red'">
+
+    <madoc-header [item]=item></madoc-header>
+
+    <div class="row hidden-xs">
+        <div class="col-sm-3">
+            <label for="autor">Identificação</label>
+            <span title="Obrigatório" [style.color]="'red'" *ngIf="item.required"> * </span>
+        </div>
+
+        <div class="col-sm-7" style="padding-left: 0">
+            <label for="cargo" style="padding-left: 0">Ementa</label>
+        </div>
+    </div>
+    <div class="row" style="padding-bottom: 10px; padding-left: 0; padding-top: 0"
+        *ngFor="let materia of materiasInput; let i = index;trackBy:trackByIndex;"
+        [style.border]="true ? 'none' : '1px solid red'">
+        <!-- sm-3 e outro 7-->
+        <div class="col-sm-3">
+            <label for="autor" class="visible-xs">Identificação
+                <span title="Obrigatório" [style.color]="'red'" *ngIf="item.required"> * </span>
+            </label>
+            <input [id]="'materia'+i" [(ngModel)]="materiaText[i]" name="materia{{i}}"
+                [ngModelOptions]="{standalone: true}" [typeahead]="dataSource" [typeaheadAsync]="true"
+                (typeaheadLoading)="changeTypeaheadLoading($event)" (blur)="onBlur(i)" (focus)="focus(i)"
+                (typeaheadOnSelect)="typeaheadOnSelect($event,i)" (typeaheadOnBlur)="onTypeadBlur(i)"
+                [typeaheadOptionsLimit]="15" [typeaheadWaitMs]="500" [typeaheadMinLength]="4"
+                typeaheadOptionField="identificacao" class="form-control" autocomplete="off"
+                style="width: 100%; vertical-align: bottom;">
+        </div>
+        <div class="col-sm-7" style="padding-left: 0">
+            <label for="cargo" class="visible-xs">Ementa</label>
+            <!-- textarea -->
+            <textarea [(ngModel)]="materiasInput[i].ementa" class="form-control" rows="3" disabled
+                style="width: 100%; vertical-align: bottom; resize: none;"></textarea>
+        </div>
+        <div class="col-sm-2" style="padding-left: 0; padding-right: 0;" [ngClass]="{'hidden': item.maxEntries == 1}">
+            <button id="moveDown" class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom"
+                style="vertical-align: bottom;" title="Mover para baixo" [disabled]="!canGoDown(i)"
+                (click)="moveDown(i)">
+            </button>
+            <button id="moveUp" class="btn btn-default btn-sm glyphicon glyphicon-triangle-top"
+                style="vertical-align: bottom;" title="Mover para cima" [disabled]="!canGoUp(i)" (click)="moveUp(i)">
+            </button>
+            <button class="btn btn-default btn-sm glyphicon glyphicon-trash" style="vertical-align: bottom;"
+                title="Excluir" [disabled]="!canDelete()" (click)="delete(i)">
+            </button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12" [ngClass]="{'hidden': item.maxEntries == 1}">
+            <button id="addAuthor" type="button" class="btn btn-primary btn-sm" (click)="add()" [disabled]="!canAdd()">
+                Incluir outra matéria
+            </button>
+        </div>
+    </div>
+
+    <div style=" font-size: 0.9em; color: red; clear: left" [ngClass]="{'hidden': isOk()}"><br />{{erro}}</div>
+    <div *ngIf="typeaheadLoading">Carregando...</div>
+</div>

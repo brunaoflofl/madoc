@@ -1,0 +1,91 @@
+<div  #scrollMe
+      class="component container-fluid"
+      [ngClass]="{'hidden': !item.visible}"
+      [style.border]="isValid()? 'none' : '1px solid red'" style="margin-left: 0"
+      style="padding-top: 10px; padding-bottom: 0; padding-left: 0">
+<form>
+<div class="row hidden-xs">
+  <div class="col-sm-5">
+    <label for="autor" >Parlamentar</label>
+    <span title="Obrigatório" [style.color]="'red'" *ngIf="item.required"> * </span>
+  </div>
+
+  <div class="col-sm-5" style="padding-left: 0">
+    <label for="cargo" style="padding-left: 0">Cargo</label>
+  </div>
+</div>
+<div  class="row" *ngFor="let parlamentar of parlamentares; let i = index"
+      [style.border]="isNomeValido(i)? 'none' : '1px solid red'"
+      style="padding-bottom: 10px; padding-left: 0; padding-top: 0">
+  <div class="col-sm-5">
+  <label for="autor" class="visible-xs">Parlamentar
+    <span title="Obrigatório" [style.color]="'red'" *ngIf="item.required"> * </span></label>
+
+    <input  [id]="parlamentar.id"
+            [(ngModel)]="parlamentar.nome"
+            [ngModelOptions]="{standalone: true}"
+            autocomplete="off"
+            style="width: 100%; vertical-align: bottom;"
+            class="form-control inputAuthor"
+            (blur)="onBlur(i)"
+            [typeahead]="item.attributes"
+            [typeaheadOptionsLimit]="10"
+            [typeaheadLatinize]="true"
+            (typeaheadOnBlur)="onTypeadBlur(parlamentar.nome)"
+            (typeaheadOnSelect)="onSelect($event.value)"
+            [typeaheadOptionField]="'display'"
+            #inputAutor />
+  </div>
+  <div class="col-sm-5" style="padding-left: 0">
+    <label for="cargo" class="visible-xs">Cargo</label>
+    <input  id="cargo"
+            [(ngModel)]="parlamentar.cargo"
+            [ngModelOptions]="{standalone: true}"
+            (blur)="updateCargo()"
+            [disabled]="isCargoDisabled(i)"
+            placeholder="{{item.hint}}"
+            type="text"
+            class="form-control inputCargo"
+            style="width: 100%; vertical-align: bottom;" />
+  </div>
+
+  <div class="col-sm-2" style="padding-left: 0; padding-right: 0" [ngClass]="{'hidden': item.maxEntries == 1}">
+      <button id="moveDown"
+              class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
+              style="padding: 0.5em; margin-top: 0.5em;"
+              title="Mover para baixo"
+              style="vertical-align: bottom;"
+              [disabled]="!canGoDown(i)"
+              (click)="moveDown(i)">
+      </button>
+      <button id="moveUp"
+              class="btn btn-default btn-sm glyphicon glyphicon-triangle-top moveUp"
+              style="padding: 0.5em; margin-top: 0.5em; margin-left: 0.5em;"
+              title="Mover para cima"
+              style="vertical-align: bottom;"
+              [disabled]="!canGoUp(i)"
+              (click)="moveUp(i)">
+      </button>
+      <button class="btn btn-default btn-sm glyphicon glyphicon-trash deleteAuthor"
+              style="padding: 0.5em; margin-top: 0.5em; margin-left: 0.5em;"
+              title="Excluir"
+              style="vertical-align: bottom;"
+              [disabled]="!canDelete(i)"
+              (click)="delete(i)">
+      </button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12" [ngClass]="{'hidden': item.maxEntries == 1}">
+  <button id="addAuthor"
+          type="button"
+          class="btn btn-primary btn-sm"
+          (click)="add()"
+          [disabled]="!canAdd()">
+          Incluir outro parlamentar
+  </button>
+  </div>
+</div>
+</form>
+
+</div>

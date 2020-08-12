@@ -1,0 +1,20 @@
+{
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "dest": "../../dist/madoc-ui",
+    "lib": {
+        "entryFile": "src/public_api.ts",
+        "umdModuleIds": {
+            "moment": "_moment",
+            "ngx-bootstrap/chronos": "chronos",
+            "ngx-bootstrap/locale": "locale",
+            "ngx-bootstrap": "ngxBootstrap",
+            "lodash": "lodash",
+            "xpath": "x",
+            "xslt": "_xslt",
+            "ngx-bootstrap/typeahead": "typeahead",
+            "ngx-bootstrap/datepicker": "datepicker",
+            "ng2-ckeditor": "ng2Ckeditor",
+            "xml2js": "xml2js"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<div>
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Tipos de documento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tipo of tipos">
+                <td><a (click)="navigate(tipo)">{{tipo.nome}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

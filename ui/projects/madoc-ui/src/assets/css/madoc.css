@@ -1,0 +1,76 @@
+div.madoc div.component {
+    padding: 0.5em;
+}
+
+div.madoc label.option {
+    margin-left: 3px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+div.madoc input {
+    padding-left: 3px;
+}
+
+div.madoc input {
+    padding-left: 3px;
+}
+
+div.madoc input.btn {
+    padding: 6px 12px;
+}
+
+.mark,
+mark {
+    background-color: #e8eba7;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.datetime div {
+    display: inline;
+    margin-left: 3px;
+}
+
+div.madoc .disabled {
+    background-color: lightgrey;
+    opacity: 0.8;
+}
+
+div.madoc .gi-menor {
+    font-size: 0.8em;
+}
+
+div.madoc input::-ms-clear {
+    display: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+tr.dms-row {
+    cursor: pointer;
+}
+
+.casa {
+    font-size: 0.8em;
+    display: inline;
+    padding: 1px 5px;
+}
+.casa-SF {
+    color: #31708f;
+    background: lightblue;
+}
+.casa-CN {
+    color: #5566f1;
+    background-color: #8ece93;
+}

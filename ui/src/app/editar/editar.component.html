@@ -1,0 +1,10 @@
+<div *ngIf="documentoService.documento != null">
+    <madoc-extras-toolbar></madoc-extras-toolbar>
+    <p></p>
+    <app-madoc-title [model]="documentoService.documento.modelo.nome" [name]="documentoService.documento.nome">
+    </app-madoc-title>
+    <div #madoc>
+        <madoc-ui></madoc-ui>
+    </div>
+    <app-pdf-viewer [closeAction]="actionService.acaoFecharVisualizacao" ></app-pdf-viewer>
+</div>

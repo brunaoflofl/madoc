@@ -1,0 +1,10 @@
+<nav class="navbar navbar-default" style="margin-bottom: 0; padding: 10px;">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group" role="group">
+        <madoc-extras-action-button *ngFor="let acao of acoes" [action]="acao"></madoc-extras-action-button>
+    </div>
+    <div class="btn-group" role="group" style="float: right;">
+      <madoc-extras-action-button [action]="acaoFecharEdicao" [shrinkable]="true" style="margin-right: 0;"></madoc-extras-action-button>
+    </div>
+  </div>
+</nav>

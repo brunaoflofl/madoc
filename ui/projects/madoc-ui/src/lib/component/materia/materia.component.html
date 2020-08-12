@@ -1,0 +1,25 @@
+<div class="component form-group"  [ngClass]="{'hidden': !item.visible}" style="padding: 12px;"
+[style.border]="isOk() ? 'none' : '1px solid red'">
+
+  <madoc-header [item] = "item" validate="validate($event.target)"></madoc-header>
+
+    <div style="position: relative;">
+
+      <input
+        [(ngModel)]="asyncSelected"
+        [typeahead]="dataSource"
+        (typeaheadLoading)="changeTypeaheadLoading($event)"
+        (blur)="blur($event.target.value)"
+        (typeaheadOnSelect)="typeaheadOnSelect($event)"
+        [typeaheadOptionsLimit]="15"
+        [typeaheadWaitMs]="500"
+        [typeaheadMinLength]="4"
+        typeaheadOptionField="identificacao"
+        class="form-control"
+        autocomplete="off">
+
+    </div>
+
+    <div style="font-size: 0.9em; color: red; clear: left" [ngClass]="{'hidden': isOk()}"><br />{{erro}}</div>
+    <div *ngIf="typeaheadLoading">Carregando...</div>
+</div>

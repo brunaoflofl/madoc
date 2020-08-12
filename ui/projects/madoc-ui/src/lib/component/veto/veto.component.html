@@ -1,0 +1,76 @@
+<div
+  class="component form-group"
+  [ngClass]="{hidden:!item.visible}"
+  [style.border]="isOk() ? 'none' : '1px solid red'"
+>
+  <madoc-header [item]=item></madoc-header>
+  <ng-template #noVetos>
+    <br>
+    <label style="color: red">Não existe célula de vetos publicada.</label>
+  </ng-template>
+  <div *ngIf="vetos || hasAnswer(); else noVetos">
+    <div class="row">
+      <div class="col-xs-12">
+        <form #f="ngForm">
+          <select
+            class="form-control"
+            name="selectVeto"
+            ngModel
+            (ngModelChange)="onSelectChange($event)"
+            [disabled]="vetoNaoExiste"
+          >
+            <option value="">Escolha o veto</option>
+            <option
+              *ngFor="let veto of vetos"
+              [value]="veto.id"
+            >VET {{veto.id+vetoParcial(veto)}}</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <div *ngIf="vetos && veto && !veto.total">
+      <br>
+      <form [formGroup]="tipoDestaqueForm">
+        <div class="row">
+          <div
+            class="col-xs-12"
+            (click)="selecionaOpcaoDestaqueVetoNaIntegra()"
+          >
+            <input
+              type="radio"
+              value="destaqueVetoNaIntegra"
+              style="cursor: pointer"
+              formControlName="radio"
+            >
+            <label style="cursor: pointer">
+              &nbsp; Destacar o veto na íntegra
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-xs-12"
+            (click)="selecionaOpcaoDestaqueDispositivosVeto()"
+          >
+            <input
+              type="radio"
+              value="destaqueDispositivosVeto"
+              style="cursor: pointer"
+              formControlName="radio"
+            >
+            <label style="cursor: pointer">
+              &nbsp; Destacar dispositivos do veto
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <madoc-dispositivo-veto
+      [(veto)]=veto
+      *ngIf="veto && canSelect && !vetoNaIntegra"
+      (change)="onChange()"
+      [disabled]="vetoNaoExiste"
+    ></madoc-dispositivo-veto>
+  </div>
+  <madoc-error [item]=item></madoc-error>
+</div>

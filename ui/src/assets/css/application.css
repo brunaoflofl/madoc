@@ -1,0 +1,73 @@
+body {
+  background: white;
+}
+
+.poweredby {
+  margin-top: 3px;
+}
+
+.table>tbody>tr.active>td,
+.table>tbody>tr.active>th,
+.table>tbody>tr>td.active,
+.table>tbody>tr>th.active,
+.table>tfoot>tr.active>td,
+.table>tfoot>tr.active>th,
+.table>tfoot>tr>td.active,
+.table>tfoot>tr>th.active,
+.table>thead>tr.active>td,
+.table>thead>tr.active>th,
+.table>thead>tr>td.active,
+.table>thead>tr>th.active {
+  background-color: #C8DEF7;
+}
+
+mark {
+  background-color: #E8EBA7;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a.disabled-link,
+a.disabled-link:visited,
+a.disabled-link:active,
+a.disabled-link:hover {
+  cursor: not-allowed;
+  color: #aaa !important;
+}
+
+.unselectabletext {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.darkClass {
+  background: url('../img/ajax-loader.gif') center center white;
+  filter: alpha(opacity=50);
+  /* IE */
+  opacity: 0.5;
+  /* Safari, Opera */
+  -moz-opacity: 0.50;
+  /* FireFox */
+  z-index: 2000;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+@media print {
+    #printContainer > div {
+      display: inline;
+      overflow-y: visible;
+    }
+    body {
+        max-width: auto !important;
+        max-height: auto !important;
+    }
+  }

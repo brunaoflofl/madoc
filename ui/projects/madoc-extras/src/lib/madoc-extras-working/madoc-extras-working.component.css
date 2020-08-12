@@ -1,0 +1,18 @@
+
+.darkClass {
+    background: url('assets/img/ajax-loader.gif') center center white;
+    filter: alpha(opacity=50);
+    /* IE */
+    opacity: 0.5;
+    /* Safari, Opera */
+    -moz-opacity: 0.50;
+    /* FireFox */
+    z-index: 2000;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}

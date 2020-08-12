@@ -1,0 +1,88 @@
+<div #scrollMe class="component container-fluid" [ngClass]="{ hidden: !item.visible }" style="margin-left: 0"
+    style="padding-top: 10px; padding-bottom: 0; padding-left: 0">
+    <div style="margin-bottom: 1em; font-size: small" [ngClass]="{'hidden': item.hint == null || item.hint == ''}"
+        [innerHTML]="item.hint">
+    </div>
+    <div class="row hidden-xs">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-1">
+            <label for="tratamento">Tratamento</label>
+        </div>
+        <div class="col-sm-3">
+            <label for="nome">Nome</label>
+        </div>
+        <div class="col-sm-2">
+            <label for="cargo">Cargo</label>
+        </div>
+        <div class="col-sm-3" [ngClass]="{ hidden: !isFieldAttribute('representanteDe', 'visible') }">
+            <label for="representanteDe" style="padding-left: 0">Instituição </label>
+        </div>
+        <div class="col-sm-2" [ngClass]="{ hidden: !isFieldAttribute('condicao', 'visible') }">
+            <label for="condicao" style="padding-left: 0">Condição </label>
+        </div>
+        <div class="col-sm-1" style="padding-left: 0">
+        </div>
+    </div>
+
+    <div class="row" *ngFor="let convidado of convidados; let i = index"
+        style="padding-bottom: 10px; padding-left: 0; padding-top: 0">
+        <div class="col-sm-2">
+            <select class="form-control selectValue" (change)="onSelectTipo(i, $event)">
+                <option value="false">Nome e cargo</option>
+                <option value="true" *ngIf="isFieldAttribute('representanteDe', 'visible')">Instituição </option>
+            </select>
+        </div>
+        <div class="col-sm-1">
+            <select class="form-control selectValue" [(ngModel)]="convidado.tratamento"
+                [disabled]="convidado.representante" (change)="onClick($event)"
+                [style.border]="isCampoValido(i, 'tratamento') ? 'none' : '1px solid red'">
+                <option *ngFor="let tratamento of tratamentosConvidado" value="{{tratamento.value}}">{{tratamento.id}}
+                </option>
+            </select>
+        </div>
+
+        <div class="col-sm-3">
+            <input type="text" [style.border]="isCampoValido(i, 'nome') ? 'none' : '1px solid red'" placeholder="Nome"
+                [(ngModel)]="convidado.nome" [disabled]="convidado.representante" (keyup)="onConvidadoModified(i)"
+                class="form-control" />
+        </div>
+        <div class="col-sm-2">
+            <input type="text" placeholder="Cargo (ex: Ministro da Saúde)"
+                [style.border]="isCampoValido(i, 'cargo') ? 'none' : '1px solid red'" [(ngModel)]="convidado.cargo"
+                [disabled]="!isFieldAttribute('cargo','enabled',convidado)" (keyup)="onConvidadoModified(i)"
+                class="form-control" />
+        </div>
+        <div class="col-sm-3" [ngClass]="{ hidden: !isFieldAttribute('representanteDe', 'visible') }">
+            <input type="text" placeholder="Instituição (ex: da ONG Abc)"
+                [style.border]="isCampoValido(i, 'representanteDe') ? 'none' : '1px solid red'"
+                [(ngModel)]="convidado.representanteDe" [disabled]="!convidado.representante"
+                (keyup)="onRepresentanteModifiend(i)" class="form-control" />
+        </div>
+        <div class="col-sm-2" [ngClass]="{ hidden: !isFieldAttribute('condicao', 'visible') }">
+            <select class="form-control selectValue" [(ngModel)]="convidado.condicao" (change)="onClick($event)">
+                <option *ngFor="let condicao of condicoesConvocacao" value="{{condicao.value}}">{{condicao.value}}
+                </option>
+            </select>
+        </div>
+        <div class="col-sm-1" style="padding-left: 0; padding-right: 0" [ngClass]="{ hidden: item.maxEntries == 1 }">
+            <button id="moveDown" class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
+                style="padding: 0.5em; margin-top: 0.5em;" title="Mover para baixo" style="vertical-align: bottom;"
+                [disabled]="!canGoDown(i)" (click)="moveDown(i)"></button>
+            <button id="moveUp" class="btn btn-default btn-sm glyphicon glyphicon-triangle-top moveUp"
+                style="padding: 0.5em; margin-top: 0.5em; margin-left: 0.5em;" title="Mover para cima"
+                style="vertical-align: bottom;" [disabled]="!canGoUp(i)" (click)="moveUp(i)"></button>
+            <button class="btn btn-default btn-sm glyphicon glyphicon-trash deleteAuthor"
+                style="padding: 0.5em; margin-top: 0.5em; margin-left: 0.5em;" title="Excluir"
+                style="vertical-align: bottom;" [disabled]="!canDelete(i)" (click)="delete(i)"></button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12" [ngClass]="{ hidden: item.maxEntries == 1 }">
+            <button id="addAuthor" type="button" class="btn btn-primary btn-sm" (click)="add()" [disabled]="!canAdd()">
+                Incluir outro convidado
+            </button>
+        </div>
+    </div>
+</div>

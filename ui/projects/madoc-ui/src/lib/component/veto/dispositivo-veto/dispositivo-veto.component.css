@@ -1,0 +1,27 @@
+.pad0 {
+  padding: 0px;
+}
+.col-custom-1 {
+  vertical-align: middle;
+  width: 1.5vw;
+  max-width: 1.5vw;
+  margin-right: 1%;
+}
+.col-custom-2 {
+  width: 2vw;
+  max-width: 2vw;
+}
+.col-custom-3 {
+  width: 10vw;
+  max-width: 10vw;
+  margin-right: 1vw;
+}
+.marg4 {
+  margin-top: 4px;
+}
+.middle {
+  padding-top: 6px;
+}
+.row {
+  margin-top: -6px !important;
+}

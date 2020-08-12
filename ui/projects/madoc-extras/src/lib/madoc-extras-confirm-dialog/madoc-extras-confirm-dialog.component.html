@@ -1,0 +1,31 @@
+<div bsModal #childModal="bs-modal" (onHidden)="onHidden()" [config]="{backdrop: 'static'}" class="modal fade"
+    tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" aria-label="Close" (click)="onCancel()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">{{params.title}}</h4>
+            </div>
+            <div class="modal-body" id="confirm-modal-body">
+
+                <p [innerHtml]="params.text">
+                </p>
+
+                <ul *ngIf="params.details && params.details.length > 0" style="margin-bottom: 2em;">
+                    <li *ngFor="let d of params.details">
+                        <span [innerHtml]="d"></span>
+                    </li>
+                </ul>
+
+                <button *ngFor="let b of params.buttons;let i = index" type="submit" class="btn btn-primary"
+                    [ngClass]="{'btn-primary': i == 0, 'btn-default': i > 0}" (click)="onSelect(b)"
+                    style="margin-right: 5px;">
+                    {{b}}
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>

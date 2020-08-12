@@ -21,6 +21,35 @@
 		<tag>HEAD</tag>
 	</scm>
 
+	<repositories>
+		<repository>
+			<id>bintray-lexml-lexml</id>
+			<name>bintray</name>
+			<url>https://dl.bintray.com/lexml/lexml</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>bintray-lexml-lexml</id>
+			<name>bintray-plugins</name>
+			<url>https://dl.bintray.com/lexml/lexml</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>bintray-lexml-lexml</id>
+			<name>lexml-lexml</name>
+			<url>https://api.bintray.com/maven/lexml/lexml/${project.artifactId}/;publish=1</url>
+		</repository>
+	</distributionManagement>	
+
 	<properties>
 		<maven.javadoc.skip>true</maven.javadoc.skip>
 		<maven.site.skip>true</maven.site.skip>
@@ -33,21 +62,16 @@
 		<buildTimestamp>${maven.build.timestamp}</buildTimestamp>
 
 		<!-- Repositórios de deployment -->
+		<!-- 
 		<base.site.deployment.url>file://${user.home}/.m2/local-site-deployment</base.site.deployment.url>
-		<!-- <release.deployment.url>????</release.deployment.url> <snapshot.deployment.url>????</snapshot.deployment.url> -->
+		<release.deployment.url>????</release.deployment.url> <snapshot.deployment.url>????</snapshot.deployment.url>
+		 -->
 
-		<release.plugin.version>2.5.2</release.plugin.version>
-		
+		<release.plugin.version>3.0.0-M1</release.plugin.version>
+
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-		
-	</properties>
 
-	<!-- configuracoes usadas para deployment de artefatos -->
-	<!-- <distributionManagement> <repository> <id>mvnrepo</id> <name>sfmvnrepo-releases</name> 
-		<url>${release.deployment.url}</url> </repository> <snapshotRepository> <id>sfmvnrepo</id> 
-		<name>sfmvnrepo-snapshots</name> <url>${snapshot.deployment.url}</url> </snapshotRepository> 
-		<site> <id>maven-site</id> <name>Componentes Java</name> <url>${base.site.deployment.url}</url> 
-		</site> </distributionManagement> -->
+	</properties>
 
 	<dependencies>
 
@@ -78,7 +102,7 @@
 
 	<build>
 		<plugins>
-			<!-- 
+		
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
@@ -94,7 +118,7 @@
 					<updateWorkingCopyVersions>true</updateWorkingCopyVersions>
 				</configuration>
 			</plugin>
-			 -->
+			
 
 			<!-- encoding usado nos arquivos de resource -->
 			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-resources-plugin</artifactId> 
@@ -110,3 +134,4 @@
 
 
 </project>
+

@@ -46,6 +46,6 @@ Ou você pode rodar tudo no mesmo terminal rodando:
 
     npm start
 
-##Atualizando o projeto
+## Atualizando o projeto
 
     npm install

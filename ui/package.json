@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "scripts": {
         "start": "concurrently \"npm:dev-*\" \"npm:app\" \"npm:server\" -k",
+        "serverless": "concurrently \"npm:dev-*\" \"npm:app\" -k",
         "lint": "ng lint",
         "app": "ng serve --proxy-config proxy.conf.json",
         "server": "cd .. && cd madoc-editor && mvn exec:java",

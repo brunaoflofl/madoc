@@ -1,4 +1,4 @@
-# madoc
+# MADOC-UI
 
 > Se você deseja apenas utilizar a biblioteca em seu projeto, **não é necessário conhecer o framework angular**. Tudo o que você precisa, está contido no arquivo testeapi.html
 >
@@ -14,10 +14,38 @@ Este projeto abrange:
 
 ## Rodando a aplicação exemplo
 
-Pré-requisitos
-- maven
+Dependências obrigatórias
 - node
 - npm
-- angular-cli
 
+Dependências opcionais
+- maven
+- angular-click
 
+## Iniciando/Instalando o projeto
+
+Se usou o start.sh ou start.bat na raiz do projeto, você já está pronto.
+
+Se não, rode:
+
+    npm install
+    npm run lib
+
+## Executando o projeto
+
+Você tem duas opções rodar só o projeto ui no terminal e em outro rodar o projeto madoc-editor, usando:
+
+    npm run serverless
+
+No outro terminal
+
+    cd ../madoc-editor
+    mvn exec:java
+
+Ou você pode rodar tudo no mesmo terminal rodando:
+
+    npm start
+
+##Atualizando o projeto
+
+    npm install

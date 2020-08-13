@@ -5,6 +5,7 @@ import { MadocExtrasAction } from '../madoc-extras-action/madoc-extras-action';
 @Component({
   selector: 'madoc-extras-toolbar',
   templateUrl: './madoc-extras-toolbar.component.html',
+  styleUrls: ['./madoc-extras-toolbar.component.scss']
 })
 export class MadocExtrasToolbarComponent {
 

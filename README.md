@@ -12,4 +12,4 @@ Na raiz do projeto
 
     mvn clean package
 
-## Para mais detalhes sobre os projetos madoc-server, madoc-editor ou madoc-ui, veja os README dentro da pasta dos projetos
+## Para mais detalhes sobre os projetos madoc-engine, madoc-editor ou madoc-ui, veja os README dentro da pasta dos projetos

@@ -48,7 +48,7 @@
 		
 		<dependency>
 			<groupId>br.gov.lexml.madoc</groupId>
-			<artifactId>madoc-server</artifactId>
+			<artifactId>madoc-engine</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		

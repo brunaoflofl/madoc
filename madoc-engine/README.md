@@ -18,5 +18,6 @@ Conferir se não há alteração no código em relação à origem
 Rodar na raiz do projeto (fora do diretório madoc-engine)
 
 	mvn release:prepare release:perform
+	git push
 	git push --tags
 	

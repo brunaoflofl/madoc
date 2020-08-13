@@ -8,7 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<artifactId>madoc-server</artifactId>
+	<artifactId>madoc-engine</artifactId>
 	<packaging>jar</packaging>
 	<name>Montador Automático de Documentos - MADOC</name>
 	<description>Processamento dos XML e PDF do MADOC</description>

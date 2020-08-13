@@ -62,8 +62,6 @@
 		<maven.build.timestamp.format>dd/MM/yyyy HH:mm:ss</maven.build.timestamp.format>
 		<buildTimestamp>${maven.build.timestamp}</buildTimestamp>
 
-		<release.plugin.version>2.5.3</release.plugin.version>
-
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 
 	</properties>
@@ -101,13 +99,15 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>${release.plugin.version}</version>
+				<version>3.0.0-M1</version>
 				<configuration>
+					<detail>true</detail>
 					<goals>deploy</goals>
-					<useReleaseProfile>false</useReleaseProfile>
 					<tagNameFormat>@{project.version}</tagNameFormat>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<allowTimestampedSnapshots>false</allowTimestampedSnapshots>
+					<pushChanges>false</pushChanges>
+					<localCheckout>true</localCheckout>
 				</configuration>
 			</plugin>
 			
@@ -116,7 +116,7 @@
 
 	<modules>
 		<module>madoc-editor</module>
-		<module>madoc-server</module>
+		<module>madoc-engine</module>
 	</modules>
 
 

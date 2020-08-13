@@ -10,7 +10,7 @@
                 name="filter"
                 autocomplete="off"
                 [(ngModel)]="filter"
-                (keyup)="onKey($event)"
+                (keyup)="onKey()"
                 placeholder="Buscar modelo..."
             />
             <label *ngFor="let casa of casas; let i = index"

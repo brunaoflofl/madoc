@@ -9,3 +9,5 @@ cd ui
 
 npm install
 npm run lib
+cd ..
+

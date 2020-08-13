@@ -1,8 +1,8 @@
-# MADOC-App
+# MADOC
 
 > Se você deseja apenas utilizar a biblioteca em seu projeto, **não é necessário conhecer o framework angular**. Tudo o que você precisa, está contido no arquivo testeapi.html
 >
-> Para obter uma explicação detalhada de como funciona a interação entre sua aplicação e o madoc, leia as instruções disponíveis em [`api`](#api).
+> Para obter uma explicação detalhada de como funciona a interação entre sua aplicação e o madoc, leia as instruções disponíveis em [`api`](#API).
 
 
 ## Visão geral
@@ -28,29 +28,35 @@ Depois de baixar esse projeto, são necessárias algumas ações para deixá-lo 
 
 Para facilitar essa configuração inicial, execute o script abaixo:
 
-    start.sh ou start.bat
+    setup.sh ou setup.bat
 
 ### Executando o projeto
 
 Você tem <strong>duas opções</strong>.
 
-A primeira seria executar o servidor e o cliente em um único passo, através do comando abaixo no diretório <em>ui</em>:
 
-    npm start
+#### para executar apenas
 
-Já se você preferir executar o servidor e o cliente em janelas diferentes, basta proceder da seguinte maneira:
+Em um terminal, execute:
 
-Em um janela de terminal, execute o cliente no diretório <em>ui</em>:
+    run.sh ou run.bat
 
-    npm run client
+    abra o browser e digite: http://localhost:8080/madoc/testeapi.html
 
-Em outro terminal, execute o servidor no diretório <em>madoc-editor</em>:
+#### para desenvolvimento
+
+Em um terminal, execute o servidor no diretório <em>madoc-editor</em>:
 
     mvn exec:java
 
+Em outra janela de terminal, preferencialmente no próprio editor, execute o cliente no diretório <em>ui</em>:
+
+    npm start
+
+    abra o browser e digite: http://localhost:4200/testeapi.html
 
 ### Atualizando o projeto
 
-Sempre que foi baixada uma nova versão, lembre-se de executar o passo "Iniciando o projeto"
+Sempre que for baixada uma nova versão, lembre-se de executar o passo "Iniciando o projeto"
 
 

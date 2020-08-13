@@ -15,14 +15,14 @@ Este projeto abrange:
 
 ## Aplicação exemplo
 
-Dependências obrigatórias
+### Dependências obrigatórias
 - node
 - npm
 - java
 - maven
 - angular-cli
 
-## Iniciando o projeto
+### Iniciando o projeto
 
 Depois de baixar esse projeto, são necessárias algumas ações para deixá-lo pronto para ser executado.
 
@@ -30,7 +30,7 @@ Para facilitar essa configuração inicial, execute o script abaixo:
 
     start.sh ou start.bat
 
-## Executando o projeto
+### Executando o projeto
 
 Você tem <strong>duas opções</strong>.
 
@@ -49,7 +49,7 @@ Em outro terminal, execute o servidor no diretório <em>madoc-editor</em>:
     mvn exec:java
 
 
-## Atualizando o projeto
+### Atualizando o projeto
 
 Sempre que foi baixada uma nova versão, lembre-se de executar o passo "Iniciando o projeto"
 

@@ -43,14 +43,14 @@ a
 	color: #0782C1;
 }
 
-ol,ul,dl
+/* ol,ul,dl
 {
 	margin-left: 50px;
 
 	*margin-right: 0px;
 
 	padding: 0 40px;
-}
+} */
 
 h1,h2,h3,h4,h5,h6
 {

@@ -14,6 +14,9 @@ export class ListarTiposComponent implements OnInit {
 
     ngOnInit() {
         this.tipos = this.route.snapshot.data.tipos;
+        if (this.tipos != null && this.tipos.length == 1) {
+            this.navigate(this.tipos[0]);
+        }
     }
 
     navigate(tipo: TipoDocumento) {

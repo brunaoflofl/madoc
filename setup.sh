@@ -8,6 +8,6 @@ mvn clean package
 cd ui
 
 npm install
-npm run lib
+
 cd ..
 

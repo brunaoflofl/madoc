@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<madoc:MadocDocument
-	xmlns:madoc="http://www.lexml.gov.br/madoc/2.0"
+<madoc:MadocDocument xmlns:madoc="http://www.lexml.gov.br/madoc/2.0"
 	xmlns:xi="http://www.lexml.gov.br/schema/xloom"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -28,22 +27,19 @@
 		</madoc:Entry>
 		<madoc:Entry key="Fundamentacao">
 			<madoc:Map>
-				<madoc:Entry
-					key="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
+				<madoc:Entry key="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
 					<madoc:List>
 						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art255_inc2_ali3_ite12
 						</madoc:Entry>
 					</madoc:List>
 				</madoc:Entry>
-				<madoc:Entry
-					key="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania">
+				<madoc:Entry key="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania">
 					<madoc:List>
 						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art101_inc1
 						</madoc:Entry>
 					</madoc:List>
 				</madoc:Entry>
-				<madoc:Entry
-					key="Requerimento de Consulta à Comissão de Assuntos Econômicos">
+				<madoc:Entry key="Requerimento de Consulta à Comissão de Assuntos Econômicos">
 					<madoc:List>
 						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art99_inc1
 						</madoc:Entry>
@@ -54,17 +50,13 @@
 	</madoc:Metadata>
 
 
-	<madoc:Wizard
-		display="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
+	<madoc:Wizard display="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
 
-		<madoc:Page id="p-detalhes"
-			display="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
+		<madoc:Page id="p-detalhes" display="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
 
 			<!-- Tipo de conteúdo informacional -->
-			<xi:include
-				href="urn:sf:sistema;madoc:id;question-library"
-				xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-				select="//madoc:Question[@id='q-tipo-conteudo-informacional']">
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-tipo-conteudo-informacional']">
 				<xsl:stylesheet version="2.0"
 					xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
 					<xsl:template match="@*|node()">
@@ -78,48 +70,27 @@
 				</xsl:stylesheet>
 			</xi:include>
 
-			<madoc:Question display="Fundamentação"
-				id="q-fundamentacao" enabled="true"
-				xsi:type="madoc:RadioBoxGroupQuestionType">
+			<madoc:Question display="Fundamentação" id="q-fundamentacao" enabled="true" xsi:type="madoc:RadioBoxGroupQuestionType">
 				<madoc:OnChange>
 					<madoc:Action xsi:type="madoc:SwitchType">
-						<madoc:Case
-							questionValue="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania">
-							<madoc:Action
-								xsi:type="madoc:SetQuestionValueActionType"
-								questionId="q-local-colegiado"
-								value="COMISSÃO DE CONSTITUIÇÃO, JUSTIÇA E CIDADANIA" />
+						<madoc:Case questionValue="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania">
+							<madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-local-colegiado" value="COMISSÃO DE CONSTITUIÇÃO, JUSTIÇA E CIDADANIA" />
 						</madoc:Case>
-						<madoc:Case
-							questionValue="Requerimento de Consulta à Comissão de Assuntos Econômicos">
-							<madoc:Action
-								xsi:type="madoc:SetQuestionValueActionType"
-								questionId="q-local-colegiado"
-								value="COMISSÃO DE ASSUNTOS ECONÔMICOS" />
+						<madoc:Case questionValue="Requerimento de Consulta à Comissão de Assuntos Econômicos">
+							<madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-local-colegiado" value="COMISSÃO DE ASSUNTOS ECONÔMICOS" />
 						</madoc:Case>
 					</madoc:Action>
 				</madoc:OnChange>
 				<madoc:Options>
-					<madoc:Option
-						value="Requerimento de Remessa a determinada comissão de matéria despachada a outra"
-						display="Remessa a determinada comissão de matéria despachada a outra (RISF, art. 255, II, c, 12)"
-						id="remessa" selected="true" />
-					<madoc:Option
-						value="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania"
-						display="Consulta à Comissão de Constituição, Justiça e Cidadania (RISF, art. 101, I)"
-						id="remessa-ccj" />
-					<madoc:Option
-						value="Requerimento de Consulta à Comissão de Assuntos Econômicos"
-						display="Consulta à Comissão de Assuntos Econômicos  (RISF, art. 99, I)"
-						id="remessa-cae" />
+					<madoc:Option value="Requerimento de Remessa a determinada comissão de matéria despachada a outra" display="Remessa a determinada comissão de matéria despachada a outra (RISF, art. 255, II, c, 12)" id="remessa" selected="true" />
+					<madoc:Option value="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania" display="Consulta à Comissão de Constituição, Justiça e Cidadania (RISF, art. 101, I)" id="remessa-ccj" />
+					<madoc:Option value="Requerimento de Consulta à Comissão de Assuntos Econômicos" display="Consulta à Comissão de Assuntos Econômicos  (RISF, art. 99, I)" id="remessa-cae" />
 				</madoc:Options>
 			</madoc:Question>
 
 			<!-- Obtendo EPIGRAFE do banco de questoes -->
-			<xi:include
-				href="urn:sf:sistema;madoc:id;question-library"
-				xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-				select="//madoc:Section[@id='q-lib-epigrafe-section']">
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-epigrafe-section']">
 				<xsl:stylesheet version="2.0"
 					xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
 					<xsl:template match="@*|node()">
@@ -127,32 +98,27 @@
 							<xsl:apply-templates select="@*|node()" />
 						</xsl:copy>
 					</xsl:template>
-					<xsl:template
-						match="@enabled[parent::*[@id='q-lib-destino-plenario']]">
+					<xsl:template match="@enabled[parent::*[@id='q-lib-destino-plenario']]">
 						<xsl:attribute name="enabled">
-                            <xsl:value-of select="'true'" />
-                        </xsl:attribute>
+							<xsl:value-of select="'true'" />
+						</xsl:attribute>
 					</xsl:template>
-					<xsl:template
-						match="@enabled[parent::*[@id='q-lib-destino-plenario-via-comissao']]">
+					<xsl:template match="@enabled[parent::*[@id='q-lib-destino-plenario-via-comissao']]">
 						<xsl:attribute name="enabled">
-                            <xsl:value-of select="'true'" />
-                        </xsl:attribute>
+							<xsl:value-of select="'true'" />
+						</xsl:attribute>
 					</xsl:template>
-					<xsl:template
-						match="@enabled[parent::*[@id='q-lib-destino-comissao']]">
+					<xsl:template match="@enabled[parent::*[@id='q-lib-destino-comissao']]">
 						<xsl:attribute name="enabled">
-                            <xsl:text>{q-fundamentacao != 'Requerimento de Remessa a determinada comissão de matéria despachada a outra'}</xsl:text>
-                        </xsl:attribute>
+							<xsl:text>{q-fundamentacao != 'Requerimento de Remessa a determinada comissão de matéria despachada a outra'}</xsl:text>
+						</xsl:attribute>
 					</xsl:template>
 				</xsl:stylesheet>
 			</xi:include>
 
 			<!-- Obtendo MATÉRIA do banco de questoes -->
-			<xi:include
-				href="urn:sf:sistema;madoc:id;question-library"
-				xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-				select="//madoc:Section[@id='q-lib-obtem-materia-e-ementa-section']">
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-obtem-materia-e-ementa-section']">
 				<xsl:stylesheet version="2.0"
 					xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
 					<xsl:template match="@*|node()">
@@ -160,60 +126,44 @@
 							<xsl:apply-templates select="@*|node()" />
 						</xsl:copy>
 					</xsl:template>
-					<xsl:template
-						match="@required[parent::*[@id='q-materia']]">
+					<xsl:template match="@required[parent::*[@id='q-materia']]">
 						<xsl:attribute name="required">
-                            <xsl:value-of select="'true'" />
-                        </xsl:attribute>
+							<xsl:value-of select="'true'" />
+						</xsl:attribute>
 					</xsl:template>
-					<xsl:template
-						match="@visible[parent::*[@id='button-obter-materias-apensadas']]">
+					<xsl:template match="@visible[parent::*[@id='button-obter-materias-apensadas']]">
 						<xsl:attribute name="visible">
-                            <xsl:value-of select="'true'" />
-                        </xsl:attribute>
+							<xsl:value-of select="'true'" />
+						</xsl:attribute>
 					</xsl:template>
-					<xsl:template
-						match="@visible[parent::*[@id='q-materia-apensada']]">
+					<xsl:template match="@visible[parent::*[@id='q-materia-apensada']]">
 						<xsl:attribute name="visible">
-                            <xsl:value-of select="'true'" />
-                        </xsl:attribute>
+							<xsl:value-of select="'true'" />
+						</xsl:attribute>
 					</xsl:template>
 				</xsl:stylesheet>
 			</xi:include>
 
-			<madoc:Question
-				display="Comissões para onde a matéria será remetida"
-				id="q-local-colegiado"
-				enabled="{q-fundamentacao == 'Requerimento de Remessa a determinada comissão de matéria despachada a outra'}"
-				required="true" xsi:type="madoc:ChoiceListQuestionType">
+			<madoc:Question display="Comissões para onde a matéria será remetida" id="q-local-colegiado" enabled="{q-fundamentacao == 'Requerimento de Remessa a determinada comissão de matéria despachada a outra'}" required="true" xsi:type="madoc:ChoiceListQuestionType">
 
-				<madoc:Options dataSetBind="/comissoes/*"
-					sorted="true">
-					<madoc:Option
-						display="{concat(./Sigla, ' - ', ./Nome)}"
-						id="q-lib-remessa-comissao" value="{./Nome}" />
+				<madoc:Options dataSetBind="/comissoes/*" sorted="true">
+					<madoc:Option display="{concat(./Sigla, ' - ', ./Nome)}" id="q-lib-remessa-comissao" value="{./Nome}" />
 				</madoc:Options>
 
 			</madoc:Question>
 
 
 			<!-- Obtendo JUSTIFICAÇÃO do banco de dados de questões -->
-			<xi:include
-				href="urn:sf:sistema;madoc:id;question-library"
-				xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-				select="//madoc:Question[@id='q-lib-justificativa']" />
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-justificativa']" />
 
 			<!-- Obtendo DATA do banco de dados de questões -->
-			<xi:include
-				href="urn:sf:sistema;madoc:id;question-library"
-				xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-				select="//madoc:Question[@id='q-lib-fecho-data']" />
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-fecho-data']" />
 
 			<!-- Obtendo AUTORIA do banco de dados de questões -->
-			<xi:include
-				href="urn:sf:sistema;madoc:id;question-library"
-				xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-				select="//madoc:Section[@id='q-lib-autoria-section']">
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-autoria-section']">
 				<xsl:stylesheet version="2.0"
 					xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
 					<xsl:template match="@*|node()">
@@ -221,31 +171,25 @@
 							<xsl:apply-templates select="@*|node()" />
 						</xsl:copy>
 					</xsl:template>
-					<xsl:template
-						match="@enabled[parent::*[@id='q-lib-autoria-signatario-mesa']]">
+					<xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-mesa']]">
 						<xsl:attribute name="enabled">
-                            <xsl:value-of select="'false'" />
-                        </xsl:attribute>
+							<xsl:value-of select="'false'" />
+						</xsl:attribute>
 					</xsl:template>
-					<xsl:template
-						match="@enabled[parent::*[@id='q-lib-autoria-signatario-comissao']]">
+					<xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-comissao']]">
 						<xsl:attribute name="enabled">{q-lib-destino == 'Plenário via Comissão'}</xsl:attribute>
 					</xsl:template>
-					<xsl:template
-						match="@value[parent::madoc:Action[ancestor::*[@id='q-lib-autoria-tipo']]]">
+					<xsl:template match="@value[parent::madoc:Action[ancestor::*[@id='q-lib-autoria-tipo']]]">
 						<xsl:attribute name="value">
-                            <xsl:value-of
-							select="'Parlamentar'" />
-                        </xsl:attribute>
+							<xsl:value-of select="'Parlamentar'" />
+						</xsl:attribute>
 					</xsl:template>
 				</xsl:stylesheet>
 			</xi:include>
 
 			<!-- Obtendo Opções de Impressão do banco de dados de questões -->
-			<xi:include
-				href="urn:sf:sistema;madoc:id;question-library"
-				xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-				select="//madoc:Section[@id='q-lib-opcoes-impressao-section']" />
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-opcoes-impressao-section']" />
 
 		</madoc:Page>
 
@@ -254,20 +198,18 @@
 	<madoc:DataSets>
 		<!-- Obtendo o dataset de senadores -->
 		<xi:include href="urn:sf:sistema;madoc:id;dataset-library"
-			xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-			select="//madoc:DataSet[@id='senadores']" />
+			xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='senadores']" />
 
 		<!-- Obtendo o dataset de comissões -->
 		<xi:include href="urn:sf:sistema;madoc:id;dataset-library"
-			xmlns:xi="http://www.lexml.gov.br/schema/xloom"
-			select="//madoc:DataSet[@id='comissoes']" />
+			xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='comissoes']" />
 
 	</madoc:DataSets>
 
 	<madoc:Templates madocSkeletonId="skeleton-001">
 		<madoc:Template replaceName="objetoDoRequerimento">
 			<madoc:content>
-                <![CDATA[
+				<![CDATA[
 
             #set($fundamentacoes = {
                 'Requerimento de Remessa a determinada comissão de matéria despachada a outra': 'nos termos do art. 255, II, “c”, 12, do Regimento Interno do Senado Federal',
@@ -282,7 +224,7 @@
             #idMateria($madoc.valueOf.q-materia)
             #if($madoc.size($madoc.valueOf.q-materia-apensada) > 0) $madoc.valueOf.q-materia-apensada #end
             #ementaMateriaOpcional()
-            #if($madoc.valueOf.q-fundamentacao == 'Requerimento de Remessa a determinada comissão de matéria despachada a outra') 
+            #if($madoc.valueOf.q-fundamentacao == 'Requerimento de Remessa a determinada comissão de matéria despachada a outra')
                 , além do constante do despacho inicial de distribuição,
 
                 #set($colegiados = $madoc.valueListOf.q-local-colegiado)
@@ -320,7 +262,7 @@
                 #end
             #end
 
-            
+
             #* --- Ementa --- *#
             #set($ementaGerada = 'Requer')
             #if($qtColegiados gt 1)
@@ -328,8 +270,8 @@
                 #foreach($colegiado in $colegiados)
                     #if($foreach.count > 1)
                         #if($foreach.hasNext)
-                            #set($ementaGerada = "$ementaGerada, da ") 
-                        #else 
+                            #set($ementaGerada = "$ementaGerada, da ")
+                        #else
                             #set($ementaGerada = "$ementaGerada e da ")
                         #end
                     #end
@@ -341,7 +283,7 @@
             #set($ementaGerada = "$ementaGerada sobre #ifFeminino($madoc.valueOf.q-materia 'a' 'o') #idMateria($madoc.valueOf.q-materia)" + '.')
             #* --- FIM Ementa --- *#
 		   ]]>
-            </madoc:content>
+			</madoc:content>
 		</madoc:Template>
 
 	</madoc:Templates>

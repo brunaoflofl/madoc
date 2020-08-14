@@ -1,5 +1,9 @@
 {
-    "/madoc": {
+    "/madoc/api": {
+        "target": "http://localhost:8080",
+        "secure": false
+    },
+    "/madoc/exemplo-integracao": {
         "target": "http://localhost:8080",
         "secure": false
     }

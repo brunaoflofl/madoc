@@ -120,12 +120,12 @@ export class EditarComponent implements OnInit, AfterViewInit, OnDestroy {
         doc['answers'] = this.documentoService.documento.estado.answers;
 
         return this.http
-            .post('/madoc/api/gerarpdf', doc, { responseType: 'text' })
+            .post('api/gerarpdf', doc, { responseType: 'text' })
             .pipe(take(1))
             .subscribe(
                 (response) => {
                     this.visualizarService.showPdf(
-                        '/madoc/api/getpdf/' + response + '/' + encodeURIComponent(normalizeFileName(doc['name']))
+                        'api/getpdf/' + response + '/' + encodeURIComponent(normalizeFileName(doc['name']))
                     );
                 },
                 (error) =>

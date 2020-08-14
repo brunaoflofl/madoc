@@ -13,24 +13,24 @@ export class CatalogoService {
     constructor(private http: HttpClient) { }
 
     getTiposDocumento(): Observable<TipoDocumento[]> {
-        return this.http.get<TipoDocumento[]>(`/madoc/api/dados/json/tipos-documento`);
+        return this.http.get<TipoDocumento[]>(`api/dados/json/tipos-documento`);
     }
 
     getCasas(): Observable<Casa[]> {
-        return this.http.get<Casa[]>(`/madoc/api/dados/json/casas-legislativas`);
+        return this.http.get<Casa[]>(`api/dados/json/casas-legislativas`);
     }
 
     getModelos(tipoDocumento: string): Observable<ModeloListagem[]> {
-        return this.http.get<ModeloListagem[]>(`/madoc/api/modelos/${tipoDocumento}`);
+        return this.http.get<ModeloListagem[]>(`api/modelos/${tipoDocumento}`);
     }
 
     getModelo(id: string): Observable<Modelo> {
-        return this.http.get<Modelo>(`/madoc/api/novo/${id}`);
+        return this.http.get<Modelo>(`api/novo/${id}`);
     }
 
     salva(saveDto: SaveDto): Observable<boolean> {
         return this.http
-            .post('/madoc/api/salvar', saveDto, { responseType: 'text' })
+            .post('api/salvar', saveDto, { responseType: 'text' })
             .pipe(map((resposta) => (resposta === 'OK' ? true : false)));
     }
 }

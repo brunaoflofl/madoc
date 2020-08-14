@@ -84,7 +84,7 @@ export class DocumentoService {
     }
 
     abrir() {
-        return this.http.get(`/madoc/api/abrir?openUrl=${this.api.getUrlAbrir()}`, {
+        return this.http.get(`api/abrir?openUrl=${this.api.getUrlAbrir()}`, {
             responseType: 'json',
         });
     }
@@ -97,7 +97,7 @@ export class DocumentoService {
 
     salvar(): Observable<boolean> {
         return this.http
-            .post('/madoc/api/salvar', this.buildSaveDto(this.documento), {
+            .post('api/salvar', this.buildSaveDto(this.documento), {
                 responseType: 'text',
             })
             .pipe(

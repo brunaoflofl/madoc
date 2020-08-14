@@ -45,7 +45,7 @@
 var __Madoc = function () {
     var iframeId = '__madoc_iframe';
 
-    var contextPath = '';
+    var contextPath = '/madoc';
 
     var resizeTimer;
 

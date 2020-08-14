@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "scripts": {
         "start": "concurrently \"npm:dev\" \"npm:app\" -k",
-        "app": "ng serve --proxy-config proxy.conf.json",
+        "app": "ng serve --proxy-config proxy.conf.json --serve-path madoc",
         "dev-madoc-ui": "ng build madoc-ui --watch",
         "dev-madoc-extras": "ng build madoc-extras --watch",
         "dev": "concurrently \"npm:dev-*\" -k",

@@ -125,7 +125,7 @@ export class EditarComponent implements OnInit, AfterViewInit, OnDestroy {
             .subscribe(
                 (response) => {
                     this.visualizarService.showPdf(
-                        'api/getpdf/' + response + '/' + encodeURIComponent(normalizeFileName(doc['name']))
+                        '/madoc/api/getpdf/' + response + '/' + encodeURIComponent(normalizeFileName(doc['name']))
                     );
                 },
                 (error) =>

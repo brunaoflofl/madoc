@@ -5,4 +5,5 @@
   top: 5px;
   width: calc(100vw - 25px);
   z-index: 1010;
+  background-color: white;
 }

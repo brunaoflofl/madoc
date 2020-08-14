@@ -55,7 +55,7 @@ Em outra janela de terminal, preferencialmente no próprio editor, execute o cli
 
     npm start
 
-    abra o browser e digite: http://localhost:4200/testeapi.html
+    abra o browser e digite: http://localhost:4200/madoc/testeapi.html
 
 ### Atualizando o projeto
 

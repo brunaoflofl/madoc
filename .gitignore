@@ -18,3 +18,4 @@ tmp
 maven-release*
 release.properties
 /pom.xml.releaseBackup
+.npmrc

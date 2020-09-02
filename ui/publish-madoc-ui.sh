@@ -34,7 +34,7 @@ $json -I -f ./projects/madoc-ui/package.json -e "this.version='"$nova_versao"'"
 
 echo 'Compilando a bilioteca e gerando o pacote NPM'
 
-npm run package
+npm run package-madoc-ui
 
 
 echo 'Publicando o pacote gerado no servidor Nexus'

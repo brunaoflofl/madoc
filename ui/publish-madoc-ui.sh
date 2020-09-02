@@ -4,6 +4,7 @@ set -e
 
 json="node node_modules/json/lib/json.js"
 
+versao=$($json -f ./projects/madoc-ui/package.json -a version)
 
 nova_versao=$versao
 
@@ -28,7 +29,7 @@ echo ------------
 echo 'Atualizando o package.json com a nova versão'
 read -p 'Tecle Enter para confirmar ou CTRL-C para abortar'
 
-$json -I -f $file -e "this.version='"$nova_versao"'"
+$json -I -f ./projects/madoc-ui/package.json -e "this.version='"$nova_versao"'"
 
 
 echo 'Compilando a bilioteca e gerando o pacote NPM'
@@ -41,7 +42,7 @@ echo 'Publicando o pacote gerado no servidor Nexus'
 npm run publish-madoc-ui
 
 
-git commit $file -m "atualizada a versão via script"
+git commit projects/madoc-ui/package.json -m "atualizada a versão via script"
 
 git push origin master
 

@@ -5,11 +5,6 @@ set -e
 json="node node_modules/json/lib/json.js"
 
 
-
-echo "É necessário atualizar esse script"
-exit -1
-
-
 nova_versao=$versao
 
 if [ -z "$(git status --porcelain)" ]; then

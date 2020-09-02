@@ -17,7 +17,7 @@ fi
 
 while [ $nova_versao == $versao ]
   do
-    read -e -p "Informe a versão: " -i $versao  nova_versao
+    read -e -p "Informe a versão: " -i $versao  $nova_versao
   done
 
 

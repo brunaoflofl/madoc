@@ -131,7 +131,6 @@ export class MadocDaterangeComponent implements OnInit {
             this.item.dirty = true;
             console.log(this.models[i]);
             if (this.models[i].length === 1) {
-                console.log('teste1');
                 this.models[i][pos] = event;
                 if (
                     pos === 0 &&
@@ -140,21 +139,16 @@ export class MadocDaterangeComponent implements OnInit {
                     this.models[i][1] = this.models[i][0];
                 }
                 if (this.isValidPeriod(i)) {
-                    console.log('teste2');
                     this.onChange();
                 }
             } else if (this.models[i].length > 1) {
-                console.log('teste3');
                 this.models[i][pos] = event;
                 if (this.isValidPeriod(i)) {
-                    console.log('teste4');
                     this.onChange();
                 }
             }
         } else {
-            console.log('teste5');
             if (this.item.dirty) {
-                console.log('teste6');
                 this.models[i][pos] = null;
                 this.onChange(this.item.dirty);
             }

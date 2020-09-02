@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<madoc:MadocDocument xmlns:madoc="http://www.lexml.gov.br/madoc/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <madoc:Metadata id="req-026-sf">
+        <madoc:Entry key="TipoModelo">Requerimento</madoc:Entry>
+        <madoc:Entry key="Titulo">Licenças</madoc:Entry>
+        <madoc:Entry key="ListaDeAnexos">q-lista-anexos</madoc:Entry>
+        <madoc:Entry key="CasaLegislativa">SF</madoc:Entry>
+        <madoc:Entry key="Categoria">
+            <madoc:List>
+                <madoc:Entry>Licenças</madoc:Entry>
+            </madoc:List>
+        </madoc:Entry>
+        <madoc:Entry key="Indexacao">
+            <madoc:List>
+                <madoc:Entry>Licença</madoc:Entry>
+                <madoc:Entry>Missão Política</madoc:Entry>
+                <madoc:Entry>Missão Cultural</madoc:Entry>
+                <madoc:Entry>Representação</madoc:Entry>
+                <madoc:Entry>Missão no Exterior</madoc:Entry>
+                <madoc:Entry>Licença Saúde</madoc:Entry>
+                <madoc:Entry>Solenidade</madoc:Entry>
+                <madoc:Entry>Ônus</madoc:Entry>
+                <madoc:Entry>Interesse Particular</madoc:Entry>
+                <madoc:Entry>Representação Externa</madoc:Entry>
+            </madoc:List>
+        </madoc:Entry>
+        <madoc:Entry key="Fundamentacao">
+            <madoc:Map>
+                <madoc:Entry key="Licença para desempenhar missão política ou cultural de interesse parlamentar, sem ônus para o Senado Federal">
+                    <madoc:List>
+                        <madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art13,art215_cpt_inc1_ali2</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:constituicao:1988-10-05;1988!art55_cpt_inc3</madoc:Entry>
+                    </madoc:List>
+                </madoc:Entry>
+                <madoc:Entry key="Licença para exercer representação a serviço da Casa, sem ônus para o Senado Federal">
+                    <madoc:List>
+                        <madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art13,art40</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:constituicao:1988-10-05;1988!art55_cpt_inc3</madoc:Entry>
+                    </madoc:List>
+                </madoc:Entry>
+                <madoc:Entry key="Licença para desempenhar missão no País ou no exterior, com ônus para o Senado Federal">
+                    <madoc:List>
+                        <madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art40</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:constituicao:1988-10-05;1988!art55_cpt_inc3</madoc:Entry>
+                    </madoc:List>
+                </madoc:Entry>
+                <madoc:Entry key="Licença saúde">
+                    <madoc:List>
+                        <madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art43_cpt_inc1</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:constituicao:1988-10-05;1988!art55_cpt_inc3,art56_cpt_inc2</madoc:Entry>
+                    </madoc:List>
+                </madoc:Entry>
+                <madoc:Entry key="Licença para tratar de interesse particular, sem remuneração">
+                    <madoc:List>
+                        <madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art43_cpt_inc2</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:constituicao:1988-10-05;1988!art55_cpt_inc3,art56_cpt_inc2</madoc:Entry>
+                    </madoc:List>
+                </madoc:Entry>
+                <madoc:Entry key="Licença de representação externa em ato ou solenidade de cunho internacional, nacional ou regional, com ônus para o Senado Federal">
+                    <madoc:List>
+                        <madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art67,art68</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:constituicao:1988-10-05;1988!art55_cpt_inc3</madoc:Entry>
+                    </madoc:List>
+                </madoc:Entry>
+            </madoc:Map>
+        </madoc:Entry>
+    </madoc:Metadata>
+
+
+    <madoc:Wizard display="Requerimento de Licenças">
+
+        <madoc:OnLoad>
+            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-mesa" />
+        </madoc:OnLoad>
+
+        <madoc:Page id="p-detalhes" display="Requerimento de Licenças">
+
+            <!-- Tipo de conteúdo informacional -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-tipo-conteudo-informacional']">
+                <xsl:stylesheet version="2.0" xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
+                    <xsl:template match="@*|node()">
+                        <xsl:copy>
+                            <xsl:apply-templates select="@*|node()" />
+                        </xsl:copy>
+                    </xsl:template>
+                    <xsl:template match="@defaultValue">
+                        <xsl:attribute name="defaultValue">MISSAO</xsl:attribute>
+                    </xsl:template>
+                </xsl:stylesheet>
+            </xi:include>
+
+            <madoc:Question display="Fundamentação" id="q-fundamentacao" enabled="true" xsi:type="madoc:RadioBoxGroupQuestionType">
+                <madoc:OnChange>
+                    <!-- Alteração do tipo de conteúdo informacional -->
+                    <madoc:Action xsi:type="madoc:SwitchType">
+                        <madoc:Case questionValue="f-particular-ate-120d">
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-tipo-conteudo-informacional" value="LICENCA_INTER_PARTIC_ATE_120D" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-particular-sup-120d">
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-tipo-conteudo-informacional" value="LICENCA_INTER_PARTIC_SUP_120D" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-saude-ate-120d">
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-tipo-conteudo-informacional" value="LICENCA_SAUDE_ATE_120D" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-saude-sup-120d">
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-tipo-conteudo-informacional" value="LICENCA_SAUDE_SUP_120D" />
+                        </madoc:Case>
+                        <madoc:Otherwise>
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-tipo-conteudo-informacional" value="MISSAO" />
+                        </madoc:Otherwise>
+                    </madoc:Action>
+                    <!-- Demais ajustes no formulário -->
+                    <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="localidade-brasil" />
+                    <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-comunicacao-ausencia-pais" value="false" />
+                    <madoc:Action xsi:type="madoc:SwitchType">
+                        <madoc:Case questionValue="f-missao-interesse-parlamentar">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-mesa" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-representacao-sem-onus">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-mesa" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-missao">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-plenario" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-saude-ate-120d">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-plenario" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="laudo de inspeção de saúde" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-saude-sup-120d">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-plenario" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="laudo de inspeção de saúde" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-particular-ate-120d">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="nao-incluir-comunicacao" />
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-plenario" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-particular-sup-120d">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="nao-incluir-comunicacao" />
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-plenario" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-representacao-ext-com-onus">
+                            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-plenario" />
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lista-anexos" value="" />
+                        </madoc:Case>
+                    </madoc:Action>
+                    <!-- Bloqueia envio de anexo para requerimentos de saúde -->
+                    <madoc:Action xsi:type="madoc:SwitchType">
+                        <madoc:Case questionValue="f-saude-ate-120d">
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-anexo-bloqueado" value="true" />
+                        </madoc:Case>
+                        <madoc:Case questionValue="f-saude-sup-120d">
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-anexo-bloqueado" value="true" />
+                        </madoc:Case>
+                        <madoc:Otherwise>
+                            <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-anexo-bloqueado" value="false" />
+                        </madoc:Otherwise>
+                    </madoc:Action>
+                </madoc:OnChange>
+                <madoc:Options>
+                    <madoc:Option value="f-missao-interesse-parlamentar" display="Licença para desempenhar missão política ou cultural de interesse parlamentar, sem ônus para o Senado Federal (RISF, arts. 13 e 215, I, b; CF, art. 55, III)" id="licencaMissaoSemOnus" selected="true" />
+                    <madoc:Option value="f-representacao-sem-onus" display="Licença para exercer representação a serviço da Casa, sem ônus para o Senado Federal (RISF, art. 40 e art. 13; CF, art. 55, III)" id="licencaRepresentacao" />
+                    <madoc:Option value="f-missao" display="Licença para desempenhar missão no País ou no exterior, com ônus para o Senado Federal (RISF, art. 40; CF, art. 55, III)" id="licencaMissao" />
+                    <madoc:Option value="f-saude-ate-120d" display="Licença Saúde ATÉ 120 DIAS (RISF, art. 43, I; CF, arts. 55, III, e 56, II)" id="licencaSaudeAte120d" />
+                    <madoc:Option value="f-saude-sup-120d" display="Licença Saúde SUPERIOR A 120 DIAS (RISF, art. 43, I; CF, arts. 55, III, e 56, II)" id="licencaSaudeSup120d" />
+                    <madoc:Option value="f-particular-ate-120d" display="Licença para tratar de interesse particular, sem remuneração, ATÉ 120 DIAS (RISF, arts. 43, II; CF, arts. 55, III, e 56, II)" id="licencaInteresseParticularAte120d" />
+                    <madoc:Option value="f-particular-sup-120d" display="Licença para tratar de interesse particular, sem remuneração, SUPERIOR A 120 DIAS (RISF, arts. 43, II; CF, arts. 55, III, e 56, II)" id="licencaInteresseParticularSup120d" />
+                    <madoc:Option value="f-representacao-ext-com-onus" display="Licença de representação externa em ato ou solenidade de cunho internacional, nacional ou regional, com ônus para o Senado Federal (RISF, arts. 67 e 68; CF, art. 55, III)" id="licencaRepresentacaoExterna" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="" id="q-anexo-bloqueado" visible="false" xsi:type="madoc:InputTextQuestionType" />
+
+            <!-- Obtendo EPIGRAFE do banco de questoes -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-epigrafe-section']" />
+
+            <madoc:Question display="Local da Licença" id="q-local-licenca" visible="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus' || q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" xsi:type="madoc:RadioBoxGroupQuestionType" required="true">
+
+                <madoc:Options>
+                    <madoc:Option id="noMeuEstado" enabled="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus' || q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" value="no meu Estado" display="no meu Estado" />
+                    <madoc:Option id="localidade-brasil" inputType="text" input="true" value="LocalidadeBrasil" enabled="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus' || q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" display="Em localidade no Brasil, especificar Cidade (Estado):" inputDefaultValue="em " selected="true" />
+                    <madoc:Option id="localidade-exterior" inputType="text" input="true" value="LocalidadeExterior" enabled="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus' || q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" display="Em localidade no exterior, especificar Cidade (País):" inputDefaultValue="em " />
+                </madoc:Options>
+            </madoc:Question>
+
+            <madoc:Question display="Finalidade" id="q-finalidade" xsi:type="madoc:RichTextQuestionType" visible="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus' || q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" required="{q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" hint="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus'? 'Complemente ou remova o texto abaixo' : q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'? 'Complemente o texto abaixo': ''}" inline="true" lines="8" defaultValueSatisfiesRequiredQuestion="false" defaultValue="a fim de " />
+
+            <madoc:Question display="Datas da Licença" id="q-periodo-licenca" xsi:type="madoc:DaterangeListQuestionType" required="true" multipleValues="true" />
+
+            <madoc:Question display="Lista de Anexos" id="q-lista-anexos" xsi:type="madoc:TextListQuestionType" visible="{q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-saude-ate-120d' || q-fundamentacao == 'f-saude-sup-120d' || q-fundamentacao == 'f-representacao-ext-com-onus'}" hint="Digite o título do documento" required="false" enabled="true" />
+
+            <madoc:Section id="s-inclui-comunicacao-ausencia" display="Comunicado de Ausência do País" visible="{q-local-licenca == 'LocalidadeExterior' || q-fundamentacao == 'f-saude-ate-120d' || q-fundamentacao == 'f-saude-sup-120d' || q-fundamentacao == 'f-particular-ate-120d' || q-fundamentacao == 'f-particular-sup-120d'}">
+
+                <madoc:Question id="q-comunicacao-ausencia-pais" xsi:type="madoc:CheckBoxQuestionType" display="Incluir comunicado de ausência do País" visible="{q-fundamentacao == 'f-saude-ate-120d' || q-fundamentacao == 'f-saude-sup-120d' || q-fundamentacao == 'f-particular-ate-120d' || q-fundamentacao == 'f-particular-sup-120d'}" />
+
+                <!-- 
+					<madoc:Question display="Comunicação de ausência do País" id="q-comunicacao-ausencia-pais"  xsi:type="madoc:RadioBoxGroupQuestionType"
+						visible="{q-fundamentacao == 'f-saude-ate-120d' || q-fundamentacao == 'f-saude-sup-120d' || q-fundamentacao == 'f-particular-ate-120d' || q-fundamentacao == 'f-particular-sup-120d'}">
+							<madoc:Options>
+								<madoc:Option id="nao-incluir-comunicacao" selected="true" value="Não incluir"/>
+								<madoc:Option id="incluir-comunicacao" value="Incluir comunicação"/>
+							</madoc:Options>
+					</madoc:Question>
+					 -->
+
+                <madoc:Question defaultValue="em " display="Em localidade no exterior, especificar Cidade (País):" id="q-local-comunicacao-ausencia" required="true" xsi:type="madoc:InputTextQuestionType" defaultValueSatisfiesRequiredQuestion="false" visible="{q-comunicacao-ausencia-pais == 'true'}" />
+
+                <madoc:Question display="Datas da Ausência" id="q-periodo-ausencia" xsi:type="madoc:DaterangeListQuestionType" required="true" visible="{q-local-licenca == 'LocalidadeExterior' || q-comunicacao-ausencia-pais == 'true'}" multipleValues="true" />
+
+            </madoc:Section>
+
+            <!-- Obtendo JUSTIFICATIVA do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-justificativa']" />
+
+            <!-- Obtendo DATA do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-fecho-data']" />
+
+            <!-- Obtendo AUTORIA do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-autoria-section']">
+                <xsl:stylesheet version="2.0" xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
+                    <xsl:template match="@*|node()">
+                        <xsl:copy>
+                            <xsl:apply-templates select="@*|node()" />
+                        </xsl:copy>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-senador']]">
+                        <xsl:attribute name="enabled">
+                            <xsl:value-of select="'true'" />
+                        </xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-sem-ident']]">
+                        <xsl:attribute name="enabled">
+                            <xsl:value-of select="'false'" />
+                        </xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-mesa']]">
+                        <xsl:attribute name="enabled">
+                            <xsl:value-of select="'false'" />
+                        </xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-comissao']]">
+                        <xsl:attribute name="enabled">
+                            <xsl:value-of select="'false'" />
+                        </xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@value[parent::madoc:Action[ancestor::*[@id='q-lib-autoria-tipo']]]">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="'Parlamentar'" />
+                        </xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@visible[parent::*[@id='q-lib-autoria-demaissignatarios-quant-assinaturas']]">
+                        <xsl:attribute name="visible">
+                            <xsl:value-of select="'false'" />
+                        </xsl:attribute>
+                    </xsl:template>
+
+                    <xsl:template match="@value[parent::madoc:CustomAttribute[ancestor::*[@id='q-lib-autoria-signatario-senador-nome']]]">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="1" />
+                        </xsl:attribute>
+                    </xsl:template>
+                </xsl:stylesheet>
+            </xi:include>
+
+            <!-- Obtendo Opções de Impressão do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-opcoes-impressao-section']" />
+
+        </madoc:Page>
+
+    </madoc:Wizard>
+
+    <madoc:DataSets>
+        <!-- Obtendo o dataset de senadores -->
+        <xi:include href="urn:sf:sistema;madoc:id;dataset-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='senadores']" />
+
+        <!-- Obtendo o dataset de comissoes -->
+        <xi:include href="urn:sf:sistema;madoc:id;dataset-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='comissoes']" />
+    </madoc:DataSets>
+
+    <madoc:Templates madocSkeletonId="skeleton-001">
+        <madoc:Template replaceName="objetoDoRequerimento">
+            <madoc:content>
+                <![CDATA[
+
+    		 #set($fundamentacoes = {
+	           'f-missao-interesse-parlamentar': 'nos termos dos arts. 13 e 215, I, “b”, do Regimento Interno do Senado Federal, em face do que dispõe o art. 55, III, da Constituição Federal',
+		  	   'f-representacao-sem-onus': 'nos termos dos arts. 13 e 40 do Regimento Interno do Senado Federal, em face do que dispõe o art. 55, III, da Constituição Federal',
+		       'f-missao': 'nos termos do art. 40 do Regimento Interno do Senado Federal, em face do que dispõe o art. 55, III, da Constituição Federal',
+		       'f-saude-ate-120d': 'nos termos do art. 43, I, do Regimento Interno do Senado Federal, em face do que dispõem os arts. 55, III, e 56, II, da Constituição Federal',
+		       'f-saude-sup-120d': 'nos termos do art. 43, I, do Regimento Interno do Senado Federal, em face do que dispõem os arts. 55, III, e 56, II, da Constituição Federal',
+ 	           'f-particular-ate-120d': 'nos termos do art. 43, II, do Regimento Interno do Senado Federal, em face do que dispõem os arts. 55, III, e 56, II, da Constituição Federal',
+ 	           'f-particular-sup-120d': 'nos termos do art. 43, II, do Regimento Interno do Senado Federal, em face do que dispõem os arts. 55, III, e 56, II, da Constituição Federal',
+		       'f-representacao-ext-com-onus': 'nos termos dos arts. 67 e 68 do Regimento Interno do Senado Federal, em face do que dispõe o art. 55, III, da Constituição Federal'
+    	   })
+
+
+    	   #set($fundamentacao = $fundamentacoes.get($madoc.valueOf.q-fundamentacao))
+
+    	   #if($madoc.valueOf.q-fundamentacao == 'f-missao-interesse-parlamentar')
+    	    #set($tipoLicenca = 'licença para desempenhar missão política ou cultural de interesse parlamentar, sem ônus para o Senado Federal')
+    	   #elseif($madoc.valueOf.q-fundamentacao == 'f-representacao-sem-onus')
+    	     #set($tipoLicenca = 'licença para exercer representação a serviço da Casa, sem ônus para o Senado Federal')
+    	   #elseif($madoc.valueOf.q-fundamentacao == 'f-missao')
+    	   	 #if($madoc.valueOf.q-local-licenca == 'LocalidadeExterior')
+    	       #set($tipoLicenca = 'licença para desempenhar missão no exterior, com ônus para o Senado Federal')
+    	   	 #else
+    	       #set($tipoLicenca = 'licença para desempenhar missão no País, com ônus para o Senado Federal')
+    	   	 #end
+    	   #elseif($madoc.valueOf.q-fundamentacao.startsWith('f-saude'))
+    	    #set($tipoLicenca = 'licença saúde')
+    	   #elseif($madoc.valueOf.q-fundamentacao.startsWith('f-particular'))
+    	    #set($tipoLicenca = 'licença para tratar de interesse particular, sem remuneração')
+    	   #elseif($madoc.valueOf.q-fundamentacao == 'f-representacao-ext-com-onus')
+    	     #set($tipoLicenca = 'licença de representação externa em ato ou solenidade de cunho internacional, nacional ou regional, com ônus para o Senado Federal')
+    	   #end
+
+		   $verboRequeiro, $fundamentacao, $tipoLicenca
+           #if($madoc.valueOf.q-fundamentacao == 'f-missao-interesse-parlamentar' or
+           		$madoc.valueOf.q-fundamentacao == 'f-representacao-sem-onus' or
+           		$madoc.valueOf.q-fundamentacao == 'f-missao' or
+           		$madoc.valueOf.q-fundamentacao == 'f-representacao-ext-com-onus')
+                , #if($madoc.valueOf.q-local-licenca.startsWith('Localidade'))
+                	$madoc.valueListOf.q-local-licenca[1]
+                  #else
+                    $madoc.valueOf.q-local-licenca
+                  #end
+           #end
+           
+           
+           #set($i = 0)
+            ,
+           	#foreach($p in $madoc.valueListOf.q-periodo-licenca)
+	        	#set($periodo = $p.split(','))
+	        	#set($i = $i+1)
+				#if($periodo[0] == $periodo[1])
+					em $periodo[0]
+				#else
+					de $periodo[0] a $periodo[1]
+				#end		
+				#if ($madoc.valueListOf.q-periodo-licenca.size() > 1)			
+					#if($foreach.hasNext)
+                		#if($i < $madoc.valueListOf.q-periodo-licenca.size() - 1)	
+                			, 
+   	              		#else
+                 			 e
+                 		#end
+       	          	#end
+       	       	#end
+           	#end        
+           
+           
+           #if(not($madoc.valueOf.q-fundamentacao.startsWith('f-particular') or $madoc.valueOf.q-fundamentacao.startsWith('f-saude')))
+           		#set($finalidade = $madoc.removeEntities($madoc.valueOf.q-finalidade).trim())
+                #if($finalidade != '' and $finalidade != $madoc.defaultValueOf.q-finalidade.trim())
+                  , $madoc.removeFinalDot($madoc.lowercaseInitial($madoc.html2fo($finalidade)))
+                #end
+           #end
+           #if( $madoc.valueOf.q-fundamentacao == 'f-missao' or $madoc.valueOf.q-fundamentacao.startsWith('f-saude') or $madoc.valueOf.q-fundamentacao == 'f-representacao-ext-com-onus')
+                   #set($vetorDocs = $madoc.valueListOf.q-lista-anexos)
+    			   #set($quantDocs = $vetorDocs.size())
+                   #if($quantDocs == 1)
+                         , conforme $vetorDocs[0] em anexo
+                   #elseif($quantDocs > 1)
+                         , conforme os seguintes documentos anexos:
+                   #end
+                   #if($quantDocs > 1)
+                       #foreach($doc in $vetorDocs)
+                           #if($foreach.count > 1)
+                               #if($foreach.hasNext)
+                                   ,
+                               #else
+                                   e
+                               #end
+                           #end
+                           $doc
+                       #end
+                   #end
+                   .
+           #else
+               .
+           #end
+
+           		   ]]>
+            </madoc:content>
+        </madoc:Template>
+
+        <madoc:Template replaceName="complementoDoObjeto">
+            <madoc:content>
+                <![CDATA[
+
+        #if($madoc.valueOf.q-comunicacao-ausencia-pais == 'true')
+        	#set($possuiLocalComunicadoAusencia = 'sim')
+        #else
+        	#set($possuiLocalComunicadoAusencia = 'nao')
+        #end
+
+        #if($madoc.valueOf.q-local-licenca == 'LocalidadeExterior'
+            or $possuiLocalComunicadoAusencia == 'sim')
+
+                <fo:block text-align='justify' space-before='0.6em' white-space-collapse='false' text-indent='2.5cm' line-height='160%'>
+                    Comunico, nos termos do art. 39, I, do Regimento Interno do Senado Federal, que estarei
+
+           #if($possuiLocalComunicadoAusencia.contains('sim'))
+           		$madoc.valueOf.q-local-comunicacao-ausencia, consequentemente
+           #end
+           ausente do País
+           
+            #set($i = 0)
+           	#foreach($p in $madoc.valueListOf.q-periodo-ausencia)
+	        	#set($periodo = $p.split(','))
+	        	#set($i = $i+1)
+				#if($periodo[0] == $periodo[1])
+					em $periodo[0]
+				#else
+					de $periodo[0] a $periodo[1]
+				#end		
+				#if ($madoc.valueListOf.q-periodo-ausencia.size() > 1)			
+					#if($foreach.hasNext)
+                		#if($i < $madoc.valueListOf.q-periodo-ausencia.size() - 1)	
+                			, 
+   	              		#else
+                 			 e
+                 		#end
+       	          	#end
+       	       	#end
+           	#end
+           
+           #if($madoc.valueOf.q-fundamentacao=='f-missao')
+           	  , para desempenho desta missão
+           #end
+           #if($madoc.valueOf.q-fundamentacao=='f-representacao-ext-com-onus')
+           	  , para desempenho desta representação
+           #end
+           .
+                </fo:block>
+         #end
+
+           ]]>
+            </madoc:content>
+        </madoc:Template>
+
+
+    </madoc:Templates>
+
+
+</madoc:MadocDocument>

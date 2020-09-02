@@ -43,7 +43,7 @@ npm run package
 
 echo 'Publicando o pacote gerado no servidor Nexus'
 
-npm run publish
+npm run publish-madoc-ui
 
 
 git commit $file -m "atualizada a versão via script"

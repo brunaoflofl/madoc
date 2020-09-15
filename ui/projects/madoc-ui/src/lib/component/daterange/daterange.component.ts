@@ -28,8 +28,8 @@ const moment = _moment;
             placement="bottom left"
             style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
             [(ngModel)]="models[i][0]"
-            (bsValueChange)="onSelected(i, 0, $event)"
-            [bsConfig]="{ isAnimated: true, containerClass: 'theme-dark-blue' }"
+            (bsValueChange)="onSelected(i, 0)"
+            [bsConfig]="bsConfig"
             />
             Até:
             <input
@@ -39,8 +39,8 @@ const moment = _moment;
             placement="bottom left"
             style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
             [(ngModel)]="models[i][1]"
-            (bsValueChange)="onSelected(i, 1, $event)"
-            [bsConfig]="{ isAnimated: true, containerClass: 'theme-dark-blue' }"
+            (bsValueChange)="onSelected(i, 1)"
+            [bsConfig]="bsConfig"
             />
             <button
             id="moveDown"
@@ -88,7 +88,11 @@ export class MadocDaterangeComponent implements OnInit {
     @Input() public item: DaterangeListQuestion;
     @Output() public retorno$ = new EventEmitter();
 
-    bsConfig: Partial<BsDatepickerConfig>;
+    bsConfig: Partial<BsDatepickerConfig> = { 
+        isAnimated: true, 
+        containerClass: 'theme-dark-blue',
+        dateInputFormat: 'DD/MM/YYYY'
+    };
 
     models: Date[][] = [];
 
@@ -125,27 +129,35 @@ export class MadocDaterangeComponent implements OnInit {
         this.item.answer = value;
     }
 
-    onSelected(i, pos, event) {
-        console.log(event);
-        if (event != null) {
+    truncate(date: Date) {
+        if(!date) {
+            return date;
+        }
+        date.setHours(0);
+        date.setMinutes(0);
+        date.setSeconds(0);
+        date.setMilliseconds(0);
+        return date;
+    }
+
+    onSelected(i, pos) {
+        const date = this.truncate(this.models[i][pos]);
+        if (date) {
             this.item.dirty = true;
-            console.log(this.models[i]);
-            if (this.models[i].length === 1) {
-                this.models[i][pos] = event;
-                if (
-                    pos === 0 &&
-                    (this.models[i][1] == null || this.models[i][1] < this.models[i][0])
-                ) {
-                    this.models[i][1] = this.models[i][0];
+            if (pos === 0) {
+                const endDate = this.models[i][1];
+                if(!endDate || date > endDate) {
+                    this.models[i][1] = date;
                 }
-                if (this.isValidPeriod(i)) {
-                    this.onChange();
+            }
+            else { // pos === 1
+                const startDate = this.models[i][0];
+                if(!startDate || date < startDate) {
+                    this.models[i][0] = date;
                 }
-            } else if (this.models[i].length > 1) {
-                this.models[i][pos] = event;
-                if (this.isValidPeriod(i)) {
-                    this.onChange();
-                }
+            }
+            if (this.isValidPeriod(i)) {
+                this.onChange();
             }
         } else {
             if (this.item.dirty) {
@@ -203,7 +215,6 @@ export class MadocDaterangeComponent implements OnInit {
     onChange(actions = true) {
         this.item.dirty = actions;
         this.updateAnswer();
-        console.log(this.item.answer);
         const escolha = new Choice(
             this.item.id,
             this.item.display,
@@ -215,11 +226,13 @@ export class MadocDaterangeComponent implements OnInit {
 
     updateAnswer() {
         this.item.answer = [];
-        this.models.forEach(m => {
-            const a = m[0] == null ? null : moment(m[0]).format('DD/MM/YYYY');
-            const b = m[1] == null ? null : moment(m[1]).format('DD/MM/YYYY');
-            this.item.answer.push(a + ',' + b);
-        });
+        this.models
+            .filter(m => m[0] && m[1])
+            .forEach(m => {
+                const a = moment(m[0]).format('DD/MM/YYYY');
+                const b = moment(m[1]).format('DD/MM/YYYY');
+                this.item.answer.push(a + ',' + b);
+            });
     }
 
     isValid() {

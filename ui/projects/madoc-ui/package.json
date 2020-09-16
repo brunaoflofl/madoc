@@ -1,6 +1,6 @@
 {
   "name": "@lexml/madoc-ui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publishConfig": {
     "registry": "https://api.bintray.com/npm/lexml/npm/"
   },

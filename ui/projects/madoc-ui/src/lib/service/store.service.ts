@@ -21,9 +21,9 @@ export class MadocStore {
     state$ = new BehaviorSubject<State>(null);
 
 
-    build(wizard: Wizard) {
+    build(wizard: Wizard, startDirty: boolean) {
         this.pageItems = wizard.pageItems;
-        this.createMaps();
+        this.createMaps(startDirty);
 
         this.execute(wizard.onLoadActions);
         this.initComponents();
@@ -165,7 +165,7 @@ export class MadocStore {
         concat(...observables).subscribe();
     }
 
-    setAnswers(answers) {
+    setAnswers(answers, startDirty = false) {
         this.getQuestions().map(q => {
             if (answers[q.id] != null && answers[q.id].length > 0) {
                 q.setQuestionValue(answers[q.id]);
@@ -173,9 +173,11 @@ export class MadocStore {
         });
         this.executeAllRules();
         this.originalMap = {};
-        window.setTimeout(() => {
-            this.originalMap = this.buildMap();
-        }, 500);
+        if(!startDirty) {
+            window.setTimeout(() => {
+                this.originalMap = this.buildMap();
+            }, 500);
+        }
     }
 
     addQuestionValue(id: string, value: any) {
@@ -243,10 +245,12 @@ export class MadocStore {
         this.executeAllRules();
     }
 
-    private createMaps() {
-        window.setTimeout(() => {
-            this.originalMap = this.buildMap();
-        }, 500);
+    private createMaps(startDirty: boolean) {
+        if(!startDirty) {
+            window.setTimeout(() => {
+                this.originalMap = this.buildMap();
+            }, 500);
+        }
         if (this.getQuestions() != null) {
             for (const item of this.getQuestions()) {
                 if (item != null) {

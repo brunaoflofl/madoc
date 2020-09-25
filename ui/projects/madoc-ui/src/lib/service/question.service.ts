@@ -18,12 +18,12 @@ export class QuestionService {
   constructor(public actionService: ActionService) {}
 
 
-  getStore(json) {
+  getStore(json, startDirty: boolean) {
     const store = new MadocStore();
-    store.build(this.getWizard(json));
+    store.build(this.getWizard(json), startDirty);
 
     if (json.answers != null) {
-      store.setAnswers(json.answers);
+      store.setAnswers(json.answers, startDirty);
     }
     return store;
   }

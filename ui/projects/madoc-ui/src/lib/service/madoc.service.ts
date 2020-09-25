@@ -22,8 +22,8 @@ export class MadocService {
 
     constructor(private questionService: QuestionService) {}
 
-    render(json: any) {
-        this.store = this.questionService.getStore(json);
+    render(json: any, startDirty = false) {
+        this.store = this.questionService.getStore(json, startDirty);
         this.subject.next(this.store);
         this.changed$ = this.store.state$.asObservable().pipe(
             filter((s) => s != null && this.loaded),

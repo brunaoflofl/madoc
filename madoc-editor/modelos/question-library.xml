@@ -100,7 +100,7 @@
 
                 <madoc:Command xsi:type="madoc:ButtonType" id="button-obter-ementa-materia" display="Obter ementa">
                     <madoc:OnClick>
-                        <madoc:Action xsi:type="madoc:ConsumeRestServiceActionType" uri="resources/materia/get?materia={q-materia}">
+                        <madoc:Action xsi:type="madoc:ConsumeRestServiceActionType" uri="api/dados/materia/get?materia={q-materia}">
                             <madoc:Action xpath="normalize-space(//EmentaMateria/text())" xsi:type="madoc:ConsumeSetQuestionValueActionType" questionId="q-materia-ementa" />
                         </madoc:Action>
                     </madoc:OnClick>

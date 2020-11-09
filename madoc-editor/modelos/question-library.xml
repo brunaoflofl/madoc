@@ -89,13 +89,13 @@
 
             <madoc:Section id="q-lib-obtem-materia-e-ementa-section" display="Identificação da Matéria" visible="true">
 
-                <madoc:Question display="Matéria" id="q-materia" required="false" xsi:type="madoc:CustomQuestionType" customQuestionType="MateriaQuestion" visible="true" hint="Identifique a matéria no formato tipo número/ano (ex: PL 1/1997)">
+                <madoc:Question display="Matéria" id="q-materia" required="false" xsi:type="madoc:CustomQuestionType" customQuestionType="MateriaQuestion" visible="true" hint="Identifique a matéria no formato tipo número/ano (ex: PL 1/1997)"
                     <madoc:OnChange>
                         <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-materia-ementa" value="" />
                         <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-materia-apensada" value="" />
                     </madoc:OnChange>
-
                     <madoc:CustomAttribute name="mregex" value="*" />
+                    <madoc:CustomAttribute name="url" value="/madoc/api/dados/materia/search?materia=" />
                 </madoc:Question>
 
                 <madoc:Command xsi:type="madoc:ButtonType" id="button-obter-ementa-materia" display="Obter ementa">

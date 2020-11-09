@@ -20,39 +20,39 @@ A aplicação roda em http://localhost:8080
 
 Obter catálogo de modelos
 
-	GET /api/modelos/<tipo-de-documento>
+	GET /madoc/api/modelos/<tipo-de-documento>
 
 Obter dados de teste em Json
 
-	GET /api/dados/json/<nome-do-arquivo>
+	GET /madoc/api/dados/json/<nome-do-arquivo>
 
 Obter dados de teste em XML
 
-	GET /api/dados/xml/<nome-do-arquivo>
+	GET /madoc/api/dados/xml/<nome-do-arquivo>
 
 Novo documento (obter modelo)
 
-	GET /api/novo/<codigo-do-modelo>
+	GET /madoc/api/novo/<codigo-do-modelo>
 
 Abrir
 
-	GET /api/abrir?openUrl=<url para abrir o documento>
+	GET /madoc/api/abrir?openUrl=<url para abrir o documento>
 
 Salvar
 
-	POST /api/salvar
+	POST /madoc/api/salvar
 	
 	Exemplo de requisição em /dados/salvar-req.json
 
 Gerar PDF (retorna nome do arquivo para download)
 
-	POST /api/gerarpdf
+	POST /madoc/api/gerarpdf
 	
 	Exemplo de requisição em /dados/gerarpdf-req.json
 
 Download/Obter PDF
 
-	GET /api/getpdf/<nome do arquivo do gerarpdf>/<nome para download>
+	GET /madoc/api/getpdf/<nome do arquivo do gerarpdf>/<nome para download>
 
 
 ## Configuração (com valores default)

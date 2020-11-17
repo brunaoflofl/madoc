@@ -10,8 +10,8 @@
     <span title="Obrigatório" [style.color]="'red'" *ngIf="item.required"> * </span>
   </div>
 
-  <div class="col-sm-5" style="padding-left: 0">
-    <label for="cargo" style="padding-left: 0">Cargo</label>
+  <div class="col-sm-5">
+    <label for="cargo">Cargo</label>
   </div>
 </div>
 <div  class="row" *ngFor="let parlamentar of parlamentares; let i = index"
@@ -36,7 +36,7 @@
             [typeaheadOptionField]="'display'"
             #inputAutor />
   </div>
-  <div class="col-sm-5" style="padding-left: 0">
+  <div class="col-sm-5">
     <label for="cargo" class="visible-xs">Cargo</label>
     <input  id="cargo"
             [(ngModel)]="parlamentar.cargo"
@@ -49,7 +49,7 @@
             style="width: 100%; vertical-align: bottom;" />
   </div>
 
-  <div class="col-sm-2" style="padding-left: 0; padding-right: 0" [ngClass]="{'hidden': item.maxEntries == 1}">
+  <div class="col-sm-2" style="padding-right: 0" [ngClass]="{'hidden': item.maxEntries == 1}">
       <button id="moveDown"
               class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
               style="padding: 0.5em; margin-top: 0.5em;"

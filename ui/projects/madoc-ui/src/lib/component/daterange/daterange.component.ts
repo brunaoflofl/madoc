@@ -10,86 +10,14 @@ const moment = _moment;
 
 @Component({
     selector: 'madoc-date-range',
-    template: `
-    <div class="component"
-    [ngClass]="{ hidden: !item.visible }"
-    [style.border]="isValid() ? 'none' : '1px solid red'"
-    >
-        <madoc-header [item]="item"></madoc-header>
-        <div
-            *ngFor="let model of models; let i = index"
-            [style.border]="isValid() && isValidPeriod(i) ? 'none' : '1px solid red'"
-        >
-            De:
-            <input
-            type="text"
-            class="form-control"
-            bsDatepicker
-            placement="bottom left"
-            style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
-            [(ngModel)]="models[i][0]"
-            (bsValueChange)="onSelected(i, 0)"
-            [bsConfig]="bsConfig"
-            />
-            Até:
-            <input
-            type="text"
-            class="form-control"
-            bsDatepicker
-            placement="bottom left"
-            style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
-            [(ngModel)]="models[i][1]"
-            (bsValueChange)="onSelected(i, 1)"
-            [bsConfig]="bsConfig"
-            />
-            <button
-            id="moveDown"
-            class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
-            title="Mover para baixo"
-            style="vertical-align: baseline; margin-left: 5px"
-            [disabled]="!canGoDown(i)"
-            (click)="moveDown(i)"
-            ></button>
-            <button
-            id="moveUp"
-            class="btn btn-default btn-sm glyphicon glyphicon-triangle-top moveUp"
-            title="Mover para cima"
-            style="vertical-align: baseline; margin-left: 5px"
-            [disabled]="!canGoUp(i)"
-            (click)="moveUp(i)"
-            ></button>
-            <button
-            class="btn btn-default btn-sm glyphicon glyphicon-trash deleteAuthor"
-            title="Excluir"
-            style="vertical-align: baseline; margin-left: 5px"
-            [disabled]="!canDelete()"
-            (click)="delete(i)"
-            ></button>
-        </div>
-        <p></p>
-        <div>
-            <button
-            id="addPeriod"
-            type="button"
-            class="btn btn-primary btn-sm"
-            (click)="add()"
-            [disabled]="!canAdd()"
-            >
-            Incluir mais datas
-            </button>
-        </div>
-        <div style="font-size: 0.9em; color: red; clear: left" *ngIf="!isValid()">
-            <br/>{{ item.erro }}
-        </div>
-    </div>
-  `
+    templateUrl: 'daterange.component.html'
 })
 export class MadocDaterangeComponent implements OnInit {
     @Input() public item: DaterangeListQuestion;
     @Output() public retorno$ = new EventEmitter();
 
-    bsConfig: Partial<BsDatepickerConfig> = { 
-        isAnimated: true, 
+    bsConfig: Partial<BsDatepickerConfig> = {
+        isAnimated: true,
         containerClass: 'theme-dark-blue',
         dateInputFormat: 'DD/MM/YYYY'
     };
@@ -130,7 +58,7 @@ export class MadocDaterangeComponent implements OnInit {
     }
 
     truncate(date: Date) {
-        if(!date) {
+        if (!date) {
             return date;
         }
         date.setHours(0);
@@ -146,13 +74,12 @@ export class MadocDaterangeComponent implements OnInit {
             this.item.dirty = true;
             if (pos === 0) {
                 const endDate = this.models[i][1];
-                if(!endDate || date > endDate) {
+                if (!endDate || date > endDate) {
                     this.models[i][1] = date;
                 }
-            }
-            else { // pos === 1
+            } else { // pos === 1
                 const startDate = this.models[i][0];
-                if(!startDate || date < startDate) {
+                if (!startDate || date < startDate) {
                     this.models[i][0] = date;
                 }
             }

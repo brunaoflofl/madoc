@@ -1,0 +1,116 @@
+<div class="component"
+     [ngClass]="{ hidden: !item.visible }"
+     [style.border]="isValid() ? 'none' : '1px solid red'">
+    <madoc-header [item]="item"></madoc-header>
+    <div *ngFor="let model of models; let i = index"
+         [style.border]="isValid() && isValidPeriod(i) ? 'none' : '1px solid red'">
+        <div class="hidden-xs">
+            <label>De:</label>
+            <input type="text"
+                   class="form-control"
+                   bsDatepicker
+                   placement="bottom left"
+                   style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
+                   [(ngModel)]="models[i][0]"
+                   (bsValueChange)="onSelected(i, 0)"
+                   [bsConfig]="bsConfig" />
+            <b>Até:</b>
+            <input type="text"
+                   class="form-control"
+                   bsDatepicker
+                   placement="bottom left"
+                   style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
+                   [(ngModel)]="models[i][1]"
+                   (bsValueChange)="onSelected(i, 1)"
+                   [bsConfig]="bsConfig" />
+            <button id="moveDown"
+                    class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
+                    title="Mover para baixo"
+                    style="vertical-align: baseline; margin-left: 5px"
+                    [disabled]="!canGoDown(i)"
+                    (click)="moveDown(i)"></button>
+            <button id="moveUp"
+                    class="btn btn-default btn-sm glyphicon glyphicon-triangle-top moveUp"
+                    title="Mover para cima"
+                    style="vertical-align: baseline; margin-left: 5px"
+                    [disabled]="!canGoUp(i)"
+                    (click)="moveUp(i)"></button>
+            <button class="btn btn-default btn-sm glyphicon glyphicon-trash deleteAuthor"
+                    title="Excluir"
+                    style="vertical-align: baseline; margin-left: 5px"
+                    [disabled]="!canDelete()"
+                    (click)="delete(i)"></button>
+        </div>
+        <div class="visible-xs">
+            <div class="row"
+                 style="padding-left: 15px;">
+
+                <label>De:</label>
+                <input type="text"
+                       class="form-control"
+                       bsDatepicker
+                       placement="bottom left"
+                       style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
+                       [(ngModel)]="models[i][0]"
+                       (bsValueChange)="onSelected(i, 0)"
+                       [bsConfig]="bsConfig" />
+
+            </div>
+            <br>
+            <div class="row"
+                 style="padding-left: 15px;">
+                <div class="col-xs-1"
+                     style="padding-right: 0; padding-left: 0;">
+                    <label style="padding-top: 8px;">Até:</label>
+                </div>
+                <div class="col-xs-5"
+                     style="padding-left: 0; margin-left: -8px">
+                    <input type="text"
+                           class="form-control"
+                           bsDatepicker
+                           placement="bottom left"
+                           style="display: inline-block; width: 180px; margin-right: 10px"
+                           [(ngModel)]="models[i][1]"
+                           (bsValueChange)="onSelected(i, 1)"
+                           [bsConfig]="bsConfig" />
+                </div>
+            </div>
+            <br>
+            <div class="row"
+                 style="padding-left: 10px;">
+                <button id="moveDown"
+                        class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
+                        title="Mover para baixo"
+                        style="vertical-align: baseline; margin-left: 5px"
+                        [disabled]="!canGoDown(i)"
+                        (click)="moveDown(i)"></button>
+                <button id="moveUp"
+                        class="btn btn-default btn-sm glyphicon glyphicon-triangle-top moveUp"
+                        title="Mover para cima"
+                        style="vertical-align: baseline; margin-left: 5px"
+                        [disabled]="!canGoUp(i)"
+                        (click)="moveUp(i)"></button>
+                <button class="btn btn-default btn-sm glyphicon glyphicon-trash deleteAuthor"
+                        title="Excluir"
+                        style="vertical-align: baseline; margin-left: 5px"
+                        [disabled]="!canDelete()"
+                        (click)="delete(i)"></button>
+            </div>
+            <br>
+        </div>
+    </div>
+    <p></p>
+    <div>
+        <button id="addPeriod"
+                type="button"
+                class="btn btn-primary btn-sm"
+                (click)="add()"
+                [disabled]="!canAdd()">
+            Incluir mais datas
+        </button>
+    </div>
+    <div style="font-size: 0.9em; color: red; clear: left"
+         *ngIf="!isValid()">
+        <br />{{ item.erro }}
+    </div>
+</div>

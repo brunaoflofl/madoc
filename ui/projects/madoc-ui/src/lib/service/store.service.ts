@@ -32,7 +32,7 @@ export class MadocStore {
     getState() {
         const state = new State();
         state.errors = this.getInvalidQuestions().map(q => q.erro);
-        state.valid = this.getInvalidQuestions().map(q => q.erro) === [];
+        state.valid = this.getInvalidQuestions().map(q => q.erro).length === 0;
         state.answers = {};
 
         this.buildAnswers(state);
@@ -173,7 +173,7 @@ export class MadocStore {
         });
         this.executeAllRules();
         this.originalMap = {};
-        if(!startDirty) {
+        if (!startDirty) {
             window.setTimeout(() => {
                 this.originalMap = this.buildMap();
             }, 500);
@@ -246,7 +246,7 @@ export class MadocStore {
     }
 
     private createMaps(startDirty: boolean) {
-        if(!startDirty) {
+        if (!startDirty) {
             window.setTimeout(() => {
                 this.originalMap = this.buildMap();
             }, 500);

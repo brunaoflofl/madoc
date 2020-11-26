@@ -118,31 +118,36 @@ export class EditarComponent implements OnInit, AfterViewInit, OnDestroy {
         doc['name'] = this.documentoService.documento.nome;
         doc['valido'] = this.documentoService.documento.estado.valid;
         doc['answers'] = this.documentoService.documento.estado.answers;
-
-        return this.http
-            .post('api/gerarpdf', doc, { responseType: 'text' })
-            .pipe(take(1))
-            .subscribe(
-                (response) => {
-                    console.log(doc['name'])
-                    this.visualizarService.showPdf(
-                        '/madoc/api/getpdf/' + response + '/' + encodeURIComponent(normalizeFileName(doc['name']) + '.pdf')
-                    );
-                },
-                (error) =>
-                this.alertService.erro(
-                    'Ocorreu um erro inesperado na visdualização do documento', error
-                )
-            );
+        console.log(doc['valido']);
+        if (doc['valido']) {
+            return this.http
+                .post('api/gerarpdf', doc, { responseType: 'text' })
+                .pipe(take(1))
+                .subscribe(
+                    (response) => {
+                        console.log(doc['name']);
+                        this.visualizarService.showPdf(
+                            '/madoc/api/getpdf/' + response + '/' + encodeURIComponent(normalizeFileName(doc['name']) + '.pdf')
+                        );
+                    },
+                    (error) =>
+                        this.alertService.erro(
+                            'Ocorreu um erro inesperado na visdualização do documento', error
+                        )
+                );
+        } else {
+            const erros = this.documentoService.validate();
+            erros.map((error) => this.alertService.erro(error.display + ': ' + error.mensagem));
+        }
     }
 
     closePDF() {
         this.visualizarService.hidePdf();
         this.actionService.ACTION_FECHAR_EDICAO.enabled = false;
         setTimeout(() => {
-          this.actionService.ACTION_FECHAR_EDICAO.enabled = true;
+            this.actionService.ACTION_FECHAR_EDICAO.enabled = true;
         }, 2000);
-      }
+    }
 
     salva() {
         this.documentoService.salvar().subscribe(

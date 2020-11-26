@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8" />
         <title>Editor Madoc</title>
         <base href="." />
 
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=Edge,chrome=1" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1" />
 
         <script type="text/javascript">
             window.domain = "senado.gov.br";
+            if (window.parent && window.parent.__madoc_opener && window.parent.__madoc_opener.madoc) {
+                var madoc = window.parent.__madoc_opener.madoc;
+
+                if (madoc.getUrlCSS()) {
+                    document.write(`<link rel="stylesheet" type="text/css" href="${madoc.getUrlCSS()}">`);
+                }
+            }
         </script>
     </head>
+
     <body style="background-color: white;">
         <app-root>
-            <p id="appAjaxLoader" style="text-align: center;">
+            <p id="appAjaxLoader"
+               style="text-align: center;">
                 <img src="assets/img/ajax-loader.gif" />
             </p>
-            <div
-                id="appErrorMessage"
-                style="text-align: center; display: none;"
-            >
+            <div id="appErrorMessage"
+                 style="text-align: center; display: none;">
                 <div style="font-weight: bold; color: red;">
                     Ocorreu uma falha ao carregar o Madoc.
                 </div>
                 <div id="appErrorDetail"></div>
                 <div style="margin-top: 10px;">
-                    <a href="#" onclick="javascript:location.reload()"
-                        >tentar novamente</a
-                    >
+                    <a href="#"
+                       onclick="javascript:location.reload()">tentar novamente</a>
                 </div>
             </div>
-            <p
-                id="ie"
-                style="
+            <p id="ie"
+               style="
                     font-weight: bold;
                     color: red;
                     text-align: center;
                     margin-top: 50px;
                     display: none;
-                "
-            >
+                ">
                 O navegador Internet Explorer não é recomendado.<br />
                 Utilize preferencialmente o Chrome ou o Firefox.
             </p>
@@ -57,4 +64,5 @@
 
         <script src="assets/js/ckeditor/ckeditor.js"></script>
     </body>
+
 </html>

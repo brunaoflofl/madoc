@@ -4,6 +4,7 @@ export interface API {
     getNomeDocumento(): string;
     getUrlAbrir(): string;
     getUrlSalvar(): string;
+    getUrlCSS(): string;
     fechar(): void;
     notificaDocumentoSalvo(): void;
 }

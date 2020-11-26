@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { MadocExtrasAlertService } from './madoc-extras-alert.service';
 
 @Component({
   selector: 'madoc-extras-alert',
   template: `
     <div id="madoc-extras-alerts" [ngClass]="{'fixed-alerts': fixedPosition}">
-        <alert *ngFor="let alert of alerts;let i = index"
+
+        <alert _alert *ngFor="let alert of alerts;let i = index"
           [type]="alert.type"
           dismissible="true" dismissOnTimeout="6000"
           (close)="closeAlert(i)">
@@ -13,7 +14,7 @@ import { MadocExtrasAlertService } from './madoc-extras-alert.service';
         </alert>
     </div>
     `,
-  styleUrls: [ 'madoc-extras-alert.component.css' ],
+  styleUrls: ['madoc-extras-alert.component.css'],
 })
 export class MadocExtrasAlertComponent {
 

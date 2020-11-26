@@ -46,7 +46,7 @@ export class ListarModelosComponent implements OnInit, OnDestroy {
         private dss: DomSanitizer,
         private router: Router,
         private route: ActivatedRoute
-    ) {}
+    ) { }
 
     ngOnInit() {
         this.route.params
@@ -76,13 +76,13 @@ export class ListarModelosComponent implements OnInit, OnDestroy {
             .sort((a, b) =>
                 a.categoria !== b.categoria
                     ? this.sortProperty(
-                          normalizeString(a.categoria),
-                          normalizeString(b.categoria)
-                      )
+                        normalizeString(a.categoria),
+                        normalizeString(b.categoria)
+                    )
                     : this.sortProperty(
-                          normalizeString(a.metadata.Titulo),
-                          normalizeString(b.metadata.Titulo)
-                      )
+                        normalizeString(a.metadata.Titulo),
+                        normalizeString(b.metadata.Titulo)
+                    )
             )
 
             .sort((a, b) => {
@@ -183,7 +183,7 @@ export class ListarModelosComponent implements OnInit, OnDestroy {
         return this.activeRow === m;
     }
 
-    ngOnDestroy() {}
+    ngOnDestroy() { }
 
     getValue(model: ModeloListagem, field: string) {
         switch (field) {
@@ -264,9 +264,14 @@ export class ListarModelosComponent implements OnInit, OnDestroy {
         const text = this.getValue(model, field);
 
         if (this.nFilter.length === 0) {
+            if (field === 'indexacao') {
+                return this.dss.bypassSecurityTrustHtml(text.replaceAll(',', ', '));
+            }
             return this.dss.bypassSecurityTrustHtml(text);
         }
-
+        if (field === 'indexacao') {
+            return this.dss.bypassSecurityTrustHtml(model['n_' + field].replaceAll(',', ', '));
+        }
         return this.dss.bypassSecurityTrustHtml(model['n_' + field]);
     }
 }

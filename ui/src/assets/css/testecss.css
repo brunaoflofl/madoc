@@ -1,3 +1,8 @@
-.teste {
-    color: #f00 !important;
+/*
+Exemplo de CSS customizado
+*/
+
+/* Alinha à esquerda o nome do modelo e o título do documento */
+#madoc-editor .app-madoc-title .panel-heading {
+    text-align: left;
 }

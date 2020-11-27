@@ -32,10 +32,12 @@
  *
  * 					{ sucesso: true/false, mensagem: 'Mensagem de erro ou sucesso' }
  *
- * target			Janela onde deverá ser adicionado o iframe do editor.
+ * target		Janela onde deverá ser adicionado o iframe do editor.
  * 					Por padrão é utilizada a janela atual.
  *
  * 					Ex: window.parent
+ * 
+ * urlCSS   URL de um CSS customizado. Opcional.
  *
  * callbackFechar	Função javascript a ser chamada após o fechamendo do editor.
  * 					Recebe um parâmetro booleano indicando se o documento foi salvo ou não.

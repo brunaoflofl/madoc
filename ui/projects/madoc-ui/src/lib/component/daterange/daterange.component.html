@@ -2,31 +2,35 @@
      [ngClass]="{ hidden: !item.visible }"
      [style.border]="isValid() ? 'none' : '1px solid red'">
     <madoc-header [item]="item"></madoc-header>
-    <div *ngFor="let model of models; let i = index"
-         [style.border]="isValid() && isValidPeriod(i) ? 'none' : '1px solid red'">
-        <div class="hidden-xs">
+    <div class="periodo" *ngFor="let model of models; let i = index"
+        [style.border]="isValid() && isValidPeriod(i) ? 'none' : '1px solid red'"
+        style="clear: left;">
+        <div class="data">
             <label>De:</label>
             <input type="text"
-                   class="form-control"
-                   bsDatepicker
-                   placement="bottom left"
-                   style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
-                   [(ngModel)]="models[i][0]"
-                   (bsValueChange)="onSelected(i, 0)"
-                   [bsConfig]="bsConfig" />
-            <b>Até:</b>
+                    class="form-control"
+                    bsDatepicker
+                    placement="bottom left"
+                    [(ngModel)]="models[i][0]"
+                    (bsValueChange)="onSelected(i, 0)"
+                    [bsConfig]="bsConfig" />
+
+        </div>
+        <div class="data">
+            <label>Até:</label>
             <input type="text"
-                   class="form-control"
-                   bsDatepicker
-                   placement="bottom left"
-                   style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
-                   [(ngModel)]="models[i][1]"
-                   (bsValueChange)="onSelected(i, 1)"
-                   [bsConfig]="bsConfig" />
+                    class="form-control"
+                    bsDatepicker
+                    placement="bottom left"
+                    [(ngModel)]="models[i][1]"
+                    (bsValueChange)="onSelected(i, 1)"
+                    [bsConfig]="bsConfig" />
+        </div>
+        <div class="botoes" *ngIf="models.length > 1">
             <button id="moveDown"
                     class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
                     title="Mover para baixo"
-                    style="vertical-align: baseline; margin-left: 5px"
+                    style="vertical-align: baseline;"
                     [disabled]="!canGoDown(i)"
                     (click)="moveDown(i)"></button>
             <button id="moveUp"
@@ -41,66 +45,9 @@
                     [disabled]="!canDelete()"
                     (click)="delete(i)"></button>
         </div>
-        <div class="visible-xs">
-            <div class="row"
-                 style="padding-left: 15px;">
-
-                <label>De:</label>
-                <input type="text"
-                       class="form-control"
-                       bsDatepicker
-                       placement="bottom left"
-                       style="display: inline-block; width: 180px; margin-left: 10px; margin-right: 10px"
-                       [(ngModel)]="models[i][0]"
-                       (bsValueChange)="onSelected(i, 0)"
-                       [bsConfig]="bsConfig" />
-
-            </div>
-            <br>
-            <div class="row"
-                 style="padding-left: 15px;">
-                <div class="col-xs-1"
-                     style="padding-right: 0; padding-left: 0;">
-                    <label style="padding-top: 8px;">Até:</label>
-                </div>
-                <div class="col-xs-5"
-                     style="padding-left: 0; margin-left: -8px">
-                    <input type="text"
-                           class="form-control"
-                           bsDatepicker
-                           placement="bottom left"
-                           style="display: inline-block; width: 180px; margin-right: 10px"
-                           [(ngModel)]="models[i][1]"
-                           (bsValueChange)="onSelected(i, 1)"
-                           [bsConfig]="bsConfig" />
-                </div>
-            </div>
-            <br>
-            <div class="row"
-                 style="padding-left: 10px;">
-                <button id="moveDown"
-                        class="btn btn-default btn-sm glyphicon glyphicon-triangle-bottom moveDown"
-                        title="Mover para baixo"
-                        style="vertical-align: baseline; margin-left: 5px"
-                        [disabled]="!canGoDown(i)"
-                        (click)="moveDown(i)"></button>
-                <button id="moveUp"
-                        class="btn btn-default btn-sm glyphicon glyphicon-triangle-top moveUp"
-                        title="Mover para cima"
-                        style="vertical-align: baseline; margin-left: 5px"
-                        [disabled]="!canGoUp(i)"
-                        (click)="moveUp(i)"></button>
-                <button class="btn btn-default btn-sm glyphicon glyphicon-trash deleteAuthor"
-                        title="Excluir"
-                        style="vertical-align: baseline; margin-left: 5px"
-                        [disabled]="!canDelete()"
-                        (click)="delete(i)"></button>
-            </div>
-            <br>
-        </div>
+        <div style="clear: left;"> </div>
     </div>
-    <p></p>
-    <div>
+    <div class="linha">
         <button id="addPeriod"
                 type="button"
                 class="btn btn-primary btn-sm"
@@ -109,8 +56,7 @@
             Incluir mais datas
         </button>
     </div>
-    <div style="font-size: 0.9em; color: red; clear: left"
-         *ngIf="!isValid()">
-        <br />{{ item.erro }}
+    <div class="linha" *ngIf="!isValid()" style="font-size: 0.9em; color: red;">
+        {{ item.erro }}
     </div>
 </div>

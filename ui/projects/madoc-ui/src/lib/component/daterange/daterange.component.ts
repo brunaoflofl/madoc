@@ -10,7 +10,8 @@ const moment = _moment;
 
 @Component({
     selector: 'madoc-date-range',
-    templateUrl: 'daterange.component.html'
+    templateUrl: 'daterange.component.html',
+    styleUrls: ['./daterange.component.scss']
 })
 export class MadocDaterangeComponent implements OnInit {
     @Input() public item: DaterangeListQuestion;

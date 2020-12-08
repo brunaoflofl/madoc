@@ -17,7 +17,7 @@ import { MadocExtrasWorkingService } from '@lexml/madoc-extras';
       </div>
     </nav>
     <div id="pdfViewer">
-        <iframe [src]="file" style="width: 100%; height: calc(100vh - 70px);"></iframe>
+        <iframe *ngIf="file" [src]="file" style="width: 100%; height: calc(100vh - 70px);"></iframe>
     </div>
   </div>
 
@@ -31,15 +31,15 @@ export class PdfViewerComponent {
 
   constructor(public workingService: MadocExtrasWorkingService, public service: PdfViewerService, public ngZone: NgZone) {
     window['angularComponentRef'] = { component: this, zone: ngZone };
-   }
+  }
 
   pdfPagesLoaded() {
     this.workingService.setWorking(false);
-   }
+  }
 }
 
 function pdfPagesLoaded() {
-  window['angularComponentRef'].zone.run( () => window['angularComponentRef'].component.pdfPagesLoaded());
+  window['angularComponentRef'].zone.run(() => window['angularComponentRef'].component.pdfPagesLoaded());
 }
 
 // must cast as any to set property on window

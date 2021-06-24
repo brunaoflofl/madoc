@@ -8,6 +8,7 @@ export class ConvidadoQuestion extends Question {
     attributes: Option[];
     fields: Field[] = [];
     maxEntries = 0;
+    labelConvidado = 'convidado';
 
     private _rules: Rule[] = [];
 
@@ -17,12 +18,20 @@ export class ConvidadoQuestion extends Question {
 
     build(input: any) {
 
-        if (input.customAttributes && input.customAttributes.length > 0
-            && input.customAttributes[0].name === 'maxEntries') {
-            this.maxEntries = this.isStatement(input.customAttributes[0].value) ? 1 : input.customAttributes[0].value;
-            this._rules.push(new Rule('maxEntries', input.customAttributes[0].value));
-        } else {
-            this.maxEntries = 0;
+        const caMaxEntries = this.getCustomAttributeByName(input, 'maxEntries');
+        if (caMaxEntries) {
+            if(!this.isStatement(caMaxEntries.value)) {
+                this.maxEntries = Number(caMaxEntries.value);
+            }
+            this._rules.push(new Rule('maxEntries', caMaxEntries.value));
+        }
+
+        const caLabelConvidado = this.getCustomAttributeByName(input, 'labelConvidado');
+        if (caLabelConvidado) {
+            if(!this.isStatement(caLabelConvidado.value)) {
+                this.labelConvidado = caLabelConvidado.value;
+            }
+            this._rules.push(new Rule('labelConvidado', caLabelConvidado.value));
         }
 
         if (input.customFields && input.customFields.length > 0) {

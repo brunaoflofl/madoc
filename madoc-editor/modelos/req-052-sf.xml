@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<madoc:MadocDocument xmlns:madoc="http://www.lexml.gov.br/madoc/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <madoc:Metadata id="req-052-sf">
+        <madoc:Entry key="TipoModelo">Requerimento</madoc:Entry>
+        <madoc:Entry key="Titulo">Acareação em Comissão Parlamentar de Inquérito (CPI)</madoc:Entry>
+        <madoc:Entry key="CasaLegislativa">SF</madoc:Entry>
+        <madoc:Entry key="Categoria">
+            <madoc:List>
+                <madoc:Entry>Informações</madoc:Entry>
+            </madoc:List>
+        </madoc:Entry>
+        <madoc:Entry key="Indexacao">
+            <madoc:List>
+                <madoc:Entry>Acareação</madoc:Entry>
+                <madoc:Entry>Convocação</madoc:Entry>
+                <madoc:Entry>Depoimento</madoc:Entry>
+                <madoc:Entry>Comissão</madoc:Entry>
+                <madoc:Entry>CPI</madoc:Entry>
+            </madoc:List>
+        </madoc:Entry>
+        <madoc:Entry key="Fundamentacao">
+            <madoc:Map>
+                <madoc:Entry key="Acareação em Comissão Parlamentar de Inquérito (CPI)">
+                    <madoc:List>
+                        <madoc:Entry>urn:lex:br:federal:constituicao:1988-10-05;1988!art58_par3</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:lei:1952-03-18;1579!art2</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art148,art153</madoc:Entry>
+                        <madoc:Entry>urn:lex:br:federal:decreto.lei:1941-10-03;3689!art229</madoc:Entry>
+                    </madoc:List>
+                </madoc:Entry>
+            </madoc:Map>
+        </madoc:Entry>
+    </madoc:Metadata>
+
+    <madoc:Wizard display="Acareação em Comissão Parlamentar de Inquérito (CPI)">
+
+        <madoc:OnLoad>
+            <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-destino-comissao" />
+        </madoc:OnLoad>
+
+        <madoc:Page id="p-detalhes" display="Acareação em Comissão Parlamentar de Inquérito (CPI)">
+
+            <!-- Tipo de conteúdo informacional -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-tipo-conteudo-informacional']">
+                <xsl:stylesheet version="2.0" xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
+                    <xsl:template match="@*|node()">
+                        <xsl:copy>
+                            <xsl:apply-templates select="@*|node()" />
+                        </xsl:copy>
+                    </xsl:template>
+                    <xsl:template match="@defaultValue">
+                        <xsl:attribute name="defaultValue">ACAREACAO</xsl:attribute>
+                    </xsl:template>
+                </xsl:stylesheet>
+            </xi:include>
+
+            <madoc:Question display="Fundamentação" id="q-fundamentacao" enabled="true" xsi:type="madoc:RadioBoxGroupQuestionType">
+                <madoc:Options>
+                    <madoc:Option 
+                    	id="f-acareacao" 
+                    	value="f-acareacao" 
+                    	display="Acareação em Comissão Parlamentar de Inquérito (CPI) (CF, art. 58, § 3º; Lei nº 1.579, de 18 de março de 1952, art. 2º; RISF, arts. 148 e 153; CPP, art. 229)" 
+                    	selected="true" />
+                </madoc:Options>
+            </madoc:Question>
+
+            <!-- Obtendo EPIGRAFE do banco de questoes -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-epigrafe-section']">
+                <xsl:stylesheet version="2.0" xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
+                    <xsl:template match="@*|node()">
+                        <xsl:copy>
+                            <xsl:apply-templates select="@*|node()" />
+                        </xsl:copy>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-destino-comissao']]">
+                        <xsl:attribute name="enabled">true</xsl:attribute>
+                    </xsl:template>
+                </xsl:stylesheet>
+            </xi:include>
+            
+            <madoc:Section id="s-convidados" display="Dados dos acareados">
+
+	            <madoc:Question id="q-convidados" display="Dados dos acareados" 
+	            	hint="Preencher pelo menos um dos dois campos: nome ou cargo. Informe duas ou mais pessoas." 
+	            	required="true" 
+	            	xsi:type="madoc:CustomQuestionType" 
+	            	customQuestionType="ConvidadoQuestion">
+	                <madoc:CustomAttribute name="labelConvidado" value="convocado" />
+	                <madoc:CustomAttribute name="minEntries" value="2" />
+	                <madoc:CustomAttribute name="maxEntries" value="5" />
+	                <madoc:CustomField name="tratamento" hint="Tratamento" display="Tratamento" required="true" visible="true" enabled="true" />
+	                <madoc:CustomField name="nome" display="Nome" required="{cargo == ''}" visible="true" enabled="true" />
+	                <madoc:CustomField name="cargo" display="Cargo ou Função" required="{nome == ''}" visible="true" enabled="true" />
+	                <madoc:CustomField name="representanteDe" display="Representando..." visible="false" required="false" enabled="false" />
+	                <madoc:CustomField name="condicao" display="Condição da convocação" visible="false" required="false" enabled="false" />
+	            </madoc:Question>
+	
+            </madoc:Section>
+
+
+            <!-- Obtendo JUSTIFICAÇÃO do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-justificativa']">
+                <xsl:stylesheet version="2.0" xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
+                    <xsl:template match="@*|node()">
+                        <xsl:copy>
+                            <xsl:apply-templates select="@*|node()" />
+                        </xsl:copy>
+                    </xsl:template>
+                    <xsl:template match="@required">
+                        <xsl:attribute name="required">true</xsl:attribute>
+                    </xsl:template>
+                </xsl:stylesheet>
+            </xi:include>
+
+            <!-- Obtendo DATA do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-fecho-data']"/>
+
+            <!-- Obtendo AUTORIA do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-autoria-section']">
+                <xsl:stylesheet version="2.0" xmlns:madoc="http://www.lexml.gov.br/madoc/2.0">
+                    <xsl:template match="@*|node()">
+                        <xsl:copy>
+                            <xsl:apply-templates select="@*|node()" />
+                        </xsl:copy>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-senador']]">
+                        <xsl:attribute name="enabled">true</xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-sem-ident']]">
+                        <xsl:attribute name="enabled">true</xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-mesa']]">
+                        <xsl:attribute name="enabled">false</xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@enabled[parent::*[@id='q-lib-autoria-signatario-comissao']]">
+                        <xsl:attribute name="enabled">false</xsl:attribute>
+                    </xsl:template>
+                    <xsl:template match="@value[parent::madoc:Action[ancestor::*[@id='q-lib-autoria-tipo']]]">
+                        <xsl:attribute name="value">Parlamentar</xsl:attribute>
+                    </xsl:template>
+                </xsl:stylesheet>
+            </xi:include>
+
+            <!-- Obtendo Opções de Impressão do banco de dados de questões -->
+            <xi:include href="urn:sf:sistema;madoc:id;question-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-opcoes-impressao-section']" />
+
+        </madoc:Page>
+
+    </madoc:Wizard>
+
+    <madoc:DataSets>
+        <!-- Obtendo o dataset de senadores -->
+        <xi:include href="urn:sf:sistema;madoc:id;dataset-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='senadores']" />
+
+        <!-- Obtendo os datasets de comissoes -->
+        <xi:include href="urn:sf:sistema;madoc:id;dataset-library" xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='comissoesInquerito']" />
+
+    </madoc:DataSets>
+
+
+<!-- 
+"Requeiro, com base 
+no art. 58, § 3°, da Constituição Federal, 
+no art. 2º da Lei nº 1579 de 1952, 
+nos arts. 148 e 153 do Regimento Interno do Senado Federal 
+e no art. 229 do Código de Processo Penal 
+a realização de acareação entre X e Y.
+ -->
+
+    <madoc:Templates madocSkeletonId="skeleton-001">
+        <madoc:Template replaceName="objetoDoRequerimento">
+            <madoc:content>
+                <![CDATA[
+
+    	#set($fundamentacoes = {
+			'f-acareacao': 'com base no art. 58, § 3°, da Constituição Federal, no art. 2º da Lei nº 1579 de 1952, nos arts. 148 e 153 do Regimento Interno do Senado Federal e no art. 229 do Código de Processo Penal'
+		})
+		#set($fundamentacao = $fundamentacoes.get($madoc.valueOf.q-fundamentacao))
+		#set($convidados = $madoc.mapListOf.q-convidados)
+		
+		#macro(listaConvidados)
+			#set($i = 1)
+			#set($iPenultimo = $convidados.size() - 1)
+			#foreach($convidado in $convidados)
+				#set($nomeECargo = $convidado.nome != '' and $convidado.cargo != '') 
+				$convidado.tratamento
+				$convidado.nome
+				#if($nomeECargo), #end 
+				$convidado.cargo
+				#if($i == $iPenultimo)
+					#if($nomeECargo) , #end 
+					e 
+				#elseif($i < $iPenultimo) 
+					, 
+				#end
+				#set($i = $i + 1) 
+			#end
+		#end
+		#set($listaConvidados = "#listaConvidados()")
+
+		$verboRequeiro, $fundamentacao,
+		
+		a realização de acareação entre $listaConvidados
+		
+		.		
+
+		#* --- Ementa --- *#
+		#set($ementaGerada = 'Requer a realização de acareação entre ' + $listaConvidados)
+		#set($nomeComissao = $madoc.render('#initCap($madoc.valueOf.q-lib-destino-comissao-comissao)'))
+		#if($nomeECargo)
+			#* Se o último tem nome e cargo *#
+			#set($ementaGerada = $ementaGerada + ', ')
+		#end
+		#set($ementaGerada = $ementaGerada + ' na ' + $nomeComissao + '.')
+		#* --- FIM Ementa --- *#
+			
+		   ]]>
+            </madoc:content>
+        </madoc:Template>
+
+
+    </madoc:Templates>
+
+
+</madoc:MadocDocument>

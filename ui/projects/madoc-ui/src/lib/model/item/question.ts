@@ -124,4 +124,15 @@ export class Question extends PageItem {
       (Array.isArray(this.answer) && (this._answer.length === 0 || this.answer[0].trim() === '') ||
       (typeof(this.answer) === 'string' && this.answer.trim() === ''));
   }
+
+  protected getCustomAttributeByName(input: any, name: string): {name: string, value: string} {
+    if(input?.customAttributes?.length) {
+      for(let ca of (input.customAttributes as Array<{name: string, value: string}>)) {
+        if(ca.name == name) {
+          return ca;
+        }
+      }
+    }
+    return null;
+  }
 }

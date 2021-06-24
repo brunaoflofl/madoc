@@ -81,7 +81,7 @@
     <div class="row">
         <div class="col-sm-12" [ngClass]="{ hidden: item.maxEntries == 1 }">
             <button id="addAuthor" type="button" class="btn btn-primary btn-sm" (click)="add()" [disabled]="!canAdd()">
-                Incluir outro convidado
+                Incluir outro {{item.labelConvidado}}
             </button>
         </div>
     </div>

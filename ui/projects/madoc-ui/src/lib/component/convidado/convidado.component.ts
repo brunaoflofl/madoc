@@ -1,20 +1,10 @@
-import { condicoes, tratamentos } from './../../model/field';
-import {
-    AfterViewInit,
-    Component,
-    ElementRef,
-    EventEmitter,
-    Input,
-    OnInit,
-    Output,
-    ViewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { filter } from 'rxjs/operators';
 
 import { Choice } from '../../model/choice';
 import { ConvidadoQuestion } from '../../model/item/convidado/convidado-question';
 import { IMadocComponent } from '../shared/madoc-abstract.component';
-import { madocScrollTo } from '../../util/scroll';
+import { condicoes, tratamentos } from './../../model/field';
 
 @Component({
     selector: 'madoc-convidado',
@@ -67,17 +57,20 @@ export class MadocConvidadoComponent
     }
 
     initConvidados() {
-        this.convidados = [
-            {
-                representante: false,
-                tratamento: '',
-                nome: '',
-                cargo: '',
-                representanteDe: '',
-                condicao: 'não informado',
-                touched: false,
-            },
-        ];
+        this.convidados = [];
+        for(let i = 0; i < this.item.minEntries; i++) {
+            this.convidados.push(
+                {
+                    representante: false,
+                    tratamento: '',
+                    nome: '',
+                    cargo: '',
+                    representanteDe: '',
+                    condicao: 'não informado',
+                    touched: false,
+                }
+            );
+        }
     }
 
     isCampoValido(i, campo) {
@@ -157,7 +150,7 @@ export class MadocConvidadoComponent
     }
 
     canDelete(i) {
-        return this.convidados.length > 1;
+        return this.convidados.length > this.item.minEntries;
     }
 
     isFirst(i) {

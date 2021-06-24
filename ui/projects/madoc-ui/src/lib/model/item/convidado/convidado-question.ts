@@ -7,6 +7,7 @@ import { MadocStore } from '../../../service/store.service';
 export class ConvidadoQuestion extends Question {
     attributes: Option[];
     fields: Field[] = [];
+    minEntries = 1;
     maxEntries = 0;
     labelConvidado = 'convidado';
 
@@ -17,6 +18,11 @@ export class ConvidadoQuestion extends Question {
     }
 
     build(input: any) {
+
+        const caMinEntries = this.getCustomAttributeByName(input, 'minEntries');
+        if (caMinEntries) {
+            this.minEntries = Math.max(1, Number(caMinEntries.value));
+        }
 
         const caMaxEntries = this.getCustomAttributeByName(input, 'maxEntries');
         if (caMaxEntries) {

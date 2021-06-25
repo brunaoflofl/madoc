@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Script desatualizado!
+
+# Não utilizar este script
+
 set -e
 
 json="node node_modules/json/lib/json.js"
@@ -36,11 +40,9 @@ echo 'Compilando a bilioteca e gerando o pacote NPM'
 
 npm run package-madoc-ui
 
-
 echo 'Publicando o pacote gerado no servidor Nexus'
 
 npm run publish-madoc-ui
-
 
 git commit projects/madoc-ui/package.json -m "atualizada a versão via script"
 

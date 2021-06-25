@@ -16,8 +16,8 @@
         "pack-madoc-extras": "cd dist/madoc-extras && npm pack",
         "package-madoc-ui": "npm run build-madoc-ui && npm run pack-madoc-ui",
         "package-madoc-extras": "npm run build-madoc-extras && npm run pack-madoc-extras",
-        "publish-madoc-ui": "npm publish ./dist/madoc-ui/lexml-madoc-ui*.tgz",
-        "publish-madoc-extras": "npm publish ./dist/madoc-extras/lexml-madoc-extras*.tgz",
+        "publish-madoc-ui": "npm publish ./dist/madoc-ui/lexml-madoc-ui*.tgz --access public",
+        "publish-madoc-extras": "npm publish ./dist/madoc-extras/lexml-madoc-extras*.tgz --access public",
         "postinstall": "ngcc"
     },
     "private": true,

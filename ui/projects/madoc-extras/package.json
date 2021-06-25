@@ -2,7 +2,7 @@
     "name": "@lexml/madoc-extras",
     "version": "0.0.1",
     "publishConfig": {
-        "registry": "https://api.bintray.com/npm/lexml/npm/"
+        "registry": "https://registry.npmjs.org/"
     },
     "peerDependencies": {
         "@angular/common": "^10.0.0",

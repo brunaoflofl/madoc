@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<madoc:MadocDocument xmlns:madoc="http://www.lexml.gov.br/madoc/2.0"
+	xmlns:xi="http://www.lexml.gov.br/schema/xloom"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<madoc:Metadata id="req-000-sf">
+		<madoc:Entry key="TipoModelo">Requerimento</madoc:Entry>
+		<madoc:Entry key="Titulo">Testes de componentes</madoc:Entry>
+		<madoc:Entry key="CasaLegislativa">SF</madoc:Entry>
+		<madoc:Entry key="Categoria">
+			<madoc:List>
+				<madoc:Entry>000 Testes</madoc:Entry>
+			</madoc:List>
+		</madoc:Entry>
+		<madoc:Entry key="Indexacao">
+			<madoc:List>
+				<madoc:Entry>Teste</madoc:Entry>
+				<madoc:Entry>Componentes</madoc:Entry>
+			</madoc:List>
+		</madoc:Entry>
+		<!-- 
+		<madoc:Entry key="Fundamentacao">
+			<madoc:Map>
+				<madoc:Entry key="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
+					<madoc:List>
+						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art255_inc2_ali3_ite12
+						</madoc:Entry>
+					</madoc:List>
+				</madoc:Entry>
+				<madoc:Entry key="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania">
+					<madoc:List>
+						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art101_inc1
+						</madoc:Entry>
+					</madoc:List>
+				</madoc:Entry>
+				<madoc:Entry key="Requerimento de Consulta à Comissão de Assuntos Econômicos">
+					<madoc:List>
+						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art99_inc1
+						</madoc:Entry>
+					</madoc:List>
+				</madoc:Entry>
+			</madoc:Map>
+		</madoc:Entry>
+		 -->
+	</madoc:Metadata>
+
+
+	<madoc:Wizard display="Testes de componentes">
+
+		<madoc:Page id="p-detalhes" display="Testes de componentes">
+
+			<madoc:Question defaultValue="SF" display="Nº no SEDOL"
+				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"
+				defaultValueSatisfiesRequiredQuestion="false"
+				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"/>			
+
+
+			<!-- Obtendo DATA do banco de dados de questões -->
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-fecho-data']" />
+
+			<!-- Obtendo Opções de Impressão do banco de dados de questões -->
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-opcoes-impressao-section']" />
+
+		</madoc:Page>
+
+	</madoc:Wizard>
+
+	<madoc:DataSets>
+		<!-- Obtendo o dataset de senadores -->
+		<!-- 
+		<xi:include href="urn:sf:sistema;madoc:id;dataset-library"
+			xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='senadores']" />
+		 -->
+
+		<!-- Obtendo o dataset de comissões -->
+		<!-- 
+		<xi:include href="urn:sf:sistema;madoc:id;dataset-library"
+			xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='comissoes']" />
+		 -->
+
+	</madoc:DataSets>
+
+	<madoc:Templates madocSkeletonId="skeleton-001">
+		<madoc:Template replaceName="objetoDoRequerimento">
+			<madoc:content>
+				<![CDATA[
+          
+            Sedol: $madoc.valueOf.q-numero-sedol
+            
+            	 ]]>
+			</madoc:content>
+		</madoc:Template>
+
+	</madoc:Templates>
+
+
+</madoc:MadocDocument>

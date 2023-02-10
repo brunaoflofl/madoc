@@ -32,6 +32,7 @@
         "@angular/platform-server": "^10.0.8",
         "@angular/router": "^10.0.8",
         "@types/ckeditor": "4.9.8",
+        "angular2-text-mask": "^9.0.0",
         "bootstrap": "3.4.1",
         "bootstrap-datepicker": "1.9.0",
         "ckeditor": "4.12.1",

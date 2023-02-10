@@ -41,6 +41,7 @@ import { defineLocale } from 'ngx-bootstrap/chronos';
 import { ptBrLocale } from 'ngx-bootstrap/locale';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { MadocMultiMateriaComponent } from './component/multimateria/multimateria.component';
+import { TextMaskModule } from 'angular2-text-mask';
 defineLocale('ptbrlocale', ptBrLocale);
 
 @NgModule({
@@ -52,7 +53,8 @@ defineLocale('ptbrlocale', ptBrLocale);
         ReactiveFormsModule,
         TypeaheadModule.forRoot(),
         BsDatepickerModule.forRoot(),
-        CKEditorModule
+        CKEditorModule,
+        TextMaskModule
     ],
     declarations: [
         MadocSignatarioComponent,

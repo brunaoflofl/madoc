@@ -49,6 +49,15 @@
 	<madoc:Wizard display="Testes de componentes">
 
 		<madoc:Page id="p-detalhes" display="Testes de componentes">
+		
+			<madoc:Question id="q-checkbox-group" xsi:type="madoc:CheckBoxGroupQuestionType" display="Checks" 
+				required="true" addSelectAll="true">
+				<madoc:Options>
+					<madoc:Option id="o-1" value="Opção 1"/>
+					<madoc:Option id="o-2" value="Opção 2"/>
+					<madoc:Option id="o-3" value="Opção 3"/>
+				</madoc:Options>
+			</madoc:Question>
 
 			<madoc:Question defaultValue="SF" display="Nº no SEDOL"
 				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"

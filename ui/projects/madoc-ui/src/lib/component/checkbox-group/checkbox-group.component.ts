@@ -10,6 +10,7 @@ import {pull} from 'lodash';
   template: `
   <div class="component" [ngClass]="{'hidden': !item.visible}">
     <madoc-header [item]="item"></madoc-header>
+    <p>Add select all: {{item.addSelectAll}}</p>
     <madoc-hint [item]="item"></madoc-hint>
     <div class="checkbox">
       <div *ngFor="let option of item.attributes">

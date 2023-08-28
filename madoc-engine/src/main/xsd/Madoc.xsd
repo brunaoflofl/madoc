@@ -657,7 +657,9 @@
 
 	<xs:complexType name="CheckBoxGroupQuestionType">
 		<xs:complexContent>
-			<xs:extension base="madoc:SelectQuestionType" />
+			<xs:extension base="madoc:SelectQuestionType">
+				<xs:attribute name="addSelectAll" type="xs:boolean" use="optional" default="false" />
+			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 

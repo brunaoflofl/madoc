@@ -10,9 +10,14 @@ import {pull} from 'lodash';
   template: `
   <div class="component" [ngClass]="{'hidden': !item.visible}">
     <madoc-header [item]="item"></madoc-header>
-    <p>Add select all: {{item.addSelectAll}}</p>
     <madoc-hint [item]="item"></madoc-hint>
     <div class="checkbox">
+      <div *ngIf="item.addSelectAll">
+        <label [style.font-weight]="'bold'" [style.margin-bottom]="'10px'">
+          <input type="checkbox" class="inputChecked" [(ngModel)]="selectAllChecked" (change)="onSelectAll()">
+          Marcar todos
+        </label>
+      </div>
       <div *ngFor="let option of item.attributes">
         <span [ngClass]="{'hidden': !option.visible}">
           <label [style.color]="isDisabled(option) ? 'darkgrey' : 'black'"
@@ -34,7 +39,7 @@ export class MadocCheckBoxGroupComponent implements IMadocComponent, OnInit {
   @Output() public retorno$ = new EventEmitter();
 
   selecionados = [];
-
+  selectAllChecked = false;
 
   ngOnInit() {
     const self = this;
@@ -63,6 +68,9 @@ export class MadocCheckBoxGroupComponent implements IMadocComponent, OnInit {
   private initSelecionados() {
     this.selecionados = this.item.attributes.filter(o => o.selected).map(o => o.value);
     this.item.answer = this.selecionados;
+    if (this.selectAllChecked) {
+      this.selecionados.push("Marcar todos");
+    }
   }
 
   isDisabled(option) {
@@ -99,6 +107,7 @@ export class MadocCheckBoxGroupComponent implements IMadocComponent, OnInit {
     this.item.dirty = actions ? true : this.item.dirty;
 
     this.sort();
+    this.selectAllChecked = this.item.attributes.every(option => option.selected);
 
     const escolha = new Choice(this.item.id, this.item.display, this.item.answer, this.item.isValid());
     this.retorno$.emit(escolha);
@@ -109,5 +118,13 @@ export class MadocCheckBoxGroupComponent implements IMadocComponent, OnInit {
     if (pos > -1) {
       this.selecionados = pull(this.selecionados, value);
     }
+  }
+
+  onSelectAll() {
+    this.item.attributes.forEach(option => {
+      option.selected = this.selectAllChecked;
+    });
+    this.initSelecionados();
+    this.onChange(true);
   }
 }

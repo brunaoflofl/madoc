@@ -1,8 +1,4 @@
-import { MadocStore } from '../../../service/store.service';
 import {MultiValueQuestion} from '../shared/multi-value.question';
-import {Option} from '../../option';
-import {Rule} from '../../rule';
-import {Answer} from '../../answer';
 
 export class CheckBoxGroupQuestion extends MultiValueQuestion {
 
@@ -17,5 +13,14 @@ export class CheckBoxGroupQuestion extends MultiValueQuestion {
     if(input.addSelectAll !== undefined) {
       this.addSelectAll = input.addSelectAll;
     }
+  }
+
+  public isValid(): boolean {
+    if (this.required === true && (!this.answer || this.answer.length === 0)) {
+      this.erro.mensagem = 'Selecionar pelo menos uma opção.';
+      return false;
+    }
+    this.erro.mensagem = '';
+    return true;
   }
 }

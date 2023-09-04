@@ -60,7 +60,7 @@
 			</madoc:Question>
 
 			<madoc:Question defaultValue="SF" display="Nº no SEDOL"
-				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"
+				id="q-numero-sedol" required="false" xsi:type="madoc:InputTextQuestionType"
 				defaultValueSatisfiesRequiredQuestion="false"
 				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"/>			
 
@@ -96,8 +96,14 @@
 		<madoc:Template replaceName="objetoDoRequerimento">
 			<madoc:content>
 				<![CDATA[
+
+<fo:block>
+			Checks: #foreach($v in $madoc.valueListOf.q-checkbox-group) [$v] #end
+</fo:block>			
           
+<fo:block>
             Sedol: $madoc.valueOf.q-numero-sedol
+</fo:block>			
             
             	 ]]>
 			</madoc:content>

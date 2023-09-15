@@ -8,7 +8,8 @@ import {pull} from 'lodash';
 @Component({
   selector: 'madoc-checkbox-group',
   template: `
-  <div class="component" [ngClass]="{'hidden': !item.visible}">
+  <div class="component" [ngClass]="{'hidden': !item.visible}"
+  [style.border]="isValid()? 'none' : '1px solid red'">
     <madoc-header [item]="item"></madoc-header>
     <madoc-hint [item]="item"></madoc-hint>
     <div class="checkbox">
@@ -123,5 +124,13 @@ export class MadocCheckBoxGroupComponent implements IMadocComponent, OnInit {
     });
     this.initSelecionados();
     this.onChange(true);
+  }
+
+  isValid() {
+    if (!this.item.dirty) {
+      return true;
+    } else {
+      return this.item.isValid();
+    }
   }
 }

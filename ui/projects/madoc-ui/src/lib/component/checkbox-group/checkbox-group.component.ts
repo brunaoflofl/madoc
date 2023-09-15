@@ -68,9 +68,6 @@ export class MadocCheckBoxGroupComponent implements IMadocComponent, OnInit {
   private initSelecionados() {
     this.selecionados = this.item.attributes.filter(o => o.selected).map(o => o.value);
     this.item.answer = this.selecionados;
-    if (this.selectAllChecked) {
-      this.selecionados.push("Marcar todos");
-    }
   }
 
   isDisabled(option) {

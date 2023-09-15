@@ -36,7 +36,7 @@
                     <madoc:OnChange>
                         <madoc:Action xsi:type="madoc:SwitchType">
                             <madoc:Case questionValue="Plenário">
-                                <madoc:Action xsi:type="madoc:SelectOptionActionType" id="actionA" optionId="q-lib-autoria-signatario-senador" />
+                                <madoc:Action xsi:type="madoc:SelectOptionActionType" optionId="q-lib-autoria-signatario-senador" />
                             </madoc:Case>
                             <madoc:Case questionValue="Plenário via Comissão">
                                 <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-autoria-signatario-comissao-nome" value="{q-lib-destino-comissao-comissao}" />
@@ -300,14 +300,14 @@
             <madoc:Section display="Opções de Impressão" id="q-lib-opcoes-impressao-section">
 
                 <madoc:Question display="Impressão do cabeçalho" id="q-lib-imprimir-cabecalho" required="true" xsi:type="madoc:RadioBoxGroupQuestionType">
+                    <madoc:OnLoad>
+                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-imprimir-cabecalho" value="@@cabecalho@@" />
+                    </madoc:OnLoad>
                     <madoc:Options>
                         <madoc:Option id="q-lib-imprimir-nao" display="Sem Cabeçalho" value="sem" enabled="true" />
                         <madoc:Option id="q-lib-imprimir-padrao" display="Cabeçalho Padrão" value="padrao" enabled="true" />
                         <madoc:Option id="q-lib-imprimir-alternativo" display="Cabeçalho Padrão com Texto Abaixo" value="alternativo" enabled="true" />
                     </madoc:Options>
-                    <madoc:OnLoad>
-                        <madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-lib-imprimir-cabecalho" value="@@cabecalho@@" />
-                    </madoc:OnLoad>
                 </madoc:Question>
 
                 <madoc:Question display="Texto do cabeçalho" id="q-lib-texto-cabecalho" xsi:type="madoc:InputTextQuestionType" visible="{q-lib-imprimir-cabecalho == 'alternativo'}" required="{q-lib-imprimir-cabecalho == 'alternativo'}" defaultValue="@@textoAdicionalCabecalho@@" hint="ex: Gabinete da Senadora..., Líderança do ..." />

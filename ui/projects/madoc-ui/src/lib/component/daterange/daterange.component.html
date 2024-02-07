@@ -48,11 +48,11 @@
         <div style="clear: left;"> </div>
     </div>
     <div class="linha">
-        <button id="addPeriod"
+        <button *ngIf="canAdd()"
+                id="addPeriod"
                 type="button"
                 class="btn btn-primary btn-sm"
-                (click)="add()"
-                [disabled]="!canAdd()">
+                (click)="add()">
             Incluir mais datas
         </button>
     </div>

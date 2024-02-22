@@ -1,3 +1,4 @@
+import { InputTextQuestion } from './../../model/item/inputtext/inputtext-question';
 import {Component, Input} from '@angular/core';
 import {MadocAbstractComponent} from '../shared/madoc-abstract.component';
 import {Question} from '../../model/index';
@@ -12,14 +13,14 @@ import {Question} from '../../model/index';
               (blur)="onModified()" (keyup.enter)="onModified()" name="{{item.id}}"
               [style.width]="getSize()" style="clear: left"
               class="form-control inputValue" [class.disabled]="isDisabled(item)" [disabled]="isDisabled(item)"
-              [style.text-align]="defineAlinhamento()">
+              [style.text-align]="defineAlinhamento()"
+              [textMask]="{mask: item.mask}">
        <madoc-error [item] = item></madoc-error>
      </div>
 `,
 })
 export class MadocInputTextComponent extends MadocAbstractComponent<Question> {
-  @Input() item: Question;
-
+  @Input() item: InputTextQuestion;
 
   getItem() {
     return this.item;

@@ -2,7 +2,6 @@ import {Question} from '../question';
 
 
 export class DecimalQuestion extends Question {
-  public mask: string;
 
   public constructor() {
     super();
@@ -10,6 +9,5 @@ export class DecimalQuestion extends Question {
 
   build(input: any) {
     super.build(input);
-    this.mask = input.mask;
   }
 }

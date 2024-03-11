@@ -51,6 +51,7 @@ public class FormModelJsonBuilder {
 		new AttributeWriter("defaultValue"),
 		new AttributeWriter("regex"),
 		new AttributeWriter("mask"),
+		new AttributeWriter("validationType"),
 		new AttributeWriter("defaultValueSatisfiesRequiredQuestion"),
 		new AttributeWriter("maxLength"),
 		new AttributeWriter("minLength"),

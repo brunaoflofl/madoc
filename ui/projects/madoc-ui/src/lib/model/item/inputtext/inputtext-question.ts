@@ -23,13 +23,13 @@ export class InputTextQuestion extends TextQuestion {
   public isValid(): boolean {
     const validationTypeLower = this.validationType ? this.validationType.toLowerCase() : '';
       if (this.required === true && (!this.answer || this.answer.length === 0)) {
-        this.erro.mensagem = (validationTypeLower === "cpf") ? ' Informe um cpf válido.' : (validationTypeLower === "cnpj") ? ' Informe um cnpj válido.' : 'Dados inválidos';
+        this.erro.mensagem = (validationTypeLower === "cpf") ? ' Informe um CPF válido.' : (validationTypeLower === "cnpj") ? ' Informe um CNPJ válido.' : 'Dados inválidos';
         return false;
       } else if (this.answer && this.answer.length === 14){
-        this.erro.mensagem = ' Informe um cpf válido.';
+        this.erro.mensagem = ' Informe um CPF válido.';
         return ValidaDados.validarCPF(this.answer);
       } else if (this.answer && this.answer.length === 18){
-        this.erro.mensagem = ' Informe um cnpj válido.';
+        this.erro.mensagem = ' Informe um CNPJ válido.';
         return ValidaDados.validarCNPJ(this.answer);
       }    
     this.erro.mensagem = '';

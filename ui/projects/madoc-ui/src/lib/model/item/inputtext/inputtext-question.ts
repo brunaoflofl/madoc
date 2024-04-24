@@ -21,18 +21,21 @@ export class InputTextQuestion extends TextQuestion {
   }
 
   public isValid(): boolean {
-    const validationTypeLower = this.validationType ? this.validationType.toLowerCase() : '';
-      if (this.required === true && (!this.answer || this.answer.length === 0)) {
-        this.erro.mensagem = (validationTypeLower === "cpf") ? ' Informe um CPF válido.' : (validationTypeLower === "cnpj") ? ' Informe um CNPJ válido.' : 'Dados inválidos';
-        return false;
-      } else if (this.answer && this.answer.length === 14){
-        this.erro.mensagem = ' Informe um CPF válido.';
-        return ValidaDados.validarCPF(this.answer);
-      } else if (this.answer && this.answer.length === 18){
-        this.erro.mensagem = ' Informe um CNPJ válido.';
-        return ValidaDados.validarCNPJ(this.answer);
-      }    
     this.erro.mensagem = '';
+    if (!super.isValid()) {
+      return false;
+    }
+    if (this.validationType && this.answer) {
+      const validationTypeLower = this.validationType.toLowerCase();
+      if (validationTypeLower == 'cpf' && !ValidaDados.validarCPF(this.answer)) {
+        this.erro.mensagem = 'Informe um CPF válido.';
+        return false;
+      }
+      if (validationTypeLower == 'cnpj' && !ValidaDados.validarCNPJ(this.answer)) {
+        this.erro.mensagem = 'Informe um CNPJ válido.';
+        return false;
+      }    
+    }
     return true;
   }
 

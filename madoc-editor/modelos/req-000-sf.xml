@@ -104,9 +104,7 @@
             	</madoc:Question>
             	
             	<madoc:Question id="q-alvo-nome" xsi:type="madoc:InputTextQuestionType" 
-            		display="Nome"
-            		hint="Opcional para sigilo telemático."
-            		required="{q-ts-rif == 'true' || q-ts-bancario == 'true' || q-ts-fiscal == 'true' || q-ts-telefonico == 'true'}"/>
+            		display="Nome"/>
             		
             	<madoc:Question id="q-alvo-cpf" xsi:type="madoc:InputTextQuestionType" 
             		display="CPF" 

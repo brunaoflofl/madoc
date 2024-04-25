@@ -25,7 +25,7 @@ export class InputTextQuestion extends TextQuestion {
     if (!super.isValid()) {
       return false;
     }
-    if (this.validationType && this.answer) {
+    if (this.validationType && !this.isNotPreenchido()) {
       const validationTypeLower = this.validationType.toLowerCase();
       if (validationTypeLower == 'cpf' && !ValidaDados.validarCPF(this.answer)) {
         this.erro.mensagem = 'Informe um CPF válido.';

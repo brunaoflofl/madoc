@@ -2,6 +2,7 @@ import { InputTextQuestion } from './../../model/item/inputtext/inputtext-questi
 import {Component, Input} from '@angular/core';
 import {MadocAbstractComponent} from '../shared/madoc-abstract.component';
 import {Question} from '../../model/index';
+import { Answer } from '../../model/answer';
 
 @Component({
   selector: 'madoc-inputtext',
@@ -31,7 +32,6 @@ export class MadocInputTextComponent extends MadocAbstractComponent<Question> {
     super.onChange();
   }
 
-
   getSize() {
     return this.item.size != null ? this.item.size + 'em' : '100%';
   }
@@ -43,4 +43,5 @@ export class MadocInputTextComponent extends MadocAbstractComponent<Question> {
       return this.item.isValid();
     }
   }
+
 }

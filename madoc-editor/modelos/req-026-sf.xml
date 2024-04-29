@@ -190,7 +190,8 @@
 
             <madoc:Question display="Finalidade" id="q-finalidade" xsi:type="madoc:RichTextQuestionType" visible="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus' || q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" required="{q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'}" hint="{q-fundamentacao == 'f-missao-interesse-parlamentar' || q-fundamentacao == 'f-representacao-sem-onus'? 'Complemente ou remova o texto abaixo' : q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-representacao-ext-com-onus'? 'Complemente o texto abaixo': ''}" inline="true" lines="8" defaultValueSatisfiesRequiredQuestion="false" defaultValue="a fim de " />
 
-            <madoc:Question display="Datas da Licença" id="q-periodo-licenca" xsi:type="madoc:DaterangeListQuestionType" required="true" multipleValues="true" />
+            <madoc:Question display="Datas da Licença" id="q-periodo-licenca" xsi:type="madoc:DaterangeListQuestionType" 
+            	required="true" multipleValues="false" />
 
             <madoc:Question display="Lista de Anexos" id="q-lista-anexos" xsi:type="madoc:TextListQuestionType" visible="{q-fundamentacao == 'f-missao' || q-fundamentacao == 'f-saude-ate-120d' || q-fundamentacao == 'f-saude-sup-120d' || q-fundamentacao == 'f-representacao-ext-com-onus'}" hint="Digite o título do documento" required="false" enabled="true" />
 

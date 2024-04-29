@@ -49,9 +49,18 @@
 	<madoc:Wizard display="Testes de componentes">
 
 		<madoc:Page id="p-detalhes" display="Testes de componentes">
+		
+			<madoc:Question id="q-checkbox-group" xsi:type="madoc:CheckBoxGroupQuestionType" display="Checks" 
+				required="true" addSelectAll="true">
+				<madoc:Options>
+					<madoc:Option id="o-1" value="Opção 1"/>
+					<madoc:Option id="o-2" value="Opção 2"/>
+					<madoc:Option id="o-3" value="Opção 3"/>
+				</madoc:Options>
+			</madoc:Question>
 
 			<madoc:Question defaultValue="SF" display="Nº no SEDOL"
-				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"
+				id="q-numero-sedol" required="false" xsi:type="madoc:InputTextQuestionType"
 				defaultValueSatisfiesRequiredQuestion="false"
 				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"/>			
 
@@ -63,6 +72,57 @@
 			<!-- Obtendo Opções de Impressão do banco de dados de questões -->
 			<xi:include href="urn:sf:sistema;madoc:id;question-library"
 				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-opcoes-impressao-section']" />
+				
+		
+            <madoc:Section id="s-alvo" display="Alvo">
+            
+            	<madoc:Question id="q-alvo-tipo-pessoa" xsi:type="madoc:RadioBoxGroupQuestionType" 
+            		display="Tipo de pessoa">
+            		<madoc:OnChange>
+            			<madoc:Action xsi:type="madoc:SwitchType">
+            				<madoc:Case questionValue="natural">
+            					<madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-alvo-cnpj" value=""/>
+            				</madoc:Case>
+            				<madoc:Case questionValue="juridica">
+            					<madoc:Action xsi:type="madoc:SetQuestionValueActionType" questionId="q-alvo-cpf" value=""/>
+            				</madoc:Case>
+            			</madoc:Action>
+            		</madoc:OnChange>
+            		<madoc:Options>
+            			<madoc:Option id="o-alvo-pn" value="natural" display="Pessoa natural" selected="true"/>
+            			<madoc:Option id="o-alvo-pj" value="juridica" display="Pessoa jurídica"/>
+            		</madoc:Options>
+            	</madoc:Question>
+            	
+            	<madoc:Question id="q-alvo-tratamento" xsi:type="madoc:ComboQuestionType" 
+            		display="Tratamento"
+            		visible="{q-alvo-tipo-pessoa == 'natural'}">
+            		<madoc:Options>
+            			<madoc:Option id="o-alvo-senhor" value="Senhor" selected="true"/>
+            			<madoc:Option id="o-alvo-senhora" value="Senhora"/>
+            		</madoc:Options>
+            	</madoc:Question>
+            	
+            	<madoc:Question id="q-alvo-nome" xsi:type="madoc:InputTextQuestionType" 
+            		display="Nome"
+            		hint="Opcional para sigilo telemático."
+            		required="{q-ts-rif == 'true' || q-ts-bancario == 'true' || q-ts-fiscal == 'true' || q-ts-telefonico == 'true'}"/>
+            		
+            	<madoc:Question id="q-alvo-cpf" xsi:type="madoc:InputTextQuestionType" 
+            		display="CPF" 
+            		required="true"
+            		visible="{q-alvo-tipo-pessoa == 'natural'}"
+            		validationType="cpf"
+            		minLength="14" maxLength="14"/>
+            		
+            	<madoc:Question id="q-alvo-cnpj" xsi:type="madoc:InputTextQuestionType" 
+            		display="CNPJ"
+            		required="true"
+            		visible="{q-alvo-tipo-pessoa == 'juridica'}"
+            		validationType="cnpj" 
+            		minLength="18" maxLength="18"/>
+            	
+            </madoc:Section>
 
 		</madoc:Page>
 
@@ -87,8 +147,14 @@
 		<madoc:Template replaceName="objetoDoRequerimento">
 			<madoc:content>
 				<![CDATA[
+
+<fo:block>
+			Checks: #foreach($v in $madoc.valueListOf.q-checkbox-group) [$v] #end
+</fo:block>			
           
+<fo:block>
             Sedol: $madoc.valueOf.q-numero-sedol
+</fo:block>			
             
             	 ]]>
 			</madoc:content>

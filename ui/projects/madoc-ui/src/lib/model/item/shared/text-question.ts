@@ -28,6 +28,8 @@ export abstract class TextQuestion extends Question {
   }
 
   public isValid(): boolean {
+    this.erro.mensagem = '';
+    
     if (this.required === true && this.isNotPreenchido()) {
       this.erro.mensagem = 'Campo de preenchimento obrigatório';
       return false;
@@ -37,8 +39,8 @@ export abstract class TextQuestion extends Question {
       const r = this.answer.match(this.regex) != null;
       if (!r) {
         this.erro.mensagem = 'Texto informado inválido';
+        return false;
       }
-      return r;
     }
 
     if (this.required === true && this.defaultValueSatisfiesRequiredQuestion === false
@@ -48,7 +50,6 @@ export abstract class TextQuestion extends Question {
       return false;
     }
 
-    this.erro.mensagem = '';
     return true;
   }
 

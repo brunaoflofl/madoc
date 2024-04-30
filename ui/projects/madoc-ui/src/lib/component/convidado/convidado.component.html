@@ -30,7 +30,7 @@
         <div class="col-sm-2">
             <select class="form-control selectValue" (change)="onSelectTipo(i, $event)">
                 <option value="false">Nome e cargo</option>
-                <option value="true" *ngIf="isFieldAttribute('representanteDe', 'visible')">Instituição </option>
+                <option value="true" [selected]="convidado.representanteDe" *ngIf="isFieldAttribute('representanteDe', 'visible')">Instituição </option>
             </select>
         </div>
         <div class="col-sm-1">

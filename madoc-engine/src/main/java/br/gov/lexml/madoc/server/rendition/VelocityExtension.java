@@ -9,6 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -22,9 +23,10 @@ import org.apache.velocity.app.VelocityEngine;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import br.gov.lexml.madoc.server.schema.Constants;
 import br.gov.lexml.madoc.server.schema.entity.QuestionType;
 import br.gov.lexml.madoc.server.schema.entity.TextQuestionType;
-import br.gov.lexml.madoc.server.schema.Constants;
+import br.gov.lexml.madoc.server.util.MadocStringUtils;
 import br.gov.lexml.madoc.server.util.Numerals;
 import br.gov.lexml.madoc.server.util.XMLUtil;
 
@@ -152,7 +154,7 @@ public class VelocityExtension {
 				String json = VelocityExtensionQuestionsUtils.getValueOfId(contextCollection, key.toString());
 				ObjectMapper mapper = new ObjectMapper();
 				try {
-					return mapper.readValue(json, Map.class);
+					return basicXmlEscape(mapper.readValue(json, Map.class));
 				} catch (Exception e) {
 					return mapper;
 				}
@@ -181,7 +183,7 @@ public class VelocityExtension {
 
 				try {
 					for (String json : values) {
-						Map<String, String> map = mapper.readValue(json, Map.class);
+						Map<String, String> map = basicXmlEscape(mapper.readValue(json, Map.class));
 						list.add(map);
 					}
 
@@ -411,6 +413,19 @@ public class VelocityExtension {
 	public String removeFinalDot(String html) {
 		return VelocityExtensionUtils.removeFinalDot(html);
 	}
+	
+	public String join(List<String> strings, String sep) {
+		return StringUtils.join(strings, sep);
+	}
+	
+	public String join(List<String> strings, String sep, String ultimoSep) {
+		return MadocStringUtils.join(strings, sep, ultimoSep);
+	}
+	
+	public boolean isEmpty(Object obj) {
+		return obj == null || (obj instanceof String && StringUtils.isEmpty((String) obj))
+				|| (obj instanceof Collection && ((Collection)obj).isEmpty());
+	}
 
 	// HTML to XSL-FO
 	public String html2fo(String html) {
@@ -433,6 +448,11 @@ public class VelocityExtension {
 		String s =  html.replaceAll("(?s)(?:<fo:block[^>]+>[\\s ]+</fo:block>\\s*?)+$", "");
 		return s;
 	}
+	
+	public String add(List<Object> list, Object element) {
+		list.add(element);
+		return "";
+	}
 
 	/*
 	 * DIGEST
@@ -450,6 +470,19 @@ public class VelocityExtension {
 	public List<String> basicXmlEscape(List<String> list) {
 		return list.stream().map(s -> basicXmlEscape(s)).collect(Collectors.toList());
 	}
+	
+	public Map<String, Object> basicXmlEscape(Map<String, Object> map) {
+		Map<String, Object> ret = new HashMap<String, Object>(map.size());
+		for(Map.Entry<String, Object> entry: map.entrySet()) {
+			Object value = entry.getValue();
+			if (value != null && value instanceof String) {
+				value = basicXmlEscape((String)value);
+			}
+			ret.put(entry.getKey(), value);
+		}
+		return ret;
+	}
+	
 
 	public String basicXmlUnescape(String str) {
 		return str.replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", "\"").replace("&apos;", "'")

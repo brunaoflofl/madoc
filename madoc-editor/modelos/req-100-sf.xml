@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<madoc:MadocDocument xmlns:madoc="http://www.lexml.gov.br/madoc/2.0"
+	xmlns:xi="http://www.lexml.gov.br/schema/xloom"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+	<madoc:Metadata id="req-100-sf">
+		<madoc:Entry key="TipoModelo">Requerimento</madoc:Entry>
+		<madoc:Entry key="Titulo">Componente de Vetos</madoc:Entry>
+		<madoc:Entry key="CasaLegislativa">SF</madoc:Entry>
+		<madoc:Entry key="Categoria">
+			<madoc:List>
+				<madoc:Entry>000 Testes</madoc:Entry>
+			</madoc:List>
+		</madoc:Entry>
+		<madoc:Entry key="Indexacao">
+			<madoc:List>
+				<madoc:Entry>Teste</madoc:Entry>
+				<madoc:Entry>Componentes</madoc:Entry>
+			</madoc:List>
+		</madoc:Entry>
+		<!-- 
+		<madoc:Entry key="Fundamentacao">
+			<madoc:Map>
+				<madoc:Entry key="Requerimento de Remessa a determinada comissão de matéria despachada a outra">
+					<madoc:List>
+						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art255_inc2_ali3_ite12
+						</madoc:Entry>
+					</madoc:List>
+				</madoc:Entry>
+				<madoc:Entry key="Requerimento de Consulta à Comissão de Constituição, Justiça e Cidadania">
+					<madoc:List>
+						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art101_inc1
+						</madoc:Entry>
+					</madoc:List>
+				</madoc:Entry>
+				<madoc:Entry key="Requerimento de Consulta à Comissão de Assuntos Econômicos">
+					<madoc:List>
+						<madoc:Entry>urn:lex:br:senado.federal:resolucao:1970-11-27;93!art99_inc1
+						</madoc:Entry>
+					</madoc:List>
+				</madoc:Entry>
+			</madoc:Map>
+		</madoc:Entry>
+		 -->
+	</madoc:Metadata>
+
+
+	<madoc:Wizard display="Componente de vetos">
+
+		<madoc:Page id="p-detalhes" display="Componente de vetos">
+
+			<madoc:Section id="p-det-s-comp" display="Destaque">
+			
+				<madoc:Question id="q-destaque-veto" xsi:type="madoc:CustomQuestionType" 
+					display="Veto" 
+					required="true" customQuestionType="DestaqueVetoQuestion">
+					<madoc:CustomAttribute name="mregex" value="*" />
+					<madoc:CustomAttribute name="url" value="/madoc/api/dados/vetos" />
+				</madoc:Question>
+				
+			</madoc:Section>
+			
+			<!-- Obtendo DATA do banco de dados de questões -->
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Question[@id='q-lib-fecho-data']" />
+
+			<!-- Obtendo Opções de Impressão do banco de dados de questões -->
+			<xi:include href="urn:sf:sistema;madoc:id;question-library"
+				xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:Section[@id='q-lib-opcoes-impressao-section']" />
+
+		</madoc:Page>
+
+	</madoc:Wizard>
+
+	<madoc:DataSets>
+		<!-- Obtendo o dataset de senadores -->
+		<!-- 
+		<xi:include href="urn:sf:sistema;madoc:id;dataset-library"
+			xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='senadores']" />
+		 -->
+
+		<!-- Obtendo o dataset de comissões -->
+		<!-- 
+		<xi:include href="urn:sf:sistema;madoc:id;dataset-library"
+			xmlns:xi="http://www.lexml.gov.br/schema/xloom" select="//madoc:DataSet[@id='comissoes']" />
+		 -->
+
+	</madoc:DataSets>
+
+	<madoc:Templates madocSkeletonId="skeleton-001">
+		<madoc:Template replaceName="objetoDoRequerimento">
+			<madoc:content>
+				<![CDATA[
+				
+<fo:block>				
+	$madoc.mapOf.q-destaque-veto
+</fo:block>
+
+<fo:block>
+		   	 		#set($veto = $madoc.mapOf.q-destaque-veto)
+	   				#if($madoc.size($veto.itensSelecionados) gt 0)
+   						#if($madoc.size($veto.itensSelecionados) gt 1)
+   							dos itens 
+   						#else
+   							do item
+   						#end
+   						
+   						#foreach($texto in $veto.texto)	   							
+   							#if($foreach.count gt 1)
+ 								#if($foreach.hasNext)
+					   				,
+					   			#else
+					   				e
+					   			#end
+					   		#end
+					   		$texto						   		
+   						#end 
+	   				#end
+	   				do "VET $veto.veto"
+</fo:block>	   				
+	   				
+            	 ]]>
+			</madoc:content>
+		</madoc:Template>
+
+	</madoc:Templates>
+
+
+</madoc:MadocDocument>

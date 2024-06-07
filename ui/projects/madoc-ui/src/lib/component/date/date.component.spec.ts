@@ -9,7 +9,7 @@ import {HttpService} from './../../service/http.service';
 import {ActionService} from './../../service/action.service';
 import {QuestionService} from './../../service/question.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {BsLocaleService} from 'ngx-bootstrap';
+import {BsLocaleService} from "ngx-bootstrap/datepicker";
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 

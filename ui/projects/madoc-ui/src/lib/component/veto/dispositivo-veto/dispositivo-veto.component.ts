@@ -1,4 +1,4 @@
-import { Veto } from '../veto.model';
+import {Dispositivo, Veto} from '../veto.model';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -23,15 +23,38 @@ export class MadocDispositivoVetoComponent implements OnInit {
 
     this.form.get('filtro').valueChanges.subscribe(value => {
       this.filteredDispositivos = [];
-      this.veto.dispositivos.forEach(d => {
-        const texto = d.texto.toUpperCase();
-        const numeroIdentificador = d.numeroIdentificador.toUpperCase();
-        const filter = value.toUpperCase();
+      if (!value) return;
 
-        if (texto.includes(filter) || numeroIdentificador.includes(filter)) {
-          this.filteredDispositivos.push(d);
-        }
-      });
+      const numbers = value.split('-');
+      if (!!value.match(/\d+-\d+/) && numbers.length == 2 && numbers[0] < numbers[1]) {
+        this.filtrarPorFaixaDispositivos(numbers);
+      } else {
+        this.filtrarPorPalavraChave(value);
+      }
+    });
+  }
+
+  private filtrarPorFaixaDispositivos(value: any[]) {
+    const numeroInicial: number = value[0];
+    const numeroFinal: number = value [1];
+    this.veto.dispositivos.forEach(d => {
+      const dispositivo = Object.assign(new Dispositivo, d);
+      if (dispositivo.getNumero() >= numeroInicial && dispositivo.getNumero() <= numeroFinal) {
+        this.filteredDispositivos.push(d);
+      }
+    });
+  }
+
+  filtrarPorPalavraChave(palavraChave: string) {
+    this.veto.dispositivos.forEach(d => {
+      const texto = d.texto.toUpperCase();
+      const numeroIdentificador = d.numeroIdentificador.toUpperCase();
+      const conteudo = d.conteudo.toUpperCase();
+      const filter = palavraChave.toUpperCase();
+
+      if (texto.includes(filter) || numeroIdentificador.includes(filter) || conteudo.includes(filter) ) {
+        this.filteredDispositivos.push(d);
+      }
     });
   }
 
@@ -81,5 +104,9 @@ export class MadocDispositivoVetoComponent implements OnInit {
 
   clearFiltro() {
     (this.form.get('filtro') as FormControl).reset();
+  }
+
+  marcarTodosDispositivos(selecionar: boolean) {
+    this.getDispositivosWithFilter().forEach(d => d.selected = selecionar);
   }
 }

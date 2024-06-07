@@ -18,42 +18,62 @@ export class DescritorDispositivoComponent implements OnInit {
 
   descreverDispositivos() {
     let texto : string = this.dispostivos.length === 1 ? 'dispositivo ' : 'dispositivos ';
-    console.log('------------------------ ' + this.dispostivos.length);
+    if (this.dispostivos.length == 1) {
+      texto = "dispositivo " + this.converterParaDispositivo(0).getNumero();
+    } else {
+      let index = 0;
+      while (index < this.dispostivos.length) {
+        let dispositivoAtual = this.converterParaDispositivo(index);
+        let inicio = index; // Marca o indice do primeiro dispositivo que foi comparado.
+        let existeProximo = !!this.dispostivos[index + 1];
 
-    let index = 0;
-    while (index < this.dispostivos.length) {
-      let dispositivo = Object.assign(new Dispositivo, this.dispostivos[index]);
-      let artigo = ', ';
-      let inicio = index;
-      let existeProximo = !!this.dispostivos[index + 1];
-      console.log(dispositivo.getNumero(), existeProximo)
-      if (existeProximo) {
-        texto += dispositivo.getNumero();
-        let isSequencial = true;
-        while (existeProximo && isSequencial) {
-          isSequencial = dispositivo.getNumero() + 1 === Object.assign(new Dispositivo, this.dispostivos[index+1]).getNumero();
-          existeProximo = !!this.dispostivos[index + 2];
-          if (isSequencial) {
-            index++;
-            dispositivo = Object.assign(new Dispositivo, this.dispostivos[index]);
+        if (existeProximo) {
+          texto += dispositivoAtual.getNumero();
+          let isSequencial = true;
+
+          while (existeProximo && isSequencial) {
+            isSequencial = this.isDispositivoSaoSequenciais(dispositivoAtual, this.converterParaDispositivo(index + 1));
+            existeProximo = !!this.dispostivos[index + 2];
+            if (isSequencial) {
+              index++;
+              dispositivoAtual = this.converterParaDispositivo(index);
+            }
           }
-          console.log(isSequencial, existeProximo)
+
+          let artigo = this.decidirProximoArtigoOuVirgula(inicio, index);
+
+          if (inicio < index) texto += artigo + dispositivoAtual.getNumero();
+          if (existeProximo) texto += ', ';
+
+        } else {
+          texto += ' e ' + dispositivoAtual.getNumero();
         }
-        if (Object.assign(new Dispositivo, this.dispostivos[inicio]).getNumero() + 1 === dispositivo.getNumero()) {
-          artigo = ' e ';
-        } else if (inicio + 1 < index) {
-          artigo = ' a '
-        }
-        console.log('artigo e disp final, proximo?', artigo, dispositivo.getNumero(), existeProximo)
-        texto += artigo + dispositivo.getNumero();
-        if (existeProximo) texto += ', ';
-      } else {
-        texto += ' e ' + dispositivo.getNumero();
+        index++;
       }
-      index++;
     }
     texto += ' do veto ' + this.numeroVeto + '/'+ this.anoVeto + '.';
-    console.log('------------------------ ');
+
     return texto;
+  }
+
+  private converterParaDispositivo(index: number) {
+    return Object.assign(new Dispositivo, this.dispostivos[index]);
+  }
+
+  private isDispositivoSaoSequenciais(dispositivoAtual: Dispositivo, dispositivoPosterior: Dispositivo) {
+    return dispositivoAtual.getNumero() + 1 == dispositivoPosterior.getNumero();
+  }
+
+  private decidirProximoArtigoOuVirgula(indexInicial: number, indexAtual: number) {
+    let artigo = ', ';
+    let dispositivoInicial = this.converterParaDispositivo(indexInicial);
+    let dispositivoAtual = this.converterParaDispositivo(indexAtual);
+
+    if (this.isDispositivoSaoSequenciais(dispositivoInicial, dispositivoAtual)) {
+      artigo = ' e ';
+    } else if (indexInicial + 1 < indexAtual) {
+      artigo = ' a '
+    }
+    return artigo;
   }
 }

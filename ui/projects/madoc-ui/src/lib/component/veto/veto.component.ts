@@ -305,19 +305,19 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
                 }
                 if (contadorAglutinacao > 0) {
                     itensSelecionados.push(
-                        vetorItensSelecionados[0] +
+                        vetorItensSelecionados[0].split('.')[2] +
                         ' a ' +
-                        vetorItensSelecionados[1 + contadorAglutinacao]
+                        vetorItensSelecionados[1 + contadorAglutinacao].split('.')[2]
                     );
                     vetorItensSelecionados.splice(0, 2 + contadorAglutinacao);
                     contadorAglutinacao = 0;
                 } else {
-                    itensSelecionados.push(vetorItensSelecionados[0]);
+                    itensSelecionados.push(vetorItensSelecionados[0].split('.')[2]);
                     vetorItensSelecionados.splice(0, 1);
                 }
                 index = 0;
             } else if (vetorItensSelecionados.length === 1) {
-                itensSelecionados.push(vetorItensSelecionados[0]);
+                itensSelecionados.push(vetorItensSelecionados[0].split('.')[2]);
                 vetorItensSelecionados.splice(0, 1);
             } else {
                 index++;

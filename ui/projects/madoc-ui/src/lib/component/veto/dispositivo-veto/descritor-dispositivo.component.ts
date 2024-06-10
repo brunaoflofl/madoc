@@ -17,63 +17,85 @@ export class DescritorDispositivoComponent implements OnInit {
   }
 
   descreverDispositivos() {
-    let texto : string = this.dispostivos.length === 1 ? 'dispositivo ' : 'dispositivos ';
-    if (this.dispostivos.length == 1) {
-      texto = "dispositivo " + this.converterParaDispositivo(0).getNumero();
-    } else {
-      let index = 0;
-      while (index < this.dispostivos.length) {
-        let dispositivoAtual = this.converterParaDispositivo(index);
-        let inicio = index; // Marca o indice do primeiro dispositivo que foi comparado.
-        let existeProximo = !!this.dispostivos[index + 1];
+    if (this.dispostivos.length == 1)
+      return `dispositivo ${this.recuperarNumeroDispositivo(0)} do veto ${this.numeroVeto}/${this.anoVeto}.`;
 
-        if (existeProximo) {
-          texto += dispositivoAtual.getNumero();
-          let isSequencial = true;
+    const gruposDispositivos = this.agruparDispositivosSequenciais();
+    const descricaoDispositivos = this.descreverDispositivosAgrupados(gruposDispositivos);
+    return `dispositivos ${descricaoDispositivos} do veto ${this.numeroVeto}/${this.anoVeto}.`;
+  }
 
-          while (existeProximo && isSequencial) {
-            isSequencial = this.isDispositivoSaoSequenciais(dispositivoAtual, this.converterParaDispositivo(index + 1));
-            existeProximo = !!this.dispostivos[index + 2];
-            if (isSequencial) {
-              index++;
-              dispositivoAtual = this.converterParaDispositivo(index);
-            }
-          }
+  private recuperarNumeroDispositivo(index: number) {
+    return +this.dispostivos[index].numeroIdentificador.split('.')[2];
+  }
 
-          let artigo = this.decidirProximoArtigoOuVirgula(inicio, index);
+  /**
+   * Coloca uma virgula entre os grupos e um artigo 'e' para
+   * o ultimo elemento, Ex. '1 a 3, 5, 7 e 9 e 10'
+   */
+  descreverDispositivosAgrupados(gruposDispositivos: string[]) {
+    if (gruposDispositivos.length == 1) {
+      return gruposDispositivos[0];
+    }
 
-          if (inicio < index) texto += artigo + dispositivoAtual.getNumero();
-          if (existeProximo) texto += ', ';
-
-        } else {
-          texto += ' e ' + dispositivoAtual.getNumero();
-        }
-        index++;
+    let texto= '';
+    gruposDispositivos.forEach(function (el, index) {
+      if (!!gruposDispositivos[index + 1]) {
+        texto += el + ', ';
+      } else {
+        texto = texto.substring(0, texto.length-2); // Tira a ultima virgula
+        texto += ' e ' + el;
       }
+    });
+
+    return texto
+  }
+
+  /**
+   * Decide a melhor forma de agrupar dispositivos em um array,
+   * caso haja uma sequencia entre eles. Ex. ['1 a 3', '5', '7', '9 e 10']
+   */
+  agruparDispositivosSequenciais() {
+    let sequenciaDispositivos: string[] = [];
+    let index = 0;
+    while (index < this.dispostivos.length) {
+      let numeroDispositivo = this.recuperarNumeroDispositivo(index);
+      let existeProximo = !!this.dispostivos[index + 1];
+
+      if (existeProximo) {
+        let isSequencial = true;
+        let numeroDispositivoAtual = numeroDispositivo;
+
+        while (isSequencial && existeProximo) {
+          let proximoNumeroDispositivo = this.recuperarNumeroDispositivo(index + 1);
+          isSequencial = numeroDispositivoAtual + 1 === proximoNumeroDispositivo;
+          if (isSequencial) {
+            existeProximo = !!this.dispostivos[index + 2];
+            index++;
+            numeroDispositivoAtual = this.recuperarNumeroDispositivo(index);
+          }
+        }
+
+        let qtdDispositivosEmSequencia = numeroDispositivoAtual - numeroDispositivo;
+        sequenciaDispositivos.push(qtdDispositivosEmSequencia > 0
+          ? numeroDispositivo + this.decidirSeparador(qtdDispositivosEmSequencia) + numeroDispositivoAtual
+          : numeroDispositivo.toString());
+
+      } else {
+        sequenciaDispositivos.push(numeroDispositivo.toString());
+      }
+      index++;
     }
-    texto += ' do veto ' + this.numeroVeto + '/'+ this.anoVeto + '.';
 
-    return texto;
+    return sequenciaDispositivos;
   }
 
-  private converterParaDispositivo(index: number) {
-    return Object.assign(new Dispositivo, this.dispostivos[index]);
-  }
-
-  private isDispositivoSaoSequenciais(dispositivoAtual: Dispositivo, dispositivoPosterior: Dispositivo) {
-    return dispositivoAtual.getNumero() + 1 == dispositivoPosterior.getNumero();
-  }
-
-  private decidirProximoArtigoOuVirgula(indexInicial: number, indexAtual: number) {
-    let artigo = ', ';
-    let dispositivoInicial = this.converterParaDispositivo(indexInicial);
-    let dispositivoAtual = this.converterParaDispositivo(indexAtual);
-
-    if (this.isDispositivoSaoSequenciais(dispositivoInicial, dispositivoAtual)) {
-      artigo = ' e ';
-    } else if (indexInicial + 1 < indexAtual) {
-      artigo = ' a '
+  private decidirSeparador(qtdDispositivosEmSequencia: number) {
+    if (qtdDispositivosEmSequencia == 1) {
+      return ' e ';
+    } else if (qtdDispositivosEmSequencia > 1) {
+      return ' a '
     }
-    return artigo;
+    return ', ';
   }
 }

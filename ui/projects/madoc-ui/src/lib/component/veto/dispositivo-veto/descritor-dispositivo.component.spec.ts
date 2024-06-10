@@ -121,7 +121,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('008'),
         criarNovoDispositivo('009')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3, 5, 7 a 9 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3, 5 e 7 a 9 do veto 1/2024.');
     });
   });
 
@@ -135,7 +135,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('009'),
         criarNovoDispositivo('0010')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 4, 9 e 10 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 4 e 9 e 10 do veto 1/2024.'); //TODO Conferir se artigo 'e' está certo
     });
 
     it('deveria descrever dois grupos de tres dispositivos sequenciais', () => {
@@ -149,7 +149,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('009'),
         criarNovoDispositivo('0010')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5, 8 a 10 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5 e 8 a 10 do veto 1/2024.');
     });
 
     it('deveria descrever dois grupos de tres dispositivos sequenciais, com dispositivos nao sequenciais entre eles', () => {
@@ -164,7 +164,22 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('0010'),
         criarNovoDispositivo('0011')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 1 e 2, 5, 7, 9 a 11 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 1 e 2, 5, 7 e 9 a 11 do veto 1/2024.');
+    });
+
+    it('deveria descrever dois grupos de dois dispositivos sequenciais, com dispositivos nao sequenciais entre eles e dois artigos no final', () => {
+      component.anoVeto = '2024';
+      component.numeroVeto = 1;
+      component.dispostivos = [
+        criarNovoDispositivo('001'),
+        criarNovoDispositivo('002'),
+        criarNovoDispositivo('003'),
+        criarNovoDispositivo('005'),
+        criarNovoDispositivo('007'),
+        criarNovoDispositivo('009'),
+        criarNovoDispositivo('0010')];
+
+      expect(component.descreverDispositivos()).toBe('dispositivos 1 a 3, 5, 7 e 9 e 10 do veto 1/2024.'); //TODO Conferir se artigo 'e' está certo
     });
   });
 });

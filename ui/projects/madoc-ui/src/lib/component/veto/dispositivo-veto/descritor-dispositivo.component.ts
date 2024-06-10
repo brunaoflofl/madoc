@@ -18,37 +18,15 @@ export class DescritorDispositivoComponent implements OnInit {
 
   descreverDispositivos() {
     if (this.dispostivos.length == 1)
-      return `dispositivo ${this.recuperarNumeroDispositivo(0)} do veto ${this.numeroVeto}/${this.anoVeto}.`;
+      return `dispositivo ${this.recuperarNumeroDispositivo(0)} do Veto ${this.numeroVeto}/${this.anoVeto}.`;
 
     const gruposDispositivos = this.agruparDispositivosSequenciais();
     const descricaoDispositivos = this.descreverDispositivosAgrupados(gruposDispositivos);
-    return `dispositivos ${descricaoDispositivos} do veto ${this.numeroVeto}/${this.anoVeto}.`;
+    return `dispositivos ${descricaoDispositivos} do Veto ${this.numeroVeto}/${this.anoVeto}.`;
   }
 
   private recuperarNumeroDispositivo(index: number) {
     return +this.dispostivos[index].numeroIdentificador.split('.')[2];
-  }
-
-  /**
-   * Coloca uma virgula entre os grupos e um artigo 'e' para
-   * o ultimo elemento, Ex. '1 a 3, 5, 7 e 9 e 10'
-   */
-  descreverDispositivosAgrupados(gruposDispositivos: string[]) {
-    if (gruposDispositivos.length == 1) {
-      return gruposDispositivos[0];
-    }
-
-    let texto= '';
-    gruposDispositivos.forEach(function (el, index) {
-      if (!!gruposDispositivos[index + 1]) {
-        texto += el + ', ';
-      } else {
-        texto = texto.substring(0, texto.length-2); // Tira a ultima virgula
-        texto += ' e ' + el;
-      }
-    });
-
-    return texto
   }
 
   /**
@@ -88,6 +66,37 @@ export class DescritorDispositivoComponent implements OnInit {
     }
 
     return sequenciaDispositivos;
+  }
+
+  /**
+   * Realiza a descricao de grupos de dispositivos conforme a qtd de elementos agrupados:
+   * - 1 elemento: Descrito de forma literal. Ex: dispositivo 3 do veto;
+   * - 2 elementos: Substitui o artigo do primeiro grupo por virgula caso seja 'e', separador pode ser virgula caso artigo do segundo grupo
+   * seja 'e'. Ex (3, 4, 7 e 8) OU (3, 4, 7 a 9)
+   * - Demais situações: Coloca uma virgula entre os grupos e um artigo 'e' para o ultimo elemento. Ex 1 a 3, 5, 7 e 9 e 10
+   */
+  descreverDispositivosAgrupados(gruposDispositivos: string[]) {
+    let texto= '';
+    if (gruposDispositivos.length == 1) {
+      return gruposDispositivos[0];
+    }
+
+    if (gruposDispositivos.length == 2) {
+      texto += gruposDispositivos[0].replace(/\se\s/, ', ');
+      texto += gruposDispositivos[1].match(/\se\s/) ? ', ' + gruposDispositivos[1] : ' e ' + gruposDispositivos[1]
+
+    } else {
+      gruposDispositivos.forEach(function (el, index) {
+        if (!!gruposDispositivos[index + 1]) {
+          texto += el + ', ';
+        } else {
+          texto = texto.substring(0, texto.length-2); // Tira a ultima virgula
+          texto += (!el.match(/\se\s/) ? ' e ' : ', ') + el;
+        }
+      });
+    }
+
+    return texto
   }
 
   private decidirSeparador(qtdDispositivosEmSequencia: number) {

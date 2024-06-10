@@ -41,7 +41,7 @@ describe('DescritorDispositivoComponent', () => {
       let dispositivo: Dispositivo = criarNovoDispositivo('001');
       component.dispostivos = [dispositivo];
 
-      expect(component.descreverDispositivos()).toBe('dispositivo 1 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivo 1 do Veto 1/2024.');
     });
   });
 
@@ -53,7 +53,7 @@ describe('DescritorDispositivoComponent', () => {
       let dispositivo2: Dispositivo = criarNovoDispositivo('004');
 
       component.dispostivos = [dispositivo1, dispositivo2];
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 4 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 4 do Veto 1/2024.');
     });
 
     it('deveria descrever tres dispositivos sequenciais', () => {
@@ -64,7 +64,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('004'),
         criarNovoDispositivo('005')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5 do Veto 1/2024.');
     });
 
     it('deveria descrever dois dispositivos nao sequenciais', () => {
@@ -74,7 +74,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('003'),
         criarNovoDispositivo('005')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 5 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 5 do Veto 1/2024.');
     });
 
     it('deveria descrever dois dispositivos nao sequenciais distantes', () => {
@@ -84,7 +84,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('003'),
         criarNovoDispositivo('0015')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 15 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 15 do Veto 1/2024.');
     });
 
     it('deveria descrever tres dispositivos nao sequenciais', () => {
@@ -95,7 +95,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('005'),
         criarNovoDispositivo('007')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3, 5 e 7 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3, 5 e 7 do Veto 1/2024.');
     });
 
     it('deveria descrever tres dispositivos sequenciais e dois nao sequenciais', () => {
@@ -108,7 +108,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('007'),
         criarNovoDispositivo('009')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5, 7 e 9 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5, 7 e 9 do Veto 1/2024.');
     });
 
     it('deveria descrever dois dispositivos nao sequenciais e tres dispositivos sequenciais', () => {
@@ -121,23 +121,11 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('008'),
         criarNovoDispositivo('009')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3, 5 e 7 a 9 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3, 5 e 7 a 9 do Veto 1/2024.');
     });
   });
 
   describe('Quando houver dois grupos de dois dispositivos sequenciais selecionados', () => {
-    it('deveria descrever dois grupos de dois dispositivos sequenciais', () => {
-      component.anoVeto = '2024';
-      component.numeroVeto = 1;
-      component.dispostivos = [
-        criarNovoDispositivo('003'),
-        criarNovoDispositivo('004'),
-        criarNovoDispositivo('009'),
-        criarNovoDispositivo('0010')];
-
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 e 4 e 9 e 10 do veto 1/2024.'); //TODO Conferir se artigo 'e' está certo
-    });
-
     it('deveria descrever dois grupos de tres dispositivos sequenciais', () => {
       component.anoVeto = '2024';
       component.numeroVeto = 1;
@@ -149,7 +137,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('009'),
         criarNovoDispositivo('0010')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5 e 8 a 10 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5 e 8 a 10 do Veto 1/2024.');
     });
 
     it('deveria descrever dois grupos de tres dispositivos sequenciais, com dispositivos nao sequenciais entre eles', () => {
@@ -164,7 +152,7 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('0010'),
         criarNovoDispositivo('0011')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 1 e 2, 5, 7 e 9 a 11 do veto 1/2024.');
+      expect(component.descreverDispositivos()).toBe('dispositivos 1 e 2, 5, 7 e 9 a 11 do Veto 1/2024.');
     });
 
     it('deveria descrever dois grupos de dois dispositivos sequenciais, com dispositivos nao sequenciais entre eles e dois artigos no final', () => {
@@ -179,7 +167,59 @@ describe('DescritorDispositivoComponent', () => {
         criarNovoDispositivo('009'),
         criarNovoDispositivo('0010')];
 
-      expect(component.descreverDispositivos()).toBe('dispositivos 1 a 3, 5, 7 e 9 e 10 do veto 1/2024.'); //TODO Conferir se artigo 'e' está certo
+      expect(component.descreverDispositivos()).toBe('dispositivos 1 a 3, 5, 7, 9 e 10 do Veto 1/2024.');
+    });
+
+    // TODO Com erro:
+
+    it('deveria descrever dois grupos, o primeiro com tres dispositivos sequenciais, segundo com dois dispositivos sequenciais', () => {
+      component.anoVeto = '2024';
+      component.numeroVeto = 1;
+      component.dispostivos = [
+        criarNovoDispositivo('003'),
+        criarNovoDispositivo('004'),
+        criarNovoDispositivo('005'),
+        criarNovoDispositivo('009'),
+        criarNovoDispositivo('0010')];
+
+      expect(component.descreverDispositivos()).toBe('dispositivos 3 a 5, 9 e 10 do Veto 1/2024.');
+    });
+
+    it('deveria descrever dois grupos, separando o primeiro com dois dispositivos sequenciais, segundo com dois dispositivos sequenciais', () => {
+      component.anoVeto = '2024';
+      component.numeroVeto = 1;
+      component.dispostivos = [
+        criarNovoDispositivo('003'),
+        criarNovoDispositivo('004'),
+        criarNovoDispositivo('009'),
+        criarNovoDispositivo('0010')];
+
+      expect(component.descreverDispositivos()).toBe('dispositivos 3, 4, 9 e 10 do Veto 1/2024.');
+    });
+
+    it('deveria descrever dois grupos, primeiro com tres dispositivos sequenciais, segundo com dois dispositivos sequenciais', () => {
+      component.anoVeto = '2024';
+      component.numeroVeto = 1;
+      component.dispostivos = [
+        criarNovoDispositivo('003'),
+        criarNovoDispositivo('004'),
+        criarNovoDispositivo('008'),
+        criarNovoDispositivo('009')];
+
+      expect(component.descreverDispositivos()).toBe('dispositivos 3, 4, 8 e 9 do Veto 1/2024.');
+    });
+
+    it('deveria descrever dois grupos, primeiro com tres dispositivos sequenciais, segundo com tres dispositivos sequenciais', () => {
+      component.anoVeto = '2024';
+      component.numeroVeto = 1;
+      component.dispostivos = [
+        criarNovoDispositivo('003'),
+        criarNovoDispositivo('004'),
+        criarNovoDispositivo('008'),
+        criarNovoDispositivo('009'),
+        criarNovoDispositivo('0010')];
+
+      expect(component.descreverDispositivos()).toBe('dispositivos 3, 4 e 8 a 10 do Veto 1/2024.');
     });
   });
 });

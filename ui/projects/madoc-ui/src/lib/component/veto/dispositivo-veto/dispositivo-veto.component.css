@@ -37,6 +37,10 @@
   margin-top: 1px;
 }
 
+.grid > div:nth-child(4n-0) {
+  min-width: 600px;
+}
+
 .grid > div > label {
   cursor: pointer;
   font-weight: normal !important;

@@ -50,12 +50,28 @@
                 style="cursor: pointer"
                 [(ngModel)]="dispositivo.selected"
                 onselect="onSelected(dispositivo)"
-                [disabled]="disabled"
+                [disabled]="disabled || dispositivo.prejudicado"
+                [title]="!dispositivo.prejudicado ? 'dispositivo.numeroIdentificador' : 'Dispositivo prejudicado'"
             >
           </div>
-          <div><label [attr.for]="dispositivo.numeroIdentificador"><strong>{{dispositivo.numeroIdentificador}}</strong></label></div>
-          <div><label [attr.for]="dispositivo.numeroIdentificador">{{dispositivo.texto}}</label></div>
-          <div><label *ngIf="dispositivo.conteudo != null" [attr.for]="dispositivo.numeroIdentificador">{{dispositivo.conteudo}}</label></div>
+          <div><label [attr.for]="dispositivo.numeroIdentificador"
+                      [ngClass]="dispositivo.prejudicado ? 'label-prejudicada' : ''"
+                      [title]="!dispositivo.prejudicado ? 'dispositivo.numeroIdentificador' : 'Dispositivo prejudicado'">
+            <strong>{{dispositivo.numeroIdentificador}}</strong></label>
+          </div>
+
+          <div><label [attr.for]="dispositivo.numeroIdentificador"
+                      [ngClass]="dispositivo.prejudicado ? 'label-prejudicada' : ''"
+                      [title]="!dispositivo.prejudicado ? 'dispositivo.texto' : 'Dispositivo prejudicado'">
+            {{dispositivo.texto}}
+          </label></div>
+
+          <div><label *ngIf="dispositivo.conteudo != null"
+                      [attr.for]="dispositivo.numeroIdentificador"
+                      [ngClass]="dispositivo.prejudicado ? 'label-prejudicada' : ''"
+                      [title]="!dispositivo.prejudicado ? 'dispositivo.conteudo' : 'Dispositivo prejudicado'">
+            {{dispositivo.conteudo}}
+          </label></div>
         </ng-container>
       </div>
     </div>

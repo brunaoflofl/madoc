@@ -42,3 +42,7 @@
   font-weight: normal !important;
   margin-bottom: 0 !important;
 }
+
+label.label-prejudicada {
+  color: #bbb;
+}

@@ -20,6 +20,7 @@ export class Dispositivo {
   texto: string;
   conteudo: string;
   selected: boolean;
+  prejudicado: boolean;
 
   public getNumero() {
     const ids = this.numeroIdentificador.split('.');

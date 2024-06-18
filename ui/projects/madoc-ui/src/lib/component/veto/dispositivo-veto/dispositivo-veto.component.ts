@@ -38,8 +38,8 @@ export class MadocDispositivoVetoComponent implements OnInit {
     const numeroInicial: number = value[0];
     const numeroFinal: number = value [1];
     this.veto.dispositivos.forEach(d => {
-      const dispositivo = Object.assign(new Dispositivo, d);
-      if (dispositivo.getNumero() >= numeroInicial && dispositivo.getNumero() <= numeroFinal) {
+      let numeroDispositivo = +d.numeroIdentificador.split('.')[2];
+      if (numeroDispositivo >= numeroInicial && numeroDispositivo <= numeroFinal) {
         this.filteredDispositivos.push(d);
       }
     });

@@ -7,8 +7,9 @@
     <div class="row">
       <div style="float: left; margin: 0 5px 3px 0">
         <input
+          id="filtro"
           type="text"
-          class="form-control"
+          class="form-control filtro"
           formControlName="filtro"
           placeholder="Filtro..."
         >
@@ -83,7 +84,7 @@
       <descritor-dispositivo [dispostivos]="getDispositivosSelecionados()" [anoVeto]="veto.ano" [numeroVeto]="veto.numero"></descritor-dispositivo>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="itens-selecionados">
     <label
       *ngIf="getDispositivosSelecionados().length === 0"
       style="font-weight: normal !important;"

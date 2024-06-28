@@ -1,2654 +1,718 @@
-[
-  {
-    "total":false,
-    "numero":"24",
-    "ano":2013,
-    "numeroIdentificador":"24.13",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"24.13.001",
-        "texto":"- inciso I do \"caput\" do art. 4º",
-        "conteudo":null,
-        "prejudicado":true
-      },
-      {
-        "numeroIdentificador":"24.13.002",
-        "texto":"- inciso VIII do \"caput\" do art. 4º",
-        "conteudo":null,
-        "prejudicado":true
-      },
-      {
-        "numeroIdentificador":"24.13.003",
-        "texto":"- inciso IX do \"caput\" do art. 4º",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"24.13.004",
-        "texto":"- § 2º do art. 4º",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"24.13.005",
-        "texto":"- inciso I do § 4º do art. 4º",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"24.13.006",
-        "texto":"- inciso II do § 4º do art. 4º",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"24.13.007",
-        "texto":"- inciso I do § 5º do art. 4º",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"24.13.008",
-        "texto":"- inciso II do § 5º do art. 4º",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"24.13.009",
-        "texto":"- inciso IV do § 5º do art. 4º",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"24.13.010",
-        "texto":"- inciso I do \"caput\" do art. 5º",
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"4",
-    "ano":2015,
-    "numeroIdentificador":"04.15",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"04.15.001",
-        "texto":"\"caput\" do art. 11-A da Lei nº 9.440, de 14 de março de 1997, com a redação dada pelo art. 3º do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.002",
-        "texto":"inciso V do \"caput\" do art. 11-A da Lei nº 9.440, de 14 de março de 1997, com a redação dada pelo art. 3º do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.003",
-        "texto":"inciso V do § 2º do art. 11-B da Lei nº 9.440, de 14 de março de 1997, com a redação dada pelo art. 3º do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.004",
-        "texto":"§ 6º do art. 11-B da Lei nº 9.440, de 14 de março de 1997, com a redação dada pelo art. 3º do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.005",
-        "texto":"art. 10",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.006",
-        "texto":"inciso XXI do § 3º do art. 8º da Lei nº 12.546, de 14 de dezembro de 2011, com a redação dada pelo art. 11 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.007",
-        "texto":"art. 20 da Lei nº 12.973, de 13 de maio de 2014, com a redação dada pelo art. 12 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.008",
-        "texto":"\"caput\" do art. 22 da Lei nº 12.973, de 13 de maio de 2014, com a redação dada pelo art. 12 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.009",
-        "texto":"parágrafo único do art. 22 da Lei nº 12.973, de 13 de maio de 2014, com a redação dada pelo art. 12 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.010",
-        "texto":"\"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.011",
-        "texto":"inciso I do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.012",
-        "texto":"inciso II do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.013",
-        "texto":"inciso III do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.014",
-        "texto":"inciso IV do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.015",
-        "texto":"inciso V do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.016",
-        "texto":"§ 1º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.017",
-        "texto":"§ 2º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.018",
-        "texto":"§ 3º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.019",
-        "texto":"\"caput\" do § 4º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.020",
-        "texto":"inciso I do § 4º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.021",
-        "texto":"inciso II do § 4º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.022",
-        "texto":"§ 5º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 13 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.023",
-        "texto":"§ 4º do art. 1º da Lei nº 11.774, de 17 de setembro de 2008, com a redação dada pelo art. 40 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.024",
-        "texto":"§ 23 do art. 3º da Lei nº 10.637, de 30 de dezembro de 2002, com a redação dada pelo art. 41 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.025",
-        "texto":"§ 31 do art. 3º da Lei nº 10.833, de 29 de dezembro de 2003, com a redação dada pelo art. 42 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.026",
-        "texto":"§ 12 do art. 22 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 43 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.027",
-        "texto":"§ 8º do art. 24 da Lei nº 12.249, de 11 de junho de 2010, com a redação dada pelo art. 44 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.028",
-        "texto":"§ 6º do art. 25 da Lei nº 12.249, de 11 de junho de 2010, com a redação dada pelo art. 44 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.029",
-        "texto":"\"caput\" do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.030",
-        "texto":"inciso I do \"caput\" do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.031",
-        "texto":"inciso II do \"caput\" do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.032",
-        "texto":"inciso III do \"caput\" do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.033",
-        "texto":"inciso IV do \"caput\" do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.034",
-        "texto":"§ 1º-A do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.035",
-        "texto":"§ 8º do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.036",
-        "texto":"§ 9º do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.037",
-        "texto":"§ 10 do art. 10-A da Lei nº 10.522, de 19 de julho de 2002, com a redação dada pelo art. 45 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.038",
-        "texto":"\"caput\" do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.039",
-        "texto":"§ 1º do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.040",
-        "texto":"§ 2º do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.041",
-        "texto":"§ 3º do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.042",
-        "texto":"§ 4º do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.043",
-        "texto":"§ 5º do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.044",
-        "texto":"§ 6º do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.045",
-        "texto":"§ 7º do art. 51",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.046",
-        "texto":"§ 1º do art. 4º da Lei nº 10.820, de 17 de dezembro de 2003, com a redação dada pelo art. 52 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.047",
-        "texto":"\"caput\" do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.048",
-        "texto":"§ 1º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.049",
-        "texto":"§ 2º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.050",
-        "texto":"\"caput\" do § 3º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.051",
-        "texto":"inciso I do § 3º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.052",
-        "texto":"inciso II do § 3º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.053",
-        "texto":"\"caput\" do § 4º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.054",
-        "texto":"inciso I do § 4º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.055",
-        "texto":"inciso II do § 4º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.056",
-        "texto":"inciso III do § 4º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.057",
-        "texto":"inciso IV do § 4º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.058",
-        "texto":"inciso V do § 4º do art. 99",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.059",
-        "texto":"\"caput\" do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.060",
-        "texto":"\"caput\" do § 1º do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.061",
-        "texto":"inciso I do § 1º do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.062",
-        "texto":"inciso II do § 1º do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.063",
-        "texto":"inciso III do § 1º do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.064",
-        "texto":"§ 2º do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.065",
-        "texto":"§ 3º do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.066",
-        "texto":"§ 4º do art. 100",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.067",
-        "texto":"art. 101",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.068",
-        "texto":"\"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.069",
-        "texto":"inciso I do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.070",
-        "texto":"inciso II do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.071",
-        "texto":"inciso III do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.072",
-        "texto":"inciso IV do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.073",
-        "texto":"inciso V do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.074",
-        "texto":"inciso VI do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.075",
-        "texto":"inciso VII do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.076",
-        "texto":"inciso VIII do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.077",
-        "texto":"inciso IX do \"caput\" do art. 102",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.078",
-        "texto":"art. 103",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.079",
-        "texto":"\"caput\" do art. 104",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.080",
-        "texto":"§ 1º do art. 104",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.081",
-        "texto":"§ 2º do art. 104",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.082",
-        "texto":"art. 105",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.083",
-        "texto":"§ 7º do art. 26 da Lei nº 9.427, de 26 de dezembro de 1996, com a redação dada pelo art. 108 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.084",
-        "texto":"\"caput\" do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.085",
-        "texto":"§ 1º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.086",
-        "texto":"§ 2º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.087",
-        "texto":"§ 3º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.088",
-        "texto":"§ 4º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.089",
-        "texto":"§ 5º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.090",
-        "texto":"§ 6º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.091",
-        "texto":"§ 7º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.092",
-        "texto":"§ 8º do art. 22 da Lei nº 11.943, de 28 de maio de 2009, com a redação dada pelo art. 111 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.093",
-        "texto":"§ 13 do art. 1º da Lei nº 12.783, de 11 de janeiro de 2013, com a redação dada pelo art. 112 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.094",
-        "texto":"§ 14 do art. 1º da Lei nº 12.783, de 11 de janeiro de 2013, com a redação dada pelo art. 112 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.095",
-        "texto":"\"caput\" do art. 29 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.096",
-        "texto":"inciso I do art. 29 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.097",
-        "texto":"inciso II do art. 29 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.098",
-        "texto":"§ 1º do art. 34 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.099",
-        "texto":"§ 2º do art. 34 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.100",
-        "texto":"§ 3º do art. 34 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.101",
-        "texto":"§ 6º do art. 36 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.102",
-        "texto":"\"caput\" do § 7º do art. 36 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.103",
-        "texto":"inciso I do § 7º do art. 36 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.104",
-        "texto":"inciso II do § 7º do art. 36 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.105",
-        "texto":"inciso III do § 7º do art. 36 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.106",
-        "texto":"§ 8º do art. 36 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.107",
-        "texto":"§ 9º do art. 36 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.108",
-        "texto":"\"caput\" do § 1º do art. 37 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.109",
-        "texto":"inciso I do § 1º do art. 37 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.110",
-        "texto":"inciso II do § 1º do art. 37 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.111",
-        "texto":"§ 2º do art. 37 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.112",
-        "texto":"§ 3º do art. 37 da Lei nº 7.565, de 19 de dezembro de 1986, com a redação dada pelo art. 123 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.113",
-        "texto":"\"caput\" do art. 63-B da Lei nº 12.462, de 4 de agosto de 2011, com a redação dada pelo art. 124 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.114",
-        "texto":"inciso I do art. 63-B da Lei nº 12.462, de 4 de agosto de 2011, com a redação dada pelo art. 124 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.115",
-        "texto":"inciso II do art. 63-B da Lei nº 12.462, de 4 de agosto de 2011, com a redação dada pelo art. 124 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.116",
-        "texto":"inciso III do art. 63-B da Lei nº 12.462, de 4 de agosto de 2011, com a redação dada pelo art. 124 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.117",
-        "texto":"\"caput\" do art. 63-C da Lei nº 12.462, de 4 de agosto de 2011, com a redação dada pelo art. 124 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.118",
-        "texto":"parágrafo único do art. 63-C da Lei nº 12.462, de 4 de agosto de 2011, com a redação dada pelo art. 124 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.119",
-        "texto":"§ 4º do art. 115 da Lei nº 9.503, de 23 de setembro de 1997, com a redação dada pelo art. 125 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.120",
-        "texto":"§ 8º do art. 115 da Lei nº 9.503, de 23 de setembro de 1997, com a redação dada pelo art. 125 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.121",
-        "texto":"§ 1º do art. 130 da Lei nº 9.503, de 23 de setembro de 1997, com a redação dada pelo art. 125 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.122",
-        "texto":"inciso III do \"caput\" do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.123",
-        "texto":"\"caput\" do § 2º-A do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.124",
-        "texto":"inciso I do § 2º-A do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.125",
-        "texto":"inciso II do § 2º-A do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.126",
-        "texto":"inciso III do § 2º-A do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.127",
-        "texto":"inciso IV do § 2º-A do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.128",
-        "texto":"inciso V do § 2º-A do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.129",
-        "texto":"§ 6º do art. 2º da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.130",
-        "texto":"§ 3º do art. 5º-A da Lei nº 11.442, de 5 de janeiro de 2007, com a redação dada pelo art. 126 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.131",
-        "texto":"§ 5º do art. 3º da Lei nº 8.666, de 21 de junho de 1993, com a redação dada pelo art. 127 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.132",
-        "texto":"§ 8º do art. 3º da Lei nº 8.666, de 21 de junho de 1993, com a redação dada pelo art. 127 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.133",
-        "texto":"§ 9º do art. 3º da Lei nº 8.666, de 21 de junho de 1993, com a redação dada pelo art. 127 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.134",
-        "texto":"§ 13 do art. 3º da Lei nº 8.666, de 21 de junho de 1993, com a redação dada pelo art. 127 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.135",
-        "texto":"§ 16 do art. 3º da Lei nº 8.666, de 21 de junho de 1993, com a redação dada pelo art. 127 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.136",
-        "texto":"inciso I do § 2º do art. 132",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.137",
-        "texto":"inciso II do § 2º do art. 132",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.138",
-        "texto":"art. 133",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.139",
-        "texto":"\"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.140",
-        "texto":"inciso I do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.141",
-        "texto":"inciso II do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.142",
-        "texto":"inciso III do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.143",
-        "texto":"inciso IV do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.144",
-        "texto":"inciso V do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.145",
-        "texto":"inciso VI do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.146",
-        "texto":"inciso VII do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.147",
-        "texto":"inciso VIII do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.148",
-        "texto":"inciso IX do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.149",
-        "texto":"inciso X do \"caput\" do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.150",
-        "texto":"§ 1º do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.151",
-        "texto":"§ 2º do art. 156-A da Lei nº 9.472, de 16 de julho de 1997, com a redação dada pelo art. 136 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.152",
-        "texto":"\"caput\" do art. 93 da Lei nº 8.112, de 11 de dezembro de 1990, com a redação dada pelo art. 138 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.153",
-        "texto":"§ 1º do art. 93 da Lei nº 8.112, de 11 de dezembro de 1990, com a redação dada pelo art. 138 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.154",
-        "texto":"§ 2º do art. 93 da Lei nº 8.112, de 11 de dezembro de 1990, com a redação dada pelo art. 138 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.155",
-        "texto":"inciso II do art. 102 da Lei nº 8.112, de 11 de dezembro de 1990, com a redação dada pelo art. 138 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.156",
-        "texto":"\"caput\" do art. 141",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.157",
-        "texto":"§ 1º do art. 141",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.158",
-        "texto":"§ 2º do art. 141",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.159",
-        "texto":"§ 3º do art. 141",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.160",
-        "texto":"parágrafo único do art. 1º da Lei nº 11.079, de 30 de dezembro de 2004, com a redação dada pelo art. 143 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.161",
-        "texto":"art. 22-A da Lei nº 11.079, de 30 de dezembro de 2004, com a redação dada pelo art. 144 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.162",
-        "texto":"art. 148",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.163",
-        "texto":"\"caput\" do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.164",
-        "texto":"inciso I do \"caput\" do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.165",
-        "texto":"inciso II do \"caput\" do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.166",
-        "texto":"\"caput\" do § 1º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.167",
-        "texto":"inciso I do § 1º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.168",
-        "texto":"inciso II do § 1º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.169",
-        "texto":"inciso III do § 1º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.170",
-        "texto":"inciso IV do § 1º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.171",
-        "texto":"inciso V do § 1º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.172",
-        "texto":"§ 2º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.173",
-        "texto":"\"caput\" do § 3º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.174",
-        "texto":"inciso I do § 3º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.175",
-        "texto":"inciso II do § 3º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.176",
-        "texto":"inciso III do § 3º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.177",
-        "texto":"inciso IV do § 3º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.178",
-        "texto":"§ 4º do art. 9º-A da Lei nº 10.925, de 23 de julho de 2004, com a redação dada pelo art. 154 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.179",
-        "texto":"§ 1º do art. 9º da Lei nº 11.051, de 29 de dezembro de 2004, com a redação dada pelo art. 155 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.180",
-        "texto":"§ 2º do art. 9º da Lei nº 11.051, de 29 de dezembro de 2004, com a redação dada pelo art. 155 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.181",
-        "texto":"\"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.182",
-        "texto":"inciso I do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.183",
-        "texto":"inciso II do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.184",
-        "texto":"inciso III do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.185",
-        "texto":"inciso IV do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.186",
-        "texto":"inciso V do \"caput\" do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.187",
-        "texto":"\"caput\" do § 1º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.188",
-        "texto":"inciso I do § 1º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.189",
-        "texto":"inciso II do § 1º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.190",
-        "texto":"inciso III do § 1º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.191",
-        "texto":"§ 2º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.192",
-        "texto":"§ 3º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.193",
-        "texto":"§ 4º do art. 1º-A da Lei nº 9.826, de 23 de agosto de 1999, com a redação dada pelo art. 156 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.194",
-        "texto":"\"caput\" do art. 1º da Lei nº 12.096, de 24 de novembro de 2009, com a redação dada pelo art. 157 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.195",
-        "texto":"§ 1º do art. 1º da Lei nº 12.096, de 24 de novembro de 2009, com a redação dada pelo art. 157 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.196",
-        "texto":"inciso I do § 4º do art. 18 da Lei Complementar nº 123, de 14 de dezembro de 2006, com a redação dada pelo art. 159 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.197",
-        "texto":"\"caput\" do art. 160",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.198",
-        "texto":"parágrafo único do art. 160",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.199",
-        "texto":"alínea \"i\" do inciso III do \"caput\" do art. 4º da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.200",
-        "texto":"alínea \"i\" do inciso VI do \"caput\" do art. 4º da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.201",
-        "texto":"item 10 da alínea \"b\" do inciso II do \"caput\" do art. 8º da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.202",
-        "texto":"item 9 da alínea \"c\" do inciso II do \"caput\" do art. 8º da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.203",
-        "texto":"inciso IX do \"caput\" do art. 10 da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.204",
-        "texto":"inciso VII do \"caput\" do art. 12 da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.205",
-        "texto":"inciso I do § 3º do art. 12 da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.206",
-        "texto":"inciso II do § 3º do art. 12 da Lei nº 9.250, de 26 de dezembro de 1995, com a redação dada pelo art. 161 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.207",
-        "texto":"art. 162",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.208",
-        "texto":"art. 163",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.209",
-        "texto":"art. 164",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.210",
-        "texto":"art. 165",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.211",
-        "texto":"Tabela Progressiva Mensal constante do inciso IX do \"caput\" do art. 1º da Lei nº 11.482, de 31 de maio de 2007, com a redação dada pelo art. 166 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.212",
-        "texto":"alínea \"i\" do inciso XV do \"caput\" do art. 6º da Lei nº 7.713, de 22 de dezembro de 1988, com a redação dada pelo art. 167 do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.15.213",
-        "texto":"inciso I do art. 169",
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":true,
-    "numero":"54",
-    "ano":2022,
-    "numeroIdentificador":"54.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"54.22.000",
-        "texto":null,
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":true,
-    "numero":"55",
-    "ano":2022,
-    "numeroIdentificador":"55.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"55.22.000",
-        "texto":null,
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"57",
-    "ano":2022,
-    "numeroIdentificador":"57.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"57.22.001",
-        "texto":"§ 1º do art. 3º",
-        "conteudo":"Serão aceitas propostas de inscrições individuais ou de equipes de, no máximo, três componentes.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"57.22.002",
-        "texto":"§ 2º do art. 3º",
-        "conteudo":"O proponente deverá registrar, no formulário de inscrição, uma proposta sucinta de projeto de desenvolvimento de solução web que utilize, preferencialmente, dados do Senado Federal com o objetivo de colaborar na compreensão do processo legislativo e da atuação parlamentar pela sociedade.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"57.22.003",
-        "texto":"§ 3º do art. 3º",
-        "conteudo":"Todos os proponentes deverão ser identificados no formulário de inscrição, sendo que no caso de inscrição coletiva, além da identificação, deverá ser indicado o membro responsável pela equipe.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"57.22.004",
-        "texto":"§ 4º do art. 3º",
-        "conteudo":"Todos os proponentes deverão ser brasileiros e, no momento da inscrição, ter idade igual ou superior a dezoito anos.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"57.22.005",
-        "texto":"§ 5º do art. 3º",
-        "conteudo":"Não serão aceitas inscrições de membros que participem da organização do evento, nem de pessoas que trabalhem ou prestem serviços para o Senado Federal.",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":true,
-    "numero":"62",
-    "ano":2022,
-    "numeroIdentificador":"62.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"62.22.000",
-        "texto":null,
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"63",
-    "ano":2022,
-    "numeroIdentificador":"63.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"63.22.001",
-        "texto":"inciso IX do \"caput\" do art. 56 da Lei nº 11.196, de 21 de novembro de 2005, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"1,52% (um inteiro e cinquenta e dois centésimos por cento) e 7% (sete por cento), para os fatos geradores ocorridos nos anos de 2025 a 2027.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"63.22.002",
-        "texto":"\"caput\" do art. 57-D da Lei nº 11.196, de 21 de novembro de 2005, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"As centrais petroquímicas e as indústrias químicas que apurarem créditos na forma prevista nos arts. 57 e 57-A desta Lei poderão descontar, no período de janeiro de 2024 a dezembro de 2027, créditos adicionais calculados mediante a aplicação da alíquota de 0,5% (cinco décimos por cento) para a Contribuição para os Programas de Integração Social e de Formação do Patrimônio do Servidor Público (Contribuição para o PIS/Pasep) e a Contribuição para os Programas de Integração Social e de Formação do Patrimônio do Servidor Público incidente na Importação de Produtos Estrangeiros ou Serviços (Contribuição para o PIS/Pasep-Importação) e de 1% (um por cento) para a Contribuição para o Financiamento da Seguridade Social (Cofins) e a Contribuição Social para o Financiamento da Seguridade Social devida pelo Importador de Bens Estrangeiros ou Serviços do Exterior (Cofins-Importação), sobre a base de cálculo da respectiva contribuição, mediante compromisso de investimento em ampliação de capacidade instalada.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"63.22.003",
-        "texto":"§ 1º do art. 57-D da Lei nº 11.196, de 21 de novembro de 2005, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"O benefício previsto neste artigo aplica-se inclusive aos investimentos em ampliação de capacidade produtiva ou instalação de novas plantas que utilizem gás natural para a produção de fertilizantes.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"63.22.004",
-        "texto":"§ 2º do art. 57-D da Lei nº 11.196, de 21 de novembro de 2005, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"O abatimento proporcionado pelos créditos adicionais previstos neste artigo será limitado ao valor efetivamente investido nos termos do compromisso a que se refere o caput deste artigo.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"63.22.005",
-        "texto":"inciso IX do § 15 do art. 8º da Lei nº 10.865, de 30 de abril de 2004, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"1,52% (um inteiro e cinquenta e dois centésimos por cento) e 7% (sete por cento), para os fatos geradores ocorridos nos anos de 2025 a 2027.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"63.22.006",
-        "texto":"\"caput\" do art. 3º",
-        "conteudo":"O art. 9º da Lei nº 14.183, de 14 de julho de 2021, passa a vigorar com a seguinte redação:\n‘Art. 39........................................................................................................\n....................................................................................................................\n\nFicam revogados a partir de 1º de janeiro de 2028 os §§ 15, 16 e 23 do art. 8º da Lei nº 10.865, de 30 de abril de 2004, e os arts. 56, 57, 57-A e 57-C da Lei nº 11.196, de 21 de novembro de 2005.'",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"63.22.007",
-        "texto":"art. 9º da Lei nº 14.183, de 14 de julho de 2021, com a redação dada pelo art. 3º do projeto",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"63.22.008",
-        "texto":"\"caput\" do art. 9º da Lei nº 14.183, de 14 de julho de 2021, com a redação dada pelo art. 3º do projeto",
-        "conteudo":"Ficam revogados a partir de 1º de janeiro de 2028 os §§ 15, 16 e 23 do art. 8º da Lei nº 10.865, de 30 de abril de 2004, e os arts. 56, 57, 57-A e 57-C da Lei nº 11.196, de 21 de novembro de 2005.",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"64",
-    "ano":2022,
-    "numeroIdentificador":"64.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"64.22.001",
-        "texto":"inciso I do \"caput\" do art. 12 d, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"da saída de mercadoria de estabelecimento de contribuinte;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.002",
-        "texto":"inciso I do § 4º do art. 12 d, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"pela unidade federada de destino, por meio de transferência de crédito, limitados aos percentuais estabelecidos nos termos do inciso IV do § 2º do art. 155 da Constituição Federal, aplicados sobre o valor atribuído à operação de transferência realizada;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.003",
-        "texto":"inciso II do § 4º do art. 12 d, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"pela unidade federada de origem, em caso de diferença positiva entre os créditos pertinentes às operações e prestações anteriores e o transferido na forma do inciso I deste parágrafo.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.004",
-        "texto":"inciso I do § 5º do art. 12 d, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"nas operações internas, as alíquotas estabelecidas na legislação;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.005",
-        "texto":"inciso II do § 5º do art. 12 d, com a redação dada pelo art. 1º do projeto",
-        "conteudo":"nas operações interestaduais, as alíquotas fixadas nos termos do inciso IV do § 2º do art. 155 da Constituição Federal.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.006",
-        "texto":"Dotação - RP: 2/ Unidade: 22201 – INSTITUTO NACIONAL DE COLONIZAÇÃO E REFORMA AGRÁRIA - INCRA  / Classificação funcional-programática: 21.608.1031.20ZV.7039/ GND: 4/ Modalidade: 90/ ID USO: 0/ Fonte: 1000 (Volume IV)",
-        "conteudo":"FOMENTO AO SETOR AGROPECUÁRIO - AQUISIÇÃO DE MÁQUINAS E EQUIPAMENTOS - NO ESTADO DO RIO GRANDE DO NORTE\nR$ 15.000.000,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.007",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.571.2204.212H.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"MANUTENÇÃO DE CONTRATO DE GESTÃO COM ORGANIZAÇÕES SOCIAIS (LEI Nº 9.637, DE 15 DE MAIO DE 1998) - NACIONAL\nR$ 150.934.964,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.008",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.571.2204.15XQ.0035/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"LNMCB, POR ORGANIZAÇÃO SOCIAL (LEI Nº 9.637, DE 15 DE MAIO DE 1998) - NO ESTADO DE SÃO PAULO\nR$ 117.874.254,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.009",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.571.2204.4947.0001/ GND: 3/ Modalidade: 90/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS DE CIÊNCIA E TECNOLOGIA - NACIONAL\nR$ 474.136.281,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.010",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.571.2204.13CL.0035/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"CONSTRUÇÃO DE FONTE DE LUZ SÍNCROTRON DE 4ª GERAÇÃO - SIRIUS, POR ORGANIZAÇÃO SOCIAL (LEI Nº 9.637, DE 15 DE MAIO DE 1998) - NO ESTADO DE SÃO PAULO\nR$ 87.077.099,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.011",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2204.2095.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS DE IMPLANTAÇÃO, RECUPERAÇÃO E MODERNIZAÇÃO DA INFRAESTRUTURA DE PESQUISA DAS INSTITUIÇÕES PÚBLICAS (CT-INFRA) - NACIONAL\nR$ 118.497.861,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.012",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.4156.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE PETRÓLEO E GÁS NATURAL (CT-PETRO) - NACIONAL\nR$ 293.139.113,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.013",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.4053.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR AERONÁUTICO (CT-AERONÁUTICO) - NACIONAL\nR$ 64.790.762,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.014",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.4031.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE BIOTECNOLOGIA (CT-BIOTECNOLOGIA) - NACIONAL\nR$ 71.581.251,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.015",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.4043.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE AGRONEGÓCIO (CT-AGRONEGÓCIO) - NACIONAL\nR$ 126.633.614,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.016",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.0A29.0001/ GND: 3/ Modalidade: 60/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"SUBVENÇÃO ECONÔMICA A PROJETOS DE DESENVOLVIMENTO TECNOLÓGICO (LEI Nº 10.973, DE 2004) - NACIONAL\nR$ 184.503.086,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.017",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.0745.0001/ GND: 5/ Modalidade: 90/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"INVESTIMENTO EM EMPRESAS INOVADORAS - NACIONAL\nR$ 149.844.069,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.018",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.4185.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE TECNOLOGIA DA INFORMAÇÃO (CT-INFO) - NACIONAL\nR$ 45.835.157,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.019",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.8563.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE TRANSPORTE AQUAVIÁRIO E DE CONSTRUÇÃO NAVAL (CT-AQUAVIÁRIO) - NACIONAL\nR$ 42.079.191,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.020",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.2189.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE ENERGIA ELÉTRICA (CT-ENERG) - NACIONAL\nR$ 129.887.109,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.021",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.20I4.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PESQUISA E DESENVOLVIMENTO EM ÁREAS BÁSICAS E ESTRATÉGICAS - NACIONAL\nR$ 1.916.959.932,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.022",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.2997.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE SAÚDE (CT-SAÚDE) – NACIONAL\nR$ 132.025.594,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.023",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.2223.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE RECURSOS HÍDRICOS (CT-HIDRO) - NACIONAL\nR$ 53.998.940,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.024",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.2119.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR MINERAL (CT-MINERAL) - NACIONAL\nR$ 11.895.586,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.025",
-        "texto":"Dotação - RP: 2/ Unidade: 24901 – FUNDO NACIONAL DE DESENVOLVIMENTO CIENTÍFICO E TECNOLÓGICO / Classificação funcional-programática: 19.572.2208.2191.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO A PROJETOS INSTITUCIONAIS PARA PESQUISA NO SETOR DE TRANSPORTES TERRESTRES E HIDROVIÁRIOS (CT-TRANSPORTE) - NACIONAL\nR$ 10.733.357,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.026",
-        "texto":"Dotação - RP: 2/ Unidade: 25101 – MINISTÉRIO DA ECONOMIA - ADMINISTRAÇÃO DIRETA  / Classificação funcional-programática: 11.334.5027.215F.0001/ GND: 3/ Modalidade: 90/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO E FORTALECIMENTO DA ECONOMIA SOLIDÁRIA, ASSOCIATIVISMO E COOPERATIVISMO - NACIONAL\nR$ 12.460.655,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.027",
-        "texto":"Dotação - RP: 2/ Unidade: 25101 – MINISTÉRIO DA ECONOMIA - ADMINISTRAÇÃO DIRETA  / Classificação funcional-programática: 11.334.5027.215F.0001/ GND: 3/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO E FORTALECIMENTO DA ECONOMIA SOLIDÁRIA, ASSOCIATIVISMO E COOPERATIVISMO - NACIONAL\nR$ 12.460.655,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.028",
-        "texto":"Dotação - RP: 2/ Unidade: 25101 – MINISTÉRIO DA ECONOMIA - ADMINISTRAÇÃO DIRETA  / Classificação funcional-programática: 11.334.5027.215F.0001/ GND: 4/ Modalidade: 50/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO E FORTALECIMENTO DA ECONOMIA SOLIDÁRIA, ASSOCIATIVISMO E COOPERATIVISMO - NACIONAL\nR$ 22.618.033,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.029",
-        "texto":"Dotação - RP: 2/ Unidade: 25101 – MINISTÉRIO DA ECONOMIA - ADMINISTRAÇÃO DIRETA  / Classificação funcional-programática: 11.334.5027.215F.0001/ GND: 4/ Modalidade: 90/ ID USO: 0/ Fonte: 8444 (Volume IV)",
-        "conteudo":"FOMENTO E FORTALECIMENTO DA ECONOMIA SOLIDÁRIA, ASSOCIATIVISMO E COOPERATIVISMO - NACIONAL\nR$ 12.460.655,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.030",
-        "texto":"Dotação - RP: 8/ Unidade: 30907 – FUNDO PENITENCIÁRIO NACIONAL / Classificação funcional-programática: 06.421.5016.21BP.0001/ GND: 4/ Modalidade: 90/ ID USO: 0/ Fonte: 1000 (Volume IV)",
-        "conteudo":"APRIMORAMENTO DO SISTEMA PENITENCIÁRIO NACIONAL E INCENTIVO AO DESENVOLVIMENTO DA INTELIGÊNCIA PENITENCIÁRIA - NACIONAL\nR$ 250.000,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.031",
-        "texto":"Dotação - RP: 8/ Unidade: 30907 – FUNDO PENITENCIÁRIO NACIONAL / Classificação funcional-programática: 06.421.5016.21BP.0001/ GND: 3/ Modalidade: 90/ ID USO: 0/ Fonte: 1000 (Volume IV)",
-        "conteudo":"APRIMORAMENTO DO SISTEMA PENITENCIÁRIO NACIONAL E INCENTIVO AO DESENVOLVIMENTO DA INTELIGÊNCIA PENITENCIÁRIA - NACIONAL\nR$ 250.000,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.032",
-        "texto":"Dotação - RP: 8/ Unidade: 74908 – RECURSOS SOB SUPERVISÃO DO FUNDO GERAL DE TURISMO/FUNGETUR - MINISTÉRIO DO TURISMO  / Classificação funcional-programática: 23.695.2223.0EC5.0001/ GND: 5/ Modalidade: 90/ ID USO: 0/ Fonte: 1000 (Volume IV)",
-        "conteudo":"INTEGRALIZAÇÃO DE COTAS EM FUNDOS GARANTIDORES DE OPERAÇÕES DO FUNGETUR - NACIONAL\nR$ 8.000.000,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.033",
-        "texto":"Subitem 5.1.6 do Item I. CRIAÇÃO E/OU PROVIMENTOS DE CARGOS, FUNÇÕES e GRATIFICAÇÕES exceto reposição (1): do Anexo V",
-        "conteudo":"Lei nº 3.634, 20 de março de 2018/UF/Catalão/GO | CRIAÇÃO: 81 | QTDE: 70\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 2.391.423,00 | FINANCEIRA: 644.467,00 | TOTAL: 3.035.890,00\nDESPESA ANUALIZADA: PRIMÁRIA: 4.782.846,00 | FINANCEIRA: 1.288.934,00 | TOTAL: 6.071.680,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.034",
-        "texto":"Subitem 5.1.7 do Item I. CRIAÇÃO E/OU PROVIMENTOS DE CARGOS, FUNÇÕES e GRATIFICAÇÕES exceto reposição (1): do Anexo V",
-        "conteudo":"Lei nº13.651,11 de abril de 2018/UF/Delta do Parnaíba/PI | CRIAÇÃO: 221 | QTDE: 70\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 2.360.577,00 | FINANCEIRA: 637.579,00 | TOTAL: 2.998.156,00\nDESPESA ANUALIZADA: PRIMÁRIA: 4.721.154,00 | FINANCEIRA: 1.275.158,00 | TOTAL: 5.996.312,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.035",
-        "texto":"Subitem 5.1.8 do Item I. CRIAÇÃO E/OU PROVIMENTOS DE CARGOS, FUNÇÕES e GRATIFICAÇÕES exceto reposição (1): do Anexo V",
-        "conteudo":"Lei nº13.637, 20de março de 2018/UF/Rondonópolis/MT | CRIAÇÃO: 239 | QTDE: 70\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 2.477.282,00 | FINANCEIRA: 657.583,00 | TOTAL: 3.134.865,00\nDESPESA ANUALIZADA: PRIMÁRIA: 4.954.564,00 | FINANCEIRA: 1.315.166,00 | TOTAL: 6.269.730,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.036",
-        "texto":"Subitem 5.1.9 do Item I. CRIAÇÃO E/OU PROVIMENTOS DE CARGOS, FUNÇÕES e GRATIFICAÇÕES exceto reposição (1): do Anexo V",
-        "conteudo":"Lei nº13.635, 20 de março de 2018/UF/Jataí/GO | CRIAÇÃO: 67 | QTDE: 67\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 2.476.162,00 | FINANCEIRA: 658.652,00 | TOTAL: 3.134.814,00\nDESPESA ANUALIZADA: PRIMÁRIA: 4.952.324,00 | FINANCEIRA: 1.317.304,00 | TOTAL: 6.269.628,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.037",
-        "texto":"Subitem 5.1.10 do Item I. CRIAÇÃO E/OU PROVIMENTOS DE CARGOS, FUNÇÕES e GRATIFICAÇÕES exceto reposição (1): do Anexo V",
-        "conteudo":"Lei nº13.651,11 de abril 2018/UF/Agreste de Pernambuco/PE | CRIAÇÃO: 1493 | QTDE: 70\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 3.168.676,00 | FINANCEIRA: 759.858,00 | TOTAL: 3.928.534,00\nDESPESA ANUALIZADA: PRIMÁRIA: 6.337.352,00 | FINANCEIRA: 1.519.716,00 | TOTAL: 7.857.068,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.038",
-        "texto":"Subitem 5.1.11 do Item I. CRIAÇÃO E/OU PROVIMENTOS DE CARGOS, FUNÇÕES e GRATIFICAÇÕES exceto reposição (1): do Anexo V",
-        "conteudo":"Lei nº13.856, 8 de julho 2019/UF/Norte do Tocantins/TO | CRIAÇÃO: 145 | QTDE: 70\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 2.334.841,00 | FINANCEIRA: 631.883,00 | TOTAL: 2.966.724,00\nDESPESA ANUALIZADA: PRIMÁRIA: 4.669.682,00 | FINANCEIRA: 1.263.766,00 | TOTAL: 5.933.448,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.039",
-        "texto":"Subitem 5.1.12 do Item I. CRIAÇÃO E/OU PROVIMENTOS DE CARGOS, FUNÇÕES e GRATIFICAÇÕES exceto reposição (1): do Anexo V",
-        "conteudo":"MPV 1133/2022 - Agência Nacional de Mineração | CRIAÇÃO: 95 | QTDE: 95\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 14.893.412,00 | FINANCEIRA:- | TOTAL: 14.893.412,00\nDESPESA ANUALIZADA: PRIMÁRIA: 16.247.359,00 | FINANCEIRA:- | TOTAL: 16.247.359,00",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"64.22.040",
-        "texto":"Subitem 5.2 do Item II. CONCESSÃO DE VANTAGEM, ALTERAÇÃO DE ESTRUTURA DE CARREIRAS E AUMENTO DE REMUNERAÇÃO: do Anexo V",
-        "conteudo":"Limite destinado ao atendimento da MPV 1133/2022 relativa ao aumento da remuneração dos cargos das carreiras da Agência Nacional de Mineração\nDESPESA NO EXERCÍCIO (6): PRIMÁRIA: 59.202.413,00 | FINANCEIRA:- | TOTAL: 59.202.413,00\nDESPESA ANUALIZADA: PRIMÁRIA: 59.202.413,00 | FINANCEIRA:- | TOTAL: 59.202.413,00",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"65",
-    "ano":2022,
-    "numeroIdentificador":"65.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"65.22.001",
-        "texto":"\"caput\" do art. 1º",
-        "conteudo":"É instituída, no âmbito do Senado Federal, a Comenda do Mérito Olímpico, destinada a agraciar atletas brasileiros que tenham se destacado em competições olímpicas e paralímpicas.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"65.22.002",
-        "texto":"\"caput\" do art. 2º",
-        "conteudo":"A comenda será concedida pela Mesa Diretora do Senado Federal e será acompanhada da concessão de diploma de menção honrosa ao agraciado.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"65.22.003",
-        "texto":"Ação 210V do Programa 2012 de Anexo VII \"Promoção e Fortalecimento da Agricultura Familiar Agricultor familiar beneficiado (unidade) : 10.000\"",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"65.22.004",
-        "texto":"Ação 210W do Programa 2012 de Anexo VII \"Apoio à Organização Econômica e Promoção da Cidadania de Mulheres Rurais Mulher atendida (unidade): 1.000\"",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"65.22.005",
-        "texto":"Ação 12L5 do Programa 2015 de Anexo VII \"Construção e Ampliação de Unidades Básicas de Saúde - UBS Unidade construída/ampliada (unidade): 10\"",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"65.22.006",
-        "texto":"Ação 210V do Programa 2012 de Anexo VII \"Promoção e Fortalecimento da Agricultura Familiar Agricultor familiar beneficiado (unidade) : 10.000\"",
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"1",
-    "ano":2023,
-    "numeroIdentificador":"01.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"01.23.001",
-        "texto":"inciso I do \"caput\" do art. 4º",
-        "conteudo":"habitadas por eles em caráter permanente;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.002",
-        "texto":"inciso II do \"caput\" do art. 4º",
-        "conteudo":"utilizadas para suas atividades produtivas;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.003",
-        "texto":"inciso III do \"caput\" do art. 4º",
-        "conteudo":"imprescindíveis à preservação dos recursos ambientais necessários a seu bem-estar;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.004",
-        "texto":"inciso IV do \"caput\" do art. 4º",
-        "conteudo":"necessárias à sua reprodução física e cultural, segundo seus usos, costumes e tradições.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.005",
-        "texto":"§ 1º do art. 4º",
-        "conteudo":"A comprovação dos requisitos a que se refere o caput deste artigo será devidamente fundamentada e baseada em critérios objetivos.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.006",
-        "texto":"§ 2º do art. 4º",
-        "conteudo":"A ausência da comunidade indígena em 5 de outubro de 1988 na área pretendida descaracteriza o seu enquadramento no inciso I do caput deste artigo, salvo o caso de renitente esbulho devidamente comprovado.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.007",
-        "texto":"§ 3º do art. 4º",
-        "conteudo":"Para os fins desta Lei, considera-se renitente esbulho o efetivo conflito possessório, iniciado no passado e persistente até o marco demarcatório temporal da data de promulgação da Constituição Federal, materializado por circunstâncias de fato ou por controvérsia possessória judicializada.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.008",
-        "texto":"§ 4º do art. 4º",
-        "conteudo":"A cessação da posse indígena ocorrida anteriormente a 5 de outubro de 1988, independentemente da causa, inviabiliza o reconhecimento da área como tradicionalmente ocupada, salvo o disposto no § 3º deste artigo.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.009",
-        "texto":"§ 7º do art. 4º",
-        "conteudo":"As informações orais porventura reproduzidas ou mencionadas no procedimento demarcatório somente terão efeitos probatórios quando fornecidas em audiências públicas, ou registradas eletronicamente em áudio e vídeo, com a devida transcrição em vernáculo.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.010",
-        "texto":"\"caput\" do art. 5º",
-        "conteudo":"A demarcação contará obrigatoriamente com a participação dos Estados e dos Municípios em que se localize a área pretendida, bem como de todas as comunidades diretamente interessadas, franqueada a manifestação de interessados e de entidades da sociedade civil desde o início do processo administrativo demarcatório, a partir da reivindicação das comunidades indígenas.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.011",
-        "texto":"\"caput\" do art. 6º",
-        "conteudo":"Aos interessados na demarcação serão assegurados, em todas as suas fases, inclusive nos estudos preliminares, o contraditório e a ampla defesa, e será obrigatória a sua intimação desde o início do procedimento, bem como permitida a indicação de peritos auxiliares.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.012",
-        "texto":"\"caput\" do art. 9º",
-        "conteudo":"Antes de concluído o procedimento demarcatório e de indenizadas as benfeitorias de boa-fé, nos termos do § 6º do art. 231 da Constituição Federal, não haverá qualquer limitação de uso e gozo aos não indígenas que exerçam posse sobre a área, garantida a sua permanência na área objeto de demarcação.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.013",
-        "texto":"§ 1º do art. 9º",
-        "conteudo":"Consideram-se de boa-fé as benfeitorias realizadas pelos ocupantes até que seja concluído o procedimento demarcatório.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.014",
-        "texto":"§ 2º do art. 9º",
-        "conteudo":"A indenização das benfeitorias deve ocorrer após a comprovação e a avaliação realizada em vistoria do órgão federal competente.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.015",
-        "texto":"\"caput\" do art. 10",
-        "conteudo":"Aplica-se aos antropólogos, aos peritos e a outros profissionais especializados, nomeados pelo poder público, cujos trabalhos fundamentem a demarcação, o disposto no art. 148 da Lei nº 13.105, de 16 de março de 2015 (Código de Processo Civil).",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.016",
-        "texto":"\"caput\" do art. 11",
-        "conteudo":"Verificada a existência de justo título de propriedade ou de posse em área considerada necessária à reprodução sociocultural da comunidade indígena, a desocupação da área será indenizável, em razão do erro do Estado, nos termos do § 6º do art. 37 da Constituição Federal.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.017",
-        "texto":"parágrafo único do art. 11",
-        "conteudo":"Aplica-se o disposto no caput deste artigo às posses legítimas, cuja concessão pelo Estado possa ser documentalmente comprovada.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.018",
-        "texto":"\"caput\" do art. 13",
-        "conteudo":"É vedada a ampliação de terras indígenas já demarcadas.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.019",
-        "texto":"\"caput\" do art. 14",
-        "conteudo":"Os processos administrativos de demarcação de terras indígenas ainda não concluídos serão adequados ao disposto nesta Lei.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.020",
-        "texto":"\"caput\" do art. 15",
-        "conteudo":"É nula a demarcação que não atenda aos preceitos estabelecidos nesta Lei.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.021",
-        "texto":"inciso I do § 4º do art. 16",
-        "conteudo":"retomá-la, dando-lhe outra destinação de interesse público ou social;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.022",
-        "texto":"inciso II do § 4º do art. 16",
-        "conteudo":"destiná-la ao Programa Nacional de Reforma Agrária, atribuindo-se os lotes preferencialmente a indígenas que tenham aptidão agrícola e assim o desejarem.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.023",
-        "texto":"\"caput\" do art. 18",
-        "conteudo":"São consideradas áreas indígenas adquiridas as havidas pela comunidade indígena mediante qualquer forma de aquisição permitida pela legislação civil, tal como a compra e venda ou a doação.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.024",
-        "texto":"§ 1º do art. 18",
-        "conteudo":"Aplica-se às áreas indígenas adquiridas o regime jurídico da propriedade privada.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.025",
-        "texto":"§ 2º do art. 18",
-        "conteudo":"As terras de domínio indígena constituídas nos termos da Lei nº 6.001, de 19 dezembro de 1973, serão consideradas áreas indígenas adquiridas nos moldes desta Lei.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.026",
-        "texto":"parágrafo único do art. 20",
-        "conteudo":"A instalação de bases, unidades e postos militares e demais intervenções militares, a expansão estratégica da malha viária, a exploração de alternativas energéticas de cunho estratégico e o resguardo das riquezas de cunho estratégico serão implementados independentemente de consulta às comunidades indígenas envolvidas ou ao órgão indigenista federal competente.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.027",
-        "texto":"\"caput\" do art. 21",
-        "conteudo":"Fica assegurada a atuação das Forças Armadas e da Polícia Federal em área indígena, no âmbito de suas atribuições, independentemente de consulta às comunidades indígenas envolvidas ou ao órgão indigenista federal competente.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.028",
-        "texto":"\"caput\" do art. 22",
-        "conteudo":"Ao poder público é permitida a instalação, em terras indígenas, de equipamentos, de redes de comunicação, de estradas e de vias de transporte, além das construções necessárias à prestação de serviços públicos, especialmente os de saúde e educação.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.029",
-        "texto":"\"caput\" do art. 23",
-        "conteudo":"O usufruto dos indígenas em terras indígenas superpostas a unidades de conservação fica sob a responsabilidade do órgão federal gestor das áreas protegidas, observada a compatibilidade do respectivo regime de proteção.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.030",
-        "texto":"§ 1º do art. 23",
-        "conteudo":"O órgão federal gestor responderá pela administração das áreas das unidades de conservação superpostas a terras indígenas, com a participação das comunidades indígenas, que deverão ser ouvidas, considerados os seus usos, tradições e costumes, e poderá, para tanto, contar com a consultoria do órgão indigenista federal competente.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.031",
-        "texto":"§ 2º do art. 23",
-        "conteudo":"O trânsito de visitantes e pesquisadores não indígenas deve ser admitido na área afetada à unidade de conservação, nos horários e condições estipulados pelo órgão federal gestor.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.032",
-        "texto":"§ 3º do art. 24",
-        "conteudo":"O ingresso, o trânsito e a permanência de não indígenas não podem ser objeto de cobrança de tarifas ou quantias de qualquer natureza por parte das comunidades indígenas.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.033",
-        "texto":"\"caput\" do art. 25",
-        "conteudo":"São vedadas a cobrança de tarifas ou quantias de qualquer natureza ou a troca pela utilização das estradas, dos equipamentos públicos, das linhas de transmissão de energia ou de quaisquer outros equipamentos e instalações colocados a serviço do público em terras indígenas.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.034",
-        "texto":"§ 1º do art. 26",
-        "conteudo":"As terras indígenas não poderão ser objeto de arrendamento ou de qualquer ato ou negócio jurídico que elimine a posse direta pela comunidade indígena.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.035",
-        "texto":"inciso I do § 2º do art. 26",
-        "conteudo":"os frutos da atividade gerem benefícios para toda a comunidade indígena;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.036",
-        "texto":"inciso II do § 2º do art. 26",
-        "conteudo":"a posse dos indígenas sobre a terra seja mantida, ainda que haja atuação conjunta de não indígenas no exercício da atividade;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.037",
-        "texto":"inciso III do § 2º do art. 26",
-        "conteudo":"a comunidade indígena, mediante os próprios meios de tomada de decisão, aprove a celebração contratual;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.038",
-        "texto":"inciso IV do § 2º do art. 26",
-        "conteudo":"os contratos sejam registrados na Funai.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.039",
-        "texto":"\"caput\" do art. 27",
-        "conteudo":"É permitido o turismo em terras indígenas, organizado pela própria comunidade indígena, admitida a celebração de contratos para a captação de investimentos de terceiros, desde que respeitadas as condições estabelecidas no § 2º do art. 26 desta Lei.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.040",
-        "texto":"parágrafo único do art. 27",
-        "conteudo":"Nas terras indígenas, é vedada a qualquer pessoa estranha às comunidades indígenas a prática de caça, pesca, extrativismo ou coleta de frutos, salvo se relacionada ao turismo organizado pelos próprios indígenas, respeitada a legislação específica.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.041",
-        "texto":"\"caput\" do art. 28",
-        "conteudo":"No caso de indígenas isolados, cabe ao Estado e à sociedade civil o absoluto respeito às suas liberdades e aos seus meios tradicionais de vida, e deve ser evitado, ao máximo, o contato com eles, salvo para prestar auxílio médico ou para intermediar ação estatal de utilidade pública.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.042",
-        "texto":"§ 1º do art. 28",
-        "conteudo":"Todo e qualquer contato com indígenas isolados deve ser realizado por agentes estatais e intermediado pela Funai.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.043",
-        "texto":"§ 2º do art. 28",
-        "conteudo":"São vedados o contato e a atuação com comunidades indígenas isoladas de entidades particulares, nacionais ou internacionais, salvo se contratadas pelo Estado para os fins do caput deste artigo, e, em todo caso, é obrigatória a intermediação do contato pela Funai.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.044",
-        "texto":"\"caput\" do art. 29",
-        "conteudo":"As terras sob ocupação e posse dos grupos e das comunidades indígenas e o usufruto exclusivo das riquezas naturais e das utilidades existentes nas terras ocupadas, observado o disposto no inciso XVI do caput do art. 49 e no § 3º do art. 231 da Constituição Federal, bem como a renda indígena, gozam de plena isenção tributária, vedada a cobrança de quaisquer impostos, taxas ou contribuições sobre uns ou outros.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.045",
-        "texto":"\"caput\" do art. 1º da Lei nº 11.460, de 21 de março de 2007, com a redação dada pelo art. 30 do projeto",
-        "conteudo":"Fica vedado o cultivo de organismos geneticamente modificados em áreas de unidades de conservação, exceto nas Áreas de Proteção Ambiental.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.046",
-        "texto":"inciso IX do \"caput\" do art. 2º da Lei nº 4.132, de 10 de setembro de 1962, com a redação dada pelo art. 31 do projeto",
-        "conteudo":"a destinação de áreas às comunidades indígenas que não se encontravam em área de ocupação tradicional em 5 de outubro de 1988, desde que necessárias à reprodução física e cultural, segundo seus usos, costumes e tradições.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"01.23.047",
-        "texto":"inciso IX do \"caput\" do art. 2º da Lei nº 6.001, de 19 de dezembro de 1973, com a redação dada pelo art. 32 do projeto",
-        "conteudo":"garantir aos índios e comunidades indígenas, nos termos da Constituição Federal, a posse permanente das terras tradicionalmente ocupadas em 5 de outubro de 1988, reconhecendo-lhes o direito ao usufruto exclusivo das riquezas naturais e de todas as utilidades naquelas terras existentes;",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"2",
-    "ano":2023,
-    "numeroIdentificador":"02.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"02.23.001",
-        "texto":"\"caput\" do art. 1º",
-        "conteudo":"Esta Lei prorroga o prazo de vigência referente à contribuição previdenciária sobre a receita bruta e ao acréscimo de alíquota da Contribuição Social para o Financiamento da Seguridade Social devida pelo Importador de Bens Estrangeiros ou Serviços do Exterior (Cofins-Importação) sobre determinados bens, de que tratam os arts. 7º e 8º da Lei nº 12.546, de 14 de dezembro de 2011, e o caput do § 21 do art. 8º da Lei nº 10.865, de 30 de abril de 2004, e dá outras providências.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.002",
-        "texto":"\"caput\" do art. 7º da Lei nº 12.546, de 14 de dezembro de 2011, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Até 31 de dezembro de 2027, poderão contribuir sobre o valor da receita bruta, excluídos as vendas canceladas e os descontos incondicionais concedidos, em substituição às contribuições previstas nos incisos I e III do caput do art. 22 da Lei nº 8.212, de 24 de julho de 1991:",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.003",
-        "texto":"\"caput\" do art. 8º da Lei nº 12.546, de 14 de dezembro de 2011, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Até 31 de dezembro de 2027, poderão contribuir sobre o valor da receita bruta, excluídos as vendas canceladas e os descontos incondicionais concedidos, em substituição às contribuições previstas nos incisos I e III do caput do art. 22 da Lei nº 8.212, de 24 de julho de 1991:",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.004",
-        "texto":"§ 21 do art. 8º da Lei nº 10.865, de 30 de abril de 2004, com a redação dada pelo art. 3º do projeto",
-        "conteudo":"Até 31 de dezembro de 2027, as alíquotas da Cofins- Importação de que trata este artigo ficam acrescidas de 1 (um) ponto percentual na hipótese de importação dos bens classificados na Tipi, aprovada pelo Decreto nº 11.158, de 29 de julho de 2022, nos códigos:",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.005",
-        "texto":"§ 17 do art. 22 da Lei nº 8.212, de 24 de julho de 1991, com a redação dada pelo art. 4º do projeto",
-        "conteudo":"A alíquota da contribuição prevista no inciso I do caput deste artigo será de 8% (oito por cento) para os Municípios enquadrados nos coeficientes inferiores a 4,0 (quatro inteiros) da tabela de faixas de habitantes do § 2º do art. 91 da Lei nº 5.172, de 25 de outubro de 1966.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.006",
-        "texto":"\"caput\" do art. 5º",
-        "conteudo":"Até 31 de dezembro de 2027, a alíquota da contribuição sobre a receita bruta será de 1% (um por cento) para as empresas previstas no inciso III do caput do art. 7º da Lei nº 12.546, de 14 de dezembro de 2011.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.007",
-        "texto":"\"caput\" do art. 6º",
-        "conteudo":"Ato do Poder Executivo definirá mecanismos de monitoramento e de avaliação do impacto da desoneração da folha de pagamentos sobre a manutenção dos empregos nas empresas afetadas pelo disposto nos arts. 7º e 8º da Lei nº 12.546, de 14 de dezembro de 2011.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.008",
-        "texto":"inciso I do \"caput\" do art. 7º",
-        "conteudo":"na data de sua publicação, quanto aos arts. 1º, 2º, 4º e 5º; e",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"02.23.009",
-        "texto":"inciso II do \"caput\" do art. 7º",
-        "conteudo":"no primeiro dia do quarto mês subsequente ao de sua publicação, quanto aos arts. 3º e 6º.",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"4",
-    "ano":2023,
-    "numeroIdentificador":"04.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"04.23.001",
-        "texto":"parágrafo único do art. 3º da Lei nº 11.091, de 12 de janeiro de 2005, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"As Instituições Federais de Ensino poderão conceder, na forma do regulamento, bolsas de pesquisa, de desenvolvimento, de inovação e de intercâmbio aos ocupantes de cargo público efetivo de técnico-administrativo envolvidos nessas atividades, atendido o disposto no art. 8º desta Lei.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"04.23.002",
-        "texto":"§ 3º do art. 8º da Lei nº 11.091, de 12 de janeiro de 2005, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"As atribuições previstas no inciso II do caput deste artigo incluem a coordenação de projetos de pesquisa e extensão, cabendo a percepção de bolsas de pesquisa e extensão, pagas diretamente pelas Instituições Federais de Ensino, por agência oficial de fomento, por fundação de apoio devidamente credenciada por Instituição Federal de Ensino ou por organismo internacional amparado por ato, tratado ou convenção internacional.",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"5",
-    "ano":2023,
-    "numeroIdentificador":"05.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"05.23.001",
-        "texto":"\"caput\" do art. 14-B da Lei nº 70.235, de 6 de março de 1972, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"No caso de determinação e exigência de crédito tributário ou aplicação de penalidade isolada que abranja operação ou atividade previamente autorizada por órgão regulador, o litígio que envolva controvérsia jurídica entre a autoridade fiscal ou aduaneira e o órgão regulador será submetido, de ofício ou mediante requerimento do sujeito passivo, à Câmara de Mediação e de Conciliação da Administração Pública Federal (CCAF), nos termos do art. 36 da Lei nº 13.140, de 26 de junho de 2015.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.002",
-        "texto":"parágrafo único do art. 14-B da Lei nº 70.235, de 6 de março de 1972, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"A submissão do litígio à CCAF é considerada reclamação, para fins do disposto no inciso III do caput do art. 151 da Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional).",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.003",
-        "texto":"parágrafo único do art. 3º",
-        "conteudo":"O Procurador-Geral da Fazenda Nacional regulamentará o disposto neste artigo, inclusive para prever que a transação de que trata o caput conterá condições não menos favorecidas do que as ofertadas aos demais sujeitos passivos e considerará o prognóstico do risco judicial de cada processo, observadas as disposições do § 9º-A do art. 25 e do art. 25-A do Decreto nº 70.235, de 6 de março de 1972.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.004",
-        "texto":"§ 1º-A do art. 9º da Lei nº 6.830, de 22 de setembro de 1980, com a redação dada pelo art. 5º do projeto",
-        "conteudo":"O executado capaz de obter seguro-garantia ou fiança bancária de terceiros está autorizado a oferecer garantia, em qualquer modalidade, apenas do valor principal atualizado da dívida, que produz os mesmos efeitos da penhora da integralidade da execução, nos termos do art. 206 da Lei nº 5.172, de 25 de outubro de 1966 (Código Tributário Nacional).",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.005",
-        "texto":"§ 1º-B do art. 9º da Lei nº 6.830, de 22 de setembro de 1980, com a redação dada pelo art. 5º do projeto",
-        "conteudo":"O disposto no § 1º-A deste artigo não se aplica aos executados que, nos 12 (doze) meses que antecederam a sua citação na execução fiscal, não tiveram certidão de regularidade fiscal válida por mais de 3 (três) meses, consecutivos ou não.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.006",
-        "texto":"§ 7º do art. 9º da Lei nº 6.830, de 22 de setembro de 1980, com a redação dada pelo art. 5º do projeto",
-        "conteudo":"As garantias apresentadas na forma do inciso II do caput deste artigo somente serão liquidadas, no todo ou parcialmente, após o trânsito em julgado de decisão de mérito em desfavor do contribuinte, vedada a sua liquidação antecipada.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.007",
-        "texto":"parágrafo único do art. 39 da Lei nº 6.830, de 22 de setembro de 1980, com a redação dada pelo art. 5º do projeto",
-        "conteudo":"Se vencida, a Fazenda Pública ressarcirá integralmente o valor devidamente atualizado das despesas incorridas pela parte contrária, inclusive com o oferecimento, a contratação e a manutenção de garantias.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.008",
-        "texto":"\"caput\" do art. 6º",
-        "conteudo":"Com o objetivo de incentivar a conformidade tributária, a Secretaria Especial da Receita Federal do Brasil disponibilizará obrigatoriamente métodos preventivos para a autorregularização de obrigações principais ou acessórias relativas a tributos por ela administrados.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.009",
-        "texto":"parágrafo único do art. 6º",
-        "conteudo":"Nas hipóteses de que trata este artigo, a comunicação ao sujeito passivo para fins de resolução de divergências ou de inconsistências, realizada previamente à intimação, não configura início de procedimento administrativo ou medida de fiscalização.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.010",
-        "texto":"inciso IV do § 1º do art. 7º",
-        "conteudo":"redução de multa de ofício em pelo menos 1/3 (um terço) e de multa de mora em pelo menos 50% (cinquenta por cento);",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.011",
-        "texto":"§ 2º do art. 7º",
-        "conteudo":"A redução prevista no inciso IV do § 1º deste artigo será aplicada cumulativamente com as reduções previstas no art. 6º da Lei nº 8.218, de 29 de agosto de 1991.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.012",
-        "texto":"§ 1º-B do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 8º do projeto",
-        "conteudo":"Para os fins do disposto no § 1º deste artigo, a ação ou omissão tipificada nos arts. 71, 72 e 73 da Lei nº 4.502, de 30 de novembro de 1964, será penalizada de forma individualizada e por uma única vez, ainda que seus efeitos impactem o cumprimento das obrigações tributárias em diferentes competências subsequentes.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.013",
-        "texto":"inciso III do § 1º-C do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 8º do projeto",
-        "conteudo":"tiver o sujeito passivo divulgado os atos ou fatos que ensejaram a qualificação da multa ou não tiver tentado omiti-los.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.014",
-        "texto":"§ 1º-D do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 8º do projeto",
-        "conteudo":"A majoração prevista no inciso VII do § 1º deste artigo não será aplicada nos casos em que o sujeito passivo adotar as providências para sanar as ações ou omissões tipificadas nos arts. 71, 72 e 73 da Lei nº 4.502, de 30 de novembro de 1964, durante o curso da fiscalização.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.015",
-        "texto":"inciso I do § 6º do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 8º do projeto",
-        "conteudo":"for constatado erro escusável do sujeito passivo cujo comportamento demonstre sua cautela para assegurar o adequado cumprimento da obrigação tributária;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.016",
-        "texto":"inciso II do § 6º do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 8º do projeto",
-        "conteudo":"decorrer o lançamento de ofício de divergência na interpretação da legislação que disponha sobre a obrigação tributária; e",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.017",
-        "texto":"inciso III do § 6º do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 8º do projeto",
-        "conteudo":"tiver o sujeito passivo agido de acordo com as práticas reiteradas adotadas pela Administração ou pelo segmento de mercado em que estiver inserido.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.018",
-        "texto":"§ 7º do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996, com a redação dada pelo art. 8º do projeto",
-        "conteudo":"A multa prevista no inciso I do caput deste artigo poderá ser relevada de acordo com o histórico de conformidade do contribuinte ou do responsável tributário.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.019",
-        "texto":"inciso I do \"caput\" do art. 6º da Lei nº 5.764, de 16 de dezembro de 1971, com a redação dada pelo art. 10 do projeto",
-        "conteudo":"singulares, as constituídas de, no mínimo, 20 (vinte) pessoas físicas, permitida a admissão de pessoas jurídicas;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.020",
-        "texto":"§ 3º do art. 3º-A da Lei nº 10.150, de 21 de dezembro de 2000, com a redação dada pelo art. 13 do projeto",
-        "conteudo":"Na hipótese deste artigo, o requerimento previsto no inciso III do caput do art. 3º desta Lei será feito diretamente pela instituição credora ao Ministro de Estado da Fazenda, que deliberará na ordem cronológica, até o dia 31 de dezembro do respectivo ano, a novação requerida, até o limite do orçamento disponível, conforme a lei orçamentária em vigor, e os créditos não novados no exercício restarão pendentes para o exercício seguinte, mantida a respectiva ordem cronológica.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.021",
-        "texto":"\"caput\" do art. 14",
-        "conteudo":"Com fundamento no disposto no inciso IV do caput do art. 150 da Constituição Federal, referendado por decisões do Supremo Tribunal Federal, fica cancelado o montante da multa em autuação fiscal, inscrito ou não em dívida ativa da União, que exceda a 100% (cem por cento) do valor do crédito tributário apurado, mesmo que a multa esteja incluída em programas de refinanciamentos de dívidas, sobre as parcelas ainda a serem pagas que pelas referidas decisões judiciais sejam consideradas confisco ao contribuinte.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.022",
-        "texto":"§ 1º do art. 14",
-        "conteudo":"A Procuradoria-Geral da Fazenda Nacional providenciará, de ofício, o imediato cancelamento da inscrição em dívida ativa de todo o montante de multa que exceda a 100% (cem por cento), independentemente de provocação do contribuinte, e ficará obrigada a comunicar o cancelamento nas execuções fiscais em andamento.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.023",
-        "texto":"§ 2º do art. 14",
-        "conteudo":"O montante de multa que exceder a 100% (cem por cento) nas autuações fiscais, já pago total ou parcialmente pelo contribuinte, apenas poderá ser reavido, se não estiver precluso o prazo, mediante propositura de ação judicial, ao final da qual será determinado o valor apurado a ser ressarcido, que será liquidado por meio de precatório judicial ou compensado com tributos a serem pagos pelo contribuinte.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"05.23.024",
-        "texto":"inciso I do \"caput\" do art. 17",
-        "conteudo":"o § 2º do art. 44 da Lei nº 9.430, de 27 de dezembro de 1996;",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"6",
-    "ano":2023,
-    "numeroIdentificador":"06.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"06.23.001",
-        "texto":"§ 2º do art. 1º",
-        "conteudo":"Esta Lei deve ser aplicada em consonância com os atos internacionais aos quais o País tenha aderido e não substitui as normas internas e transnacionais das organizações esportivas.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.002",
-        "texto":"§ 3º do art. 1º",
-        "conteudo":"Sem prejuízo de outras normas de teor similar, esta Lei é interpretada à luz da Carta Olímpica e da Carta Internacional da Educação Física, da Atividade Física e do Esporte adotada pela Conferência Geral da Organização das Nações Unidas para a Educação, a Ciência e a Cultura (Unesco).",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.003",
-        "texto":"inciso IV do \"caput\" do art. 2º",
-        "conteudo":"diferenciação;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.004",
-        "texto":"inciso IX do \"caput\" do art. 2º",
-        "conteudo":"identidade nacional;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.005",
-        "texto":"inciso XIII do \"caput\" do art. 2º",
-        "conteudo":"participação;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.006",
-        "texto":"§ 1º do art. 3º",
-        "conteudo":"A promoção, o fomento e o desenvolvimento de atividades físicas para todos, como direito social, notadamente às pessoas com deficiência e às pessoas em vulnerabilidade social, são deveres do Estado e possuem caráter de interesse público geral.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.007",
-        "texto":"\"caput\" do art. 5º",
-        "conteudo":"A formação esportiva visa ao acesso à prática esportiva por meio de ações planejadas, inclusivas, educativas, culturais e lúdicas para crianças e adolescentes, desde os primeiros anos de idade, direcionada ao desenvolvimento integral, e compreende os seguintes serviços:",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.008",
-        "texto":"inciso I do \"caput\" do art. 5º",
-        "conteudo":"vivência esportiva, com vistas à aproximação a uma base ampla e variada de movimentos, atitudes e conhecimentos relacionados ao esporte, por meio de práticas corporais inclusivas e lúdicas;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.009",
-        "texto":"inciso II do \"caput\" do art. 5º",
-        "conteudo":"fundamentação esportiva, com vistas a ampliar e a aprofundar o conhecimento e a cultura esportiva, tendo por objetivo o autocontrole da conduta humana e a autodeterminação dos sujeitos, bem como a construção de bases amplas e sistemáticas de elementos constitutivos de todo e qualquer esporte;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.010",
-        "texto":"inciso III do \"caput\" do art. 5º",
-        "conteudo":"aprendizagem da prática esportiva, com vistas à oferta sistemática de múltiplas práticas corporais esportivas para as aprendizagens básicas de diferentes modalidades esportivas, por meio de conhecimentos científicos, habilidades, técnicas, táticas e regras.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.011",
-        "texto":"§ 3º do art. 5º",
-        "conteudo":"O menor, de 12 (doze) a 14 (quatorze) anos, está sujeito ao pátrio poder e à decisão exclusiva de seus familiares, condicionada sua participação em competições à expressa autorização dos pais ou responsáveis e sua efetiva presença durante a participação do menor na competição.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.012",
-        "texto":"inciso I do \"caput\" do art. 6º",
-        "conteudo":"especialização esportiva, direcionada ao treinamento sistematizado em modalidades específicas, buscando a consolidação do potencial dos atletas em formação, com vistas a propiciar a transição para outros serviços;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.013",
-        "texto":"\"caput\" do art. 7º",
-        "conteudo":"O esporte para toda a vida consolida a aquisição de hábitos saudáveis ao longo da vida, a partir da aprendizagem esportiva, do lazer, da atividade física e do esporte competitivo para jovens e adultos, e envolve os seguintes serviços:",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.014",
-        "texto":"inciso I do \"caput\" do art. 7º",
-        "conteudo":"aprendizagem esportiva para todos, para dar acesso ao esporte àqueles que nunca o praticaram, inclusive às pessoas com deficiência e em processo de reabilitação física;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.015",
-        "texto":"inciso II do \"caput\" do art. 7º",
-        "conteudo":"esporte de lazer, para incorporar práticas corpóreas lúdicas como mecanismo de desenvolvimento humano, bem-estar e cidadania;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.016",
-        "texto":"inciso III do \"caput\" do art. 7º",
-        "conteudo":"atividade física, para sedimentar hábitos, costumes e condutas corporais regulares com repercussões benéficas na educação, na saúde e no lazer dos praticantes;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.017",
-        "texto":"inciso IV do \"caput\" do art. 7º",
-        "conteudo":"esporte competitivo, para manter a prática cotidiana do esporte, ao propiciar competições por faixas etárias àqueles advindos de outros níveis;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.018",
-        "texto":"inciso V do \"caput\" do art. 7º",
-        "conteudo":"esporte social, como meio de inclusão de pessoas em vulnerabilidade social, com deficiência, em regime prisional, idosas e em instituições de acolhimento para crianças e adolescentes, entre outros segmentos de demanda de atenção social especial;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.019",
-        "texto":"inciso VI do \"caput\" do art. 7º",
-        "conteudo":"esporte como meio de reabilitação, habilitação e saúde, para proporcionar à pessoa a continuidade, a manutenção e a estimulação corporal para o seu bem-estar físico, psíquico e social, com atenção primária aos idosos e às pessoas com deficiência.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.020",
-        "texto":"inciso III do \"caput\" do art. 11",
-        "conteudo":"estabelecer as responsabilidades dos entes federativos na estruturação, na regulação, na manutenção e na expansão das atividades e das políticas públicas na área esportiva;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.021",
-        "texto":"inciso VIII do \"caput\" do art. 11",
-        "conteudo":"promover a descentralização e a articulação da política esportiva e de lazer;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.022",
-        "texto":"inciso XIV do \"caput\" do art. 11",
-        "conteudo":"elaborar e cumprir os planos de esporte em todos os níveis da Federação;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.023",
-        "texto":"inciso III do \"caput\" do art. 12",
-        "conteudo":"governança com base no princípio da gestão democrática e participação social;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.024",
-        "texto":"inciso I do \"caput\" do art. 13",
-        "conteudo":"coletar, sistematizar e interpretar dados, fornecer metodologias e estabelecer parâmetros à mensuração da atividade da área esportiva e das necessidades sociais por manifestação esportiva, que permitam a formulação, o monitoramento, a gestão e a avaliação das políticas públicas do esporte, de forma a verificar e a racionalizar a implementação do PNEsporte e sua revisão nos prazos previstos;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"06.23.025",
-        "texto":"inciso III do \"caput\" do art. 13",
-        "conteudo":"exercer e facilitar o monitoramento e a avaliação das políticas públicas do esporte, de forma a assegurar ao poder público e à sociedade civil o acompanhamento do desempenho do PNEsporte.",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"7",
-    "ano":2023,
-    "numeroIdentificador":"07.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"07.23.001",
-        "texto":"§ 1º do art. 9º do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Os crimes militares de que trata este artigo, incluídos os previstos na legislação penal, nos termos do inciso II do caput deste artigo, quando dolosos contra a vida e cometidos por militares contra civil, serão da competência do Tribunal do Júri.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.002",
-        "texto":"§ 3º do art. 9º do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Excetuam-se deste artigo os delitos tipificados como crimes sexuais ou praticados com violência doméstica e familiar contra a mulher, nos termos da legislação penal e especial vigentes, desde que praticados em lugar que não esteja sujeito à administração militar.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.003",
-        "texto":"\"caput\" do art. 31-A do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até o recebimento da denúncia, por ato voluntário do agente, a pena será reduzida de 1/3 (um terço) a 2/3 (dois terços).",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.004",
-        "texto":"parágrafo único do art. 42 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Não há igualmente crime quando o militar na função de comando, na iminência de perigo ou de grave calamidade, compele os subalternos, por meios violentos, a executar serviços e manobras urgentes, para salvar a unidade ou vidas ou para evitar o desânimo, o terror, a desordem, a rendição, a revolta ou o saque.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.005",
-        "texto":"inciso V do \"caput\" do art. 98 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"a perda da função pública;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.006",
-        "texto":"\"caput\" do art. 102 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"A condenação de praça a pena privativa de liberdade por tempo superior a 2 (dois) anos, por crimes comuns e militares, pode acarretar a sua exclusão das instituições militares, desde que submetida, mediante processo específico, ao crivo do Tribunal Militar competente.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.007",
-        "texto":"§ 1º do art. 102 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Os militares condenados por crimes comuns e militares somente perderão a graduação por meio de processo específico no Tribunal de Justiça Militar.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.008",
-        "texto":"§ 2º do art. 102 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Nas unidades da Federação em que não houver o Tribunal de Justiça Militar, o processo específico será de competência do Tribunal de Justiça do Estado.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.009",
-        "texto":"§ 3º do art. 102 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Aplica-se ao processo específico de que trata este artigo o mesmo procedimento destinado aos oficiais.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.010",
-        "texto":"\"caput\" do art. 107 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Salvo os casos do art. 99 e do inciso II do caput do art. 103 deste Código, a imposição da pena acessória deve constar expressamente da sentença.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"07.23.011",
-        "texto":"\"caput\" do art. 166 do Decreto-Lei nº 1.001, de 21 de outubro de 1969, com a redação dada pelo art. 2º do projeto",
-        "conteudo":"Publicar o militar, sem licença, ato ou documento oficial, ou criticar publicamente superior hierárquico por ato de ofício ou assunto atinente à disciplina militar:",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"8",
-    "ano":2023,
-    "numeroIdentificador":"08.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"08.23.001",
-        "texto":"parágrafo único do art. 2º da Lei nº 11.416, de 15 de dezembro de 2006, com a redação dada pelo art. 4º do projeto",
-        "conteudo":"Os cargos do quadro permanente de servidores do Poder Judiciário da União são essenciais à atividade jurisdicional.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"08.23.002",
-        "texto":"parágrafo único do art. 11 da Lei nº 11.416, de 15 de dezembro de 2006, com a redação dada pelo art. 4º do projeto",
-        "conteudo":"As vantagens pessoais nominalmente identificadas de caráter permanente, incorporadas aos vencimentos, aos proventos e às pensões dos servidores das Carreiras dos Quadros de Pessoal do Poder Judiciário, inclusive aquelas derivadas da incorporação de quintos ou décimos de função comissionada, não serão reduzidas, absorvidas ou compensadas pelo reajuste das parcelas remuneratórias dos anexos desta Lei.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"08.23.003",
-        "texto":"§ 5º do art. 15 da Lei nº 11.416, de 15 de dezembro de 2006, com a redação dada pelo art. 4º do projeto",
-        "conteudo":"Os Técnicos Judiciários que fizerem jus ao Adicional de Qualificação (AQ) em razão da aplicação do inciso VI do caput deste artigo terão a parcela automaticamente transformada em vantagem pessoal nominalmente identificada, no valor de 5% (cinco por cento) sobre o vencimento básico do cargo efetivo do servidor.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"08.23.004",
-        "texto":"§ 6º do art. 15 da Lei nº 11.416, de 15 de dezembro de 2006, com a redação dada pelo art. 4º do projeto",
-        "conteudo":"A vantagem pessoal nominalmente identificada de que trata o § 5º será absorvida quando o servidor que a detiver enquadrar-se nos incisos I, II e III do caput deste artigo.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"08.23.005",
-        "texto":"§ 3º do art. 16 da Lei nº 11.416, de 15 de dezembro de 2006, com a redação dada pelo art. 4º do projeto",
-        "conteudo":"A vantagem pessoal nominalmente identificada decorrente da incorporação de quintos ou décimos de função comissionada de executante de mandados ou equivalente será percebida concomitantemente com a gratificação prevista neste artigo, vedada sua redução, absorção ou compensação.",
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"9",
-    "ano":2023,
-    "numeroIdentificador":"09.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"09.23.001",
-        "texto":"inciso I do § 14 do art. 6º",
-        "conteudo":"urbanização;",
-        "prejudicado":true
-      },
-      {
-        "numeroIdentificador":"09.23.002",
-        "texto":"inciso II do § 14 do art. 6º",
-        "conteudo":"regularização fundiária;",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"09.23.003",
-        "texto":"inciso III do § 14 do art. 6º",
-        "conteudo":"concessão de cartas de crédito; e",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"09.23.004",
-        "texto":"inciso IV do § 14 do art. 6º",
-        "conteudo":"produção habitacional.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"09.23.005",
-        "texto":"inciso VI do \"caput\" do art. 15",
-        "conteudo":"seguro de danos estruturais.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"09.23.006",
-        "texto":"teste",
-        "conteudo":"teste",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"09.23.007",
-        "texto":"Ação 210V do Programa 2012 de Anexo VII \"Promoção e Fortalecimento da Agricultura Familiar Agricultor familiar beneficiado (unidade) : 10.000\"",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"09.23.008",
-        "texto":"Ação 210W do Programa 2012 de Anexo VII \"Apoio à Organização Econômica e Promoção da Cidadania de Mulheres Rurais Mulher atendida (unidade): 1.000\"",
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  },
-  {
-    "total":false,
-    "numero":"10",
-    "ano":2023,
-    "numeroIdentificador":"10.23",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"10.23.001",
-        "texto":"Art. 1º Teste do artigo primeiro desmembrado",
-        "conteudo":null,
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"10.23.002",
-        "texto":"Art. 2º Teste do artigo segundo desmembrado.",
-        "conteudo":null,
-        "prejudicado":false
-      }
-    ]
-  }
-]
+{
+  "id":414,
+  "versao":1,
+  "vetos":[
+    {
+      "total":false,
+      "numero":"33",
+      "ano":2018,
+      "numeroIdentificador":"33.18",
+      "dispositivos":[
+        {
+          "numeroIdentificador":"33.18.007",
+          "texto":"\"caput\" do art. 55",
+          "conteudo":"à? criada a Autoridade Nacional de Proteção de Dados (ANPD), integrante da administração pública federal indireta, submetida a regime autárquico especial e vinculada ao Ministério da Justiça.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.008",
+          "texto":"§ 1º do art. 55",
+          "conteudo":"A ANPD deverá ser regida nos termos previstos na Lei nº 9.986, de 18 de julho de 2000.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.009",
+          "texto":"§ 2º do art. 55",
+          "conteudo":"A ANPD será composta pelo Conselho Diretor, como órgão máximo, e pelo Conselho Nacional de Proteção de Dados Pessoais e da Privacidade, além das unidades especializadas para a aplicação desta Lei.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.010",
+          "texto":"§ 3º do art. 55",
+          "conteudo":"A natureza de autarquia especial conferida à ANPD é caracterizada por independência administrativa, ausência de subordinação hierárquica, mandato fixo e estabilidade de seus dirigentes e autonomia financeira.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.011",
+          "texto":"§ 4º do art. 55",
+          "conteudo":"O regulamento e a estrutura organizacional da ANPD serão aprovados por decreto do Presidente da República.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.012",
+          "texto":"§ 5º do art. 55",
+          "conteudo":"O Conselho Diretor será composto por 3 (três) conselheiros e decidirá por maioria.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.013",
+          "texto":"§ 6º do art. 55",
+          "conteudo":"O mandato dos membros do Conselho Diretor será de 4 (quatro) anos.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.014",
+          "texto":"§ 7º do art. 55",
+          "conteudo":"Os mandatos dos primeiros membros do Conselho Diretor serão de 3 (três), 4 (quatro) e 5 (cinco) anos, a serem estabelecidos no decreto de nomeação.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.015",
+          "texto":"§ 8º do art. 55",
+          "conteudo":"à? vedado a ex-conselheiro utilizar informações privilegiadas obtidas em decorrência do cargo exercido, sob pena de incorrer em improbidade administrativa.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.016",
+          "texto":"inciso I do \"caput\" do art. 56",
+          "conteudo":"zelar pela proteção dos dados pessoais, nos termos da legislação;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.017",
+          "texto":"inciso II do \"caput\" do art. 56",
+          "conteudo":"zelar pela observância dos segredos comercial e industrial em ponderação com a proteção de dados pessoais e do sigilo das informações quando protegido por lei ou quando a quebra do sigilo violar os fundamentos do art. 2º desta Lei;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.018",
+          "texto":"inciso III do \"caput\" do art. 56",
+          "conteudo":"elaborar diretrizes para Política Nacional de Proteção de Dados Pessoais e da Privacidade;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.019",
+          "texto":"inciso IV do \"caput\" do art. 56",
+          "conteudo":"fiscalizar e aplicar sanções em caso de tratamento de dados realizado em descumprimento à legislação, mediante processo administrativo que assegure o contraditório, a ampla defesa e o direito de recurso;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.020",
+          "texto":"inciso V do \"caput\" do art. 56",
+          "conteudo":"atender petições de titular contra controlador;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.021",
+          "texto":"inciso VI do \"caput\" do art. 56",
+          "conteudo":"promover na população o conhecimento das normas e das políticas públicas sobre proteção de dados pessoais e das medidas de segurança;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.022",
+          "texto":"inciso VII do \"caput\" do art. 56",
+          "conteudo":"promover estudos sobre as práticas nacionais e internacionais de proteção de dados pessoais e privacidade;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.023",
+          "texto":"inciso VIII do \"caput\" do art. 56",
+          "conteudo":"estimular a adoção de padrões para serviços e produtos que facilitem o exercício de controle dos titulares sobre seus dados pessoais, que deverão levar em consideração as especificidades das atividades e o porte dos responsáveis;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.024",
+          "texto":"inciso IX do \"caput\" do art. 56",
+          "conteudo":"promover ações de cooperação com autoridades de proteção de dados pessoais de outros países, de natureza internacional ou transnacional;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.025",
+          "texto":"inciso X do \"caput\" do art. 56",
+          "conteudo":"dispor sobre as formas de publicidade das operações de tratamento de dados pessoais, observado o respeito aos segredos comercial e industrial;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.026",
+          "texto":"inciso XI do \"caput\" do art. 56",
+          "conteudo":"solicitar, a qualquer momento, às entidades do Poder Público que realizem operações de tratamento de dados pessoais, informe específico sobre o âmbito e a natureza dos dados e os demais detalhes do tratamento realizado, podendo emitir parecer técnico complementar para garantir o cumprimento desta Lei;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.027",
+          "texto":"inciso XII do \"caput\" do art. 56",
+          "conteudo":"elaborar relatórios de gestão anuais acerca de suas atividades;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.028",
+          "texto":"inciso XIII do \"caput\" do art. 56",
+          "conteudo":"editar regulamentos e procedimentos sobre proteção de dados pessoais e privacidade, assim como sobre relatórios de impacto à proteção de dados pessoais para os casos em que o tratamento representar alto risco para a garantia dos princípios gerais de proteção de dados pessoais previstos nesta Lei;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.029",
+          "texto":"inciso XIV do \"caput\" do art. 56",
+          "conteudo":"ouvir os agentes de tratamento e a sociedade em matérias de interesse relevante, assim como prestar contas sobre suas atividades e planejamento;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.030",
+          "texto":"inciso XV do \"caput\" do art. 56",
+          "conteudo":"arrecadar e aplicar suas receitas e publicar, no relatório de gestão a que se refere o inciso XII do caput deste artigo, o detalhamento de suas receitas e despesas; e",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.031",
+          "texto":"inciso XVI do \"caput\" do art. 56",
+          "conteudo":"realizar ou determinar a realização de auditorias, no âmbito da atividade de fiscalização, sobre o tratamento de dados pessoais efetuado pelos agentes de tratamento, incluindo o Poder Público.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.032",
+          "texto":"§ 1º do art. 56",
+          "conteudo":"Ao impor condicionamentos administrativos ao tratamento de dados pessoais por agente de tratamento privado, sejam eles limites, encargos ou sujeições, a ANPD deve observar a exigência de mínima intervenção, assegurados os fundamentos, os princípios e os direitos dos titulares previstos no art. 170 da Constituição Federal e nesta Lei.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.033",
+          "texto":"§ 2º do art. 56",
+          "conteudo":"Os regulamentos e normas editados pela ANPD devem necessariamente ser precedidos de consulta e audiência públicas, bem como de análises de impacto regulatório.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.034",
+          "texto":"inciso I do art. 57",
+          "conteudo":"o produto da execução da sua dívida ativa;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.035",
+          "texto":"inciso II do art. 57",
+          "conteudo":"as dotações consignadas no orçamento geral da União, os créditos especiais, os créditos adicionais, as transferências e os repasses que lhe forem conferidos;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.036",
+          "texto":"inciso III do art. 57",
+          "conteudo":"as doações, os legados, as subvenções e outros recursos que lhe forem destinados;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.037",
+          "texto":"inciso IV do art. 57",
+          "conteudo":"os valores apurados na venda ou aluguel de bens móveis e imóveis de sua propriedade;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.038",
+          "texto":"inciso V do art. 57",
+          "conteudo":"os valores apurados em aplicações no mercado financeiro das receitas previstas neste artigo;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.039",
+          "texto":"inciso VI do art. 57",
+          "conteudo":"o produto da cobrança de emolumentos por serviços prestados;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.040",
+          "texto":"inciso VII do art. 57",
+          "conteudo":"os recursos provenientes de acordos, convênios ou contratos celebrados com entidades, organismos ou empresas, públicos ou privados, nacionais ou internacionais;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.041",
+          "texto":"inciso VIII do art. 57",
+          "conteudo":"o produto da venda de publicações, material técnico, dados e informações, inclusive para fins de licitação pública.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.042",
+          "texto":"inciso I do \"caput\" do art. 58",
+          "conteudo":"6 (seis) representantes do Poder Executivo federal;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.043",
+          "texto":"inciso II do \"caput\" do art. 58",
+          "conteudo":"1 (um) representante indicado pelo Senado Federal;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.044",
+          "texto":"inciso III do \"caput\" do art. 58",
+          "conteudo":"1 (um) representante indicado pela Câmara dos Deputados;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.045",
+          "texto":"inciso IV do \"caput\" do art. 58",
+          "conteudo":"1 (um) representante indicado pelo Conselho Nacional de Justiça;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.046",
+          "texto":"inciso V do \"caput\" do art. 58",
+          "conteudo":"1 (um) representante indicado pelo Conselho Nacional do Ministério Público;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.047",
+          "texto":"inciso VI do \"caput\" do art. 58",
+          "conteudo":"1 (um) representante indicado pelo Comitê Gestor da Internet no Brasil;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.048",
+          "texto":"inciso VII do \"caput\" do art. 58",
+          "conteudo":"4 (quatro) representantes da sociedade civil com atuação comprovada em proteção de dados pessoais;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.049",
+          "texto":"inciso VIII do \"caput\" do art. 58",
+          "conteudo":"4 (quatro) representantes de instituição científica, tecnológica e de inovação; e",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.050",
+          "texto":"inciso IX do \"caput\" do art. 58",
+          "conteudo":"4 (quatro) representantes de entidade representativa do setor empresarial afeto à área de tratamento de dados pessoais.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.051",
+          "texto":"§ 1º do art. 58",
+          "conteudo":"Os representantes serão designados por ato do Presidente da República, permitida a delegação, e terão mandato de 2 (dois) anos, permitida 1 (uma) recondução.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.052",
+          "texto":"§ 2º do art. 58",
+          "conteudo":"A participação no Conselho Nacional de Proteção de Dados Pessoais e da Privacidade será considerada atividade de relevante interesse público, não remunerada.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.053",
+          "texto":"§ 3º do art. 58",
+          "conteudo":"Os representantes referidos nos incisos I a VI do caput deste artigo e seus suplentes serão indicados pelos titulares dos respectivos órgãos e entidades.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.054",
+          "texto":"§ 4º do art. 58",
+          "conteudo":"Os representantes referidos nos incisos VII, VIII e IX do caput deste artigo e seus suplentes serão indicados na forma de regulamento e não poderão ser membros da entidade mencionada no inciso VI do caput deste artigo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.055",
+          "texto":"inciso I do art. 59",
+          "conteudo":"propor diretrizes estratégicas e fornecer subsídios para a elaboração da Política Nacional de Proteção de Dados Pessoais e da Privacidade e para a atuação da ANPD;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.056",
+          "texto":"inciso II do art. 59",
+          "conteudo":"elaborar relatórios anuais de avaliação da execução das ações da Política Nacional de Proteção de Dados Pessoais e da Privacidade;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.057",
+          "texto":"inciso III do art. 59",
+          "conteudo":"sugerir ações a serem realizadas pela ANPD;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.058",
+          "texto":"inciso IV do art. 59",
+          "conteudo":"realizar estudos e debates sobre a proteção de dados pessoais e da privacidade; e",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"33.18.059",
+          "texto":"inciso V do art. 59",
+          "conteudo":"disseminar o conhecimento sobre proteção de dados pessoais e da privacidade à população em geral.",
+          "prejudicado":false
+        }
+      ]
+    },
+    {
+      "total":false,
+      "numero":"38",
+      "ano":2018,
+      "numeroIdentificador":"38.18",
+      "dispositivos":[
+        {
+          "numeroIdentificador":"38.18.005",
+          "texto":"inciso I do \"caput\" do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"as operações tenham sido contratadas por intermédio de cooperativas de crédito rural central ou singular até 30 de junho de 2008;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.006",
+          "texto":"inciso II do \"caput\" do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"as operações estivessem em situação de inadimplência em 22 de novembro de 2011;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.007",
+          "texto":"inciso III do \"caput\" do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"a cooperativa não tenha recebido do agricultor e não seja avalista do título;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.008",
+          "texto":"inciso IV do \"caput\" do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"a cooperativa comprove que o título objeto da liquidação teve origem nas operações referidas neste artigo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.009",
+          "texto":"§ 1º do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Fica a União autorizada a assumir os ônus decorrentes das disposições deste artigo com recursos destinados à equalização de encargos financeiros das operações efetuadas no âmbito do Pronaf, com risco da União ou desoneradas de risco pela União.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.010",
+          "texto":"§ 2º do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"As operações serão atualizadas pelos encargos de normalidade e corrigidas por juros equivalentes à taxa referencial do Sistema Especial de Liquidação e de Custódia (Selic) para títulos federais, a partir do débito praticado pela instituição financeira oficial, limitado o rebate ao valor descrito no caput deste artigo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.011",
+          "texto":"§ 3º do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Os recursos referentes ao rebate de que trata o caput deste artigo serão repassados pelo Tesouro Nacional às cooperativas segundo o disposto em regulamento, a ser publicado até 30 de dezembro de 2018.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.012",
+          "texto":"§ 4º do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"A cooperativa de crédito terá o prazo de 180 (cento e oitenta) dias, a contar da publicação do regulamento de que trata o parágrafo anterior, para requerer o rebate perante a Secretaria do Tesouro Nacional (STN), mediante comprovação do enquadramento de que tratam os incisos I, II, III, IV e V do caput deste artigo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.013",
+          "texto":"§ 5º do art. 28-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"A cooperativa de crédito rural terá o prazo de trinta dias, a contar do recebimento do recurso, para comprovar a quitação da dívida do agricultor.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.014",
+          "texto":"inciso I do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"ajuste do saldo devedor para a data da liquidação, observado o disposto nos §§ lo e 2o do art. 1o da Lei no 13.340, de 28 de setembro de 2016, excluídas as operações contratadas ao amparo do § 6odo art. 5° da Lei no 9.138, de 29 de novembro de 1995, e da Resolução no 2.471 do Conselho Monetário Nacional (CMN), de 26 de fevereiro de 1998;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.015",
+          "texto":"alínea \"a\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"o saldo devedor da operação renegociada será atualizado pelo Índice Geral de Preços do Mercado (IGP-M), desde a data da renegociação contratada, para o que será considerado como base de cálculo o valor contratado correspondente ao valor nominal dos Certificados do Tesouro Nacional (CTNs), emitidos na forma da Resolução n° 2.471 do CMN, de 26 de fevereiro de 1998;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.016",
+          "texto":"alínea \"b\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"o saldo devedor apurado na forma da alínea a deste inciso será acrescido dos juros contratuais calculados pro rata die entre o vencimento da parcela de juros anterior e a data de liquidação da operação;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.017",
+          "texto":"alínea \"c\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"os CTNs serão atualizados pelo IGP-M, acrescidos de juros calculados à taxa efetiva de 12% a.a. (doze por cento ao ano), considerado o valor dos títulos na data da contratação da operação, correspondente a 10,367% (dez inteiros e trezentos e sessenta e sete milésimos por cento) do valor nominal da operação renegociada;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.018",
+          "texto":"alínea \"d\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"o valor a ser considerado como saldo devedor atualizado, sobre o qual incidirá o percentual de rebate, corresponderá à diferença entre o saldo devedor calculado na forma definida na alínea a deste inciso, acrescido dos valores de que trata a alínea b deste inciso, e os valores dos CTNs, calculados na forma da alínea c deste inciso;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.019",
+          "texto":"alínea \"e\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"nas operações contratadas com recursos e risco da União, o mutuário deverá fornecer à secretaria do Tesouro Nacional do Ministério da Fazenda a autorização para cancelamento dos respectivos CTNs;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.020",
+          "texto":"alínea \"f\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"nas operações contratadas com recursos e risco das instituições financeiras, do FNO ou do FNE, os CTNs seguirão os fluxos normais pactuados;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.021",
+          "texto":"alínea \"g\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"no caso de operações com juros em atraso que ainda não tenham sido inscritas em dívida ativa da União, será acrescido ao saldo devedor para liquidação o estoque de juros vencidos, atualizados com base no IGP-M;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.022",
+          "texto":"alínea \"h\" do inciso II do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"na atualização do saldo devedor da operação de que trata o caput deste artigo, não será aplicado o teto do IGP-M a que se refere o inciso I do caput do art. 2o da Lei no 10.437, de 25 de abril de 2002;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.023",
+          "texto":"inciso III do \"caput\" do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"concessão de rebate para liquidação, até 30 de dezembro de 2019, independentemente do valor originalmente contratado, a ser concedido sobre o valor consolidado da dívida atualizada na forma definida nos incisos I e II do caput deste artigo, conforme o caso, segundo o enquadramento em uma das faixas de valores indicadas no Anexo IV da Lei no 13.340, de 28 de setembro de 2016, devendo primeiro ser aplicado o correspondente desconto percentual e, em seguida, o respectivo desconto de valor fixo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.024",
+          "texto":"§ 1º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Entende-se por valor consolidado da dívida de que trata o caput deste artigo o montante do débito atualizado até a data de liquidação.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.025",
+          "texto":"inciso I do § 2º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"limite de crédito: até o valor suficiente para liquidação do saldo devedor das operações de que trata este artigo, apurado na forma dos incisos I, II e III do caput deste artigo, depois de aplicado o rebate de que trata o inciso III do caput deste artigo;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.026",
+          "texto":"inciso II do § 2º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"fonte de recursos: FNE;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.027",
+          "texto":"inciso III do § 2º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"riscos da operação: os aplicados para operações contratadas com recursos do FNE na data da publicação desta Lei;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.028",
+          "texto":"inciso IV do § 2º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"amortização da dívida: prestações anuais, iguais e sucessivas, fixado o vencimento da primeira parcela para 2021 e o vencimento da última parcela para 2030, estabelecido novo cronograma de amortização, sem a necessidade de estudo de capacidade de pagamento;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.029",
+          "texto":"inciso V do § 2º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"encargos financeiros: taxa efetiva de juros de 3,5% a.a. (três inteiros e cinco décimos por cento ao ano);",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.030",
+          "texto":"inciso VI do § 2º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"amortização prévia de valor equivalente a 3% (três por cento) do saldo devedor atualizado, depois de aplicados os rebates de que trata o inciso III do caput deste artigo; e",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.031",
+          "texto":"inciso VII do § 2º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"garantias: as mesmas constituídas nas operações que serão liquidadas com a contratação do novo financiamento, exceto pelos Certificados do Tesouro Nacional que serão resgatados na forma do inciso II do caput deste artigo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.032",
+          "texto":"§ 3º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"As disposições deste artigo aplicam-se  operações contratadas com recursos do FNE, inclusive à quelas reclassificadas ao amparo do art. 31 da Lei no 11.775, de 17 de setembro de 2008, em substituição  disposições contidas nos arts. 1o e 2° da Lei no 13.340, de 28 de setembro de 2016.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.033",
+          "texto":"§ 4º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Fica o FNE autorizado a assumir os custos decorrentes dos rebates de que trata este artigo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.034",
+          "texto":"inciso I do § 5º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"pelo FNE, relativamente à parcela amparada em seus recursos;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.035",
+          "texto":"inciso II do § 5º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"pelo Banco do Nordeste do Brasil S.A., relativamente à parcela amparada em outras fontes de recursos.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.036",
+          "texto":"§ 6º do art. 29-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"As disposições deste artigo não se aplicam  operações contratadas por mutuários que tenham comprovadamente cometido desvio de finalidade de crédito, exceto se a irregularidade tiver sido sanada previamente à liquidação da dívida.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.037",
+          "texto":"\"caput\" do art. 30-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Aplicam-se  operações efetuadas ao amparo do Programa Especial de Crédito para a Reforma Agrária (Procera), repactuadas ou não, desconto de 95% (noventa e cinco por cento), em substituição aos bônus de adimplência contratuais.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.038",
+          "texto":"parágrafo único do art. 30-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Os custos decorrentes dos benefícios concedidos nos termos deste artigo serão imputados aos Fundos Constitucionais de Financiamento e ao Tesouro Nacional, nas operações efetuadas com seus recursos, e ao Fundo Contábil do Procera, nos demais casos.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.039",
+          "texto":"\"caput\" do art. 31-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Fica autorizada a concessão de rebate para liquidação, até 30 de dezembro de 2019, das operações de crédito rural contratadas até 30 de dezembro de 2011 no âmbito do Pronaf, observadas as seguintes condições:",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.040",
+          "texto":"inciso I do \"caput\" do art. 31-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"nas operações contratadas até 31 de dezembro de 2006, o rebate será de 60% (sessenta por cento);",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.041",
+          "texto":"inciso II do \"caput\" do art. 31-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"nas operações contratadas entre 1o de janeiro de 2007 e 31 de dezembro de 2011, o rebate será de 30% (trinta por cento);",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.042",
+          "texto":"§ 1º do art. 31-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"O rebate para liquidação será concedido sobre os saldos devedores que se enquadrem nos termos deste artigo, atualizados a partir da data da contratação da operação original com base nos encargos contratuais de normalidade, excluídos os bônus, sem o cômputo de multa, mora ou quaisquer outros encargos por inadimplemento ou honorários advocatícios, mesmo que tenham sido incorporados ou pactuados por meio de aditivos contratuais ou escrituras públicas de confissão, de assunção e de repactuação de dívidas.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.043",
+          "texto":"§ 2º do art. 31-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"O Tesouro Nacional assumirá as despesas com os bônus na conta da subvenção econômica ao crédito rural.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.044",
+          "texto":"§ 3º do art. 31-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Os agentes financeiros terão até 30 de abril de 2020 para apresentar ao Tesouro Nacional os dados das operações liquidadas.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.045",
+          "texto":"§ 4º do art. 31-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"O disposto no caput se aplica a operações não enquadradas nas áreas de abrangência da Superintendência do Desenvolvimento do Nordeste (Sudene) e da Superintendência do Desenvolvimento da Amazônia (Sudam)",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.046",
+          "texto":"\"caput\" do art. 32-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Fica autorizada a concessão de rebate para liquidação, até 30 de dezembro de 2019, das operações de crédito rural, incluídas as contratadas no âmbito do Pronaf entre 1º de janeiro de 2010 e 31 de dezembro de 2013 com o Banco do Nordeste do Brasil S.A. com recursos oriundos do FNE ou com recursos mistos do referido Fundo com outras fontes, relativas a empreendimentos de irrigação localizados na área de abrangência do Lago Sobradinho, que foram inadimplidas em decorrência dos efeitos de estiagem, observadas ainda as seguintes condições:",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.047",
+          "texto":"inciso I do \"caput\" do art. 32-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"operações com valor originalmente contratado de até R$ 100.000,00 (cem mil reais) em uma ou mais operações do mesmo mutuário;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.048",
+          "texto":"inciso II do \"caput\" do art. 32-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"rebate de 95% (noventa e cinco por cento) sobre o saldo devedor atualizado.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.049",
+          "texto":"parágrafo único do art. 32-A da Lei nº 13.606, de 9 de janeiro de 2018, com a redação dada pelo art. 2º do projeto",
+          "conteudo":"Fica o FNE autorizado a assumir os custos decorrentes dos rebates de que trata este artigo.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.050",
+          "texto":"\"caput\" do art. 3º",
+          "conteudo":"Ficam a Companhia de Desenvolvimento dos Vales do São Francisco e do Parnaíba (CODEVASF), o Departamento Nacional de Obras Contra as Secas (DNOCS) e a Companhia Hidroelétrica do São Francisco (CHESF) autorizados a adotar medidas destinadas à regularização fundiária de imóveis rurais de suas propriedades, observando o seguinte:",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"38.18.051",
+          "texto":"inciso I do art. 3º",
+          "conteudo":"comprovação do desinteresse pelas áreas ocupadas, desde que as referidas áreas tenham sido ocupadas até 31 de dezembro de 2017;",
+          "prejudicado":false
+        }
+      ]
+    },
+    {
+      "total":false,
+      "numero":"22",
+      "ano":2019,
+      "numeroIdentificador":"22.19",
+      "dispositivos":[
+        {
+          "numeroIdentificador":"22.19.001",
+          "texto":"\"caput\" do art. 118 da Lei nº 1.970, de 27 de novembro de 1970, com a redação dada pelo art. 3º do projeto",
+          "conteudo":"O exame das comissões sobre as proposições, excetuadas as emendas e os casos em que este Regimento determine em contrário, obedecerá aos seguintes prazos:",
+          "prejudicado":true
+        },
+        {
+          "numeroIdentificador":"22.19.002",
+          "texto":"inciso I do \"caput\" do art. 118 da Lei nº 1.970, de 27 de novembro de 1970, com a redação dada pelo art. 3º do projeto",
+          "conteudo":"vinte dias úteis para a Comissão de Constituição, Justiça e Cidadania, dos quais, dez dias úteis serão destinados à apresentação do parecer;",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"22.19.003",
+          "texto":"inciso II do \"caput\" do art. 118 da Lei nº 1.970, de 27 de novembro de 1970, com a redação dada pelo art. 3º do projeto",
+          "conteudo":"dezesseis dias úteis para as demais comissões, dos quais, oito dias úteis serão destinados à apresentação do parecer.",
+          "prejudicado":true
+        },
+        {
+          "numeroIdentificador":"22.19.004",
+          "texto":"§ 1º do art. 118 da Lei nº 1.970, de 27 de novembro de 1970, com a redação dada pelo art. 3º do projeto",
+          "conteudo":"Sobre as emendas, o prazo é de quinze dias úteis, correndo em conjunto se tiver que ser ouvida mais de uma comissão.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"22.19.005",
+          "texto":"§ 2º do art. 118 da Lei nº 1.970, de 27 de novembro de 1970, com a redação dada pelo art. 3º do projeto",
+          "conteudo":"Se o Relator não puder apresentar seu parecer nos prazos previstos neste artigo, poderá requerer à Comissão prorrogação por igual período a ele destinado, prorrogando-se, automaticamente, o prazo para deliberação da comissão.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"22.19.006",
+          "texto":"art. 4º",
+          "conteudo":null,
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"22.19.007",
+          "texto":"\"caput\" do art. 4º",
+          "conteudo":"O art. 129 do Regimento Interno do Senado Federal passa a vigorar com a seguinte redação:",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"22.19.008",
+          "texto":"art. 129 da Lei nº 1.970, de 27 de novembro de 1970, com a redação dada pelo art. 4º do projeto",
+          "conteudo":null,
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"22.19.009",
+          "texto":"\"caput\" do art. 129 da Lei nº 1.970, de 27 de novembro de 1970, com a redação dada pelo art. 4º do projeto",
+          "conteudo":"O Presidente poderá funcionar regularmente como relator.",
+          "prejudicado":false
+        },
+        {
+          "numeroIdentificador":"22.19.010",
+          "texto":"\"caput\" do art. 6º",
+          "conteudo":"Não se submetem à distribuição eletrônica a que se refere a presente Resolução as hipóteses previstas nos arts. 24, III, 48, XXI, 140, 147, 348, 358, § 1º e 374, I.",
+          "prejudicado":false
+        }
+      ]
+    },
+    {
+      "total":true,
+      "numero":"29",
+      "ano":2019,
+      "numeroIdentificador":"29.19",
+      "dispositivos":[
+        {
+          "numeroIdentificador":"29.19.000",
+          "texto":null,
+          "conteudo":null,
+          "prejudicado":false
+        }
+      ]
+    },
+    {
+      "total":true,
+      "numero":"55",
+      "ano":2020,
+      "numeroIdentificador":"55.20",
+      "dispositivos":[
+        {
+          "numeroIdentificador":"55.20.000",
+          "texto":null,
+          "conteudo":null,
+          "prejudicado":false
+        }
+      ]
+    }
+  ]
+}

@@ -149,31 +149,35 @@ export function getVeto(): Veto {
 
 export function getVetoJson() {
   return {
-    "id":  '57.22',
-    "total":true,
-    "numero":"57",
-    "ano":2022,
-    "numeroIdentificador":"57.22",
-    "dispositivos":[
-      {
-        "numeroIdentificador":"57.22.001",
-        "texto":"§ 1º do art. 3º",
-        "conteudo":"Serão aceitas propostas de inscrições individuais ou de equipes de, no máximo, três componentes.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"57.22.002",
-        "texto":"§ 2º do art. 3º",
-        "conteudo":"O proponente deverá registrar, no formulário de inscrição, uma proposta sucinta de projeto de desenvolvimento de solução web que utilize, preferencialmente, dados do Senado Federal com o objetivo de colaborar na compreensão do processo legislativo e da atuação parlamentar pela sociedade.",
-        "prejudicado":false
-      },
-      {
-        "numeroIdentificador":"57.22.003",
-        "texto":"§ 3º do art. 3º",
-        "conteudo":"Todos os proponentes deverão ser identificados no formulário de inscrição, sendo que no caso de inscrição coletiva, além da identificação, deverá ser indicado o membro responsável pela equipe.",
-        "prejudicado":false
-      },
-    ]
+    "id":414,
+    "versao":1,
+    "vetos":[{
+      "id": '57.22',
+      "total": true,
+      "numero": "57",
+      "ano": 2022,
+      "numeroIdentificador": "57.22",
+      "dispositivos": [
+        {
+          "numeroIdentificador": "57.22.001",
+          "texto": "§ 1º do art. 3º",
+          "conteudo": "Serão aceitas propostas de inscrições individuais ou de equipes de, no máximo, três componentes.",
+          "prejudicado": false
+        },
+        {
+          "numeroIdentificador": "57.22.002",
+          "texto": "§ 2º do art. 3º",
+          "conteudo": "O proponente deverá registrar, no formulário de inscrição, uma proposta sucinta de projeto de desenvolvimento de solução web que utilize, preferencialmente, dados do Senado Federal com o objetivo de colaborar na compreensão do processo legislativo e da atuação parlamentar pela sociedade.",
+          "prejudicado": false
+        },
+        {
+          "numeroIdentificador": "57.22.003",
+          "texto": "§ 3º do art. 3º",
+          "conteudo": "Todos os proponentes deverão ser identificados no formulário de inscrição, sendo que no caso de inscrição coletiva, além da identificação, deverá ser indicado o membro responsável pela equipe.",
+          "prejudicado": false
+        },
+      ]
+    }]
   };
 }
 

@@ -5,6 +5,7 @@ import {MadocDispositivoVetoComponent} from "./dispositivo-veto.component";
 import {FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {Veto} from "../veto.model";
 import {DescritorDispositivoComponent} from "./descritor-dispositivo.component";
+import {Cedula} from "../cedula.model";
 
 describe('MadocDispositivoVetoComponent', () => {
   let component: MadocDispositivoVetoComponent;
@@ -25,7 +26,8 @@ describe('MadocDispositivoVetoComponent', () => {
     fixture = TestBed.createComponent(MadocDispositivoVetoComponent);
     component = fixture.componentInstance;
     component.ngOnInit();
-    component.veto = getVeto();
+    let cedula = getCedula();
+    component.veto = cedula.vetos[0];
     component.disabled = false;
     fixture.detectChanges();
   });
@@ -124,7 +126,8 @@ describe('MadocDispositivoVetoComponent', () => {
 
   describe('Quando há seleção de veto total', () => {
     it('não deve haver dispositivos para selecionar', async () => {
-      let veto = getVeto();
+      let cedula = getCedula();
+      let veto = cedula.vetos[0];
       veto.total = true;
       veto.dispositivos = [];
       component.veto = veto;
@@ -132,6 +135,14 @@ describe('MadocDispositivoVetoComponent', () => {
       let qtdDispositivos = fixture.debugElement.queryAll(By.css('input[type="checkbox"]')).length;
 
       expect(qtdDispositivos).toBe(0);
+    });
+
+    it('deve selecionar todos os dispositivos não prejudicados', async () => {
+      component.veto.dispositivos[1].prejudicado = true;
+      component.marcarTodosDispositivos(true);
+      fixture.detectChanges();
+
+      expect(component.getDispositivosSelecionados().length).toBe(2);
     });
   });
 
@@ -143,11 +154,11 @@ export function typeValue(fixture: ComponentFixture<MadocDispositivoVetoComponen
   input.dispatchEvent(new Event('input'));
 }
 
-export function getVeto(): Veto {
-  return Object.assign(new Veto(), getVetoJson());
+export function getCedula(): Cedula {
+  return Object.assign(new Cedula(), getJson());
 }
 
-export function getVetoJson() {
+export function getJson() {
   return {
     "id":414,
     "versao":1,

@@ -50,8 +50,27 @@
 
 		<madoc:Page id="p-detalhes" display="Testes de componentes">
 		
+		    <madoc:Section id="s-convidados" display="Convidados">
+
+	            <madoc:Question id="q-convidados" display="Dados dos acareados" 
+	            	hint="Preencher pelo menos um dos dois campos: nome ou cargo. Informe duas ou mais pessoas." 
+	            	required="true" 
+	            	xsi:type="madoc:CustomQuestionType" 
+	            	customQuestionType="ConvidadoQuestion">
+	                <madoc:CustomAttribute name="labelConvidado" value="convocado" />
+	                <madoc:CustomAttribute name="minEntries" value="2" />
+	                <madoc:CustomAttribute name="maxEntries" value="5" />
+	                <madoc:CustomField name="tratamento" hint="Tratamento" display="Tratamento" required="false" visible="true" enabled="true" />
+	                <madoc:CustomField name="nome" display="Nome" required="false" visible="true" enabled="true" />
+	                <madoc:CustomField name="cargo" display="Cargo ou Função" required="false" visible="true" enabled="true" />
+	                <madoc:CustomField name="representanteDe" display="Representando..." visible="true" required="false" enabled="true" />
+	                <madoc:CustomField name="condicao" display="Condição da convocação" visible="false" required="false" enabled="false" />
+	            </madoc:Question>
+	
+            </madoc:Section>
+		
 			<madoc:Question id="q-checkbox-group" xsi:type="madoc:CheckBoxGroupQuestionType" display="Checks" 
-				required="true" addSelectAll="true">
+				required="false" addSelectAll="true">
 				<madoc:Options>
 					<madoc:Option id="o-1" value="Opção 1"/>
 					<madoc:Option id="o-2" value="Opção 2"/>
@@ -104,20 +123,18 @@
             	</madoc:Question>
             	
             	<madoc:Question id="q-alvo-nome" xsi:type="madoc:InputTextQuestionType" 
-            		display="Nome"
-            		hint="Opcional para sigilo telemático."
-            		required="{q-ts-rif == 'true' || q-ts-bancario == 'true' || q-ts-fiscal == 'true' || q-ts-telefonico == 'true'}"/>
+            		display="Nome"/>
             		
             	<madoc:Question id="q-alvo-cpf" xsi:type="madoc:InputTextQuestionType" 
             		display="CPF" 
-            		required="true"
+            		required="false"
             		visible="{q-alvo-tipo-pessoa == 'natural'}"
             		validationType="cpf"
             		minLength="14" maxLength="14"/>
             		
             	<madoc:Question id="q-alvo-cnpj" xsi:type="madoc:InputTextQuestionType" 
             		display="CNPJ"
-            		required="true"
+            		required="false"
             		visible="{q-alvo-tipo-pessoa == 'juridica'}"
             		validationType="cnpj" 
             		minLength="18" maxLength="18"/>

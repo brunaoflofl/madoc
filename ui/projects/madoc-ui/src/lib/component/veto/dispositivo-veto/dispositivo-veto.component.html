@@ -4,19 +4,17 @@
     [formGroup]="form"
     *ngIf="!disabled"
   >
-    <div
-      class="row"
-      style="display:flex;align-items:center;"
-    >
-      <div style="margin-right: 5px">
+    <div class="row">
+      <div style="float: left; margin: 0 5px 3px 0">
         <input
+          id="filtro"
           type="text"
-          class="form-control"
+          class="form-control filtro"
           formControlName="filtro"
           placeholder="Filtro..."
         >
       </div>
-      <div>
+      <div style="float: left; margin: 0 5px 3px 0">
         <button
           class="btn btn-default"
           type="button"
@@ -24,7 +22,16 @@
           [disabled]="disabled"
         >Limpar</button>
       </div>
+      <div style="float: left; margin: 0 5px 3px 0">
+        <button class="btn btn-default"
+          (click)="marcarTodosDispositivos(true);">Marcar todos</button>
+      </div>
+      <div style="float: left; margin: 0 0 3px 0">
+        <button class="btn btn-default"
+          (click)="marcarTodosDispositivos(false);">Desmarcar todos</button>
+      </div>
     </div>
+    <div class="row" style="margin-bottom: 10px; clear: left;">Filtre por faixa de dispositivos (ex. 1-3) ou palavras-chave.</div>
   </form>
   <br *ngIf="!disabled">
   <div
@@ -33,40 +40,51 @@
   >
     <div
       class="col-xs-12"
-      style="overflow-y: auto; height:100px;border: #ccc 1px solid;"
+      style="overflow-y: auto;border: #ccc 1px solid;min-height: 70px; max-height: 300px; padding: 0;"
     >
-      <div
-        style="display:flex;align-items:center; text-indent: 0; margin: 6px 0px 5px 5px;"
-        *ngFor="let dispositivo of getDispositivosWithFilter(); let i = index"
-      >
-        <span *ngIf="dispositivo != null">
-          <label
-            style="cursor: pointer"
-            [style.font-weight]="'normal'"
-            [attr.for]="dispositivo.id"
-          >
+      <div class="grid">
+        <ng-container *ngFor="let dispositivo of getDispositivosWithFilter(); let i = index">
+          <div>
             <input
-              [id]="dispositivo.id"
-              type="checkbox"
-              style="cursor: pointer"
-              [(ngModel)]="dispositivo.selected"
-              onselect="onSelected(dispositivo)"
-              [disabled]="disabled"
-            > &nbsp;
-            <strong>{{dispositivo.numeroIdentificador}}</strong>:
+                [id]="dispositivo.numeroIdentificador"
+                type="checkbox"
+                style="cursor: pointer"
+                [(ngModel)]="dispositivo.selected"
+                onselect="onSelected(dispositivo)"
+                [disabled]="disabled || dispositivo.prejudicado"
+                [title]="!dispositivo.prejudicado ? 'dispositivo.numeroIdentificador' : 'Dispositivo prejudicado'"
+            >
+          </div>
+          <div><label [attr.for]="dispositivo.numeroIdentificador"
+                      [ngClass]="dispositivo.prejudicado ? 'label-prejudicada' : ''"
+                      [title]="!dispositivo.prejudicado ? 'dispositivo.numeroIdentificador' : 'Dispositivo prejudicado'">
+            <strong>{{dispositivo.numeroIdentificador}}</strong></label>
+          </div>
+
+          <div><label [attr.for]="dispositivo.numeroIdentificador"
+                      [ngClass]="dispositivo.prejudicado ? 'label-prejudicada' : ''"
+                      [title]="!dispositivo.prejudicado ? 'dispositivo.texto' : 'Dispositivo prejudicado'">
             {{dispositivo.texto}}
-          </label>
-        </span>
+          </label></div>
+
+          <div><label *ngIf="dispositivo.conteudo != null"
+                      [attr.for]="dispositivo.numeroIdentificador"
+                      [ngClass]="dispositivo.prejudicado ? 'label-prejudicada' : ''"
+                      [title]="!dispositivo.prejudicado ? 'dispositivo.conteudo' : 'Dispositivo prejudicado'">
+            {{dispositivo.conteudo}}
+          </label></div>
+        </ng-container>
       </div>
     </div>
   </div>
   <br *ngIf="!disabled">
   <div class="row">
-    <div class="col-xs-12 pad0">
-      <label>Itens Destacados</label>
+    <div class="col-xs-12 pad0" style="margin-bottom: 5px;">
+      <strong>Itens destacados:&nbsp;</strong>
+      <descritor-dispositivo [dispostivos]="getDispositivosSelecionados()" [anoVeto]="veto.ano" [numeroVeto]="veto.numero"></descritor-dispositivo>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="itens-selecionados">
     <label
       *ngIf="getDispositivosSelecionados().length === 0"
       style="font-weight: normal !important;"

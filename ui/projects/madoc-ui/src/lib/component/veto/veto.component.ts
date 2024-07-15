@@ -14,7 +14,7 @@ import { IMadocComponent } from '../shared/madoc-abstract.component';
 import { HttpService } from '../../service/http.service';
 import { FormGroup, FormControl, NgForm } from '@angular/forms';
 
-import { Veto } from './veto.model';
+import { Dispositivo, Veto } from './veto.model';
 import { finalize } from 'rxjs/operators';
 import { Cedula } from "./cedula.model";
 
@@ -114,7 +114,7 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
                             this.vetos = result.vetos
                                 .map(v => ({
                                     ...v,
-                                    id: v.numero + '/' + v.ano,
+                                    id: v.id,
                                     dispositivos: v.dispositivos.map(el => ({
                                         ...el,
                                         selected: false
@@ -169,15 +169,21 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
     }
 
     onSelect() {
-        this.selectVeto(this.asyncSelected);
+        this.selectVeto(+this.asyncSelected);
     }
 
     onChange(respostaNaoNula = true) {
         this.item.dirty = true;
+        console.log(this.veto)
         if (respostaNaoNula) {
             const answer = {
                 cedula: { id: this.cedula.id, versao: this.cedula.versao },
-                veto: this.veto.id,
+                veto: {
+                    id: this.veto.id,
+                    numeroIdentificador: this.veto.numeroIdentificador,
+                    numero: this.veto.numero,
+                    ano: this.veto.ano
+                },
                 total: this.veto.total,
                 destaqueDispositivos: false,
                 itensSelecionados: [],
@@ -187,7 +193,10 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
             if (!this.veto.total) {
                 this.veto.dispositivos.forEach(el => {
                     if (el.selected) {
-                        itensSelecionados.push(el.numeroIdentificador);
+                        itensSelecionados.push({
+                            id: el.id,
+                            numeroIdentificador: el.numeroIdentificador
+                        });
                     }
                 });
                 const sortedArray = itensSelecionados.sort(
@@ -241,22 +250,26 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
         }
     }
 
-    ordenarVeto(a: any, b: any) {
-        const vetorVetoA = a.id.split('/');
-        const vetorVetoB = b.id.split('/');
-        if (+vetorVetoA[1] - +vetorVetoB[1] !== 0) {
-            return +vetorVetoA[1] - +vetorVetoB[1];
+    ordenarVeto(a: Veto, b: Veto) {
+        const numeroA = +a.numero;
+        const anoA = a.ano;
+
+        const numeroB = +b.numero;
+        const anoB = b.ano;
+
+        if (anoA - anoB !== 0) {
+            return anoA - anoB;
         } else {
-            return +vetorVetoA[0] - +vetorVetoB[0];
+            return numeroA - numeroB;
         }
     }
-    ordenarItensSelecionados(a: any, b: any) {
-        const vetorNumeroIdentificadorA = a.split('.');
-        const vetorNumeroIdentificadorB = b.split('.');
+    ordenarItensSelecionados(a: Dispositivo, b: Dispositivo) {
+        const vetorNumeroIdentificadorA = a.numeroIdentificador.split('.');
+        const vetorNumeroIdentificadorB = b.numeroIdentificador.split('.');
 
         return +vetorNumeroIdentificadorA[2] - +vetorNumeroIdentificadorB[2];
     }
-    selectVeto(id: string) {
+    selectVeto(id: number) {
         this.veto = this.vetos.find(val => id === val.id);
         if (this.veto != null) {
             this.habilitaSelecaoDispositivos();
@@ -268,7 +281,7 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
     }
     onSelectChange(event: Event) {
         if (event) {
-            this.selectVeto(String(event));
+            this.selectVeto(+event);
             if (!this.hasAnswer() || this.vetoAnswer) {
                 this.initialState();
                 this.onChange();
@@ -290,17 +303,17 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
         });
     }
 
-    sequential(vetorItensSelecionados: any[]): String[] {
+    sequential(vetorItensSelecionados: Dispositivo[]): String[] {
         let index = 0;
         let contadorAglutinacao = 0;
         const itensSelecionados: String[] = [];
         while (vetorItensSelecionados.length > 0) {
             if (index >= 1) {
-                const val = +vetorItensSelecionados[index].split('.')[2];
-                if (val - 1 === +vetorItensSelecionados[index - 1].split('.')[2]) {
+                const val = +vetorItensSelecionados[index].numeroIdentificador.split('.')[2];
+                if (val - 1 === +vetorItensSelecionados[index - 1].numeroIdentificador.split('.')[2]) {
                     if (
                         vetorItensSelecionados[index + 1] &&
-                        val + 1 === +vetorItensSelecionados[index + 1].split('.')[2]
+                        val + 1 === +vetorItensSelecionados[index + 1].numeroIdentificador.split('.')[2]
                     ) {
                         contadorAglutinacao++;
                         index++;
@@ -309,19 +322,19 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
                 }
                 if (contadorAglutinacao > 0) {
                     itensSelecionados.push(
-                        (+vetorItensSelecionados[0].split('.')[2]).toString() +
+                        (+vetorItensSelecionados[0].numeroIdentificador.split('.')[2]).toString() +
                         ' a ' +
-                        (+vetorItensSelecionados[1 + contadorAglutinacao].split('.')[2]).toString()
+                        (+vetorItensSelecionados[1 + contadorAglutinacao].numeroIdentificador.split('.')[2]).toString()
                     );
                     vetorItensSelecionados.splice(0, 2 + contadorAglutinacao);
                     contadorAglutinacao = 0;
                 } else {
-                    itensSelecionados.push((+vetorItensSelecionados[0].split('.')[2]).toString());
+                    itensSelecionados.push((+vetorItensSelecionados[0].numeroIdentificador.split('.')[2]).toString());
                     vetorItensSelecionados.splice(0, 1);
                 }
                 index = 0;
             } else if (vetorItensSelecionados.length === 1) {
-                itensSelecionados.push((+vetorItensSelecionados[0].split('.')[2]).toString());
+                itensSelecionados.push((+vetorItensSelecionados[0].numeroIdentificador.split('.')[2]).toString());
                 vetorItensSelecionados.splice(0, 1);
             } else {
                 index++;

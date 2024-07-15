@@ -10,7 +10,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class MadocDispositivoVetoComponent implements OnInit {
   form: FormGroup;
 
-  filteredDispositivos = [];
+  filteredDispositivos: Dispositivo[] = [];
 
   @Input() veto: Veto;
   @Output() change = new EventEmitter<boolean>();
@@ -34,7 +34,7 @@ export class MadocDispositivoVetoComponent implements OnInit {
     });
   }
 
-  private filtrarPorFaixaDispositivos(value: any[]) {
+  private filtrarPorFaixaDispositivos(value: number[]) {
     const numeroInicial: number = value[0];
     const numeroFinal: number = value [1];
     this.veto.dispositivos.forEach(d => {
@@ -58,7 +58,7 @@ export class MadocDispositivoVetoComponent implements OnInit {
     });
   }
 
-  remove(dispositivo) {
+  remove(dispositivo: Dispositivo) {
     if (!this.disabled) {
       dispositivo['selected'] = false;
       this.change.emit(true);
@@ -77,7 +77,7 @@ export class MadocDispositivoVetoComponent implements OnInit {
       .sort(this.compare);
   }
 
-  onSelected(dispositivo) {
+  onSelected(dispositivo: Dispositivo) {
     dispositivo['selected'] = !dispositivo['selected'];
     this.change.emit(true);
   }

@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.websocket.server.PathParam;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;

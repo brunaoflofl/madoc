@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.websocket.server.PathParam;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
@@ -383,6 +384,17 @@ public class MadocEditorController {
 
 		return he;
 	}
+	
+    @GetMapping(path = "/valida-nome/{nome}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public Map<String, Object> validaNome(@PathVariable("nome") String nome) throws Exception {
+    	boolean isValid = nome.toLowerCase().contains("bruna");
+    	Map<String, Object> map = new HashMap<>();
+    	map.put("isValid", isValid);
+    	if(!isValid) {
+    		map.put("errorMessage", "O nome deve conter bruna");
+    	}
+        return map;
+    }
 
 
 }

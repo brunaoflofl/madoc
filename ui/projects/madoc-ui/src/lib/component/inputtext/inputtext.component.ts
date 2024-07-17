@@ -3,6 +3,7 @@ import {Component, Input} from '@angular/core';
 import {MadocAbstractComponent} from '../shared/madoc-abstract.component';
 import {Question} from '../../model/index';
 import { Answer } from '../../model/answer';
+import { InputtextService } from '../../service/inputtext.service';
 
 @Component({
   selector: 'madoc-inputtext',
@@ -22,6 +23,14 @@ import { Answer } from '../../model/answer';
 })
 export class MadocInputTextComponent extends MadocAbstractComponent<Question> {
   @Input() item: InputTextQuestion;
+
+  constructor(private inputtextService: InputtextService) {
+    super();
+  }
+
+  ngOnInit() {
+    this.item.setService(this.inputtextService); 
+  }
 
   getItem() {
     return this.item;

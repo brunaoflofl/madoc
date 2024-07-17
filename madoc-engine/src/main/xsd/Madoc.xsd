@@ -542,6 +542,7 @@
 				<xs:attribute name="regex" type="xs:string" use="optional" />
 				<xs:attribute name="mask" type="xs:string" use="optional" />
 				<xs:attribute name="validationType" type="xs:string" use="optional" />
+				<xs:attribute name="validationURL" type="xs:string" use="optional" />
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

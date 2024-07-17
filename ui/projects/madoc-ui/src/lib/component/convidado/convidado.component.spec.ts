@@ -1,8 +1,8 @@
 import { ConvidadoQuestion } from '../../model/item/convidado/convidado-question';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ModalModule, TypeaheadModule } from 'ngx-bootstrap';
+import {ModalModule} from 'ngx-bootstrap/modal';
+import {TypeaheadModule} from 'ngx-bootstrap/typeahead';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 
 import { MadocConvidadoComponent } from './convidado.component';
 

@@ -25,3 +25,28 @@
 .row {
   margin-top: -6px !important;
 }
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.grid > div {
+  padding: 1px 4px;
+}
+.grid > div:nth-child(4n-3) {
+  padding-top: 0;
+  margin-top: 1px;
+}
+
+.grid > div:nth-child(4n-0) {
+  min-width: 600px;
+}
+
+.grid > div > label {
+  cursor: pointer;
+  font-weight: normal !important;
+  margin-bottom: 0 !important;
+}
+
+label.label-prejudicada {
+  color: #bbb;
+}

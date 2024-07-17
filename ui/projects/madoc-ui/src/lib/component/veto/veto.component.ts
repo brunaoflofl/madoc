@@ -16,6 +16,7 @@ import { FormGroup, FormControl, NgForm } from '@angular/forms';
 
 import { Veto } from './veto.model';
 import { finalize } from 'rxjs/operators';
+import { Cedula } from "./cedula.model";
 
 @Component({
     selector: 'madoc-veto',
@@ -33,6 +34,7 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
 
     @ViewChild('f', { static: false }) selectVetoForm: NgForm;
 
+    cedula: Cedula;
     veto: Veto;
     vetoNaIntegra = true;
     dataSource: Observable<any>;
@@ -107,9 +109,9 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
                     })
                 )
                 .subscribe(
-                    (result: Veto[]) => {
-                        if (result.length) {
-                            this.vetos = result
+                    (result: Cedula) => {
+                        if (result && result.id > 0) {
+                            this.vetos = result.vetos
                                 .map(v => ({
                                     ...v,
                                     id: v.numero + '/' + v.ano,
@@ -119,6 +121,7 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
                                     }))
                                 }))
                                 .sort(this.ordenarVeto);
+                            this.cedula = result;
                         } else {
                             this.vetoNaoExiste = true;
                         }
@@ -173,6 +176,7 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
         this.item.dirty = true;
         if (respostaNaoNula) {
             const answer = {
+                cedula: { id: this.cedula.id, versao: this.cedula.versao },
                 veto: this.veto.id,
                 total: this.veto.total,
                 destaqueDispositivos: false,
@@ -305,19 +309,19 @@ export class MadocVetoComponent implements IMadocComponent, OnInit {
                 }
                 if (contadorAglutinacao > 0) {
                     itensSelecionados.push(
-                        vetorItensSelecionados[0] +
+                        (+vetorItensSelecionados[0].split('.')[2]).toString() +
                         ' a ' +
-                        vetorItensSelecionados[1 + contadorAglutinacao]
+                        (+vetorItensSelecionados[1 + contadorAglutinacao].split('.')[2]).toString()
                     );
                     vetorItensSelecionados.splice(0, 2 + contadorAglutinacao);
                     contadorAglutinacao = 0;
                 } else {
-                    itensSelecionados.push(vetorItensSelecionados[0]);
+                    itensSelecionados.push((+vetorItensSelecionados[0].split('.')[2]).toString());
                     vetorItensSelecionados.splice(0, 1);
                 }
                 index = 0;
             } else if (vetorItensSelecionados.length === 1) {
-                itensSelecionados.push(vetorItensSelecionados[0]);
+                itensSelecionados.push((+vetorItensSelecionados[0].split('.')[2]).toString());
                 vetorItensSelecionados.splice(0, 1);
             } else {
                 index++;

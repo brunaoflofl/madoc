@@ -1,5 +1,6 @@
 import { MadocVetoComponent } from './component/veto/veto.component';
 import { MadocDispositivoVetoComponent } from './component/veto/dispositivo-veto/dispositivo-veto.component';
+import { DescritorDispositivoComponent } from './component/veto/dispositivo-veto/descritor-dispositivo.component';
 import { MadocDaterangeComponent } from './component/daterange/daterange.component';
 import { CkeditorConfigService } from './service/ckeditorconfig.service';
 import { QuestionService } from './service/question.service';
@@ -82,6 +83,7 @@ defineLocale('ptbrlocale', ptBrLocale);
         MadocSectionComponent,
         MadocTextListComponent,
         MadocDispositivoVetoComponent,
+        DescritorDispositivoComponent,
         MadocVetoComponent,
         MadocMultiMateriaComponent
     ],

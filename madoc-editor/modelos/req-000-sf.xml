@@ -79,10 +79,11 @@
 			</madoc:Question>
 
 			<madoc:Question defaultValue="SF" display="Nº no SEDOL"
-				id="q-numero-sedol" required="false" xsi:type="madoc:InputTextQuestionType"
+				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"
 				defaultValueSatisfiesRequiredQuestion="false"
-				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"/>			
-
+				validationURL="http://localhost:4200/madoc/api/valida-nome/" 
+				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"
+				hint="Deve conter o numeral 32"/>	
 
 			<!-- Obtendo DATA do banco de dados de questões -->
 			<xi:include href="urn:sf:sistema;madoc:id;question-library"

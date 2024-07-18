@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.websocket.server.PathParam;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
@@ -383,6 +384,18 @@ public class MadocEditorController {
 
 		return he;
 	}
+	
+	//Endpoint teste para validação de campo InputtextQuestiontype por Url atributo validationURL
+    @GetMapping(path = "/valida-nome/{valor}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public Map<String, Object> validaNome(@PathVariable("valor") String nome) throws Exception {
+    	boolean isValid = nome.toLowerCase().contains("32");
+    	Map<String, Object> map = new HashMap<>();
+    	map.put("isValid", isValid);
+    	if(!isValid) {
+    		map.put("errorMessage", "O nome deve conter 32");
+    	}
+        return map;
+    }
 
 
 }

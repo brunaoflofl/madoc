@@ -38,6 +38,9 @@ export class MadocInputTextComponent extends MadocAbstractComponent<Question> {
 
   onModified() {
     this.item.dirty = true;
+    if(this.isModified()){
+      this.item.resetUrlValidationControls();
+    }
     super.onChange();
   }
 

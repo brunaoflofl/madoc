@@ -82,7 +82,8 @@
 				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"
 				defaultValueSatisfiesRequiredQuestion="false"
 				validationURL="http://localhost:4200/madoc/api/valida-nome/" 
-				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"/>	
+				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"
+				hint="Deve conter o numeral 32"/>	
 
 			<!-- Obtendo DATA do banco de dados de questões -->
 			<xi:include href="urn:sf:sistema;madoc:id;question-library"
@@ -125,7 +126,7 @@
             	<madoc:Question id="q-alvo-nome" xsi:type="madoc:InputTextQuestionType" 
             		display="Nome"/>
             		
-            	<madoc:Question id="q-alvo-cpf" xsi:type="madoc:InputTextQuestionType" 
+            	<madoc:Question id="q-alvo-cpf" defaultValue="02328904394" xsi:type="madoc:InputTextQuestionType" 
             		display="CPF" 
             		required="false"
             		visible="{q-alvo-tipo-pessoa == 'natural'}"

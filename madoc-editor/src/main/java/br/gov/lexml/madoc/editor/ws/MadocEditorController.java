@@ -385,13 +385,14 @@ public class MadocEditorController {
 		return he;
 	}
 	
-    @GetMapping(path = "/valida-nome/{nome}",produces = MediaType.APPLICATION_JSON_VALUE)
-    public Map<String, Object> validaNome(@PathVariable("nome") String nome) throws Exception {
-    	boolean isValid = nome.toLowerCase().contains("bruna");
+	//Endpoint teste para validação de campo InputtextQuestiontype por Url atributo validationURL
+    @GetMapping(path = "/valida-nome/{valor}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public Map<String, Object> validaNome(@PathVariable("valor") String nome) throws Exception {
+    	boolean isValid = nome.toLowerCase().contains("32");
     	Map<String, Object> map = new HashMap<>();
     	map.put("isValid", isValid);
     	if(!isValid) {
-    		map.put("errorMessage", "O nome deve conter bruna");
+    		map.put("errorMessage", "O nome deve conter 32");
     	}
         return map;
     }

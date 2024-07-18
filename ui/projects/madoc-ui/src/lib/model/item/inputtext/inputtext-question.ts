@@ -6,6 +6,8 @@ export class InputTextQuestion extends TextQuestion {
   mask: (string | RegExp)[] | false;
   validationType = '';
   validationURL = '';
+  urlValidated = false;
+  urlValidationMessage = '';
   resultado: any = null;
   private inputtextService: InputtextService;
 
@@ -31,49 +33,69 @@ export class InputTextQuestion extends TextQuestion {
   }
 
   public isValid(): boolean {
-    this.erro.mensagem = '';
+    this.erro.mensagem = "";
     if (!super.isValid()) {
       return false;
     }
     if (this.validationType && !this.isNotPreenchido()) {
       const validationTypeLower = this.validationType.toLowerCase();
-      if (validationTypeLower == 'cpf' && !ValidaDados.validarCPF(this.answer)) {
-        this.erro.mensagem = 'Informe um CPF válido.';
+      if (
+        validationTypeLower == "cpf" &&
+        !ValidaDados.validarCPF(this.answer)
+      ) {
+        this.erro.mensagem = "Informe um CPF válido.";
         return false;
       }
-      if (validationTypeLower == 'cnpj' && !ValidaDados.validarCNPJ(this.answer)) {
-        this.erro.mensagem = 'Informe um CNPJ válido.';
+      if (
+        validationTypeLower == "cnpj" &&
+        !ValidaDados.validarCNPJ(this.answer)
+      ) {
+        this.erro.mensagem = "Informe um CNPJ válido.";
         return false;
-      }    
-    } 
-    if (this.validationURL && !this.isNotPreenchido()) {
-      console.log("valor::", this.validationURL);
-      console.log("this.answer::", this.answer);
-        // Chamada assíncrona
-        this.validateURL().then(isValid => {
-          if (!isValid) {
-              // Se a validação falhar, atualiza a mensagem de erro
-              this.erro.mensagem = this.resultado.errorMessage;
-              return false;
-          }
-      }).catch(error => {
-          console.error('Erro ao verificar a URL:', error);
-          this.erro.mensagem = 'Erro ao validar a URL.';
-      });
+      }
     }
-  
+    if (this.validationURL && !this.isNotPreenchido()) {
+      if (this.urlValidated) {
+        if (!!this.urlValidationMessage) {
+          this.erro.mensagem = this.urlValidationMessage;
+          return false;
+        }
+      } else {
+        this.urlValidated = true;
+        this.urlValidationMessage = "";
+        this.validateURL()
+          .then((resultado) => {
+            if (!resultado.body.isValid) {
+              this.erro.mensagem = resultado.body.errorMessage;
+              this.urlValidationMessage = resultado.body.errorMessage;
+              return false;
+            }
+            return true;
+          })
+          .catch((error) => {
+            console.error("Erro ao verificar a URL:", error);
+            this.erro.mensagem = "Erro ao validar a URL.";
+            this.urlValidationMessage = this.erro.mensagem;
+            return false;
+          });
+
+        return true;
+      }
+    }
     return true;
   }
 
-  private validateURL() {
+  private async validateURL(): Promise<any> {
     try {
-      this.resultado = this.inputtextService.checkSedolNumber(this.validationURL, this.answer).toPromise();
-      console.log("result", this.resultado);
-      return this.resultado.isValid;
+      const resultado = await this.inputtextService
+        .checkUrlValue(this.validationURL, this.answer)
+        .toPromise();
+      this.resultado = resultado;
+      return resultado;
     } catch (error) {
-      console.error('Erro ao verificar o nome', error);
-      this.erro.mensagem = 'Erro ao validar o SEDOL.';
-      return false;
+      console.error("Erro ao verificar a URL:", error);
+      this.erro.mensagem = "Erro ao validar a URL.";
+      return this.erro.mensagem;
     }
   }
 
@@ -89,4 +111,8 @@ export class InputTextQuestion extends TextQuestion {
       }
   }  
 
+  resetUrlValidationControls(){
+    this.urlValidated = false;
+    this.urlValidationMessage = '';
+  }
 }

@@ -81,7 +81,7 @@
 			<madoc:Question defaultValue="SF" display="Nº no SEDOL"
 				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"
 				defaultValueSatisfiesRequiredQuestion="false"
-				validationURL="http://localhost:4200/madoc/api/valida-nome/" 
+				validationURL="http://localhost:4200/madoc/api/valida-campo?valor=" 
 				mask="[/[sScC]/, /[fFdD]/, '/', /\d/, /\d/, /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/]"
 				hint="Deve conter o numeral 32"/>	
 

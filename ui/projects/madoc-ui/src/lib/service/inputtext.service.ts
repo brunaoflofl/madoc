@@ -10,9 +10,8 @@ export class InputtextService {
 
   constructor(private http: HttpClient) { }
 
-  checkUrlValue(url: string, value: string): Observable<HttpResponse<any>> {
-    const cleanedValue = value.replace(/[^a-zA-Z0-9]/g, '');
-    const fullUrl = `${url}${cleanedValue}`;
+  checkUrlValue(url: string, value: string): Observable<any> {
+    const fullUrl = `${url}${encodeURIComponent(value)}`;
     return this.http.get<any>(fullUrl, { observe: 'response' }).pipe(first());
   }
 }

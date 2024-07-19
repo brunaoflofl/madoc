@@ -26,7 +26,7 @@ export class MadocDispositivoVetoComponent implements OnInit {
       if (!value) return;
 
       const numbers = value.split('-');
-      if (!!value.match(/\d+-\d+/) && numbers.length == 2 && numbers[0] < numbers[1]) {
+      if (!!value.match(/\d+-\d+/) && numbers.length == 2 && +numbers[0] < +numbers[1]) {
         this.filtrarPorFaixaDispositivos(numbers);
       } else {
         this.filtrarPorPalavraChave(value);

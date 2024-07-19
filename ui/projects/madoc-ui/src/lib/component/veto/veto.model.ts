@@ -16,6 +16,7 @@ export class Veto {
 }
 
 export class Dispositivo {
+  id: string;
   numeroIdentificador: string;
   texto: string;
   conteudo: string;

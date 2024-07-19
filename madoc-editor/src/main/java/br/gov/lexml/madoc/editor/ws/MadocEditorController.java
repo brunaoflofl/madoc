@@ -383,6 +383,18 @@ public class MadocEditorController {
 
 		return he;
 	}
+	
+	//Endpoint teste para validação de campo InputtextQuestiontype por Url atributo validationURL
+    @GetMapping(path = "/valida-campo",produces = MediaType.APPLICATION_JSON_VALUE)
+    public Map<String, Object> validaNome(@RequestParam("valor") String nome) throws Exception {
+    	boolean isValid = nome.toLowerCase().contains("32");
+    	Map<String, Object> map = new HashMap<>();
+    	map.put("isValid", isValid);
+    	if(!isValid) {
+    		map.put("errorMessage", "O nome deve conter 32");
+    	}
+        return map;
+    }
 
 
 }

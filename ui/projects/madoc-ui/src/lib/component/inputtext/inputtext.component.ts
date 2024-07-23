@@ -29,6 +29,7 @@ export class MadocInputTextComponent extends MadocAbstractComponent<Question> {
   }
 
   ngOnInit() {
+    super.ngOnInit();
     this.item.setService(this.inputtextService); 
   }
 

@@ -108,5 +108,6 @@ export class MadocDispositivoVetoComponent implements OnInit {
 
   marcarTodosDispositivos(selecionar: boolean) {
     this.getDispositivosWithFilter().forEach(d => d.selected = !d.prejudicado ? selecionar : false);
+    this.change.emit(true);
   }
 }

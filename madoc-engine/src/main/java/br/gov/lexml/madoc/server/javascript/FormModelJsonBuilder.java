@@ -88,6 +88,7 @@ public class FormModelJsonBuilder {
 		new AttributeWriter("transformations", "transformation"),
 		new AttributeWriter("actions", "action"),
 		new AttributeWriter("content", "any"),
+		new AttributeWriter("validationURL"),
 	};
 	
 	private WizardType wizardType;

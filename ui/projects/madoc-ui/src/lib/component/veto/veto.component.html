@@ -23,7 +23,7 @@
             <option
               *ngFor="let veto of vetos"
               [value]="veto.id"
-            >VET {{veto.id+vetoParcial(veto)}}</option>
+            >VET {{ veto.numero + '/' + veto.ano + vetoParcial(veto)}}</option>
           </select>
         </form>
       </div>

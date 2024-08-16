@@ -30,7 +30,14 @@ export class DestaqueVetoQuestion extends Question {
         if (!this.answer) {
             this.answer = '';
         }
-        const answer = this.isEmptyAnswer() ? null : JSON.parse(this.answer);
+        let answer;
+        if (this.isEmptyAnswer())
+            answer = null
+        else if (typeof this.answer !== 'object')
+            answer = JSON.parse(this.answer);
+        else
+            answer = this.answer;
+
         const vetoNaoSelecionado = answer
             ? answer.destaqueDispositivos && answer.itensSelecionados.length === 0
             : true;

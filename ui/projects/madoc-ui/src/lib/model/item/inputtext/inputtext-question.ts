@@ -70,7 +70,6 @@ export class InputTextQuestion extends TextQuestion {
               this.urlValidationMessage = resultado.body.errorMessage;
               return false;
             }
-            return true;
           })
           .catch((error) => {
             console.error("Erro ao verificar a URL:", error);
@@ -78,10 +77,9 @@ export class InputTextQuestion extends TextQuestion {
             this.urlValidationMessage = this.erro.mensagem;
             return false;
           });
-
-        return true;
       }
     }
+    console.log("retorna true")
     return true;
   }
 

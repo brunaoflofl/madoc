@@ -30,7 +30,11 @@ export class CkeditorConfigService {
         'RemoveFormat'
       ]
     },
-    { name: 'insert', items: ['SpecialChar'] }
+    { name: 'insert', items: ['SpecialChar'] },
+    {
+      name: 'indentation', 
+      items: ['Outdent', 'Indent']
+    }
   ];
 
   // 'Table'
@@ -72,7 +76,9 @@ export class CkeditorConfigService {
         'JustifyRight',
         'JustifyBlock',
         '-',
-        'Blockquote'
+        'Blockquote',
+        'Outdent', 
+        'Indent' 
       ]
     },
     { name: 'tools', items: ['Maximize'] }

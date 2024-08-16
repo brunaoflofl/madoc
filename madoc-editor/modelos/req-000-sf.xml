@@ -77,6 +77,12 @@
 					<madoc:Option id="o-3" value="Opção 3"/>
 				</madoc:Options>
 			</madoc:Question>
+			            
+                <madoc:Question id="q-texto-oficio-1" 
+            	display="Texto do ofício"
+            	xsi:type="madoc:RichTextQuestionType"
+            	lines="15"
+            	required="false"/>
 
 			<madoc:Question defaultValue="SF" display="Nº no SEDOL"
 				id="q-numero-sedol" required="true" xsi:type="madoc:InputTextQuestionType"

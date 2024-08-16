@@ -17,7 +17,6 @@ export class InputTextQuestion extends TextQuestion {
 
   build(input: any) {
     super.build(input);
-    console.log("input::", input);
 
     this.validationType = input.validationType;
     this.validationURL = input.validationURL;
@@ -63,19 +62,19 @@ export class InputTextQuestion extends TextQuestion {
       } else {
         this.urlValidated = true;
         this.urlValidationMessage = "";
+        //  TODO - Refatorar chamadas a isValid() para permitir chamadas síncronas à url de validação
+        // Da forma que está, a chamada abaixo não está síncrona e a validação ocorre apenas
+        // por causa da validação acima quando o método é chamado repetidamente para o mesmo valor.
         this.validateURL()
           .then((resultado) => {
             if (!resultado.body.isValid) {
               this.erro.mensagem = resultado.body.errorMessage;
               this.urlValidationMessage = resultado.body.errorMessage;
-              return false;
             }
           })
           .catch((error) => {
-            console.error("Erro ao verificar a URL:", error);
             this.erro.mensagem = "Erro ao validar a URL.";
             this.urlValidationMessage = this.erro.mensagem;
-            return false;
           });
       }
     }

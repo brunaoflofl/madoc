@@ -43,6 +43,7 @@ import { ptBrLocale } from 'ngx-bootstrap/locale';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { MadocMultiMateriaComponent } from './component/multimateria/multimateria.component';
 import { TextMaskModule } from 'angular2-text-mask';
+import { InputtextService } from './service/inputtext.service';
 defineLocale('ptbrlocale', ptBrLocale);
 
 @NgModule({
@@ -92,7 +93,8 @@ defineLocale('ptbrlocale', ptBrLocale);
         HttpService,
         MadocService,
         QuestionService,
-        CkeditorConfigService
+        CkeditorConfigService,
+        InputtextService
     ],
     exports: [MadocComponent]
 })

@@ -78,6 +78,7 @@ export class InputTextQuestion extends TextQuestion {
           });
       }
     }
+    console.log("retorna true")
     return true;
   }
 
